@@ -1,0 +1,168 @@
+
+<div style="font-family: var(--font-sans); padding: 1rem 0; max-width: 680px;">
+
+<div style="background: #1F2D5C; border-radius: 12px; padding: 20px 24px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: flex-start;">
+  <div>
+    <div style="font-size: 11px; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.5); margin-bottom: 4px;">Projeto ARI-001 · REVIZI · CAN-02</div>
+    <div style="font-size: 22px; font-weight: 500; color: #fff;">Ficha de Onboarding — Érico</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,.45); margin-top: 4px;">Diagnóstico inicial · conversa presencial · sem plateia</div>
+  </div>
+  <div style="text-align: right;">
+    <div style="font-size: 11px; color: rgba(255,255,255,.4);">Data</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,.8);" id="dataHoje"></div>
+  </div>
+</div>
+
+<div style="background: #fef3cd; border-left: 4px solid #B8863B; padding: 11px 14px; border-radius: 0 6px 6px 0; margin-bottom: 20px; font-size: 13px; color: #7a5000;">
+  <strong>Objetivo:</strong> entender o que absorveu do ambiente, se tem referência de processo estruturado e se enxerga o problema. Faça sozinho — sem o Sr. Ari, sem a Fabiana.
+</div>
+
+<!-- PERGUNTA 1 -->
+<div style="background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;">
+  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+    <div style="width: 28px; height: 28px; border-radius: 50%; background: #1F2D5C; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0;">1</div>
+    <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">O que ele já viu acontecer</div>
+  </div>
+  <div style="font-size: 13px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; padding-left: 38px;">"Desde que chegou, como você viu o processo funcionar quando um cliente entra em contato — do início até fechar?"</div>
+
+  <div style="padding-left: 38px;">
+    <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em;">Sinais observados</div>
+    <div style="display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px;">
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Descreve processo diferente do que viu na Fabiana
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Descreve exatamente o processo da Fabiana <span style="font-size:11px;color:#d03b3b;margin-left:4px;">⚠ contaminação iniciada</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Não soube descrever o processo claramente
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Mencionou problemas no atendimento atual espontaneamente
+      </label>
+    </div>
+    <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 5px;">Observações</div>
+    <textarea placeholder="O que ele disse exatamente..." style="width:100%;min-height:64px;font-size:13px;padding:8px 10px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface-1);color:var(--text-primary);resize:vertical;font-family:var(--font-sans);"></textarea>
+  </div>
+</div>
+
+<!-- PERGUNTA 2 -->
+<div style="background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;">
+  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+    <div style="width: 28px; height: 28px; border-radius: 50%; background: #1F2D5C; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0;">2</div>
+    <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">Referência de processo anterior</div>
+  </div>
+  <div style="font-size: 13px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; padding-left: 38px;">"Onde você trabalhou antes? Como era o processo de vendas lá — do contato até fechar?"</div>
+
+  <div style="padding-left: 38px;">
+    <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em;">Perfil identificado</div>
+    <div style="display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px;">
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Tem referência de funil ou CRM estruturado <span style="font-size:11px;color:#0a5938;margin-left:4px;">✓ bom sinal</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Vem de ambiente com processo definido (metas, script, registro)
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Vem de ambiente informal — sem processo estruturado <span style="font-size:11px;color:#d03b3b;margin-left:4px;">⚠ requer mais condução</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Primeira experiência em vendas
+      </label>
+    </div>
+    <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 5px;">Onde trabalhou / função</div>
+    <input type="text" placeholder="Ex: Empresa X · vendedor externo · 2 anos" style="width:100%;font-size:13px;padding:8px 10px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface-1);color:var(--text-primary);margin-bottom:10px;font-family:var(--font-sans);">
+    <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 5px;">Observações</div>
+    <textarea placeholder="O que ele descreveu do processo anterior..." style="width:100%;min-height:64px;font-size:13px;padding:8px 10px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface-1);color:var(--text-primary);resize:vertical;font-family:var(--font-sans);"></textarea>
+  </div>
+</div>
+
+<!-- PERGUNTA 3 -->
+<div style="background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 20px;">
+  <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+    <div style="width: 28px; height: 28px; border-radius: 50%; background: #1F2D5C; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0;">3</div>
+    <div style="font-size: 14px; font-weight: 500; color: var(--text-primary);">Se ele enxerga o problema</div>
+  </div>
+  <div style="font-size: 13px; color: var(--text-secondary); font-style: italic; margin-bottom: 14px; padding-left: 38px;">"Na sua opinião, o que poderia melhorar aqui para vender mais?"</div>
+
+  <div style="padding-left: 38px;">
+    <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em;">Nível de percepção</div>
+    <div style="display: flex; flex-direction: column; gap: 7px; margin-bottom: 12px;">
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Identificou problema de processo / método <span style="font-size:11px;color:#0a5938;margin-left:4px;">✓ MVP será confirmação</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Identificou problema de produto / preço / concorrente
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Acha que está tudo bem <span style="font-size:11px;color:#d03b3b;margin-left:4px;">⚠ MVP será revelação</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Demonstrou iniciativa / sugeriu algo concreto
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;">
+        <input type="checkbox" style="width:15px;height:15px;flex-shrink:0;"> Não soube responder / ficou vago
+      </label>
+    </div>
+    <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 5px;">O que ele disse</div>
+    <textarea placeholder="Registre a resposta com as palavras dele..." style="width:100%;min-height:80px;font-size:13px;padding:8px 10px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface-1);color:var(--text-primary);resize:vertical;font-family:var(--font-sans);"></textarea>
+  </div>
+</div>
+
+<!-- AVALIAÇÃO GERAL -->
+<div style="background: var(--surface-2); border: 0.5px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 20px;">
+  <div style="font-size: 14px; font-weight: 500; color: var(--text-primary); margin-bottom: 14px;">Avaliação geral do Érico</div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 14px;">
+    <div>
+      <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 8px;">Perfil comercial</div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;"><input type="radio" name="perfil" style="flex-shrink:0;"> Pronto para MVP imediato</label>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;"><input type="radio" name="perfil" style="flex-shrink:0;"> Precisa de condução próxima</label>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;"><input type="radio" name="perfil" style="flex-shrink:0;"> Requer treinamento antes de operar</label>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 8px;">Risco de replicar a Fabiana</div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;"><input type="radio" name="risco" style="flex-shrink:0;"> Baixo — tem referência própria</label>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;"><input type="radio" name="risco" style="flex-shrink:0;"> Moderado — observar de perto</label>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-primary); cursor: pointer;"><input type="radio" name="risco" style="flex-shrink:0;"> Alto — separar imediatamente</label>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size: 12px; font-weight: 500; color: var(--text-secondary); margin-bottom: 5px;">Observações gerais / impressão do consultor</div>
+  <textarea placeholder="Síntese da conversa — o que ficou claro sobre o Érico..." style="width:100%;min-height:80px;font-size:13px;padding:8px 10px;border-radius:8px;border:0.5px solid var(--border);background:var(--surface-1);color:var(--text-primary);resize:vertical;font-family:var(--font-sans);"></textarea>
+</div>
+
+<!-- PRÓXIMO PASSO -->
+<div style="background: #1F2D5C; border-radius: 10px; padding: 14px 18px; margin-bottom: 16px;">
+  <div style="font-size: 12px; color: rgba(255,255,255,.55); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em;">Depois desta conversa</div>
+  <div style="display: flex; flex-direction: column; gap: 7px;">
+    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.85); cursor: pointer;">
+      <input type="checkbox" style="width:14px;height:14px;flex-shrink:0;"> Definir com o Sr. Ari: processo próprio para o Érico ou "ajuda" a Fabiana?
+    </label>
+    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.85); cursor: pointer;">
+      <input type="checkbox" style="width:14px;height:14px;flex-shrink:0;"> Apresentar os 3 pilares do MVP ao Sr. Ari
+    </label>
+    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.85); cursor: pointer;">
+      <input type="checkbox" style="width:14px;height:14px;flex-shrink:0;"> Treinar o Érico no script de qualificação (5 perguntas)
+    </label>
+    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.85); cursor: pointer;">
+      <input type="checkbox" style="width:14px;height:14px;flex-shrink:0;"> Entregar o CRM mínimo e explicar o preenchimento
+    </label>
+    <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,.85); cursor: pointer;">
+      <input type="checkbox" style="width:14px;height:14px;flex-shrink:0;"> Definir portfólio de foco com o Sr. Ari
+    </label>
+  </div>
+</div>
+
+<div style="text-align: center; font-size: 11px; color: var(--text-muted);">Ficha de Onboarding · Érico · REVIZI — Estruturação Comercial · Projeto ARI-001</div>
+
+</div>
+
+<script>
+const d = new Date();
+document.getElementById('dataHoje').textContent = d.toLocaleDateString('pt-BR', {day:'2-digit',month:'2-digit',year:'numeric'});
+</script>
