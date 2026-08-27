@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Kommo · AriLub</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap');
+
+:root {
+  --navy: #1F2D5C;
+  --gold: #B8863B;
+  --gold-light: #D4A857;
+  --cream: #F7F4EE;
+  --ink: #1a1a2e;
+  --gray: #6B7280;
+  --line: #E5E0D5;
+  --ok: #16a34a;
+  --danger: #dc2626;
+  --warn: #d97706;
+  --blue: #2563eb;
+  --white: #fff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* HERO */
+.hero {
+  background: var(--navy);
+  padding: 52px 40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(184,134,59,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-size: 11px; font-weight: 500; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+}
+.hero-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 800; color: #fff;
+  line-height: 1.15; margin-bottom: 12px;
+}
+.hero-title span { color: var(--gold-light); }
+.hero-sub { font-size: 15px; color: rgba(255,255,255,.55); max-width: 540px; margin-bottom: 32px; }
+.hero-stats {
+  display: grid; grid-template-columns: repeat(3, auto);
+  gap: 0; width: fit-content;
+  border: 1px solid rgba(255,255,255,.12); border-radius: 12px; overflow: hidden;
+}
+.hero-stat {
+  padding: 16px 28px;
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+.hero-stat:last-child { border-right: none; }
+.hero-stat-val {
+  font-family: 'Sora', sans-serif;
+  font-size: 28px; font-weight: 700; color: #fff;
+}
+.hero-stat-val.pos { color: #4ade80; }
+.hero-stat-val.warn { color: var(--gold-light); }
+.hero-stat-lbl { font-size: 11px; color: rgba(255,255,255,.45); margin-top: 2px; }
+
+/* LAYOUT */
+.wrap { max-width: 1100px; margin: 0 auto; padding: 40px 28px; }
+.section { margin-bottom: 48px; }
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 10px;
+}
+.section-label::before {
+  content: ''; display: block; width: 18px; height: 2px; background: var(--gold);
+}
+.section-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 22px; font-weight: 700; color: var(--navy);
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 22px 24px;
+}
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.g4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+/* PROBLEM - O QUE ESTÁ SENDO PERDIDO */
+.loss-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+.loss-card {
+  background: #fff5f5; border: 1px solid #fecaca;
+  border-radius: 10px; padding: 16px;
+}
+.loss-icon { font-size: 24px; margin-bottom: 8px; }
+.loss-title { font-size: 13px; font-weight: 600; color: var(--danger); margin-bottom: 4px; }
+.loss-text { font-size: 12px; color: #7f1d1d; line-height: 1.5; }
+
+/* COST SECTION */
+.cost-main {
+  background: var(--navy); border-radius: 14px;
+  padding: 28px 32px; margin-bottom: 16px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;
+}
+.cost-left .eyebrow { font-size: 11px; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .08em; margin-bottom: 8px; }
+.cost-left .price { font-family: 'Sora', sans-serif; font-size: 48px; font-weight: 800; color: var(--gold-light); line-height: 1; }
+.cost-left .price-sub { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 6px; }
+.cost-left .price-note { margin-top: 14px; font-size: 12px; color: rgba(255,255,255,.4); padding: 10px 14px; background: rgba(255,255,255,.07); border-radius: 8px; line-height: 1.5; }
+.cost-right { display: flex; flex-direction: column; gap: 10px; }
+.cost-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: rgba(255,255,255,.07); border-radius: 8px; }
+.cost-item-lbl { font-size: 12px; color: rgba(255,255,255,.6); }
+.cost-item-val { font-size: 14px; font-weight: 600; color: #fff; }
+.cost-item-val.green { color: #4ade80; }
+
+/* COMPARATIVO */
+.compare-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.compare-table th { background: var(--navy); color: #fff; padding: 10px 14px; text-align: left; font-size: 11px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
+.compare-table th.highlight { background: var(--gold); color: var(--navy); }
+.compare-table td { padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+.compare-table tr:last-child td { border-bottom: none; }
+.compare-table tr:nth-child(even) td { background: #faf8f3; }
+.tick { color: var(--ok); font-weight: 600; }
+.cross { color: var(--danger); }
+.partial { color: var(--warn); }
+.highlight-col { background: #fffbf0 !important; border-left: 2px solid var(--gold); border-right: 2px solid var(--gold); }
+
+/* BENEFÍCIOS */
+.benefit-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 20px;
+}
+.benefit-icon { font-size: 28px; margin-bottom: 10px; }
+.benefit-title { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+.benefit-text { font-size: 12px; color: var(--gray); line-height: 1.6; }
+
+/* ENTREGÁVEIS */
+.entregavel {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 14px 0; border-bottom: 1px solid var(--line);
+}
+.entregavel:last-child { border-bottom: none; }
+.entregavel-num {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--navy); color: var(--gold);
+  font-family: 'Sora', sans-serif; font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.entregavel-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+.entregavel-text { font-size: 12px; color: var(--gray); }
+.entregavel-tag {
+  display: inline-block; margin-top: 6px;
+  font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 10px;
+  background: #e1f5ee; color: var(--ok);
+}
+.entregavel-tag.blue { background: #dbeafe; color: var(--blue); }
+.entregavel-tag.gold { background: #fef3cd; color: var(--warn); }
+
+/* KPIs */
+.kpi-card {
+  background: #fff; border: 1px solid var(--line);
+  border-radius: 12px; padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.kpi-icon { font-size: 20px; }
+.kpi-label { font-size: 11px; color: var(--gray); text-transform: uppercase; letter-spacing: .06em; font-weight: 600; }
+.kpi-val { font-family: 'Sora', sans-serif; font-size: 24px; font-weight: 700; color: var(--navy); }
+.kpi-note { font-size: 11px; color: var(--gray); }
+
+/* CHART */
+.chart-wrap { position: relative; height: 220px; }
+
+/* FUNIL VISUAL */
+.funnel {
+  display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 16px 0;
+}
+.funnel-step {
+  height: 40px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 14px; font-size: 12px; font-weight: 500; color: #fff;
+  transition: width .3s;
+}
+.funnel-step span { font-size: 11px; opacity: .8; }
+
+/* ALERT */
+.alert {
+  border-radius: 10px; padding: 14px 18px;
+  font-size: 13px; display: flex; gap: 10px; align-items: flex-start;
+  margin-bottom: 14px;
+}
+.alert-danger { background: #fef2f2; border-left: 4px solid var(--danger); color: #7f1d1d; }
+.alert-ok { background: #f0fdf4; border-left: 4px solid var(--ok); color: #14532d; }
+.alert b { font-weight: 600; }
+
+/* FOOTER */
+.footer {
+  background: var(--navy); padding: 28px 40px;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;
+}
+.footer-l { font-size: 12px; color: rgba(255,255,255,.4); }
+.footer-r { font-size: 12px; color: rgba(255,255,255,.4); }
+
+@media(max-width:768px){
+  .g2,.g3,.g4,.loss-grid,.hero-stats { grid-template-columns: 1fr 1fr; }
+  .cost-main { grid-template-columns: 1fr; }
+  .hero-stats { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">AriLub Distribuidora · Proposta Comercial · 27/08/2026</div>
+  <h1 class="hero-title">Ativar o que já está <span>pago e dormindo</span></h1>
+  <p class="hero-sub">A AriLub já tem um CRM Avançado contratado. A plataforma está subutilizada, sem método e sem equipe estruturada. Isso tem custo real — em leads perdidos, em clientes que não voltam e em receita que não entra.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="hero-stat-val warn">896</div>
+      <div class="hero-stat-lbl">Leads no funil atual</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val danger" id="pct">94%</div>
+      <div class="hero-stat-lbl">Sem tarefa atribuída</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-val pos">US$ 25</div>
+      <div class="hero-stat-lbl">Por usuário/mês na Kommo</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<!-- O QUE ESTÁ SENDO PERDIDO -->
+<div class="section">
+  <div class="section-label">Diagnóstico</div>
+  <div class="section-title">O que está sendo perdido hoje</div>
+
+  <div class="alert alert-danger">
+    <span>⚠</span>
+    <span><b>A Kommo já está contratada e paga.</b> Mas 94% dos leads não têm nenhuma tarefa, ninguém vai atrás dos clientes que sumiram e o novo vendedor não tem acesso ao funil. Cada dia sem método é receita que não volta.</span>
+  </div>
+
+  <div class="loss-grid">
+    <div class="loss-card">
+      <div class="loss-icon">📱</div>
+      <div class="loss-title">Atendimento centralizado</div>
+      <div class="loss-text">Todos os clientes chegam pelo celular pessoal da Fabiana. Sem fila, sem controle, sem histórico. Se ela não responder — o cliente some.</div>
+    </div>
+    <div class="loss-card">
+      <div class="loss-icon">💸</div>
+      <div class="loss-title">Clientes que não voltam</div>
+      <div class="loss-text">46% dos clientes compraram uma vez e nunca mais voltaram. Ninguém foi atrás. A plataforma tem os dados — mas ninguém usa.</div>
+    </div>
+    <div class="loss-card">
+      <div class="loss-icon">🤖</div>
+      <div class="loss-title">Automações não ativadas</div>
+      <div class="loss-text">Boas-vindas automático, IA, roteamento, follow-up — tudo disponível na Kommo Avançado. Nada configurado. A ferramenta trabalha menos do que poderia.</div>
+    </div>
+    <div class="loss-card">
+      <div class="loss-icon">👤</div>
+      <div class="loss-title">Novo vendedor travado</div>
+      <div class="loss-text">O Érico foi cadastrado como usuário gratuito — e não pode ser responsável por lead, não entra em automação, não tem funil próprio. Inoperante do jeito atual.</div>
+    </div>
+    <div class="loss-card">
+      <div class="loss-icon">📊</div>
+      <div class="loss-title">Zero visibilidade gerencial</div>
+      <div class="loss-text">Sem relatório de atendimento por vendedor, sem taxa de conversão, sem motivo de perda registrado. O Sr. Ari decide sem dado.</div>
+    </div>
+    <div class="loss-card">
+      <div class="loss-icon">🔁</div>
+      <div class="loss-title">Funil órfão — 268 leads</div>
+      <div class="loss-text">"Funil Flávio" com 268 leads sem responsável ativo. Esses contatos existem na plataforma e ninguém está trabalhando com eles.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CUSTO -->
+<div class="section">
+  <div class="section-label">Investimento</div>
+  <div class="section-title">Quanto custa resolver isso</div>
+
+  <div class="cost-main">
+    <div class="cost-left">
+      <div class="eyebrow">Custo para adicionar o Érico agora</div>
+      <div class="price">US$ 380</div>
+      <div class="price-sub">Pagamento único · proporcional até nov/2027</div>
+      <div class="price-note">
+        ⓘ O valor de US$ 380 é proporcional ao período restante da assinatura atual (até 27/11/2027 — aproximadamente 15 meses). Após a renovação, o custo recorrente é de apenas US$ 25/mês por licença.
+      </div>
+    </div>
+    <div class="cost-right">
+      <div class="cost-item">
+        <span class="cost-item-lbl">Plano atual (Fabiana)</span>
+        <span class="cost-item-val">US$ 25/mês</span>
+      </div>
+      <div class="cost-item">
+        <span class="cost-item-lbl">Licença adicional (Érico)</span>
+        <span class="cost-item-val">US$ 25/mês</span>
+      </div>
+      <div class="cost-item">
+        <span class="cost-item-lbl">Total recorrente após renovação</span>
+        <span class="cost-item-val green">US$ 50/mês (~R$ 285)</span>
+      </div>
+      <div class="cost-item">
+        <span class="cost-item-lbl">Custo hoje (proporcional)</span>
+        <span class="cost-item-val">US$ 380 (~R$ 2.166)</span>
+      </div>
+      <div class="cost-item">
+        <span class="cost-item-lbl">Custo por lead reativado (meta 10)</span>
+        <span class="cost-item-val green">R$ 216 por cliente</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARATIVO -->
+<div class="section">
+  <div class="section-label">Comparativo</div>
+  <div class="section-title">Kommo vs outras plataformas</div>
+
+  <div class="card" style="padding:0;overflow:hidden;">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Recurso</th>
+          <th class="highlight">Kommo Avançado</th>
+          <th>Respond.io</th>
+          <th>Wati</th>
+          <th>HubSpot Free</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>CRM nativo completo</td>
+          <td class="highlight-col"><span class="tick">✓ Sim</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="cross">✗ Não</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+        </tr>
+        <tr>
+          <td>WhatsApp API integrado</td>
+          <td class="highlight-col"><span class="tick">✓ Nativo</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="cross">✗ Não</span></td>
+        </tr>
+        <tr>
+          <td>Multi-atendentes mesmo número</td>
+          <td class="highlight-col"><span class="tick">✓ Sim</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="cross">✗ Não</span></td>
+        </tr>
+        <tr>
+          <td>Automação de funil</td>
+          <td class="highlight-col"><span class="tick">✓ Avançada</span></td>
+          <td><span class="tick">✓ Avançada</span></td>
+          <td><span class="partial">⚠ Básica</span></td>
+          <td><span class="partial">⚠ Limitada</span></td>
+        </tr>
+        <tr>
+          <td>App mobile</td>
+          <td class="highlight-col"><span class="tick">✓ iOS + Android</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+        </tr>
+        <tr>
+          <td>IA integrada (Copilot)</td>
+          <td class="highlight-col"><span class="tick">✓ Nativo</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="partial">⚠ Básica</span></td>
+          <td><span class="cross">✗ Não</span></td>
+        </tr>
+        <tr>
+          <td>Relatórios por vendedor</td>
+          <td class="highlight-col"><span class="tick">✓ Completo</span></td>
+          <td><span class="tick">✓ Sim</span></td>
+          <td><span class="partial">⚠ Básico</span></td>
+          <td><span class="partial">⚠ Limitado</span></td>
+        </tr>
+        <tr>
+          <td>Já está contratado</td>
+          <td class="highlight-col"><span class="tick">✓ Sim</span></td>
+          <td><span class="cross">✗ Não</span></td>
+          <td><span class="cross">✗ Não</span></td>
+          <td><span class="cross">✗ Não</span></td>
+        </tr>
+        <tr>
+          <td><strong>Custo mensal/usuário</strong></td>
+          <td class="highlight-col"><strong style="color:var(--ok)">US$ 25</strong></td>
+          <td><strong>US$ 40+</strong></td>
+          <td><strong>US$ 20+</strong></td>
+          <td><strong>US$ 0 (limitado)</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="margin-top:12px;" class="alert alert-ok">
+    <span>✓</span>
+    <span><b>Conclusão:</b> A Kommo entrega o mesmo conjunto de funcionalidades das plataformas concorrentes por US$ 25/usuário/mês — e já está contratada. Adicionar o Érico é a decisão mais barata e mais rápida disponível.</span>
+  </div>
+</div>
+
+<!-- BENEFÍCIOS -->
+<div class="section">
+  <div class="section-label">Benefícios</div>
+  <div class="section-title">O que muda imediatamente</div>
+  <div class="g3">
+    <div class="benefit-card">
+      <div class="benefit-icon">📋</div>
+      <div class="benefit-title">Funil próprio para o Érico</div>
+      <div class="benefit-text">O Érico opera com funil independente, leads atribuídos só a ele, histórico completo e métricas separadas da Fabiana.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🔄</div>
+      <div class="benefit-title">Atendimento distribuído</div>
+      <div class="benefit-text">Clientes entram pelo número corporativo e são distribuídos automaticamente. Nenhum lead fica sem resposta por mais de 15 minutos.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🤖</div>
+      <div class="benefit-title">Automações ativadas</div>
+      <div class="benefit-text">Boas-vindas automático, roteamento por perfil de cliente, follow-up agendado e IA Copilot para sugestão de resposta.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">📊</div>
+      <div class="benefit-title">Visibilidade total</div>
+      <div class="benefit-text">Relatório diário de atendimentos, taxa de conversão por vendedor, tempo médio de resposta e motivo de perda registrado.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">🎯</div>
+      <div class="benefit-title">Reativação dos inativos</div>
+      <div class="benefit-text">98 clientes que compraram 1x e sumiram. Com o Érico ativo e a Kommo estruturada, iniciam os contatos de reativação na semana 1.</div>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">💼</div>
+      <div class="benefit-title">Funil Flávio aproveitado</div>
+      <div class="benefit-text">268 leads órfãos são migrados para a carteira do Érico. Contatos que já existem e nunca foram trabalhados com método.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ENTREGÁVEIS -->
+<div class="section">
+  <div class="section-label">O que será feito</div>
+  <div class="section-title">Entregáveis — sequência de implantação</div>
+  <div class="card">
+    <div class="entregavel">
+      <div class="entregavel-num">1</div>
+      <div>
+        <div class="entregavel-title">Licença paga do Érico ativada na Kommo</div>
+        <div class="entregavel-text">Migração do usuário gratuito para pago. Érico passa a ter funil próprio, acesso ao painel, criação de tarefas e entrada nas automações.</div>
+        <span class="entregavel-tag">Imediato · após pagamento</span>
+      </div>
+    </div>
+    <div class="entregavel">
+      <div class="entregavel-num">2</div>
+      <div>
+        <div class="entregavel-title">Funil do Érico configurado</div>
+        <div class="entregavel-text">Criação do funil de vendas do Érico com as etapas do processo comercial: Novo contato → Qualificação → Cotação enviada → Negociação → Fechado / Perdido.</div>
+        <span class="entregavel-tag blue">Dia 1</span>
+      </div>
+    </div>
+    <div class="entregavel">
+      <div class="entregavel-num">3</div>
+      <div>
+        <div class="entregavel-title">WhatsApp corporativo integrado à Kommo</div>
+        <div class="entregavel-text">Conexão do número corporativo da AriLub à Kommo via API. Fabiana e Érico atendem pelo mesmo número, com fila organizada e histórico centralizado.</div>
+        <span class="entregavel-tag blue">Dia 1–2</span>
+      </div>
+    </div>
+    <div class="entregavel">
+      <div class="entregavel-num">4</div>
+      <div>
+        <div class="entregavel-title">Automações básicas ativadas</div>
+        <div class="entregavel-text">Boas-vindas automático, transferência para atendente após 15 min sem resposta, follow-up automático para cotações sem retorno em 48h.</div>
+        <span class="entregavel-tag blue">Dia 2–3</span>
+      </div>
+    </div>
+    <div class="entregavel">
+      <div class="entregavel-num">5</div>
+      <div>
+        <div class="entregavel-title">Carteira de reativação carregada no Érico</div>
+        <div class="entregavel-text">Top 20 clientes inativos (jan–jun 2026) migrados para o funil do Érico com script de abordagem definido. Reativação começa na semana 1.</div>
+        <span class="entregavel-tag gold">Semana 1</span>
+      </div>
+    </div>
+    <div class="entregavel">
+      <div class="entregavel-num">6</div>
+      <div>
+        <div class="entregavel-title">Painel de controle gerencial configurado</div>
+        <div class="entregavel-text">Dashboard com os KPIs do MVP: contatos/semana por vendedor, taxa de conversão, ticket médio, clientes reativados e motivos de perda.</div>
+        <span class="entregavel-tag gold">Semana 1–2</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- KPIs -->
+<div class="section">
+  <div class="section-label">Controle e Resultado</div>
+  <div class="section-title">O que o Sr. Ari vai ver todo dia</div>
+  <div class="g4" style="margin-bottom:20px;">
+    <div class="kpi-card">
+      <div class="kpi-icon">📞</div>
+      <div class="kpi-label">Contatos/semana</div>
+      <div class="kpi-val">20+</div>
+      <div class="kpi-note">Meta por vendedor</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">🎯</div>
+      <div class="kpi-label">Taxa de conversão</div>
+      <div class="kpi-val">30%+</div>
+      <div class="kpi-note">Cotação → venda fechada</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">💰</div>
+      <div class="kpi-label">Ticket médio</div>
+      <div class="kpi-val">R$1.831</div>
+      <div class="kpi-note">Meta mínima por pedido</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-icon">🔁</div>
+      <div class="kpi-label">Inativos reativados</div>
+      <div class="kpi-val">10</div>
+      <div class="kpi-note">Em 30 dias · meta Lab 3</div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <div class="card">
+      <div style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:14px;">Resultado estimado — Lab 3 (30 dias)</div>
+      <div class="chart-wrap"><canvas id="chartResult"></canvas></div>
+    </div>
+    <div class="card">
+      <div style="font-size:13px;font-weight:600;color:var(--navy);margin-bottom:14px;">Funil do Érico — etapas e volume esperado</div>
+      <div class="funnel" id="funnel"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ROI -->
+<div class="section">
+  <div class="section-label">Retorno</div>
+  <div class="section-title">O investimento se paga em quanto tempo</div>
+  <div class="g3">
+    <div class="card" style="text-align:center;padding:28px 20px;">
+      <div style="font-size:11px;color:var(--gray);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Investimento hoje</div>
+      <div style="font-family:'Sora',sans-serif;font-size:36px;font-weight:700;color:var(--navy);">R$ 2.166</div>
+      <div style="font-size:12px;color:var(--gray);margin-top:4px;">US$ 380 proporcional · até nov/2027</div>
+    </div>
+    <div class="card" style="text-align:center;padding:28px 20px;border-color:var(--ok);background:#f0fdf4;">
+      <div style="font-size:11px;color:var(--ok);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:8px;">Receita adicional estimada</div>
+      <div style="font-family:'Sora',sans-serif;font-size:36px;font-weight:700;color:var(--ok);">R$ 18.310</div>
+      <div style="font-size:12px;color:var(--ok);margin-top:4px;">10 inativos × R$1.831 ticket médio · 30 dias</div>
+    </div>
+    <div class="card" style="text-align:center;padding:28px 20px;border-color:var(--gold);background:#fffbf0;">
+      <div style="font-size:11px;color:var(--gold);text-transform:uppercase;letter-spacing:.06em;font-weight:600;margin-bottom:8px;">Retorno sobre investimento</div>
+      <div style="font-family:'Sora',sans-serif;font-size:36px;font-weight:700;color:var(--gold);">8,5x</div>
+      <div style="font-size:12px;color:var(--warn);margin-top:4px;">Apenas com reativação de inativos no primeiro mês</div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-l">AriLub Distribuidora · Proposta de Ativação Kommo · 27/08/2026</div>
+  <div class="footer-r">Severo Brito Jr. · REVIZI — Estruturação Comercial</div>
+</div>
+
+<script>
+// CHART RESULTADO
+new Chart(document.getElementById('chartResult'), {
+  type: 'bar',
+  data: {
+    labels: ['Sem ação\n(hoje)', 'Com reativação\n(30 dias)', 'Com equipe\ncompleta'],
+    datasets: [{
+      label: 'Receita estimada',
+      data: [0, 18310, 54930],
+      backgroundColor: ['#fecaca', '#86efac', '#4ade80'],
+      borderRadius: 8,
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: i => 'R$ ' + i.raw.toLocaleString('pt-BR') } }
+    },
+    scales: {
+      y: {
+        ticks: { callback: v => 'R$' + (v/1000).toFixed(0) + 'k', font: { size: 11 } },
+        grid: { color: 'rgba(0,0,0,0.05)' }
+      },
+      x: { ticks: { font: { size: 10 } }, grid: { display: false } }
+    }
+  }
+});
+
+// FUNIL VISUAL
+const steps = [
+  { label: 'Contatos realizados', val: '80/mês', w: 100, bg: '#1F2D5C' },
+  { label: 'Qualificados', val: '56', w: 70, bg: '#2d4a8f' },
+  { label: 'Cotação enviada', val: '40', w: 55, bg: '#B8863B' },
+  { label: 'Em negociação', val: '20', w: 38, bg: '#d4a857' },
+  { label: 'Fechados', val: '12', w: 22, bg: '#16a34a' },
+];
+const f = document.getElementById('funnel');
+steps.forEach(s => {
+  const div = document.createElement('div');
+  div.className = 'funnel-step';
+  div.style.cssText = `width:${s.w}%;background:${s.bg};`;
+  div.innerHTML = `<span>${s.label}</span><span>${s.val}</span>`;
+  f.appendChild(div);
+});
+</script>
+</body>
+</html>
