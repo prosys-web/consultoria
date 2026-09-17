@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PIF 2.0 — AriLub Distribuidora</title>
+<style>
+:root{
+  --navy:#21386f; --navy2:#172a58; --bg:#f6f3ed; --card:#fff;
+  --text:#17213b; --muted:#6b7280; --line:#ddd7cc;
+  --blue:#2f80d8; --green:#18a66a; --yellow:#d89b17; --red:#d64242; --gold:#c9973d;
+}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif}
+header{background:var(--navy);color:#fff;padding:14px 28px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:13px;align-items:center}.logo{width:36px;height:36px;border-radius:9px;background:#d5a13e;display:grid;place-items:center;font-weight:800}
+.brand h1{font-size:16px;margin:0 0 4px}.brand small{opacity:.78}.updated{font-size:11px;background:rgba(255,255,255,.14);padding:7px 12px;border-radius:20px}
+nav{background:#fff;border-bottom:1px solid var(--line);padding:0 28px;display:flex;gap:7px;overflow:auto;white-space:nowrap}
+nav button{border:0;background:transparent;padding:14px 13px 11px;cursor:pointer;color:#26334d;border-bottom:3px solid transparent}
+nav button.active{color:var(--navy);font-weight:700;border-bottom-color:var(--gold)}
+main{max-width:1240px;margin:auto;padding:22px 28px 50px}.tab{display:none}.tab.active{display:block}
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(4,1fr)}.g6{grid-template-columns:repeat(6,1fr)}.g2{grid-template-columns:1.55fr 1fr}
+.card{background:var(--card);border:1px solid var(--line);border-radius:9px;padding:16px 18px;box-shadow:0 1px 1px rgba(0,0,0,.02)}
+.metric{border-left:4px solid var(--blue)}.metric.green{border-left-color:var(--green)}.metric.red{border-left-color:var(--red)}.metric.yellow{border-left-color:var(--yellow)}.metric.gold{border-left-color:var(--gold)}
+.label{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#47526a}.value{font-size:22px;font-weight:800;color:var(--navy);margin:9px 0 5px}.sub{font-size:11px;color:var(--muted);line-height:1.35}
+h2{font-size:16px;color:var(--navy);margin:0 0 5px} h3{font-size:13px;margin:0 0 4px;color:var(--navy)} .section{margin-top:18px}
+.periods{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.period{cursor:pointer;text-align:center}.period .value{font-size:17px}.period.ok{border-top:4px solid var(--green)}.period.warn{border-top:4px solid var(--yellow)}.period.danger{border-top:4px solid var(--red)}
+.legend{display:flex;gap:15px;font-size:11px;color:var(--muted);margin-top:8px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.chart{height:270px;position:relative;margin-top:12px;border-left:1px solid #ccc;border-bottom:1px solid #ccc;background:repeating-linear-gradient(to bottom,transparent 0,transparent 53px,#ece8e0 54px)}
+.chart svg{width:100%;height:100%;overflow:visible}.limit{stroke:var(--red);stroke-dasharray:7 5;stroke-width:1.5}.cash{fill:none;stroke:var(--blue);stroke-width:4}.area{fill:rgba(47,128,216,.08)}
+.alert{border-left:5px solid var(--red)}.alert.ok{border-left-color:var(--green)}.alert.warn{border-left-color:var(--yellow)}
+.alert-title{font-weight:800;color:var(--red);font-size:13px}.ok .alert-title{color:var(--green)}.warn .alert-title{color:#a66f00}
+table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;color:#596276;font-size:10px;text-transform:uppercase;letter-spacing:.5px;padding:9px;border-bottom:1px solid var(--line)}td{padding:10px 9px;border-bottom:1px solid #eee}.right{text-align:right}.click{cursor:pointer}
+.timeline{border-left:2px solid #ccd3df;margin:16px 0 0 12px;padding-left:22px}.event{position:relative;margin:0 0 19px}.event:before{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--blue);left:-28px;top:3px}.event.out:before{background:var(--red)}.event.in:before{background:var(--green)}
+.badge{display:inline-block;padding:4px 8px;border-radius:12px;font-size:10px;background:#eef2f7;color:#47526a}.badge.green{background:#e7f7ef;color:#087848}.badge.red{background:#fdeaea;color:#b42323}.badge.yellow{background:#fff4d9;color:#946400}
+.window{height:18px;border-radius:12px;background:linear-gradient(90deg,var(--green) 0 55%,var(--yellow) 55% 78%,var(--red) 78%);margin:15px 0}
+.controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.controls input{width:70px;padding:7px;border:1px solid var(--line);border-radius:6px}
+.note{background:#fff;border:1px dashed #cfc7ba;border-radius:8px;padding:12px;font-size:11px;color:var(--muted)}
+.modal{display:none;position:fixed;inset:0;background:rgba(10,20,40,.55);z-index:20;padding:5vh 5vw}.modal.open{display:block}.modal-box{background:#fff;max-width:900px;margin:auto;border-radius:10px;padding:22px;max-height:90vh;overflow:auto}.close{float:right;border:0;background:#eee;border-radius:6px;padding:6px 10px;cursor:pointer}
+footer{font-size:10px;color:#7a8190;text-align:center;padding:25px}
+@media(max-width:900px){.g4,.g6,.g2,.periods{grid-template-columns:1fr 1fr}header{align-items:flex-start;gap:10px}.updated{display:none}}
+@media(max-width:560px){.g4,.g6,.g2,.periods{grid-template-columns:1fr}main{padding:16px}nav{padding:0 10px}}
+</style>
+
+<style id="pif-final-enhancements">
+.pif-period-wrap{margin:16px 0 20px;padding:14px 16px;border:1px solid rgba(148,163,184,.25);border-radius:14px;background:rgba(255,255,255,.035)}
+.pif-period-title{font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.68;margin-bottom:10px}
+.pif-periods{display:flex;gap:8px;flex-wrap:wrap}
+.pif-period-btn{border:1px solid rgba(148,163,184,.32);background:transparent;color:inherit;border-radius:999px;padding:8px 13px;font-weight:700;cursor:pointer}
+.pif-period-btn.active{background:#fff;color:#111827;border-color:#fff}
+.pif-timeline-enhanced{margin-top:18px}
+.pif-timeline-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:14px}
+.pif-timeline-bars{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(62px,1fr);gap:8px;overflow-x:auto;padding:8px 2px 14px}
+.pif-day{min-height:170px;border:1px solid rgba(148,163,184,.22);border-radius:12px;padding:9px;display:flex;flex-direction:column;justify-content:flex-end;cursor:pointer;background:rgba(255,255,255,.025)}
+.pif-day:hover{border-color:rgba(255,255,255,.55)}
+.pif-day-date{font-size:11px;opacity:.72;margin-bottom:7px;text-align:center}
+.pif-bars{height:95px;display:flex;align-items:flex-end;justify-content:center;gap:5px}
+.pif-bar{width:12px;border-radius:4px 4px 0 0;min-height:2px}
+.pif-bar-in{background:#22c55e}.pif-bar-out{background:#ef4444}
+.pif-day-balance{font-size:11px;font-weight:700;text-align:center;margin-top:7px}
+.pif-timeline-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;opacity:.78}
+.pif-dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.pif-events{margin-top:12px;overflow:auto}
+.pif-events table{width:100%;border-collapse:collapse;font-size:12px}
+.pif-events th,.pif-events td{padding:9px 8px;border-bottom:1px solid rgba(148,163,184,.18);text-align:left;white-space:nowrap}
+.pif-events td.num{text-align:right;font-variant-numeric:tabular-nums}
+.pif-day-detail{margin-top:12px;padding:12px 14px;border:1px solid rgba(148,163,184,.22);border-radius:12px;display:none}
+@media(max-width:720px){.pif-period-btn{padding:7px 10px}.pif-day{min-height:150px}}
+</style>
+
+
+<style id="pif-import-ready-css">
+.pif-import-status{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:10px 0 16px;font-size:12px}
+.pif-import-pill{padding:6px 10px;border:1px solid rgba(148,163,184,.28);border-radius:999px;background:rgba(255,255,255,.035)}
+.pif-import-actions{display:flex;gap:8px;flex-wrap:wrap}
+.pif-import-btn{border:1px solid rgba(148,163,184,.35);background:transparent;color:inherit;padding:7px 11px;border-radius:9px;cursor:pointer;font-weight:700}
+.pif-import-btn:hover{border-color:rgba(255,255,255,.65)}
+.pif-projection-note{font-size:11px;opacity:.72}
+</style>
+
+
+<style id="pif-v21-css">
+#pifReserveCard{border:1px solid rgba(148,163,184,.28);border-radius:14px;padding:14px 16px;margin:10px 0 16px;background:rgba(255,255,255,.035)}
+#pifReserveCard .v{font-size:24px;font-weight:800;margin-top:4px}
+#pifReserveCard .s{font-size:11px;opacity:.68;margin-top:5px}
+.pif-filtered-summary{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:10px;margin:10px 0 18px}
+.pif-filtered-summary>div{border:1px solid rgba(148,163,184,.22);border-radius:12px;padding:12px;background:rgba(255,255,255,.025)}
+.pif-filtered-summary small{display:block;opacity:.68;margin-bottom:5px}.pif-filtered-summary b{font-size:18px}
+@media(max-width:720px){.pif-filtered-summary{grid-template-columns:1fr}}
+</style>
+
+</head>
+<body>
+<header>
+ <div class="brand"><div class="logo">AL</div><div><h1>Painel de Inteligência Financeira</h1><small>AriLub Distribuidora Ltda. · PIF 2.0</small></div></div>
+ <div class="updated" id="updated">Modo demonstração · aguardando carga real</div>
+</header>
+
+<div class="pif-import-status" id="pifImportStatus">
+  <span class="pif-import-pill"><b>Fonte:</b> Shop Control 9</span>
+  <span class="pif-import-pill"><b>Posição:</b> <span id="pifDataBase">—</span></span>
+  <span class="pif-import-pill"><b>Carga:</b> <span id="pifCargaStatus">aguardando base</span></span>
+  <span class="pif-projection-note">Projeção financeira: em validação/reconciliação com o Saldo Futuro do Shop9.</span>
+  <span class="pif-import-actions">
+    <button class="pif-import-btn" id="pifLoadJsonBtn" type="button">IMPORTAR JSON</button>
+    <input id="pifJsonFile" type="file" accept=".json,application/json" hidden>
+  </span>
+</div>
+
+
+
+<div id="pifCanonicalBalances" class="pif-filtered-summary">
+ <div><small>SALDO CONSOLIDADO</small><b id="pifCanonicalConsolidated">R$ 357.866,36</b><small>Inclui Reserva Financeira BNB</small></div>
+ <div><small>RESERVA FINANCEIRA — BNB</small><b id="pifCanonicalReserve">R$ 320.000,00</b><small>Exclusiva da disponibilidade e projeções</small></div>
+ <div><small>DISPONIBILIDADE OPERACIONAL</small><b id="pifCanonicalOperational">R$ 37.866,36</b><small>Saldo Consolidado − Reserva BNB</small></div>
+</div>
+
+<div id="pifReserveCard">
+  <small>RESERVA FINANCEIRA — BNB</small>
+  <div class="v" id="pifReserveValue">R$ 320.000,00</div>
+  <div class="s">Conta de investimento/reserva. Incluída no Saldo Consolidado; excluída da disponibilidade operacional, projeções e Timeline.</div>
+</div>
+<div class="pif-filtered-summary" id="pifGlobalSummary">
+ <div><small>RECEBÍVEIS NO PERÍODO</small><b id="pifGlobalRec">—</b></div>
+ <div><small>PAGAMENTOS NO PERÍODO</small><b id="pifGlobalPag">—</b></div>
+ <div><small>DISPONIBILIDADE OPERACIONAL PROJETADA</small><b id="pifGlobalOp">—</b></div>
+</div>
+
+<div class="pif-period-wrap" id="pifGlobalPeriod">
+  <div class="pif-period-title">Período de análise</div>
+  <div class="pif-periods">
+    <button class="pif-period-btn active" data-days="0">HOJE</button>
+    <button class="pif-period-btn" data-days="7">7 DIAS</button>
+    <button class="pif-period-btn" data-days="15">15 DIAS</button>
+    <button class="pif-period-btn" data-days="30">30 DIAS</button>
+    <button class="pif-period-btn" data-days="60">60 DIAS</button>
+    <button class="pif-period-btn" data-days="90">90 DIAS</button>
+  </div>
+</div>
+
+<nav id="nav">
+ <button class="active" data-tab="dashboard">Dashboard</button><button data-tab="fluxo">Fluxo Projetado</button>
+ <button data-tab="timeline">Timeline</button><button data-tab="recebiveis">Recebíveis</button>
+ <button data-tab="pagamentos">Pagamentos</button><button data-tab="janelas">Janelas de Aplicação</button>
+ <button data-tab="contas">Contas</button><button data-tab="insights">Insights Executivos</button>
+</nav>
+<main>
+<section class="tab active" id="dashboard">
+ <div class="grid g4">
+  <div class="card metric"><div class="label">Saldo consolidado</div><div class="value" data-kpi="saldo">R$ 590.411</div><div class="sub">Total das contas monitoradas</div></div>
+  <div class="card metric green"><div class="label">Disponibilidade operacional</div><div class="value">R$ 574.524</div><div class="sub">Recursos operacionais disponíveis</div></div>
+  <div class="card metric green click" onclick="openModal('Recebíveis','recebiveis')"><div class="label">Total a receber</div><div class="value">R$ 310.000</div><div class="sub">Recebimentos futuros registrados</div></div>
+  <div class="card metric red click" onclick="openModal('Pagamentos','pagamentos')"><div class="label">Total a pagar</div><div class="value">R$ 265.000</div><div class="sub">Pagamentos futuros registrados</div></div>
+ </div>
+ <div class="grid g4 section">
+  <div class="card metric gold"><div class="label">BNB · Reserva estratégica</div><div class="value">R$ 402.204</div><div class="sub">Posição de referência</div></div>
+  <div class="card metric gold"><div class="label">Bradesco</div><div class="value">R$ 127.980</div><div class="sub">Conta operacional</div></div>
+  <div class="card metric gold"><div class="label">Banco Itaú</div><div class="value">R$ 30.471</div><div class="sub">Conta operacional</div></div>
+  <div class="card metric gold"><div class="label">Depósito bancário</div><div class="value">R$ 29.756</div><div class="sub">Conta operacional</div></div>
+ </div>
+ <div class="section"><h2>Posição projetada</h2><div class="sub">Visão rápida do saldo ao longo do tempo</div></div>
+ <div class="periods section">
+  <div class="card period ok"><div class="label">Hoje</div><div class="value">R$ 574 mil</div><div class="sub">posição atual</div></div>
+  <div class="card period ok"><div class="label">7 dias</div><div class="value">R$ 531 mil</div><div class="sub">+ 82 / − 125 mil</div></div>
+  <div class="card period ok"><div class="label">15 dias</div><div class="value">R$ 497 mil</div><div class="sub">+ 148 / − 225 mil</div></div>
+  <div class="card period warn"><div class="label">30 dias</div><div class="value">R$ 418 mil</div><div class="sub">atenção</div></div>
+  <div class="card period warn"><div class="label">60 dias</div><div class="value">R$ 356 mil</div><div class="sub">aproximação do limite</div></div>
+  <div class="card period danger"><div class="label">90 dias</div><div class="value">R$ 289 mil</div><div class="sub">pressão simulada</div></div>
+ </div>
+ <div class="grid g2 section">
+  <div class="card"><h2>Fluxo de caixa projetado — 90 dias</h2><div class="sub">Saldo diário projetado · dados ilustrativos até a primeira carga real</div>
+   <div class="chart"><svg viewBox="0 0 700 260" preserveAspectRatio="none">
+    <path class="area" d="M0 35 L80 48 L155 62 L235 75 L310 105 L390 118 L470 150 L550 176 L625 195 L700 215 L700 260 L0 260 Z"/>
+    <line class="limit" x1="0" y1="190" x2="700" y2="190"/><text x="515" y="184" font-size="11" fill="#d64242">Limite operacional</text>
+    <polyline class="cash" points="0,35 80,48 155,62 235,75 310,105 390,118 470,150 550,176 625,195 700,215"/>
+    <g fill="#2f80d8"><circle cx="0" cy="35" r="4"/><circle cx="155" cy="62" r="4"/><circle cx="310" cy="105" r="4"/><circle cx="470" cy="150" r="4"/><circle cx="700" cy="215" r="4"/></g>
+   </svg></div>
+   <div class="legend"><span><i class="dot" style="background:#2f80d8"></i>Saldo projetado</span><span><i class="dot" style="background:#d64242"></i>Limite operacional</span></div>
+  </div>
+  <div class="card alert"><div class="alert-title">ATENÇÃO — PRESSÃO DE CAIXA PREVISTA</div><div class="value">22/12/2026</div>
+   <div class="sub">Exemplo visual. A data real será calculada após a carga dos títulos.</div><hr style="border:0;border-top:1px solid #eee;margin:16px 0">
+   <div class="label">Menor saldo projetado</div><div class="value" style="font-size:18px">R$ 289.000</div>
+   <div class="label">Alerta antecipado</div><div style="margin-top:6px"><span class="badge red">5 dias antes</span></div>
+  </div>
+ </div>
+ <div class="grid g2 section">
+  <div class="card"><h2>Top 10 recebimentos</h2><table id="topReceber"></table></div>
+  <div class="card"><h2>Top 10 pagamentos</h2><table id="topPagar"></table></div>
+ </div>
+</section>
+
+<section class="tab" id="fluxo"><div class="grid g4"><div class="card metric"><div class="label">Saldo inicial</div><div class="value">R$ 574.524</div></div><div class="card metric green"><div class="label">Entradas previstas</div><div class="value">R$ 310.000</div></div><div class="card metric red"><div class="label">Saídas previstas</div><div class="value">R$ 265.000</div></div><div class="card metric"><div class="label">Saldo final projetado</div><div class="value">R$ 619.524</div></div></div><div class="card section"><h2>Evolução diária do caixa</h2><div class="sub">Base auditável do gráfico: saldo anterior + recebimentos − pagamentos.</div><div id="fluxoTabela"></div></div></section>
+<section class="tab" id="timeline"><div class="card"><h2>Timeline financeira</h2><div class="sub">Principais eventos futuros que alteram o caixa.</div><div class="timeline" id="timelineList"></div></div></section>
+<section class="tab" id="recebiveis"><div class="card"><h2>Recebíveis</h2><div class="sub">Total registrado, sem desconto automático de risco.</div><div id="recebTabela"></div></div></section>
+<section class="tab" id="pagamentos"><div class="card"><h2>Pagamentos</h2><div class="sub">Compromissos futuros registrados.</div><div id="pagTabela"></div></div></section>
+<section class="tab" id="janelas"><div class="grid g4"><div class="card metric green"><div class="label">Recurso disponível</div><div class="value">R$ 172.320</div></div><div class="card metric green"><div class="label">Início da janela</div><div class="value" style="font-size:17px">Hoje</div></div><div class="card metric yellow"><div class="label">Fim seguro estimado</div><div class="value" style="font-size:17px">15/11</div></div><div class="card metric red"><div class="label">Próxima pressão</div><div class="value" style="font-size:17px">22/12</div></div></div><div class="card section"><h2>Janela de aplicação / CID</h2><div class="window"></div><div class="legend"><span>🟢 janela projetada</span><span>🟡 atenção</span><span>🔴 pressão</span></div><div class="note section">O cálculo definitivo da CID e das janelas será alimentado pelos saldos, recebíveis, pagamentos e limite operacional real.</div></div></section>
+<section class="tab" id="contas"><div class="card"><h2>Posição por conta</h2><table><tr><th>Conta</th><th>Classificação</th><th>Atualização</th><th class="right">Saldo</th></tr><tr><td>BNB</td><td><span class="badge yellow">Reserva estratégica</span></td><td>—</td><td class="right">R$ 402.204</td></tr><tr><td>Bradesco ARILUB</td><td><span class="badge green">Operacional</span></td><td>—</td><td class="right">R$ 127.980</td></tr><tr><td>Banco Itaú</td><td><span class="badge green">Operacional</span></td><td>—</td><td class="right">R$ 30.471</td></tr><tr><td>Depósito bancário</td><td><span class="badge green">Operacional</span></td><td>—</td><td class="right">R$ 29.756</td></tr></table></div></section>
+<section class="tab" id="insights"><div class="grid g2"><div class="card alert ok"><div class="alert-title">LIQUIDEZ</div><p>O painel indicará até quando o caixa projetado permanece acima do limite operacional.</p></div><div class="card alert warn"><div class="alert-title">ATENÇÃO</div><p>Concentrações relevantes de pagamentos serão destacadas automaticamente.</p></div><div class="card alert"><div class="alert-title">ALERTA</div><p>Quando houver insuficiência projetada, serão mostrados data, valor e antecedência do aviso.</p></div><div class="card metric"><h3>INVESTIMENTO</h3><p>As janelas de disponibilidade serão calculadas sem misturar automaticamente reserva estratégica e caixa operacional.</p></div></div></section>
+</main>
+
+<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeModal()">Fechar</button><h2 id="modalTitle"></h2><div id="modalBody"></div></div></div>
+<footer>PIF 2.0 · AriLub Distribuidora · Estrutura preparada para atualização por arquivos e futura integração Shop9</footer>
+<script>
+const recebiveis=[
+ ["Cliente Alfa","20/09/2026","NF 1001",52000],["Cliente Beta","25/09/2026","NF 1002",47000],["Cliente Gama","30/09/2026","NF 1003",42000],["Cliente Delta","05/10/2026","NF 1004",35000],["Cliente Épsilon","12/10/2026","NF 1005",31000],["Cliente Zeta","20/10/2026","NF 1006",28000]
+];
+const pagamentos=[
+ ["Fornecedor A","19/09/2026","Estoque","DOC 501",61000],["Fornecedor B","26/09/2026","Estoque","DOC 502",49000],["Fornecedor C","03/10/2026","Operacional","DOC 503",41000],["Fornecedor D","15/10/2026","Tributos","DOC 504",33000],["Fornecedor E","25/10/2026","Operacional","DOC 505",26000]
+];
+const money=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+function table(data,type){
+ let h='<table><tr>'+(type==='r'?'<th>Cliente</th><th>Vencimento</th><th>Documento</th>':'<th>Fornecedor</th><th>Vencimento</th><th>Categoria</th><th>Documento</th>')+'<th class="right">Valor</th></tr>';
+ data.forEach(r=>{h+='<tr>'+r.slice(0,-1).map(x=>'<td>'+x+'</td>').join('')+'<td class="right"><b>'+money(r[r.length-1])+'</b></td></tr>'}); return h+'</table>';
+}
+document.getElementById('topReceber').innerHTML=table(recebiveis.slice(0,10),'r').replace('<table>','').replace('</table>','');
+document.getElementById('topPagar').innerHTML=table(pagamentos.slice(0,10),'p').replace('<table>','').replace('</table>','');
+document.getElementById('recebTabela').innerHTML=table(recebiveis,'r');
+document.getElementById('pagTabela').innerHTML=table(pagamentos,'p');
+document.getElementById('fluxoTabela').innerHTML='<table><tr><th>Data</th><th class="right">Saldo inicial</th><th class="right">Recebimentos</th><th class="right">Pagamentos</th><th class="right">Saldo projetado</th></tr><tr><td>Hoje</td><td class="right">R$ 574.524</td><td class="right">—</td><td class="right">—</td><td class="right"><b>R$ 574.524</b></td></tr><tr><td>+7 dias</td><td class="right">R$ 574.524</td><td class="right">R$ 82.000</td><td class="right">R$ 125.000</td><td class="right"><b>R$ 531.524</b></td></tr><tr><td>+15 dias</td><td class="right">R$ 531.524</td><td class="right">R$ 66.000</td><td class="right">R$ 100.000</td><td class="right"><b>R$ 497.524</b></td></tr></table>';
+document.getElementById('timelineList').innerHTML=[
+ ['in','20/09','+ R$ 52.000','Cliente Alfa · recebimento'],
+ ['out','26/09','− R$ 49.000','Fornecedor B · pagamento'],
+ ['in','30/09','+ R$ 42.000','Cliente Gama · recebimento'],
+ ['out','03/10','− R$ 41.000','Fornecedor C · pagamento']
+].map(e=>`<div class="event ${e[0]}"><b>${e[1]} — ${e[2]}</b><div class="sub">${e[3]}</div></div>`).join('');
+document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('#nav button').forEach(x=>x.classList.remove('active')); b.classList.add('active');
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active')); document.getElementById(b.dataset.tab).classList.add('active');
+});
+function openModal(title,type){document.getElementById('modalTitle').textContent=title;document.getElementById('modalBody').innerHTML=table(type==='recebiveis'?recebiveis:pagamentos,type==='recebiveis'?'r':'p');document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+</script>
+
+<section class="pif-timeline-enhanced" id="pifTimelineDaily">
+  <div class="pif-timeline-controls">
+    <div>
+      <div class="pif-period-title">Timeline financeira diária</div>
+      <strong id="pifTimelineTitle">Próximos 7 dias</strong>
+    </div>
+    <div class="pif-periods">
+      <button class="pif-period-btn active" data-timeline-days="7">7 DIAS</button>
+      <button class="pif-period-btn" data-timeline-days="15">15 DIAS</button>
+      <button class="pif-period-btn" data-timeline-days="30">30 DIAS</button>
+    </div>
+  </div>
+  <div class="pif-timeline-legend">
+    <span><i class="pif-dot" style="background:#22c55e"></i>Receber</span>
+    <span><i class="pif-dot" style="background:#ef4444"></i>Pagar</span>
+    <span>Saldo = posição projetada após os eventos do dia</span>
+  </div>
+  <div class="pif-timeline-bars" id="pifTimelineBars"></div>
+  <div class="pif-day-detail" id="pifDayDetail"></div>
+  <div class="pif-events" id="pifTimelineEvents"></div>
+</section>
+
+<script id="PIF_DATA" type="application/json">
+{"metadata": {"empresa": "ARILUB DISTRIBUIDORA LTDA", "data_base": "17/09/2026", "origem": "Relatórios Shop Control 9", "versao": "PIF 2.2 - fórmulas financeiras auditadas"}, "contas": [{"Conta": "BNB", "Data posição": "17/09/2026", "Saldo": 484130.14, "Saldo futuro": 484130.14, "Classificacao": "RESERVA", "Saldo_reserva": 320000.0, "Incluir_saldo_consolidado": true, "Incluir_disponibilidade_operacional": false, "Incluir_projecao": false}, {"Conta": "BRADESCO", "Data posição": "17/09/2026", "Saldo": 21232.9, "Saldo futuro": -111465.58}, {"Conta": "SANTANDER", "Data posição": "17/09/2026", "Saldo": 11470.53, "Saldo futuro": 9983.39}, {"Conta": "ITAU", "Data posição": "17/09/2026", "Saldo": 5162.93, "Saldo futuro": 5162.93}], "recebiveis": [{"Emissão": "23/07/2026", "Código Cliente": "112", "Cliente": "Rolitec Comercio Rocha", "Vencimento": "21/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 3303.35}, {"Emissão": "05/08/2026", "Código Cliente": "3541", "Cliente": "PECEM II GERACAO DE", "Vencimento": "19/09/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 450.0}, {"Emissão": "05/08/2026", "Código Cliente": "4006", "Cliente": "R C Construcoes Ltda", "Vencimento": "16/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 513.9}, {"Emissão": "07/08/2026", "Código Cliente": "4343", "Cliente": "Ed Locacoes E Servicos De", "Vencimento": "18/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1521.19}, {"Emissão": "07/08/2026", "Código Cliente": "4343", "Cliente": "Ed Locacoes E Servicos De", "Vencimento": "02/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1521.19}, {"Emissão": "13/08/2026", "Código Cliente": "4179", "Cliente": "Paraipaba Agroindustrial", "Vencimento": "24/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1658.48}, {"Emissão": "13/08/2026", "Código Cliente": "4179", "Cliente": "Paraipaba Agroindustrial", "Vencimento": "08/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1658.48}, {"Emissão": "14/08/2026", "Código Cliente": "2790", "Cliente": "Ok Empreendimentos", "Vencimento": "11/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 593.73}, {"Emissão": "14/08/2026", "Código Cliente": "2790", "Cliente": "Ok Empreendimentos", "Vencimento": "25/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 593.72}, {"Emissão": "14/08/2026", "Código Cliente": "2790", "Cliente": "Ok Empreendimentos", "Vencimento": "09/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 593.72}, {"Emissão": "14/08/2026", "Código Cliente": "2850", "Cliente": "PAP NETO LTDA", "Vencimento": "25/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 540.41}, {"Emissão": "14/08/2026", "Código Cliente": "2850", "Cliente": "PAP NETO LTDA", "Vencimento": "09/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 540.41}, {"Emissão": "14/08/2026", "Código Cliente": "3754", "Cliente": "Glc Comercio De Pecas", "Vencimento": "25/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 3780.33}, {"Emissão": "14/08/2026", "Código Cliente": "3754", "Cliente": "Glc Comercio De Pecas", "Vencimento": "09/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 3780.33}, {"Emissão": "17/08/2026", "Código Cliente": "3541", "Cliente": "PECEM II GERACAO DE", "Vencimento": "01/10/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 2100.0}, {"Emissão": "17/08/2026", "Código Cliente": "4844", "Cliente": "ENEVA S.A.", "Vencimento": "16/10/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 540.0}, {"Emissão": "20/08/2026", "Código Cliente": "3541", "Cliente": "PECEM II GERACAO DE", "Vencimento": "04/10/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 2500.2}, {"Emissão": "20/08/2026", "Código Cliente": "3837", "Cliente": "Vm Engenharia Ltda", "Vencimento": "17/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 968.19}, {"Emissão": "20/08/2026", "Código Cliente": "3837", "Cliente": "Vm Engenharia Ltda", "Vencimento": "01/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 968.19}, {"Emissão": "20/08/2026", "Código Cliente": "3837", "Cliente": "Vm Engenharia Ltda", "Vencimento": "15/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 968.19}, {"Emissão": "20/08/2026", "Código Cliente": "4177", "Cliente": "Geofix Engenharia", "Vencimento": "17/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 4542.9}, {"Emissão": "20/08/2026", "Código Cliente": "4615", "Cliente": "Condominio Platinum", "Vencimento": "17/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 848.74}, {"Emissão": "24/08/2026", "Código Cliente": "2258", "Cliente": "COMPANHIA DE AGUA", "Vencimento": "23/09/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 23000.0}, {"Emissão": "24/08/2026", "Código Cliente": "2258", "Cliente": "COMPANHIA DE AGUA", "Vencimento": "23/09/2026", "Vendedor": "1 - ARI CAVALCANTE", "Valor": 4275.0}, {"Emissão": "24/08/2026", "Código Cliente": "4177", "Cliente": "Geofix Engenharia", "Vencimento": "21/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 3052.72}, {"Emissão": "25/08/2026", "Código Cliente": "4354", "Cliente": "Companhia De Agua E", "Vencimento": "24/09/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 777.8}, {"Emissão": "25/08/2026", "Código Cliente": "4833", "Cliente": "Pace Planta Automotiva Do", "Vencimento": "22/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 416.2}, {"Emissão": "25/08/2026", "Código Cliente": "4864", "Cliente": "Brasfond Fundacoes", "Vencimento": "22/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1497.0}, {"Emissão": "27/08/2026", "Código Cliente": "2529", "Cliente": "G S Incorporadora E", "Vencimento": "24/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 717.51}, {"Emissão": "27/08/2026", "Código Cliente": "2529", "Cliente": "G S Incorporadora E", "Vencimento": "08/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 717.51}, {"Emissão": "28/08/2026", "Código Cliente": "2258", "Cliente": "COMPANHIA DE AGUA", "Vencimento": "27/09/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 4769.0}, {"Emissão": "28/08/2026", "Código Cliente": "4008", "Cliente": "Inace Iate Ltda", "Vencimento": "25/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 3648.08}, {"Emissão": "28/08/2026", "Código Cliente": "4867", "Cliente": "Forship Engenharia S/A", "Vencimento": "25/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 2779.66}, {"Emissão": "31/08/2026", "Código Cliente": "2258", "Cliente": "COMPANHIA DE AGUA", "Vencimento": "30/09/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 2650.0}, {"Emissão": "31/08/2026", "Código Cliente": "3776", "Cliente": "Santa Clara Moveis", "Vencimento": "28/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 351.27}, {"Emissão": "31/08/2026", "Código Cliente": "4859", "Cliente": "Qualigraf Editora E Grafica", "Vencimento": "28/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1830.99}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                B     0      0/1    0", "Vencimento": "30/09/2026", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                B     0      0/2    0", "Vencimento": "30/10/2026", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                B     0      0/3    0", "Vencimento": "30/11/2026", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                B     0      0/4    0", "Vencimento": "30/12/2026", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                B     0      0/5    0", "Vencimento": "30/01/2027", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                 B     0      0/6    0", "Vencimento": "28/02/2027", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                 B     0      0/7    0", "Vencimento": "30/03/2027", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                 B     0      0/8    0", "Vencimento": "30/04/2027", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                 B     0      0/9    0", "Vencimento": "30/05/2027", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "31/08/2026", "Código Cliente": "19096", "Cliente": "AGLAÍLTON MACHADO                                 B     0      0/10   0", "Vencimento": "30/06/2027", "Vendedor": "0 - Não Cadastrado", "Valor": 500.0}, {"Emissão": "01/09/2026", "Código Cliente": "1438", "Cliente": "C M Cavalcante Motos - Me", "Vencimento": "29/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 629.52}, {"Emissão": "01/09/2026", "Código Cliente": "1438", "Cliente": "C M Cavalcante Motos - Me", "Vencimento": "13/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 629.53}, {"Emissão": "01/09/2026", "Código Cliente": "1438", "Cliente": "C M Cavalcante Motos - Me", "Vencimento": "27/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 629.53}, {"Emissão": "02/09/2026", "Código Cliente": "4008", "Cliente": "Inace Iate Ltda", "Vencimento": "30/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1642.28}, {"Emissão": "02/09/2026", "Código Cliente": "4886", "Cliente": "Granjas Sao Jose Ltda", "Vencimento": "02/10/2026", "Vendedor": "107 - AGLAÍLTON", "Valor": 6395.3}, {"Emissão": "03/09/2026", "Código Cliente": "1357", "Cliente": "Vicunha Textil S", "Vencimento": "03/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 3724.8}, {"Emissão": "03/09/2026", "Código Cliente": "2258", "Cliente": "COMPANHIA DE AGUA", "Vencimento": "03/10/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 7912.5}, {"Emissão": "03/09/2026", "Código Cliente": "2377", "Cliente": "J3 Industria Metalurgica E", "Vencimento": "17/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 300.0}, {"Emissão": "03/09/2026", "Código Cliente": "2522", "Cliente": "PEDRO THIAGO SILVA", "Vencimento": "04/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 472.8}, {"Emissão": "03/09/2026", "Código Cliente": "4894", "Cliente": "Vicunha Textil S A", "Vencimento": "03/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1862.4}, {"Emissão": "04/09/2026", "Código Cliente": "3010", "Cliente": "LUIZ CARLOS DE              8689 9384         D     506    506/1   90844", "Vencimento": "01/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 130.5}, {"Emissão": "04/09/2026", "Código Cliente": "4615", "Cliente": "Condominio Platinum", "Vencimento": "02/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 848.74}, {"Emissão": "08/09/2026", "Código Cliente": "1", "Cliente": "CLIENTE BALCÃO                32541644          D", "Vencimento": "01/09/2026", "Vendedor": "141 - ERICO DO", "Valor": 45.0}, {"Emissão": "08/09/2026", "Código Cliente": "1", "Cliente": "CLIENTE BALCÃO              32541644          D     509    509/1   90869", "Vencimento": "01/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 32.0}, {"Emissão": "08/09/2026", "Código Cliente": "1853", "Cliente": "FRANCISCO PACHECO", "Vencimento": "06/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 441.14}, {"Emissão": "08/09/2026", "Código Cliente": "1853", "Cliente": "FRANCISCO PACHECO", "Vencimento": "20/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 441.15}, {"Emissão": "08/09/2026", "Código Cliente": "1853", "Cliente": "FRANCISCO PACHECO", "Vencimento": "03/11/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 441.15}, {"Emissão": "08/09/2026", "Código Cliente": "2458", "Cliente": "FRANCISCO CLAUDIO           85 99445 6527     C     507    507/1   90856", "Vencimento": "09/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 53.72}, {"Emissão": "08/09/2026", "Código Cliente": "2458", "Cliente": "FRANCISCO CLAUDIO           85 99445 6527     C     508    508/1   90857", "Vencimento": "09/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 70.22}, {"Emissão": "08/09/2026", "Código Cliente": "2850", "Cliente": "PAP NETO LTDA", "Vencimento": "06/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 706.2}, {"Emissão": "08/09/2026", "Código Cliente": "4006", "Cliente": "R C Construcoes Ltda", "Vencimento": "06/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 513.9}, {"Emissão": "08/09/2026", "Código Cliente": "4006", "Cliente": "R C Construcoes Ltda", "Vencimento": "20/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 513.9}, {"Emissão": "08/09/2026", "Código Cliente": "4897", "Cliente": "Sp Moveis Especiais Ltda", "Vencimento": "01/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 471.12}, {"Emissão": "09/09/2026", "Código Cliente": "1", "Cliente": "CLIENTE BALCÃO                32541644          D", "Vencimento": "01/09/2026", "Vendedor": "141 - ERICO DO", "Valor": 25.0}, {"Emissão": "09/09/2026", "Código Cliente": "1", "Cliente": "CLIENTE BALCÃO              32541644          C     510    510/1   90882", "Vencimento": "10/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 268.6}, {"Emissão": "09/09/2026", "Código Cliente": "3744", "Cliente": "Hm Imports Comercio", "Vencimento": "07/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 2483.1}, {"Emissão": "09/09/2026", "Código Cliente": "3744", "Cliente": "Hm Imports Comercio", "Vencimento": "21/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 2483.1}, {"Emissão": "09/09/2026", "Código Cliente": "3744", "Cliente": "Hm Imports Comercio", "Vencimento": "04/11/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 2483.1}, {"Emissão": "09/09/2026", "Código Cliente": "3750", "Cliente": "Kanaflex Do Nordeste", "Vencimento": "07/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 2047.36}, {"Emissão": "09/09/2026", "Código Cliente": "4179", "Cliente": "Paraipaba Agroindustrial", "Vencimento": "07/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1542.84}, {"Emissão": "09/09/2026", "Código Cliente": "4179", "Cliente": "Paraipaba Agroindustrial", "Vencimento": "21/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1542.83}, {"Emissão": "09/09/2026", "Código Cliente": "4179", "Cliente": "Paraipaba Agroindustrial", "Vencimento": "04/11/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1542.83}, {"Emissão": "09/09/2026", "Código Cliente": "4273", "Cliente": "Luciano Compressores E Ar", "Vencimento": "10/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 438.0}, {"Emissão": "10/09/2026", "Código Cliente": "3809", "Cliente": "Raysan Transportes De      85 99600.6430", "Vencimento": "08/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1161.22}, {"Emissão": "10/09/2026", "Código Cliente": "4425", "Cliente": "Jeri-1 Empreendimento", "Vencimento": "08/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 8612.2}, {"Emissão": "11/09/2026", "Código Cliente": "2258", "Cliente": "COMPANHIA DE AGUA", "Vencimento": "11/10/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 46140.0}, {"Emissão": "11/09/2026", "Código Cliente": "4006", "Cliente": "R C Construcoes Ltda", "Vencimento": "09/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 520.0}, {"Emissão": "11/09/2026", "Código Cliente": "4006", "Cliente": "R C Construcoes Ltda", "Vencimento": "23/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 520.0}, {"Emissão": "14/09/2026", "Código Cliente": "1", "Cliente": "CLIENTE BALCÃO               32541644          D", "Vencimento": "01/09/2026", "Vendedor": "107 - AGLAÍLTON", "Valor": 10.0}, {"Emissão": "14/09/2026", "Código Cliente": "2418", "Cliente": "FRANCISCO PEROCLES         85 99653 1431     C     516    516/1   90940", "Vencimento": "15/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 199.08}, {"Emissão": "15/09/2026", "Código Cliente": "2258", "Cliente": "COMPANHIA DE AGUA", "Vencimento": "15/10/2026", "Vendedor": "119 - EDVALDO DA", "Valor": 9790.0}, {"Emissão": "15/09/2026", "Código Cliente": "2873", "Cliente": "CONSORCIO TSM", "Vencimento": "13/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 11646.66}, {"Emissão": "15/09/2026", "Código Cliente": "2873", "Cliente": "CONSORCIO TSM", "Vencimento": "27/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 11646.67}, {"Emissão": "15/09/2026", "Código Cliente": "2873", "Cliente": "CONSORCIO TSM", "Vencimento": "10/11/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 11646.67}, {"Emissão": "15/09/2026", "Código Cliente": "4822", "Cliente": "Solobahia Engenharia E", "Vencimento": "29/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 875.0}, {"Emissão": "15/09/2026", "Código Cliente": "4894", "Cliente": "Vicunha Textil S A", "Vencimento": "15/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 1862.4}, {"Emissão": "15/09/2026", "Código Cliente": "4894", "Cliente": "Vicunha Textil S A", "Vencimento": "15/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 186.24}, {"Emissão": "16/09/2026", "Código Cliente": "2844", "Cliente": "Eletra Industria E Comercio", "Vencimento": "15/11/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 12068.1}, {"Emissão": "17/09/2026", "Código Cliente": "1054", "Cliente": "Marte Petroleo Ltda", "Vencimento": "15/10/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 955.1}, {"Emissão": "17/09/2026", "Código Cliente": "3010", "Cliente": "LUIZ CARLOS DE             8689 9384         D     520    520/1   90986", "Vencimento": "01/09/2026", "Vendedor": "19 - MARITZA FABIANA", "Valor": 125.5}], "pagamentos": [{"Emissão": "01/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "LOJA 7435 3/3", "Vencimento": "25/09/2026", "Valor": 47.84}, {"Emissão": "08/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "RAIA DROGASIL 3/3", "Vencimento": "25/09/2026", "Valor": 125.29}, {"Emissão": "08/07/2026", "Código Fornecedor": "10301", "Fornecedor": "Central Nordeste De Pecas Ltda", "Nota": "49652", "Descrição": "FORN 10301 NF 49652 CT BRADESCO", "Vencimento": "13/10/2026", "Valor": 587.65}, {"Emissão": "10/07/2026", "Código Fornecedor": "11106", "Fornecedor": "Itau Unibanco Holding S.A.", "Nota": "401", "Descrição": "FORN 11193 NF 401 CT ITAU EMPRESA -", "Vencimento": "05/10/2026", "Valor": 1999.0}, {"Emissão": "10/07/2026", "Código Fornecedor": "11106", "Fornecedor": "Itau Unibanco Holding S.A.", "Nota": "401", "Descrição": "FORN 11193 NF 401 CT ITAU EMPRESA -", "Vencimento": "05/11/2026", "Valor": 1999.0}, {"Emissão": "10/07/2026", "Código Fornecedor": "11106", "Fornecedor": "Itau Unibanco Holding S.A.", "Nota": "401", "Descrição": "FORN 11193 NF 401 CT ITAU EMPRESA -", "Vencimento": "05/12/2026", "Valor": 1999.0}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/10/2026", "Valor": 399.8}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/11/2026", "Valor": 399.8}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/12/2026", "Valor": 399.8}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/01/2027", "Valor": 399.8}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/02/2027", "Valor": 399.8}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/03/2027", "Valor": 399.8}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/04/2027", "Valor": 399.8}, {"Emissão": "10/07/2026", "Código Fornecedor": "11192", "Fornecedor": "MAGAZINE LUIZA S/A", "Nota": "153677", "Descrição": "FORN 11192 NF 153677 CT BRADESCO", "Vencimento": "13/05/2027", "Valor": 399.8}, {"Emissão": "13/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "CARNAUBA 3/3", "Vencimento": "25/09/2026", "Valor": 108.7}, {"Emissão": "22/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "EVC - PR. LIMPEZA 3/3", "Vencimento": "25/10/2026", "Valor": 77.2}, {"Emissão": "22/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "EVC - PR. LIMPEZA 2/3", "Vencimento": "25/09/2026", "Valor": 77.2}, {"Emissão": "22/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "RAIA DROGASIL 3/3", "Vencimento": "25/10/2026", "Valor": 118.69}, {"Emissão": "22/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "RAIA DROGASIL 2/3", "Vencimento": "25/09/2026", "Valor": 118.69}, {"Emissão": "23/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "ACAL MAT CONST. 8/8", "Vencimento": "25/03/2027", "Valor": 235.76}, {"Emissão": "23/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "ACAL MAT CONST. 7/8", "Vencimento": "25/02/2027", "Valor": 235.76}, {"Emissão": "23/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "ACAL MAT CONST. 6/8", "Vencimento": "25/01/2027", "Valor": 235.76}, {"Emissão": "23/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "ACAL MAT CONST. 5/8", "Vencimento": "25/12/2026", "Valor": 235.76}, {"Emissão": "23/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "ACAL MAT CONST. 4/8", "Vencimento": "25/11/2026", "Valor": 235.76}, {"Emissão": "23/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "ACAL MAT CONST. 3/8", "Vencimento": "25/10/2026", "Valor": 235.76}, {"Emissão": "23/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "ACAL MAT CONST. 2/8", "Vencimento": "25/09/2026", "Valor": 235.76}, {"Emissão": "24/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "EXTRA FARMA 3/3", "Vencimento": "25/10/2026", "Valor": 49.12}, {"Emissão": "24/07/2026", "Código Fornecedor": "10147", "Fornecedor": "CARTAO SANTANDER ELITE", "Nota": "0", "Descrição": "EXTRA FARMA 2/3", "Vencimento": "25/09/2026", "Valor": 49.12}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 24/24", "Vencimento": "15/07/2028", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 23/24", "Vencimento": "15/06/2028", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 22/24", "Vencimento": "15/05/2028", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 21/24", "Vencimento": "15/04/2028", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 20/24", "Vencimento": "15/03/2028", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 19/24", "Vencimento": "15/02/2028", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 18/24", "Vencimento": "15/01/2028", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 17/24", "Vencimento": "15/12/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 16/24", "Vencimento": "15/11/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 15/24", "Vencimento": "15/10/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 14/24", "Vencimento": "15/09/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 13/24", "Vencimento": "15/08/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 12/24", "Vencimento": "15/07/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 11/24", "Vencimento": "15/06/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 10/24", "Vencimento": "15/05/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 9/24", "Vencimento": "15/04/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 8/24", "Vencimento": "15/03/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 7/24", "Vencimento": "15/02/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 6/24", "Vencimento": "15/01/2027", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 5/24", "Vencimento": "15/12/2026", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 4/24", "Vencimento": "15/11/2026", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "KIWIFY Academia do Candiba BR 3/24", "Vencimento": "15/10/2026", "Valor": 19.9}, {"Emissão": "07/08/2026", "Código Fornecedor": "10239", "Fornecedor": "IDIAL DISTRIBUIDORA LTDA", "Nota": "9085", "Descrição": "FORN: 10239 NF 9085 CT BRADESCO", "Vencimento": "13/10/2026", "Valor": 1400.0}, {"Emissão": "07/08/2026", "Código Fornecedor": "10239", "Fornecedor": "IDIAL DISTRIBUIDORA LTDA", "Nota": "9085", "Descrição": "FORN: 10239 NF 9085 CT BRADESCO", "Vencimento": "13/11/2026", "Valor": 1400.0}, {"Emissão": "10/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "CAROL DISTR- SUPLEMENTOS 3/3", "Vencimento": "15/11/2026", "Valor": 127.39}, {"Emissão": "10/08/2026", "Código Fornecedor": "10210", "Fornecedor": "CART PORTO BANK", "Nota": "0", "Descrição": "CAROL DISTR- SUPLEMENTOS 2/3", "Vencimento": "15/10/2026", "Valor": 127.39}, {"Emissão": "14/08/2026", "Código Fornecedor": "107", "Fornecedor": "Atm Refrigeracao Industrial Ltda", "Nota": "23805", "Descrição": "FORN 107 NF 23805 CT BRADESCO", "Vencimento": "13/10/2026", "Valor": 2268.22}, {"Emissão": "14/08/2026", "Código Fornecedor": "107", "Fornecedor": "Atm Refrigeracao Industrial Ltda", "Nota": "23805", "Descrição": "FORN 107 NF 23805 CT BRADESCO", "Vencimento": "13/11/2026", "Valor": 2268.22}, {"Emissão": "17/08/2026", "Código Fornecedor": "11106", "Fornecedor": "Itau Unibanco Holding S.A.", "Nota": "16223", "Descrição": "FORN 11197 NF 16223 CT ITAU", "Vencimento": "05/11/2026", "Valor": 335.0}, {"Emissão": "17/08/2026", "Código Fornecedor": "11197", "Fornecedor": "Roster Equipamentos Para", "Nota": "16223", "Descrição": "FORN 11197 NF 16223 CT ITAU", "Vencimento": "05/10/2026", "Valor": 335.0}, {"Emissão": "18/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "802323", "Descrição": "FORN 4104 NF 802323 CT BRADESCO", "Vencimento": "13/10/2026", "Valor": 114.51}, {"Emissão": "18/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "802323", "Descrição": "FORN 4104 NF 802323 CT BRADESCO", "Vencimento": "13/11/2026", "Valor": 114.51}, {"Emissão": "18/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "802323", "Descrição": "FORN 4104 NF 802323 CT BRADESCO", "Vencimento": "13/12/2026", "Valor": 114.51}, {"Emissão": "18/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "802323", "Descrição": "FORN 4104 NF 802323 CT BRADESCO", "Vencimento": "13/01/2027", "Valor": 114.51}, {"Emissão": "18/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "802323", "Descrição": "FORN 4104 NF 802323 CT BRADESCO", "Vencimento": "13/02/2027", "Valor": 114.51}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "800954", "Descrição": "FORN 4104 NF 800954 CT BRADESCO", "Vencimento": "13/10/2026", "Valor": 949.76}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "800954", "Descrição": "FORN 4104 NF 800954 CT BRADESCO", "Vencimento": "13/11/2026", "Valor": 949.76}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "800954", "Descrição": "FORN 4104 NF 800954 CT BRADESCO", "Vencimento": "13/12/2026", "Valor": 949.76}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "800954", "Descrição": "FORN 4104 NF 800954 CT BRADESCO", "Vencimento": "13/01/2027", "Valor": 949.76}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "800954", "Descrição": "FORN 4104 NF 800954 CT BRADESCO", "Vencimento": "13/02/2027", "Valor": 949.76}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "800954", "Descrição": "FORN 4104 NF 800954 CT BRADESCO", "Vencimento": "13/03/2027", "Valor": 949.76}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "800954", "Descrição": "FORN 4104 NF 800954 CT BRADESCO", "Vencimento": "13/04/2027", "Valor": 949.76}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "379508", "Descrição": "FORN 11156 NF 379508 CT BRADESCO", "Vencimento": "13/10/2026", "Valor": 189.65}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "379508", "Descrição": "FORN 11156 NF 379508 CT BRADESCO", "Vencimento": "13/11/2026", "Valor": 189.65}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "379508", "Descrição": "FORN 11156 NF 379508 CT BRADESCO", "Vencimento": "13/12/2026", "Valor": 189.65}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "379508", "Descrição": "FORN 11156 NF 379508 CT BRADESCO", "Vencimento": "13/01/2027", "Valor": 189.65}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "379508", "Descrição": "FORN 11156 NF 379508 CT BRADESCO", "Vencimento": "13/02/2027", "Valor": 189.65}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "379508", "Descrição": "FORN 11156 NF 379508 CT BRADESCO", "Vencimento": "13/03/2027", "Valor": 189.65}, {"Emissão": "25/08/2026", "Código Fornecedor": "11072", "Fornecedor": "CARTÃO BRADESCO ELO MAIS", "Nota": "379508", "Descrição": "FORN 11156 NF 379508 CT BRADESCO", "Vencimento": "13/04/2027", "Valor": 189.65}, {"Emissão": "25/08/2026", "Código Fornecedor": "11204", "Fornecedor": "CARTÃO SANTANDER EMPRESA", "Nota": "305003", "Descrição": "FORN 11140 NF 305003 CT SANT EMP -", "Vencimento": "20/10/2026", "Valor": 360.0}, {"Emissão": "25/08/2026", "Código Fornecedor": "11204", "Fornecedor": "CARTÃO SANTANDER EMPRESA", "Nota": "305003", "Descrição": "FORN 11140 NF 305003 CT SANT EMP -", "Vencimento": "20/11/2026", "Valor": 360.0}, {"Emissão": "31/08/2026", "Código Fornecedor": "10517", "Fornecedor": "Apiguana Maquinas E Ferramentas", "Nota": "837211", "Descrição": "FORN 10517 NF 837211 CT ITAU EMP -", "Vencimento": "05/10/2026", "Valor": 2120.0}, {"Emissão": "31/08/2026", "Código Fornecedor": "10517", "Fornecedor": "Apiguana Maquinas E Ferramentas", "Nota": "837211", "Descrição": "FORN 10517 NF 837211 CT ITAU EMP -", "Vencimento": "05/11/2026", "Valor": 2120.0}, {"Emissão": "31/08/2026", "Código Fornecedor": "10517", "Fornecedor": "Apiguana Maquinas E Ferramentas", "Nota": "837211", "Descrição": "FORN 10517 NF 837211 CT ITAU EMP -", "Vencimento": "05/12/2026", "Valor": 2120.0}, {"Emissão": "04/09/2026", "Código Fornecedor": "11156", "Fornecedor": "Araujo Cabral E Alves Ltda", "Nota": "380467", "Descrição": "FORN 11156 NF 380467 CT ITAU EMP -", "Vencimento": "05/10/2026", "Valor": 187.9}, {"Emissão": "10/09/2026", "Código Fornecedor": "10081", "Fornecedor": "AUTO PECAS PADRE CICERO LTDA 7305838 BOLETO BANCO DO BRASIL - Entrada", "Nota": "", "Descrição": "", "Vencimento": "10/10/2026", "Valor": 608.13}, {"Emissão": "10/09/2026", "Código Fornecedor": "10081", "Fornecedor": "AUTO PECAS PADRE CICERO LTDA 7305838 BOLETO BANCO DO BRASIL - Entrada", "Nota": "", "Descrição": "", "Vencimento": "09/11/2026", "Valor": 608.13}, {"Emissão": "10/09/2026", "Código Fornecedor": "10081", "Fornecedor": "AUTO PECAS PADRE CICERO LTDA 7305838 BOLETO BANCO DO BRASIL - Entrada", "Nota": "", "Descrição": "", "Vencimento": "09/12/2026", "Valor": 608.14}, {"Emissão": "10/09/2026", "Código Fornecedor": "11046", "Fornecedor": "NOVUM DISTRIBUIDORA DE", "Nota": "357364", "Descrição": "boleto bradesco - Entrada 90914 - 1/1", "Vencimento": "04/10/2026", "Valor": 803.85}], "horizontes": [{"Horizonte": "Hoje", "Até": "17/09/2026", "Recebimentos acumulados": 6659.83, "Pagamentos acumulados": 0, "Saldo projetado bruto": 528656.33}, {"Horizonte": "7 dias", "Até": "24/09/2026", "Recebimentos acumulados": 47329.08, "Pagamentos acumulados": 0, "Saldo projetado bruto": 569325.58}, {"Horizonte": "15 dias", "Até": "02/10/2026", "Recebimentos acumulados": 83752.76, "Pagamentos acumulados": 762.6, "Saldo projetado bruto": 604986.66}, {"Horizonte": "30 dias", "Até": "17/10/2026", "Recebimentos acumulados": 197789.19, "Pagamentos acumulados": 12873.36, "Saldo projetado bruto": 706912.33}, {"Horizonte": "60 dias", "Até": "16/11/2026", "Recebimentos acumulados": 244248.22, "Pagamentos acumulados": 24245.49, "Saldo projetado bruto": 741999.23}, {"Horizonte": "90 dias", "Até": "16/12/2026", "Recebimentos acumulados": 244748.22, "Pagamentos acumulados": 31242.01, "Saldo projetado bruto": 735502.71}], "auditoria": {"qtd_recebiveis": 96, "total_recebiveis_relatorio": 251697.39, "qtd_pagamentos": 87, "total_pagamentos_relatorio": 39348.81, "saldo_bancario_consolidado_data_base": 521996.5, "recebiveis_vencidos_antes_data_base": 3449.17, "pagamentos_vencidos_antes_data_base": 0.0, "observacao": "Conversão automática de PDFs. Validar amostra contra o Shop9 antes de uso gerencial definitivo.", "saldo_futuro_shop9": 387810.88, "validacao_amostral": "10/10 títulos conferidos no Shop9 (5 recebíveis + 5 pagamentos)", "fonte_saldo": "Relatório Saldos Bancários Shop9 emitido em 17/09/2026"}, "parametros": {"reserva_bnb": 320000.0, "regra_reserva_bnb": "Visualiza no card Reserva BNB e no Saldo Consolidado; exclui da Disponibilidade Operacional, projeções e Timeline.", "status_movimentacao_bnb": "Movimentação de recebíveis ainda não lançada no Shop9; ajustar JSON após regularização.", "formula_saldo_consolidado": "Saldos operacionais não-BNB + Reserva Financeira BNB", "formula_disponibilidade_operacional": "Saldo Consolidado - Reserva Financeira BNB", "saldo_consolidado_atual": 357866.36, "disponibilidade_operacional_atual": 37866.36, "diferenca_consolidado_operacional": 320000.0, "regra_filtro_global": "Hoje/7/15/30/60/90 controla recebíveis, pagamentos, disponibilidade projetada e componentes marcados para período em todas as abas."}}
+</script>
+
+<script id="pif-storage-bootstrap">
+(function(){
+  try{
+    const saved = localStorage.getItem('ARILUB_PIF_DATA_V2');
+    if(!saved) return;
+    const parsed = JSON.parse(saved);
+    if(!parsed || !Array.isArray(parsed.contas) || !Array.isArray(parsed.recebiveis) || !Array.isArray(parsed.pagamentos)) return;
+    const node = document.getElementById('PIF_DATA');
+    if(node) node.textContent = JSON.stringify(parsed);
+  }catch(e){
+    console.error('PIF: falha ao recuperar base importada', e);
+  }
+})();
+</script>
+
+
+<script id="pif-final-js">
+(function(){
+  function money(v){return Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});}
+  function parseBR(s){var p=(s||'').split('/');return new Date(+p[2],+p[1]-1,+p[0]);}
+  function fmt(d){return String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0');}
+  function load(){
+    var el=document.getElementById('PIF_DATA'); if(!el) return null;
+    try{return JSON.parse(el.textContent)}catch(e){return null}
+  }
+  var D=load(); if(!D) return;
+  var base=parseBR((D.metadata&&D.metadata.data_base)||'17/09/2026');
+  var currentGlobal=0, currentTimeline=7;
+
+  function itemsBetween(arr,days){
+    var end=new Date(base); end.setDate(end.getDate()+days);
+    return (arr||[]).filter(function(x){
+      var d=parseBR(x.Vencimento);
+      return days===0 ? d.toDateString()===base.toDateString() : d>=base && d<=end;
+    });
+  }
+  function dispatchPeriod(days){
+    currentGlobal=days;
+    document.querySelectorAll('[data-days]').forEach(function(b){b.classList.toggle('active',+b.dataset.days===days)});
+    window.PIF_SELECTED_PERIOD=days;
+    document.dispatchEvent(new CustomEvent('pif:periodchange',{detail:{days:days}}));
+    // Update elements prepared with semantic data attributes, without disturbing legacy cards.
+    var rr=itemsBetween(D.recebiveis,days), pp=itemsBetween(D.pagamentos,days);
+    var rec=rr.reduce((s,x)=>s+Number(x.Valor||0),0), pag=pp.reduce((s,x)=>s+Number(x.Valor||0),0);
+    document.querySelectorAll('[data-pif-period-receber]').forEach(e=>e.textContent=money(rec));
+    document.querySelectorAll('[data-pif-period-pagar]').forEach(e=>e.textContent=money(pag));
+    document.querySelectorAll('[data-pif-period-label]').forEach(e=>e.textContent=days===0?'Hoje':days+' dias');
+  }
+  document.querySelectorAll('[data-days]').forEach(function(b){b.onclick=function(){dispatchPeriod(+b.dataset.days)}});
+
+  function daily(days){
+    var rows=[], saldo=(D.contas||[]).reduce((s,x)=>s+Number(x.Saldo||0),0);
+    for(var i=0;i<=days;i++){
+      var d=new Date(base); d.setDate(d.getDate()+i);
+      var r=(D.recebiveis||[]).filter(x=>parseBR(x.Vencimento).toDateString()===d.toDateString());
+      var p=(D.pagamentos||[]).filter(x=>parseBR(x.Vencimento).toDateString()===d.toDateString());
+      var rin=r.reduce((s,x)=>s+Number(x.Valor||0),0), pout=p.reduce((s,x)=>s+Number(x.Valor||0),0);
+      saldo += rin-pout;
+      rows.push({date:d,rec:rin,pag:pout,saldo:saldo,receb:r,pagam:p});
+    }
+    return rows;
+  }
+  function renderTimeline(days){
+    currentTimeline=days;
+    document.querySelectorAll('[data-timeline-days]').forEach(b=>b.classList.toggle('active',+b.dataset.timelineDays===days));
+    document.getElementById('pifTimelineTitle').textContent='Próximos '+days+' dias';
+    var rows=daily(days), max=Math.max(1,...rows.map(x=>Math.max(x.rec,x.pag)));
+    var bars=document.getElementById('pifTimelineBars');
+    bars.innerHTML=rows.map(function(x,i){
+      var hi=Math.max(2,Math.round(x.rec/max*88)), ho=Math.max(2,Math.round(x.pag/max*88));
+      return '<div class="pif-day" data-day="'+i+'"><div class="pif-day-date">'+fmt(x.date)+'</div><div class="pif-bars">'+
+      '<div class="pif-bar pif-bar-in" style="height:'+hi+'px" title="Receber '+money(x.rec)+'"></div>'+
+      '<div class="pif-bar pif-bar-out" style="height:'+ho+'px" title="Pagar '+money(x.pag)+'"></div></div>'+
+      '<div class="pif-day-balance">'+money(x.saldo)+'</div></div>';
+    }).join('');
+    bars.querySelectorAll('.pif-day').forEach(function(el){el.onclick=function(){showDay(rows[+el.dataset.day])}});
+    var events=[];
+    rows.forEach(function(x){
+      x.receb.forEach(r=>events.push({d:x.date,t:'Receber',nome:r.Cliente||'',ent:Number(r.Valor||0),sai:0}));
+      x.pagam.forEach(p=>events.push({d:x.date,t:'Pagar',nome:p.Fornecedor||'',ent:0,sai:Number(p.Valor||0)}));
+    });
+    document.getElementById('pifTimelineEvents').innerHTML='<table><thead><tr><th>Data</th><th>Evento</th><th>Cliente / Fornecedor</th><th>Entrada</th><th>Saída</th></tr></thead><tbody>'+
+      (events.length?events.map(e=>'<tr><td>'+fmt(e.d)+'</td><td>'+e.t+'</td><td>'+e.nome+'</td><td class="num">'+(e.ent?money(e.ent):'—')+'</td><td class="num">'+(e.sai?money(e.sai):'—')+'</td></tr>').join(''):'<tr><td colspan="5">Sem eventos no período.</td></tr>')+
+      '</tbody></table>';
+  }
+  function showDay(x){
+    var box=document.getElementById('pifDayDetail'); box.style.display='block';
+    var ev=[...x.receb.map(r=>({n:r.Cliente,v:Number(r.Valor),s:'+'})),...x.pagam.map(p=>({n:p.Fornecedor,v:Number(p.Valor),s:'−'}))]
+      .sort((a,b)=>b.v-a.v).slice(0,5);
+    box.innerHTML='<strong>'+fmt(x.date)+'</strong><br>Recebimentos: <b>'+money(x.rec)+'</b> &nbsp; Pagamentos: <b>'+money(x.pag)+'</b> &nbsp; Saldo projetado: <b>'+money(x.saldo)+'</b>'+
+      (ev.length?'<div style="margin-top:8px">'+ev.map(e=>e.s+' '+e.n+' — '+money(e.v)).join('<br>')+'</div>':'');
+  }
+  document.querySelectorAll('[data-timeline-days]').forEach(function(b){b.onclick=function(){renderTimeline(+b.dataset.timelineDays)}});
+  dispatchPeriod(0); renderTimeline(7);
+})();
+</script>
+
+
+<script id="pif-import-ready-js">
+(function(){
+  const STORAGE_KEY='ARILUB_PIF_DATA_V2';
+  function readEmbedded(){
+    const e=document.getElementById('PIF_DATA');
+    if(!e) return null;
+    try{return JSON.parse(e.textContent)}catch(_){return null}
+  }
+  function setEmbedded(data){
+    let e=document.getElementById('PIF_DATA');
+    if(!e){
+      e=document.createElement('script'); e.id='PIF_DATA'; e.type='application/json';
+      document.body.appendChild(e);
+    }
+    e.textContent=JSON.stringify(data);
+    window.PIF_DATA_RUNTIME=data;
+    updateStatus(data);
+  }
+  function updateStatus(d){
+    const db=document.getElementById('pifDataBase');
+    const st=document.getElementById('pifCargaStatus');
+    if(db) db.textContent=(d&&d.metadata&&d.metadata.data_base)||'não informada';
+    if(st){
+      const a=(d&&d.auditoria)||{};
+      const ok=a.validacao_amostral||'base carregada';
+      st.textContent=ok;
+    }
+  }
+  function validate(d){
+    if(!d || typeof d!=='object') throw new Error('JSON inválido.');
+    ['contas','recebiveis','pagamentos'].forEach(k=>{
+      if(!Array.isArray(d[k])) throw new Error('Campo obrigatório ausente: '+k);
+    });
+    return true;
+  }
+  const btn=document.getElementById('pifLoadJsonBtn');
+  const input=document.getElementById('pifJsonFile');
+  if(btn&&input){
+    btn.addEventListener('click',()=>input.click());
+    input.addEventListener('change',async ev=>{
+      const f=ev.target.files&&ev.target.files[0]; if(!f) return;
+      try{
+        const d=JSON.parse(await f.text()); validate(d);
+        localStorage.setItem(STORAGE_KEY,JSON.stringify(d));
+        setEmbedded(d);
+        alert('Base PIF importada com sucesso. O painel será recarregado com os novos dados.');
+        location.reload();
+      }catch(err){alert('Não foi possível importar: '+err.message);}
+    });
+  }
+  let d=null;
+  try{const saved=localStorage.getItem(STORAGE_KEY); if(saved) d=JSON.parse(saved);}catch(_){}
+  if(!d) d=readEmbedded();
+  if(d){setEmbedded(d); updateStatus(d);}
+})();
+</script>
+
+
+<script id="pif-v21-js">
+(function(){
+ const RES=320000;
+ const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+ const pdate=s=>{let p=(s||'').split('/');return new Date(+p[2],+p[1]-1,+p[0])};
+ function getData(){
+   try{
+     const saved=localStorage.getItem('ARILUB_PIF_DATA_V2');
+     if(saved) return JSON.parse(saved);
+   }catch(e){}
+   try{return JSON.parse(document.getElementById('PIF_DATA').textContent)}catch(e){return null}
+ }
+ function calc(days){
+   const D=getData(); if(!D)return null;
+   const base=pdate(D.metadata.data_base), end=new Date(base); end.setDate(end.getDate()+days);
+   const inRange=x=>{let d=pdate(x.Vencimento);return days===0?d.toDateString()===base.toDateString():d>=base&&d<=end};
+   const rec=(D.recebiveis||[]).filter(inRange).reduce((s,x)=>s+Number(x.Valor||0),0);
+   const pag=(D.pagamentos||[]).filter(inRange).reduce((s,x)=>s+Number(x.Valor||0),0);
+   // Consolidated includes only the explicit BNB reserve amount plus non-BNB balances.
+   const nonBNB=(D.contas||[]).filter(x=>String(x.Conta).toUpperCase()!=='BNB').reduce((s,x)=>s+Number(x.Saldo||0),0);
+   const consolidated=nonBNB+RES;
+   const operational=nonBNB; // reserve excluded
+   return {rec,pag,consolidated,operational,projected:operational+rec-pag};
+ }
+ function update(days){
+   const x=calc(days); if(!x)return;
+   document.getElementById('pifGlobalRec').textContent=money(x.rec);
+   document.getElementById('pifGlobalPag').textContent=money(x.pag);
+   document.getElementById('pifGlobalOp').textContent=money(x.projected);
+   // Update any semantic fields in all tabs/cards if present.
+   document.querySelectorAll('[data-pif-period-receber]').forEach(e=>e.textContent=money(x.rec));
+   document.querySelectorAll('[data-pif-period-pagar]').forEach(e=>e.textContent=money(x.pag));
+   document.querySelectorAll('[data-pif-operational]').forEach(e=>e.textContent=money(x.projected));
+   document.querySelectorAll('[data-pif-consolidated]').forEach(e=>e.textContent=money(x.consolidated));
+   // Re-render timeline using same global period when it supports it.
+   if(typeof window.PIF_renderAllTabs==='function') window.PIF_renderAllTabs(days,x);
+   document.dispatchEvent(new CustomEvent('pif:v21period',{detail:{days,x}}));
+ }
+ // Capture clicks after older handlers, making top selector authoritative.
+ document.addEventListener('click',function(ev){
+   const b=ev.target.closest('[data-days]'); if(!b)return;
+   const days=+b.dataset.days;
+   document.querySelectorAll('[data-days]').forEach(x=>x.classList.toggle('active',+x.dataset.days===days));
+   update(days);
+   // Timeline follows global selection; for Today use 7-day context, otherwise exact selected horizon.
+   const tdays=days===0?7:days;
+   if(typeof window.renderTimeline==='function') window.renderTimeline(tdays);
+ },true);
+ // Expose calculation for all tabs and future import renderer.
+ window.PIF_V21={calculate:calc,update:update,reserveBNB:RES};
+ setTimeout(()=>update(0),250);
+})();
+</script>
+
+
+<script id="pif-v22-audit-js">
+(function(){
+ const RES=320000;
+ const money=v=>Number(v||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+ const parse=s=>{let p=(s||'').split('/');return new Date(+p[2],+p[1]-1,+p[0])};
+ function D(){
+   try{let s=localStorage.getItem('ARILUB_PIF_DATA_V2'); if(s)return JSON.parse(s)}catch(e){}
+   try{return JSON.parse(document.getElementById('PIF_DATA').textContent)}catch(e){return null}
+ }
+ function baseValues(){
+   let d=D(); let non=(d.contas||[]).filter(c=>String(c.Conta).toUpperCase()!=='BNB').reduce((s,c)=>s+Number(c.Saldo||0),0);
+   return {con:non+RES,op:non};
+ }
+ function replaceLegacyByLabel(){
+   let v=baseValues();
+   document.querySelectorAll('body *').forEach(el=>{
+     if(el.children.length>8)return;
+     let txt=(el.textContent||'').trim().toUpperCase();
+     if(txt==='SALDO CONSOLIDADO'){
+       let box=el.parentElement; if(box){let nums=box.querySelectorAll('[class*="value"],[class*="valor"],b,strong,h2,h3'); if(nums.length)nums[nums.length-1].textContent=money(v.con)}
+     }
+     if(txt==='DISPONIBILIDADE OPERACIONAL'){
+       let box=el.parentElement; if(box){let nums=box.querySelectorAll('[class*="value"],[class*="valor"],b,strong,h2,h3'); if(nums.length)nums[nums.length-1].textContent=money(v.op)}
+     }
+   });
+   let a=document.getElementById('pifCanonicalConsolidated'),b=document.getElementById('pifCanonicalOperational');
+   if(a)a.textContent=money(v.con); if(b)b.textContent=money(v.op);
+ }
+ function period(days){
+   let d=D(), base=parse(d.metadata.data_base), end=new Date(base); end.setDate(end.getDate()+days);
+   let inr=x=>{let z=parse(x.Vencimento);return days===0?z.toDateString()===base.toDateString():z>=base&&z<=end};
+   let rec=(d.recebiveis||[]).filter(inr).reduce((s,x)=>s+Number(x.Valor||0),0);
+   let pag=(d.pagamentos||[]).filter(inr).reduce((s,x)=>s+Number(x.Valor||0),0);
+   let op=baseValues().op+rec-pag;
+   document.querySelectorAll('[data-pif-period-receber]').forEach(e=>e.textContent=money(rec));
+   document.querySelectorAll('[data-pif-period-pagar]').forEach(e=>e.textContent=money(pag));
+   document.querySelectorAll('[data-pif-operational]').forEach(e=>e.textContent=money(op));
+   let gr=document.getElementById('pifGlobalRec'),gp=document.getElementById('pifGlobalPag'),go=document.getElementById('pifGlobalOp');
+   if(gr)gr.textContent=money(rec); if(gp)gp.textContent=money(pag); if(go)go.textContent=money(op);
+   document.querySelectorAll('[data-days]').forEach(b=>b.classList.toggle('active',+b.dataset.days===days));
+   window.PIF_SELECTED_PERIOD=days;
+   document.dispatchEvent(new CustomEvent('pif:globalperiod',{detail:{days,receber:rec,pagar:pag,operacional:op}}));
+ }
+ document.addEventListener('click',e=>{let b=e.target.closest('[data-days]');if(b){e.preventDefault();period(+b.dataset.days)}},true);
+ window.PIF_FINANCE={baseValues,period,reservaBNB:RES};
+ setTimeout(()=>{replaceLegacyByLabel();period(0)},400);
+})();
+</script>
+
+</body></html>
