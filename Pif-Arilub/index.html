@@ -1,0 +1,3317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+
+<title>PIF | ARILUB</title>
+
+<style>
+:root{
+    --nav:#102f49;
+    --nav2:#173f5e;
+    --blue:#176b9d;
+    --bg:#f4f6f8;
+    --card:#ffffff;
+    --text:#17212b;
+    --muted:#6d7882;
+    --line:#dde3e8;
+    --green:#247454;
+    --orange:#a96b10;
+    --red:#a54242;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+header{
+    background:linear-gradient(135deg,var(--nav),var(--nav2));
+    color:#fff;
+    padding:20px;
+}
+
+.head{
+    max-width:1280px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.head h1{
+    margin:0;
+    font-size:25px;
+}
+
+.head p{
+    margin:5px 0 0;
+    color:#cbd8e2;
+    font-size:13px;
+}
+
+.meta{
+    text-align:right;
+    font-size:12px;
+    line-height:1.6;
+    color:#d6e2ea;
+}
+
+.meta strong{
+    color:#fff;
+}
+
+nav{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.nav{
+    max-width:1280px;
+    margin:auto;
+    display:flex;
+    gap:5px;
+    padding:8px;
+    overflow:auto;
+}
+
+button{
+    font-family:inherit;
+}
+
+.tab{
+    border:0;
+    background:#fff;
+    color:#596671;
+    border-radius:8px;
+    padding:10px 13px;
+    font-weight:700;
+    cursor:pointer;
+    white-space:nowrap;
+}
+
+.tab:hover,
+.tab.on{
+    background:var(--nav);
+    color:#fff;
+}
+
+.wrap{
+    max-width:1280px;
+    margin:auto;
+    padding:20px 15px;
+}
+
+.sec{
+    display:none;
+}
+
+.sec.on{
+    display:block;
+}
+
+.title{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:12px;
+    margin-bottom:14px;
+}
+
+.title h2{
+    margin:0;
+    font-size:21px;
+}
+
+.title p{
+    margin:4px 0 0;
+    color:var(--muted);
+    font-size:12px;
+}
+
+.periods{
+    display:flex;
+    gap:5px;
+    flex-wrap:wrap;
+}
+
+.per{
+    border:1px solid var(--line);
+    background:#fff;
+    color:#56636e;
+    border-radius:8px;
+    padding:8px 11px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.per.on{
+    background:var(--nav);
+    border-color:var(--nav);
+    color:#fff;
+}
+
+.grid{
+    display:grid;
+    gap:12px;
+}
+
+.g4{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.g5{
+    grid-template-columns:repeat(5,1fr);
+}
+
+.g2{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px;
+    box-shadow:0 4px 15px rgba(22,43,59,.05);
+}
+
+.kpi{
+    border-top:4px solid var(--blue);
+}
+
+.kpi.reserve{
+    border-top-color:var(--orange);
+}
+
+.kpi small{
+    display:block;
+    color:var(--muted);
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:.5px;
+    font-size:10px;
+}
+
+.val{
+    font-size:24px;
+    font-weight:800;
+    margin-top:8px;
+    letter-spacing:-.4px;
+}
+
+.sub{
+    font-size:11px;
+    color:var(--muted);
+    margin-top:6px;
+    line-height:1.4;
+}
+
+.note{
+    margin:12px 0;
+    background:#eef5f9;
+    border-left:4px solid var(--blue);
+    padding:12px 14px;
+    border-radius:7px;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.note.warn{
+    background:#fff6e7;
+    border-color:var(--orange);
+}
+
+.scroll{
+    overflow:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:12px;
+}
+
+th,
+td{
+    padding:9px;
+    border-bottom:1px solid #edf0f2;
+    text-align:left;
+    vertical-align:top;
+}
+
+th{
+    background:#f7f8fa;
+    color:#65717c;
+    white-space:nowrap;
+}
+
+.num{
+    text-align:right;
+    white-space:nowrap;
+}
+
+.badge{
+    display:inline-block;
+    padding:4px 7px;
+    border-radius:12px;
+    font-size:10px;
+    font-weight:800;
+    background:#e8f3ed;
+    color:var(--green);
+}
+
+.badge.reserva{
+    background:#fff0d6;
+    color:var(--orange);
+}
+
+.insight{
+    border-bottom:1px solid #edf0f2;
+    padding:10px 0;
+    line-height:1.5;
+}
+
+.insight:last-child{
+    border-bottom:0;
+}
+
+.insight b{
+    display:block;
+    margin-bottom:3px;
+}
+
+.insight span{
+    color:var(--muted);
+    font-size:12px;
+}
+
+.empty{
+    text-align:center;
+    color:var(--muted);
+    padding:25px;
+}
+
+footer{
+    text-align:center;
+    color:#7a858e;
+    font-size:11px;
+    line-height:1.6;
+    padding:25px 10px 35px;
+}
+
+#load{
+    position:fixed;
+    inset:0;
+    background:rgba(244,246,248,.96);
+    z-index:99;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+#load.hide{
+    display:none;
+}
+
+.loadbox{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:25px 30px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.loadbox strong{
+    display:block;
+    margin-bottom:7px;
+}
+
+.loadbox span{
+    color:var(--muted);
+    font-size:12px;
+}
+
+#errorBox{
+    display:none;
+}
+
+@media(max-width:950px){
+
+    .g4,
+    .g5,
+    .g2{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .g4,
+    .g5,
+    .g2{
+        grid-template-columns:1fr;
+    }
+
+    .head{
+        display:block;
+    }
+
+    .meta{
+        text-align:left;
+        margin-top:12px;
+    }
+
+    .title{
+        display:block;
+    }
+
+    .periods{
+        margin-top:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div id="load">
+    <div class="loadbox">
+        <strong>PIF · ARILUB</strong>
+        <span id="loadText">
+            Carregando base financeira do Shop9...
+        </span>
+    </div>
+</div>
+
+
+<header>
+
+<div class="head">
+
+    <div>
+        <h1>PIF · ARILUB</h1>
+        <p>
+            Painel de Inteligência Financeira
+        </p>
+    </div>
+
+    <div class="meta">
+
+        <div id="base">
+            <strong>Base:</strong> —
+        </div>
+
+        <div id="gerado">
+            <strong>Atualização:</strong> —
+        </div>
+
+        <div>
+            <strong>Origem:</strong>
+            SQL Server · Shop Control 9
+        </div>
+
+    </div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<div class="nav">
+
+    <button class="tab on" data-section="dashboard">
+        Dashboard
+    </button>
+
+    <button class="tab" data-section="fluxo">
+        Fluxo Projetado
+    </button>
+
+    <button class="tab" data-section="recebiveis">
+        Recebíveis
+    </button>
+
+    <button class="tab" data-section="pagamentos">
+        Pagamentos
+    </button>
+
+    <button class="tab" data-section="contas">
+        Contas
+    </button>
+
+    <button class="tab" data-section="insights">
+        Insights
+    </button>
+
+</div>
+
+</nav>
+
+
+<main class="wrap">
+
+<div
+    id="errorBox"
+    class="note warn">
+</div>
+
+
+<!-- ====================================================== -->
+<!-- DASHBOARD -->
+<!-- ====================================================== -->
+
+<section
+    id="section-dashboard"
+    class="sec on">
+
+<div class="title">
+
+    <div>
+
+        <h2>
+            Dashboard Financeiro
+        </h2>
+
+        <p>
+            Posição financeira e compromissos da operação.
+        </p>
+
+    </div>
+
+    <div class="periods"></div>
+
+</div>
+
+
+<div class="grid g4">
+
+    <div class="card kpi">
+
+        <small>
+            Saldo Consolidado
+        </small>
+
+        <div
+            id="saldoConsolidado"
+            class="val">
+            —
+        </div>
+
+        <div class="sub">
+            Operacional + reserva financeira
+        </div>
+
+    </div>
+
+
+    <div class="card kpi">
+
+        <small>
+            Disponibilidade Operacional
+        </small>
+
+        <div
+            id="disponibilidade"
+            class="val">
+            —
+        </div>
+
+        <div class="sub">
+            Exclui recursos classificados como reserva
+        </div>
+
+    </div>
+
+
+    <div class="card kpi">
+
+        <small>
+            Entradas
+        </small>
+
+        <div
+            id="entradas"
+            class="val">
+            —
+        </div>
+
+        <div
+            id="entradasSub"
+            class="sub">
+            Recebíveis
+        </div>
+
+    </div>
+
+
+    <div class="card kpi">
+
+        <small>
+            Saídas
+        </small>
+
+        <div
+            id="saidas"
+            class="val">
+            —
+        </div>
+
+        <div
+            id="saidasSub"
+            class="sub">
+            Pagamentos + débitos bancários
+        </div>
+
+    </div>
+
+</div>
+
+
+<div style="height:12px"></div>
+
+
+<div class="grid g5">
+
+    <div class="card">
+
+        <small>
+            Contas a Pagar
+        </small>
+
+        <div
+            id="contasPagar"
+            class="val">
+            —
+        </div>
+
+        <div class="sub">
+            Período selecionado
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <small>
+            Débitos Programados
+        </small>
+
+        <div
+            id="debitos"
+            class="val">
+            —
+        </div>
+
+        <div class="sub">
+            Contas operacionais
+        </div>
+
+    </div>
+
+
+    <div class="card kpi reserve">
+
+        <small>
+            Reserva Financeira
+        </small>
+
+        <div
+            id="reserva"
+            class="val">
+            —
+        </div>
+
+        <div class="sub">
+            BNB FIF Institucional · conta 1017
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <small>
+            BNB Operacional
+        </small>
+
+        <div
+            id="bnb"
+            class="val">
+            —
+        </div>
+
+        <div class="sub">
+            Conta 3022
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <small>
+            Outros Bancos
+        </small>
+
+        <div
+            id="outrosBancos"
+            class="val">
+            —
+        </div>
+
+        <div class="sub">
+            Bradesco + Itaú + Santander
+        </div>
+
+    </div>
+
+</div>
+
+
+<div
+    id="reservaAviso"
+    class="note">
+</div>
+
+
+<div class="grid g2">
+
+    <div class="card">
+
+        <strong>
+            Top 10 · Recebimentos
+        </strong>
+
+        <div
+            class="scroll"
+            style="margin-top:10px">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Vencimento</th>
+                        <th class="num">
+                            Valor
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody id="topRecebimentos"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <div class="card">
+
+        <strong>
+            Top 10 · Saídas
+        </strong>
+
+        <div
+            class="scroll"
+            style="margin-top:10px">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Data</th>
+                        <th class="num">
+                            Valor
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody id="topSaidas"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<!-- FLUXO -->
+<!-- ====================================================== -->
+
+<section
+    id="section-fluxo"
+    class="sec">
+
+<div class="title">
+
+    <div>
+
+        <h2>
+            Fluxo Projetado
+        </h2>
+
+        <p>
+            Projeção baseada exclusivamente na disponibilidade operacional.
+            A reserva financeira não participa da projeção.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="card scroll">
+
+<table>
+
+<thead>
+
+<tr>
+
+    <th>
+        Horizonte
+    </th>
+
+    <th class="num">
+        Entradas
+    </th>
+
+    <th class="num">
+        Contas a Pagar
+    </th>
+
+    <th class="num">
+        Débitos Programados
+    </th>
+
+    <th class="num">
+        Saídas
+    </th>
+
+    <th class="num">
+        Saldo Projetado
+    </th>
+
+</tr>
+
+</thead>
+
+<tbody id="fluxoTabela"></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<!-- RECEBIVEIS -->
+<!-- ====================================================== -->
+
+<section
+    id="section-recebiveis"
+    class="sec">
+
+<div class="title">
+
+    <div>
+
+        <h2>
+            Recebíveis
+        </h2>
+
+        <p>
+            Contas a receber abertas no Shop9.
+        </p>
+
+    </div>
+
+    <div class="periods"></div>
+
+</div>
+
+
+<div class="card scroll">
+
+<table>
+
+<thead>
+
+<tr>
+
+    <th>
+        Cliente
+    </th>
+
+    <th>
+        Descrição
+    </th>
+
+    <th>
+        Vencimento
+    </th>
+
+    <th class="num">
+        Valor
+    </th>
+
+</tr>
+
+</thead>
+
+<tbody id="recebiveisTabela"></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<!-- PAGAMENTOS -->
+<!-- ====================================================== -->
+
+<section
+    id="section-pagamentos"
+    class="sec">
+
+<div class="title">
+
+    <div>
+
+        <h2>
+            Pagamentos
+        </h2>
+
+        <p>
+            Contas a pagar e débitos bancários programados.
+        </p>
+
+    </div>
+
+    <div class="periods"></div>
+
+</div>
+
+
+<div class="grid g2">
+
+<div class="card scroll">
+
+<strong>
+    Contas a Pagar
+</strong>
+
+<table style="margin-top:10px">
+
+<thead>
+
+<tr>
+
+    <th>
+        Fornecedor
+    </th>
+
+    <th>
+        Descrição
+    </th>
+
+    <th>
+        Vencimento
+    </th>
+
+    <th class="num">
+        Valor
+    </th>
+
+</tr>
+
+</thead>
+
+<tbody id="pagamentosTabela"></tbody>
+
+</table>
+
+</div>
+
+
+<div class="card scroll">
+
+<strong>
+    Débitos Bancários Programados
+</strong>
+
+<table style="margin-top:10px">
+
+<thead>
+
+<tr>
+
+    <th>
+        Banco / Descrição
+    </th>
+
+    <th>
+        Data
+    </th>
+
+    <th class="num">
+        Valor
+    </th>
+
+</tr>
+
+</thead>
+
+<tbody id="debitosTabela"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<!-- CONTAS -->
+<!-- ====================================================== -->
+
+<section
+    id="section-contas"
+    class="sec">
+
+<div class="title">
+
+    <div>
+
+        <h2>
+            Contas
+        </h2>
+
+        <p>
+            Posição das contas homologadas diretamente no Shop9.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="card scroll">
+
+<table>
+
+<thead>
+
+<tr>
+
+    <th>
+        Conta
+    </th>
+
+    <th>
+        Classificação
+    </th>
+
+    <th>
+        Data da Posição
+    </th>
+
+    <th class="num">
+        Saldo
+    </th>
+
+    <th>
+        Consolidado
+    </th>
+
+    <th>
+        Operacional
+    </th>
+
+    <th>
+        Projeção
+    </th>
+
+</tr>
+
+</thead>
+
+<tbody id="contasTabela"></tbody>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- ====================================================== -->
+<!-- INSIGHTS -->
+<!-- ====================================================== -->
+
+<section
+    id="section-insights"
+    class="sec">
+
+<div class="title">
+
+    <div>
+
+        <h2>
+            Insights
+        </h2>
+
+        <p>
+            Leitura objetiva da posição e do fluxo financeiro.
+        </p>
+
+    </div>
+
+    <div class="periods"></div>
+
+</div>
+
+
+<div class="grid g2">
+
+    <div
+        id="insightPosicao"
+        class="card">
+    </div>
+
+    <div
+        id="insightFluxo"
+        class="card">
+    </div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+PIF · Painel de Inteligência Financeira · ARILUB Distribuidora Ltda.
+
+<br>
+
+Fonte:
+Shop Control 9 · SQL Server S9_Real · integração somente leitura
+
+</footer>
+
+
+<script>
+
+(() => {
+
+"use strict";
+
+
+/* ==========================================================
+   CONFIGURAÇÃO
+   ========================================================== */
+
+const DATA_URL =
+    "./pif-data.json";
+
+const CACHE_KEY =
+    "ARILUB_PIF_LAST_VALID_V20";
+
+
+const PERIODOS = [
+
+    {
+        nome:"Hoje",
+        dias:0
+    },
+
+    {
+        nome:"7 dias",
+        dias:7
+    },
+
+    {
+        nome:"15 dias",
+        dias:15
+    },
+
+    {
+        nome:"30 dias",
+        dias:30
+    }
+
+];
+
+
+let DATA = null;
+
+let periodoDias = 0;
+
+
+/* ==========================================================
+   UTILITÁRIOS
+   ========================================================== */
+
+function el(id){
+
+    return document.getElementById(id);
+
+}
+
+
+function numero(v){
+
+    return Number(v || 0);
+
+}
+
+
+function dinheiro(v){
+
+    return numero(v).toLocaleString(
+
+        "pt-BR",
+
+        {
+            style:"currency",
+            currency:"BRL"
+        }
+
+    );
+
+}
+
+
+function escapeHTML(v){
+
+    return String(v ?? "").replace(
+
+        /[&<>"']/g,
+
+        c => ({
+
+            "&":"&amp;",
+            "<":"&lt;",
+            ">":"&gt;",
+            '"':"&quot;",
+            "'":"&#39;"
+
+        })[c]
+
+    );
+
+}
+
+
+function dataBR(s){
+
+    if(!s){
+
+        return null;
+
+    }
+
+
+    const p =
+        String(s).split("/");
+
+
+    if(p.length !== 3){
+
+        return null;
+
+    }
+
+
+    return new Date(
+
+        Number(p[2]),
+        Number(p[1]) - 1,
+        Number(p[0]),
+        12,
+        0,
+        0,
+        0
+
+    );
+
+}
+
+
+/* ==========================================================
+   VALIDAÇÃO DO JSON
+   ========================================================== */
+
+function validarJSON(d){
+
+    if(
+        !d ||
+        typeof d !== "object"
+    ){
+
+        throw new Error(
+            "JSON vazio ou inválido."
+        );
+
+    }
+
+
+    if(
+        !d.metadata ||
+        !d.metadata.data_base
+    ){
+
+        throw new Error(
+            "metadata.data_base ausente."
+        );
+
+    }
+
+
+    if(
+        !Array.isArray(d.contas)
+    ){
+
+        throw new Error(
+            "contas ausente."
+        );
+
+    }
+
+
+    if(
+        !Array.isArray(d.recebiveis)
+    ){
+
+        throw new Error(
+            "recebiveis ausente."
+        );
+
+    }
+
+
+    if(
+        !Array.isArray(d.pagamentos)
+    ){
+
+        throw new Error(
+            "pagamentos ausente."
+        );
+
+    }
+
+
+    if(
+        !Array.isArray(d.horizontes)
+    ){
+
+        throw new Error(
+            "horizontes ausente."
+        );
+
+    }
+
+
+    if(
+        !Array.isArray(
+            d.debitos_programados
+        )
+    ){
+
+        throw new Error(
+            "debitos_programados ausente."
+        );
+
+    }
+
+
+    return true;
+
+}
+
+
+/* ==========================================================
+   CARREGAMENTO
+   ========================================================== */
+
+async function carregarDados(){
+
+    try{
+
+        /*
+        O JSON publicado tem prioridade absoluta.
+
+        O timestamp evita que o navegador utilize
+        uma versão antiga armazenada em cache.
+        */
+
+        const resposta =
+            await fetch(
+
+                DATA_URL +
+                "?t=" +
+                Date.now(),
+
+                {
+                    cache:"no-store"
+                }
+
+            );
+
+
+        if(!resposta.ok){
+
+            throw new Error(
+
+                "HTTP " +
+                resposta.status
+
+            );
+
+        }
+
+
+        const json =
+            await resposta.json();
+
+
+        validarJSON(json);
+
+
+        DATA = json;
+
+
+        /*
+        Salva apenas uma cópia de contingência.
+
+        Ela NÃO tem prioridade sobre o JSON publicado.
+        */
+
+        try{
+
+            localStorage.setItem(
+
+                CACHE_KEY,
+
+                JSON.stringify(json)
+
+            );
+
+        }
+        catch(e){
+
+            console.warn(
+                "Cache local indisponível.",
+                e
+            );
+
+        }
+
+
+        return;
+
+    }
+    catch(erro){
+
+        console.error(
+
+            "Falha ao carregar pif-data.json:",
+
+            erro
+
+        );
+
+
+        /*
+        CONTINGÊNCIA
+
+        Só utiliza a última base válida se
+        o JSON publicado estiver indisponível.
+        */
+
+        try{
+
+            const salvo =
+                localStorage.getItem(
+                    CACHE_KEY
+                );
+
+
+            if(!salvo){
+
+                throw new Error(
+                    "Cache inexistente."
+                );
+
+            }
+
+
+            const json =
+                JSON.parse(salvo);
+
+
+            validarJSON(json);
+
+
+            DATA = json;
+
+
+            mostrarAviso(
+
+                "A base online não respondeu. " +
+                "O painel está exibindo a última " +
+                "base válida armazenada neste navegador."
+
+            );
+
+
+            return;
+
+        }
+        catch(e){
+
+            throw new Error(
+
+                "Não foi possível carregar " +
+                "pif-data.json e não existe " +
+                "base válida de contingência."
+
+            );
+
+        }
+
+    }
+
+}
+
+
+/* ==========================================================
+   AVISO
+   ========================================================== */
+
+function mostrarAviso(texto){
+
+    const box =
+        el("errorBox");
+
+
+    box.style.display =
+        "block";
+
+
+    box.textContent =
+        texto;
+
+}
+
+
+/* ==========================================================
+   CONTAS
+   ========================================================== */
+
+function conta(chave){
+
+    return (
+
+        DATA.contas || []
+
+    ).find(
+
+        x =>
+
+        String(
+            x.Conta
+        ).toUpperCase()
+
+        ===
+
+        chave.toUpperCase()
+
+    );
+
+}
+
+
+function saldoConsolidado(){
+
+    return (
+
+        DATA.contas || []
+
+    )
+
+    .filter(
+
+        x =>
+
+        x.Incluir_saldo_consolidado
+        === true
+
+    )
+
+    .reduce(
+
+        (s,x) =>
+            s + numero(x.Saldo),
+
+        0
+
+    );
+
+}
+
+
+function disponibilidadeOperacional(){
+
+    return (
+
+        DATA.contas || []
+
+    )
+
+    .filter(
+
+        x =>
+
+        x.Incluir_disponibilidade_operacional
+        === true
+
+    )
+
+    .reduce(
+
+        (s,x) =>
+            s + numero(x.Saldo),
+
+        0
+
+    );
+
+}
+
+
+function reservaFinanceira(){
+
+    return (
+
+        DATA.contas || []
+
+    )
+
+    .filter(
+
+        x =>
+
+        String(
+            x.Classificacao
+        ).toUpperCase()
+
+        === "RESERVA"
+
+    )
+
+    .reduce(
+
+        (s,x) =>
+            s + numero(x.Saldo),
+
+        0
+
+    );
+
+}
+
+
+/* ==========================================================
+   HORIZONTE
+   ========================================================== */
+
+function horizonte(){
+
+    const periodo =
+        PERIODOS.find(
+
+            p =>
+                p.dias ===
+                periodoDias
+
+        );
+
+
+    return (
+
+        DATA.horizontes || []
+
+    ).find(
+
+        x =>
+            x.Horizonte ===
+            periodo.nome
+
+    ) || {};
+
+}
+
+
+/* ==========================================================
+   FILTRO DE DATAS
+   ========================================================== */
+
+function dentroPeriodo(
+    data,
+    dias,
+    incluirHoje = true
+){
+
+    const base =
+        dataBR(
+            DATA.metadata.data_base
+        );
+
+
+    const atual =
+        dataBR(data);
+
+
+    if(
+        !base ||
+        !atual
+    ){
+
+        return false;
+
+    }
+
+
+    const limite =
+        new Date(base);
+
+
+    limite.setDate(
+
+        limite.getDate() +
+        dias
+
+    );
+
+
+    if(incluirHoje){
+
+        return (
+
+            atual >= base &&
+            atual <= limite
+
+        );
+
+    }
+
+
+    return (
+
+        atual > base &&
+        atual <= limite
+
+    );
+
+}
+
+
+/* ==========================================================
+   LISTAS DO PERÍODO
+   ========================================================== */
+
+function recebiveisPeriodo(){
+
+    return (
+
+        DATA.recebiveis || []
+
+    ).filter(
+
+        x =>
+
+        dentroPeriodo(
+
+            x.Vencimento,
+
+            periodoDias,
+
+            true
+
+        )
+
+    );
+
+}
+
+
+function pagamentosPeriodo(){
+
+    return (
+
+        DATA.pagamentos || []
+
+    ).filter(
+
+        x =>
+
+        dentroPeriodo(
+
+            x.Vencimento,
+
+            periodoDias,
+
+            true
+
+        )
+
+    );
+
+}
+
+
+function debitosPeriodo(){
+
+    /*
+    Hoje retorna zero porque o saldo bancário
+    atual já contempla os movimentos realizados.
+    */
+
+    if(
+        periodoDias === 0
+    ){
+
+        return [];
+
+    }
+
+
+    return (
+
+        DATA.debitos_programados || []
+
+    ).filter(
+
+        x =>
+
+        dentroPeriodo(
+
+            x.Data,
+
+            periodoDias,
+
+            false
+
+        )
+
+    );
+
+}
+
+
+/* ==========================================================
+   BOTÕES DE PERÍODO
+   ========================================================== */
+
+function renderPeriodos(){
+
+    document
+    .querySelectorAll(
+        ".periods"
+    )
+    .forEach(
+
+        box => {
+
+            box.innerHTML = "";
+
+
+            PERIODOS.forEach(
+
+                p => {
+
+                    const botao =
+                        document.createElement(
+                            "button"
+                        );
+
+
+                    botao.className =
+                        "per" +
+                        (
+                            p.dias ===
+                            periodoDias
+                            ?
+                            " on"
+                            :
+                            ""
+                        );
+
+
+                    botao.textContent =
+                        p.nome;
+
+
+                    botao.onclick =
+                        () => {
+
+                            periodoDias =
+                                p.dias;
+
+
+                            renderTudo();
+
+                        };
+
+
+                    box.appendChild(
+                        botao
+                    );
+
+                }
+
+            );
+
+        }
+
+    );
+
+}
+
+
+/* ==========================================================
+   CABEÇALHO
+   ========================================================== */
+
+function renderCabecalho(){
+
+    el("base").innerHTML =
+
+        "<strong>Base:</strong> " +
+
+        escapeHTML(
+            DATA.metadata.data_base
+        );
+
+
+    el("gerado").innerHTML =
+
+        "<strong>Atualização:</strong> " +
+
+        escapeHTML(
+            DATA.metadata.gerado_em || "—"
+        );
+
+}
+
+
+/* ==========================================================
+   DASHBOARD
+   ========================================================== */
+
+function renderDashboard(){
+
+    const h =
+        horizonte();
+
+
+    const consolidado =
+        saldoConsolidado();
+
+
+    const operacional =
+        disponibilidadeOperacional();
+
+
+    const reserva =
+        reservaFinanceira();
+
+
+    const entradas =
+        numero(
+            h[
+                "Recebimentos acumulados"
+            ]
+        );
+
+
+    const pagamentos =
+        numero(
+            h[
+                "Pagamentos acumulados"
+            ]
+        );
+
+
+    const debitos =
+        numero(
+            h[
+                "Débitos bancários acumulados"
+            ]
+        );
+
+
+    const saidas =
+        numero(
+            h[
+                "Saídas acumuladas"
+            ]
+        );
+
+
+    el(
+        "saldoConsolidado"
+    ).textContent =
+        dinheiro(consolidado);
+
+
+    el(
+        "disponibilidade"
+    ).textContent =
+        dinheiro(operacional);
+
+
+    el(
+        "reserva"
+    ).textContent =
+        dinheiro(reserva);
+
+
+    el(
+        "entradas"
+    ).textContent =
+        dinheiro(entradas);
+
+
+    el(
+        "saidas"
+    ).textContent =
+        dinheiro(saidas);
+
+
+    el(
+        "contasPagar"
+    ).textContent =
+        dinheiro(pagamentos);
+
+
+    el(
+        "debitos"
+    ).textContent =
+        dinheiro(debitos);
+
+
+    const periodo =
+        PERIODOS.find(
+
+            p =>
+                p.dias ===
+                periodoDias
+
+        );
+
+
+    el(
+        "entradasSub"
+    ).textContent =
+
+        "Recebíveis · " +
+        periodo.nome;
+
+
+    el(
+        "saidasSub"
+    ).textContent =
+
+        "Pagamentos + débitos · " +
+        periodo.nome;
+
+
+    /*
+    BNB OPERACIONAL
+    */
+
+    const bnb =
+        conta("BNB");
+
+
+    el(
+        "bnb"
+    ).textContent =
+        dinheiro(
+            bnb
+            ?
+            bnb.Saldo
+            :
+            0
+        );
+
+
+    /*
+    OUTROS BANCOS
+    */
+
+    const outros =
+
+        [
+            "BRADESCO",
+            "ITAU",
+            "SANTANDER"
+        ]
+
+        .reduce(
+
+            (s,chave) => {
+
+                const c =
+                    conta(chave);
+
+
+                return (
+
+                    s +
+                    numero(
+                        c
+                        ?
+                        c.Saldo
+                        :
+                        0
+                    )
+
+                );
+
+            },
+
+            0
+
+        );
+
+
+    el(
+        "outrosBancos"
+    ).textContent =
+        dinheiro(outros);
+
+
+    /*
+    BNB FIF INSTITUCIONAL
+    */
+
+    const fif =
+        conta("BNB_FIF");
+
+
+    const aviso =
+        el("reservaAviso");
+
+
+    if(
+        !fif ||
+        numero(fif.Saldo) === 0
+    ){
+
+        aviso.className =
+            "note warn";
+
+
+        aviso.innerHTML =
+
+            "<strong>" +
+
+            "Reserva Financeira — " +
+            "BNB FIF Institucional: " +
+            dinheiro(0) +
+
+            ".</strong> " +
+
+            "A conta 1017 está integrada ao PIF, " +
+            "porém ainda não possui posição financeira " +
+            "registrada no Shop9. " +
+
+            "Enquanto permanecer zerada, " +
+            "Saldo Consolidado e Disponibilidade " +
+            "Operacional serão iguais.";
+
+    }
+    else{
+
+        aviso.className =
+            "note";
+
+
+        aviso.innerHTML =
+
+            "<strong>" +
+
+            "Reserva Financeira — " +
+            "BNB FIF Institucional: " +
+
+            dinheiro(
+                fif.Saldo
+            ) +
+
+            ".</strong> " +
+
+            "O valor integra o Saldo Consolidado " +
+            "e permanece fora da Disponibilidade " +
+            "e da Projeção Operacional.";
+
+    }
+
+
+    renderTop10();
+
+}
+
+
+/* ==========================================================
+   TOP 10
+   ========================================================== */
+
+function renderTop10(){
+
+    const recebiveis =
+
+        recebiveisPeriodo()
+
+        .sort(
+
+            (a,b) =>
+                numero(b.Valor) -
+                numero(a.Valor)
+
+        )
+
+        .slice(
+            0,
+            10
+        );
+
+
+    const tbodyRec =
+        el(
+            "topRecebimentos"
+        );
+
+
+    if(
+        recebiveis.length === 0
+    ){
+
+        tbodyRec.innerHTML =
+
+            '<tr>' +
+            '<td colspan="3" class="empty">' +
+            'Sem recebíveis no período.' +
+            '</td>' +
+            '</tr>';
+
+    }
+    else{
+
+        tbodyRec.innerHTML =
+
+            recebiveis.map(
+
+                x =>
+
+                "<tr>" +
+
+                "<td>" +
+                escapeHTML(
+                    x.Cliente || "—"
+                ) +
+                "</td>" +
+
+                "<td>" +
+                escapeHTML(
+                    x.Vencimento || "—"
+                ) +
+                "</td>" +
+
+                '<td class="num">' +
+                dinheiro(
+                    x.Valor
+                ) +
+                "</td>" +
+
+                "</tr>"
+
+            ).join("");
+
+    }
+
+
+    /*
+    Une pagamentos e débitos
+    para formar o Top 10 de saídas.
+    */
+
+    const pagamentos =
+
+        pagamentosPeriodo()
+
+        .map(
+
+            x => ({
+
+                descricao:
+                    x.Fornecedor ||
+                    x["Descrição"] ||
+                    "Pagamento",
+
+                data:
+                    x.Vencimento,
+
+                valor:
+                    numero(
+                        x.Valor
+                    )
+
+            })
+
+        );
+
+
+    const debitos =
+
+        debitosPeriodo()
+
+        .map(
+
+            x => ({
+
+                descricao:
+
+                    (
+                        x.Banco
+                        ?
+                        x.Banco + " · "
+                        :
+                        ""
+                    )
+
+                    +
+
+                    (
+                        x.Descricao ||
+                        "Débito programado"
+                    ),
+
+                data:
+                    x.Data,
+
+                valor:
+                    numero(
+                        x.Valor
+                    )
+
+            })
+
+        );
+
+
+    const saidas =
+
+        [
+            ...pagamentos,
+            ...debitos
+        ]
+
+        .sort(
+
+            (a,b) =>
+                b.valor -
+                a.valor
+
+        )
+
+        .slice(
+            0,
+            10
+        );
+
+
+    const tbodySaidas =
+        el(
+            "topSaidas"
+        );
+
+
+    if(
+        saidas.length === 0
+    ){
+
+        tbodySaidas.innerHTML =
+
+            '<tr>' +
+            '<td colspan="3" class="empty">' +
+            'Sem saídas no período.' +
+            '</td>' +
+            '</tr>';
+
+    }
+    else{
+
+        tbodySaidas.innerHTML =
+
+            saidas.map(
+
+                x =>
+
+                "<tr>" +
+
+                "<td>" +
+                escapeHTML(
+                    x.descricao
+                ) +
+                "</td>" +
+
+                "<td>" +
+                escapeHTML(
+                    x.data || "—"
+                ) +
+                "</td>" +
+
+                '<td class="num">' +
+                dinheiro(
+                    x.valor
+                ) +
+                "</td>" +
+
+                "</tr>"
+
+            ).join("");
+
+    }
+
+}
+
+
+/* ==========================================================
+   FLUXO PROJETADO
+   ========================================================== */
+
+function renderFluxo(){
+
+    const tbody =
+        el(
+            "fluxoTabela"
+        );
+
+
+    tbody.innerHTML =
+
+        (
+            DATA.horizontes || []
+        )
+
+        .map(
+
+            x =>
+
+            "<tr>" +
+
+            "<td>" +
+
+            "<strong>" +
+            escapeHTML(
+                x.Horizonte
+            ) +
+            "</strong>" +
+
+            "<br>" +
+
+            '<span class="sub">' +
+            escapeHTML(
+                x["Até"] || ""
+            ) +
+            "</span>" +
+
+            "</td>" +
+
+
+            '<td class="num">' +
+
+            dinheiro(
+                x[
+                    "Recebimentos acumulados"
+                ]
+            ) +
+
+            "</td>" +
+
+
+            '<td class="num">' +
+
+            dinheiro(
+                x[
+                    "Pagamentos acumulados"
+                ]
+            ) +
+
+            "</td>" +
+
+
+            '<td class="num">' +
+
+            dinheiro(
+                x[
+                    "Débitos bancários acumulados"
+                ]
+            ) +
+
+            "</td>" +
+
+
+            '<td class="num">' +
+
+            dinheiro(
+                x[
+                    "Saídas acumuladas"
+                ]
+            ) +
+
+            "</td>" +
+
+
+            '<td class="num">' +
+
+            "<strong>" +
+
+            dinheiro(
+                x[
+                    "Saldo projetado operacional"
+                ]
+            ) +
+
+            "</strong>" +
+
+            "</td>" +
+
+            "</tr>"
+
+        )
+
+        .join("");
+
+}
+
+
+/* ==========================================================
+   RECEBÍVEIS
+   ========================================================== */
+
+function renderRecebiveis(){
+
+    const lista =
+
+        recebiveisPeriodo()
+
+        .sort(
+
+            (a,b) =>
+
+                dataBR(
+                    a.Vencimento
+                )
+
+                -
+
+                dataBR(
+                    b.Vencimento
+                )
+
+        );
+
+
+    const tbody =
+        el(
+            "recebiveisTabela"
+        );
+
+
+    if(
+        lista.length === 0
+    ){
+
+        tbody.innerHTML =
+
+            '<tr>' +
+            '<td colspan="4" class="empty">' +
+            'Sem recebíveis no período.' +
+            '</td>' +
+            '</tr>';
+
+
+        return;
+
+    }
+
+
+    tbody.innerHTML =
+
+        lista.map(
+
+            x =>
+
+            "<tr>" +
+
+            "<td>" +
+            escapeHTML(
+                x.Cliente || "—"
+            ) +
+            "</td>" +
+
+            "<td>" +
+            escapeHTML(
+                x.Descricao || "—"
+            ) +
+            "</td>" +
+
+            "<td>" +
+            escapeHTML(
+                x.Vencimento || "—"
+            ) +
+            "</td>" +
+
+            '<td class="num">' +
+            dinheiro(
+                x.Valor
+            ) +
+            "</td>" +
+
+            "</tr>"
+
+        ).join("");
+
+}
+
+
+/* ==========================================================
+   PAGAMENTOS
+   ========================================================== */
+
+function renderPagamentos(){
+
+    const pagamentos =
+
+        pagamentosPeriodo()
+
+        .sort(
+
+            (a,b) =>
+
+                dataBR(
+                    a.Vencimento
+                )
+
+                -
+
+                dataBR(
+                    b.Vencimento
+                )
+
+        );
+
+
+    const tbodyPag =
+        el(
+            "pagamentosTabela"
+        );
+
+
+    if(
+        pagamentos.length === 0
+    ){
+
+        tbodyPag.innerHTML =
+
+            '<tr>' +
+            '<td colspan="4" class="empty">' +
+            'Sem contas a pagar no período.' +
+            '</td>' +
+            '</tr>';
+
+    }
+    else{
+
+        tbodyPag.innerHTML =
+
+            pagamentos.map(
+
+                x =>
+
+                "<tr>" +
+
+                "<td>" +
+                escapeHTML(
+                    x.Fornecedor || "—"
+                ) +
+                "</td>" +
+
+                "<td>" +
+                escapeHTML(
+                    x["Descrição"] || "—"
+                ) +
+                "</td>" +
+
+                "<td>" +
+                escapeHTML(
+                    x.Vencimento || "—"
+                ) +
+                "</td>" +
+
+                '<td class="num">' +
+                dinheiro(
+                    x.Valor
+                ) +
+                "</td>" +
+
+                "</tr>"
+
+            ).join("");
+
+    }
+
+
+    const debitos =
+
+        debitosPeriodo()
+
+        .sort(
+
+            (a,b) =>
+
+                dataBR(
+                    a.Data
+                )
+
+                -
+
+                dataBR(
+                    b.Data
+                )
+
+        );
+
+
+    const tbodyDeb =
+        el(
+            "debitosTabela"
+        );
+
+
+    if(
+        debitos.length === 0
+    ){
+
+        tbodyDeb.innerHTML =
+
+            '<tr>' +
+            '<td colspan="3" class="empty">' +
+            'Sem débitos programados no período.' +
+            '</td>' +
+            '</tr>';
+
+    }
+    else{
+
+        tbodyDeb.innerHTML =
+
+            debitos.map(
+
+                x =>
+
+                "<tr>" +
+
+                "<td>" +
+
+                "<strong>" +
+                escapeHTML(
+                    x.Banco || "—"
+                ) +
+                "</strong>" +
+
+                "<br>" +
+
+                escapeHTML(
+                    x.Descricao || ""
+                ) +
+
+                "</td>" +
+
+                "<td>" +
+                escapeHTML(
+                    x.Data || "—"
+                ) +
+                "</td>" +
+
+                '<td class="num">' +
+                dinheiro(
+                    x.Valor
+                ) +
+                "</td>" +
+
+                "</tr>"
+
+            ).join("");
+
+    }
+
+}
+
+
+/* ==========================================================
+   CONTAS
+   ========================================================== */
+
+function renderContas(){
+
+    const tbody =
+        el(
+            "contasTabela"
+        );
+
+
+    tbody.innerHTML =
+
+        (
+            DATA.contas || []
+        )
+
+        .map(
+
+            x => {
+
+                const reserva =
+
+                    String(
+                        x.Classificacao
+                    ).toUpperCase()
+
+                    ===
+
+                    "RESERVA";
+
+
+                return (
+
+                    "<tr>" +
+
+
+                    "<td>" +
+
+                    "<strong>" +
+                    escapeHTML(
+                        x.Nome ||
+                        x.Conta
+                    ) +
+                    "</strong>" +
+
+                    "<br>" +
+
+                    '<span class="sub">' +
+
+                    "SQL " +
+                    escapeHTML(
+                        x.Ordem_SQL
+                    ) +
+
+                    "</span>" +
+
+                    "</td>" +
+
+
+                    "<td>" +
+
+                    '<span class="badge ' +
+
+                    (
+                        reserva
+                        ?
+                        "reserva"
+                        :
+                        ""
+                    )
+
+                    +
+
+                    '">' +
+
+                    escapeHTML(
+                        x.Classificacao ||
+                        "—"
+                    ) +
+
+                    "</span>" +
+
+                    "</td>" +
+
+
+                    "<td>" +
+
+                    escapeHTML(
+
+                        x[
+                            "Data posição"
+                        ]
+
+                        ||
+
+                        "Sem lançamento"
+
+                    ) +
+
+                    "</td>" +
+
+
+                    '<td class="num">' +
+
+                    "<strong>" +
+
+                    dinheiro(
+                        x.Saldo
+                    ) +
+
+                    "</strong>" +
+
+                    "</td>" +
+
+
+                    "<td>" +
+
+                    (
+                        x.Incluir_saldo_consolidado
+                        === true
+                        ?
+                        "Sim"
+                        :
+                        "Não"
+                    ) +
+
+                    "</td>" +
+
+
+                    "<td>" +
+
+                    (
+                        x.Incluir_disponibilidade_operacional
+                        === true
+                        ?
+                        "Sim"
+                        :
+                        "Não"
+                    ) +
+
+                    "</td>" +
+
+
+                    "<td>" +
+
+                    (
+                        x.Incluir_projecao
+                        === true
+                        ?
+                        "Sim"
+                        :
+                        "Não"
+                    ) +
+
+                    "</td>" +
+
+
+                    "</tr>"
+
+                );
+
+            }
+
+        )
+
+        .join("");
+
+}
+
+
+/* ==========================================================
+   INSIGHTS
+   ========================================================== */
+
+function renderInsights(){
+
+    const h =
+        horizonte();
+
+
+    const consolidado =
+        saldoConsolidado();
+
+
+    const operacional =
+        disponibilidadeOperacional();
+
+
+    const reserva =
+        reservaFinanceira();
+
+
+    const fif =
+        conta(
+            "BNB_FIF"
+        );
+
+
+    el(
+        "insightPosicao"
+    ).innerHTML =
+
+        "<strong>Posição Financeira</strong>" +
+
+        '<div class="insight">' +
+
+        "<b>Saldo Consolidado</b>" +
+
+        "<span>" +
+
+        dinheiro(
+            consolidado
+        ) +
+
+        " registrados nas contas homologadas." +
+
+        "</span>" +
+
+        "</div>" +
+
+
+        '<div class="insight">' +
+
+        "<b>Disponibilidade Operacional</b>" +
+
+        "<span>" +
+
+        dinheiro(
+            operacional
+        ) +
+
+        " disponíveis nas contas operacionais." +
+
+        "</span>" +
+
+        "</div>" +
+
+
+        '<div class="insight">' +
+
+        "<b>Reserva Financeira</b>" +
+
+        "<span>" +
+
+        dinheiro(
+            reserva
+        ) +
+
+        " na conta BNB FIF Institucional (1017)." +
+
+        (
+            fif &&
+            !fif["Data posição"]
+
+            ?
+
+            " A conta ainda não possui lançamento financeiro no Shop9."
+
+            :
+
+            ""
+        ) +
+
+        "</span>" +
+
+        "</div>";
+
+
+    const periodo =
+        PERIODOS.find(
+
+            p =>
+                p.dias ===
+                periodoDias
+
+        );
+
+
+    el(
+        "insightFluxo"
+    ).innerHTML =
+
+        "<strong>Fluxo · " +
+
+        escapeHTML(
+            periodo.nome
+        ) +
+
+        "</strong>" +
+
+
+        '<div class="insight">' +
+
+        "<b>Entradas previstas</b>" +
+
+        "<span>" +
+
+        dinheiro(
+
+            h[
+                "Recebimentos acumulados"
+            ]
+
+        ) +
+
+        "</span>" +
+
+        "</div>" +
+
+
+        '<div class="insight">' +
+
+        "<b>Saídas previstas</b>" +
+
+        "<span>" +
+
+        dinheiro(
+
+            h[
+                "Saídas acumuladas"
+            ]
+
+        ) +
+
+        "</span>" +
+
+        "</div>" +
+
+
+        '<div class="insight">' +
+
+        "<b>Débitos bancários programados</b>" +
+
+        "<span>" +
+
+        dinheiro(
+
+            h[
+                "Débitos bancários acumulados"
+            ]
+
+        ) +
+
+        "</span>" +
+
+        "</div>" +
+
+
+        '<div class="insight">' +
+
+        "<b>Saldo Projetado Operacional</b>" +
+
+        "<span>" +
+
+        dinheiro(
+
+            h[
+                "Saldo projetado operacional"
+            ]
+
+        ) +
+
+        ". A reserva financeira não participa desta projeção." +
+
+        "</span>" +
+
+        "</div>";
+
+}
+
+
+/* ==========================================================
+   RENDER GERAL
+   ========================================================== */
+
+function renderTudo(){
+
+    renderPeriodos();
+
+    renderCabecalho();
+
+    renderDashboard();
+
+    renderFluxo();
+
+    renderRecebiveis();
+
+    renderPagamentos();
+
+    renderContas();
+
+    renderInsights();
+
+}
+
+
+/* ==========================================================
+   NAVEGAÇÃO
+   ========================================================== */
+
+document
+.querySelectorAll(
+    ".tab"
+)
+.forEach(
+
+    botao => {
+
+        botao.addEventListener(
+
+            "click",
+
+            () => {
+
+                document
+                .querySelectorAll(
+                    ".tab"
+                )
+                .forEach(
+
+                    x =>
+                        x.classList.remove(
+                            "on"
+                        )
+
+                );
+
+
+                document
+                .querySelectorAll(
+                    ".sec"
+                )
+                .forEach(
+
+                    x =>
+                        x.classList.remove(
+                            "on"
+                        )
+
+                );
+
+
+                botao.classList.add(
+                    "on"
+                );
+
+
+                el(
+
+                    "section-" +
+                    botao.dataset.section
+
+                ).classList.add(
+                    "on"
+                );
+
+            }
+
+        );
+
+    }
+
+);
+
+
+/* ==========================================================
+   INICIALIZAÇÃO
+   ========================================================== */
+
+async function iniciar(){
+
+    try{
+
+        await carregarDados();
+
+
+        renderTudo();
+
+
+        el(
+            "load"
+        ).classList.add(
+            "hide"
+        );
+
+    }
+    catch(erro){
+
+        console.error(
+            erro
+        );
+
+
+        el(
+            "loadText"
+        ).textContent =
+            erro.message;
+
+
+        mostrarAviso(
+            erro.message
+        );
+
+    }
+
+}
+
+
+iniciar();
+
+
+})();
+
+</script>
+
+</body>
+</html>
