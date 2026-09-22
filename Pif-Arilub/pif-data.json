@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "22/09/2026",
-                     "gerado_em":  "22/09/2026 09:00:03",
+                     "gerado_em":  "22/09/2026 10:00:03",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.0"
                  },
@@ -25,8 +25,8 @@
                        "Conta":  "ITAU",
                        "Nome":  "BANCO ITAU",
                        "Data posição":  "22/09/2026",
-                       "Saldo":  8984.11,
-                       "Saldo futuro":  8984.11,
+                       "Saldo":  16678.7,
+                       "Saldo futuro":  16678.7,
                        "Classificacao":  "OPERACIONAL",
                        "Saldo_reserva":  0,
                        "Incluir_saldo_consolidado":  true,
@@ -37,9 +37,9 @@
                        "Ordem_SQL":  3022,
                        "Conta":  "BNB",
                        "Nome":  "BNB",
-                       "Data posição":  "18/09/2026",
-                       "Saldo":  460054.7,
-                       "Saldo futuro":  460054.7,
+                       "Data posição":  "21/09/2026",
+                       "Saldo":  447355.7,
+                       "Saldo futuro":  447355.7,
                        "Classificacao":  "OPERACIONAL",
                        "Saldo_reserva":  0,
                        "Incluir_saldo_consolidado":  true,
@@ -313,16 +313,6 @@
                            "Valor":  6395.3,
                            "Ordem_SQL":  628968,
                            "Descricao":  "Saída 90799 - 1/1"
-                       },
-                       {
-                           "Emissão":  "04/09/2026",
-                           "Código Cliente":  "92897",
-                           "Cliente":  "Condominio Platinum",
-                           "Vencimento":  "02/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  848.74,
-                           "Ordem_SQL":  629082,
-                           "Descricao":  "Saída 90853 - 1/1"
                        },
                        {
                            "Emissão":  "03/09/2026",
@@ -1285,7 +1275,7 @@
                            "Pagamentos acumulados":  0,
                            "Débitos bancários acumulados":  0,
                            "Saídas acumuladas":  0,
-                           "Saldo projetado operacional":  485871.78
+                           "Saldo projetado operacional":  480867.37
                        },
                        {
                            "Horizonte":  "7 dias",
@@ -1294,36 +1284,36 @@
                            "Pagamentos acumulados":  0,
                            "Débitos bancários acumulados":  24713.03,
                            "Saídas acumuladas":  24713.03,
-                           "Saldo projetado operacional":  510756
+                           "Saldo projetado operacional":  505751.59
                        },
                        {
                            "Horizonte":  "15 dias",
                            "Até":  "07/10/2026",
-                           "Recebimentos acumulados":  92045.59,
+                           "Recebimentos acumulados":  91196.85,
                            "Pagamentos acumulados":  15744.77,
                            "Débitos bancários acumulados":  52802.76,
                            "Saídas acumuladas":  68547.53,
-                           "Saldo projetado operacional":  507456.64
+                           "Saldo projetado operacional":  501603.49
                        },
                        {
                            "Horizonte":  "30 dias",
                            "Até":  "22/10/2026",
-                           "Recebimentos acumulados":  189064.65,
+                           "Recebimentos acumulados":  188215.91,
                            "Pagamentos acumulados":  37959.95,
                            "Débitos bancários acumulados":  90457.62,
                            "Saídas acumuladas":  128417.57,
-                           "Saldo projetado operacional":  544605.66
+                           "Saldo projetado operacional":  538752.51
                        }
                    ],
     "auditoria":  {
-                      "qtd_recebiveis":  58,
-                      "total_recebiveis_30d":  189064.65,
+                      "qtd_recebiveis":  57,
+                      "total_recebiveis_30d":  188215.91,
                       "qtd_pagamentos":  62,
                       "total_pagamentos_30d":  37959.95,
                       "qtd_debitos_programados":  34,
                       "total_debitos_programados_30d":  90457.62,
-                      "saldo_bancario_consolidado_data_base":  483958.58,
-                      "disponibilidade_operacional":  483958.58,
+                      "saldo_bancario_consolidado_data_base":  478954.17,
+                      "disponibilidade_operacional":  478954.17,
                       "reserva_financeira":  0,
                       "modo_sql":  "SOMENTE LEITURA"
                   },
@@ -1600,6 +1590,16 @@
     "top10":  {
                   "recebimentos":  [
                                        {
+                                           "Emissão":  "14/08/2026",
+                                           "Código Cliente":  "78778",
+                                           "Cliente":  "PAP NETO LTDA",
+                                           "Vencimento":  "09/10/2026",
+                                           "Vendedor":  "",
+                                           "Valor":  540.41,
+                                           "Ordem_SQL":  628502,
+                                           "Descricao":  "Saída 90578 - 3/3"
+                                       },
+                                       {
                                            "Emissão":  "10/09/2026",
                                            "Código Cliente":  "88672",
                                            "Cliente":  "Jeri-1 Empreendimento Imobiliario Spe Ltda",
@@ -1620,24 +1620,24 @@
                                            "Descricao":  "Saída 90906 - 1/1"
                                        },
                                        {
-                                           "Emissão":  "27/08/2026",
-                                           "Código Cliente":  "82152",
-                                           "Cliente":  "G S Incorporadora E Loteadora Ltda",
-                                           "Vencimento":  "08/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  717.51,
-                                           "Ordem_SQL":  628794,
-                                           "Descricao":  "Saída 90753 - 2/2"
-                                       },
-                                       {
                                            "Emissão":  "14/08/2026",
-                                           "Código Cliente":  "78778",
-                                           "Cliente":  "PAP NETO LTDA",
+                                           "Código Cliente":  "66954",
+                                           "Cliente":  "Glc Comercio De Pecas Para Refrigeracao Ltda",
                                            "Vencimento":  "09/10/2026",
                                            "Vendedor":  "",
-                                           "Valor":  540.41,
-                                           "Ordem_SQL":  628502,
-                                           "Descricao":  "Saída 90578 - 3/3"
+                                           "Valor":  3780.33,
+                                           "Ordem_SQL":  628506,
+                                           "Descricao":  "Saída 90580 - 3/3"
+                                       },
+                                       {
+                                           "Emissão":  "11/09/2026",
+                                           "Código Cliente":  "2223",
+                                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                                           "Vencimento":  "11/10/2026",
+                                           "Vendedor":  "",
+                                           "Valor":  46140,
+                                           "Ordem_SQL":  629262,
+                                           "Descricao":  "Saída 90922 - 1/1"
                                        },
                                        {
                                            "Emissão":  "11/09/2026",
@@ -1660,14 +1660,14 @@
                                            "Descricao":  "Saída 90588 - 3/3"
                                        },
                                        {
-                                           "Emissão":  "14/08/2026",
-                                           "Código Cliente":  "66954",
-                                           "Cliente":  "Glc Comercio De Pecas Para Refrigeracao Ltda",
-                                           "Vencimento":  "09/10/2026",
+                                           "Emissão":  "09/09/2026",
+                                           "Código Cliente":  "78468",
+                                           "Cliente":  "Paraipaba Agroindustrial Ltda",
+                                           "Vencimento":  "07/10/2026",
                                            "Vendedor":  "",
-                                           "Valor":  3780.33,
-                                           "Ordem_SQL":  628506,
-                                           "Descricao":  "Saída 90580 - 3/3"
+                                           "Valor":  1542.84,
+                                           "Ordem_SQL":  629165,
+                                           "Descricao":  "Saída 90887 - 1/3"
                                        },
                                        {
                                            "Emissão":  "08/09/2026",
@@ -1688,16 +1688,6 @@
                                            "Valor":  706.2,
                                            "Ordem_SQL":  629144,
                                            "Descricao":  "Saída 90876 - 1/1"
-                                       },
-                                       {
-                                           "Emissão":  "08/09/2026",
-                                           "Código Cliente":  "74257",
-                                           "Cliente":  "R C Construcoes Ltda",
-                                           "Vencimento":  "06/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  513.9,
-                                           "Ordem_SQL":  629125,
-                                           "Descricao":  "Saída 90866 - 1/2"
                                        }
                                    ],
                   "pagamentos":  [
