@@ -2,1893 +2,1880 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "23/09/2026",
-                     "gerado_em":  "23/09/2026 12:00:01",
+                     "gerado_em":  "23/09/2026 13:41:40",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
-                     "versao":  "PIF SQL 2.0"
+                     "versao":  "PIF SQL 2.1"
                  },
+    "regras":  {
+                   "schema":  "PIF SQL 2.1",
+                   "integridade":  "100% dos recebiveis e pagamentos participam da projecao.",
+                   "hierarquia":  "SHOP9 \u003e movimento programado identificado \u003e regra provisoria \u003e SEM BANCO.",
+                   "recebiveis_sem_banco":  "BRADESCO / ALOC. PENDENTE",
+                   "pagamentos_bradesco":  "Contas, boletos e fornecedores programados.",
+                   "pagamentos_itau":  "Despesas operacionais, pessoal, adiantamentos, servicos e pagamentos diversos.",
+                   "nao_classificavel":  "SEM BANCO / NAO ALOCADO",
+                   "investimentos":  "BNB 1017 + SANTANDER 3025; integram consolidado e nao integram disponibilidade/projecao operacional.",
+                   "duplicidade":  "Nao excluir valores. Apenas sinalizar possivel duplicidade para verificacao no Shop9."
+               },
     "contas":  [
                    {
-                       "Ordem_SQL":  3,
-                       "Conta":  "BRADESCO",
-                       "Nome":  "BRADESCO ARILUB",
-                       "Data posição":  "23/09/2026",
-                       "Saldo":  8567.93,
-                       "Saldo futuro":  8567.93,
+                       "Ordem":  3,
+                       "Banco":  "BRADESCO",
                        "Classificacao":  "OPERACIONAL",
-                       "Saldo_reserva":  0,
-                       "Incluir_saldo_consolidado":  true,
-                       "Incluir_disponibilidade_operacional":  true,
-                       "Incluir_projecao":  true
+                       "Data_Posicao":  "23/09/2026",
+                       "Saldo":  8979.3300
                    },
                    {
-                       "Ordem_SQL":  3021,
-                       "Conta":  "ITAU",
-                       "Nome":  "BANCO ITAU",
-                       "Data posição":  "22/09/2026",
-                       "Saldo":  8411.76,
-                       "Saldo futuro":  8411.76,
+                       "Ordem":  3021,
+                       "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
-                       "Saldo_reserva":  0,
-                       "Incluir_saldo_consolidado":  true,
-                       "Incluir_disponibilidade_operacional":  true,
-                       "Incluir_projecao":  true
+                       "Data_Posicao":  "22/09/2026",
+                       "Saldo":  8411.7600
                    },
                    {
-                       "Ordem_SQL":  3022,
-                       "Conta":  "BNB",
-                       "Nome":  "BNB",
-                       "Data posição":  "22/09/2026",
-                       "Saldo":  3436.73,
-                       "Saldo futuro":  3436.73,
+                       "Ordem":  3022,
+                       "Banco":  "BNB",
                        "Classificacao":  "OPERACIONAL",
-                       "Saldo_reserva":  0,
-                       "Incluir_saldo_consolidado":  true,
-                       "Incluir_disponibilidade_operacional":  true,
-                       "Incluir_projecao":  true
+                       "Data_Posicao":  "22/09/2026",
+                       "Saldo":  3436.7300
                    },
                    {
-                       "Ordem_SQL":  3024,
-                       "Conta":  "SANTANDER",
-                       "Nome":  "Banco Santander ARILUB",
-                       "Data posição":  "22/09/2026",
-                       "Saldo":  4982.39,
-                       "Saldo futuro":  4982.39,
+                       "Ordem":  3024,
+                       "Banco":  "SANTANDER",
                        "Classificacao":  "OPERACIONAL",
-                       "Saldo_reserva":  0,
-                       "Incluir_saldo_consolidado":  true,
-                       "Incluir_disponibilidade_operacional":  true,
-                       "Incluir_projecao":  true
+                       "Data_Posicao":  "22/09/2026",
+                       "Saldo":  4982.3900
                    },
                    {
-                       "Ordem_SQL":  1017,
-                       "Conta":  "BNB_FIF",
-                       "Nome":  "BNB - FIF INSTITUCIONAL",
-                       "Data posição":  "22/09/2026",
-                       "Saldo":  443918.97,
-                       "Saldo futuro":  443918.97,
-                       "Classificacao":  "RESERVA",
-                       "Saldo_reserva":  443918.97,
-                       "Incluir_saldo_consolidado":  true,
-                       "Incluir_disponibilidade_operacional":  false,
-                       "Incluir_projecao":  false
+                       "Ordem":  1017,
+                       "Banco":  "BNB INVESTIMENTO",
+                       "Classificacao":  "INVESTIMENTO",
+                       "Data_Posicao":  "22/09/2026",
+                       "Saldo":  443918.9700
+                   },
+                   {
+                       "Ordem":  3025,
+                       "Banco":  "SANTANDER INVESTIMENTO",
+                       "Classificacao":  "INVESTIMENTO",
+                       "Data_Posicao":  null,
+                       "Saldo":  0.0000
                    }
                ],
     "recebiveis":  [
                        {
-                           "Emissão":  "24/08/2026",
-                           "Código Cliente":  "2223",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                           "Vencimento":  "23/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  23000,
                            "Ordem_SQL":  628658,
-                           "Descricao":  "Saída 90694 - 1/1"
-                       },
-                       {
-                           "Emissão":  "24/08/2026",
-                           "Código Cliente":  "2223",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Emissao":  "24/08/2026",
                            "Vencimento":  "23/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  4275,
+                           "Codigo_Cliente":  "2258",
+                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Descricao":  "Saída 90694 - 1/1",
+                           "Valor":  23000.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
                            "Ordem_SQL":  628660,
-                           "Descricao":  "Saída 90695 - 1/1"
+                           "Emissao":  "24/08/2026",
+                           "Vencimento":  "23/09/2026",
+                           "Codigo_Cliente":  "2258",
+                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Descricao":  "Saída 90695 - 1/1",
+                           "Valor":  4275.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
                        },
                        {
-                           "Emissão":  "13/08/2026",
-                           "Código Cliente":  "78468",
-                           "Cliente":  "Paraipaba Agroindustrial Ltda",
-                           "Vencimento":  "24/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  1658.48,
                            "Ordem_SQL":  628491,
-                           "Descricao":  "Saída 90567 - 3/4"
-                       },
-                       {
-                           "Emissão":  "25/08/2026",
-                           "Código Cliente":  "86589",
-                           "Cliente":  "Companhia De Agua E Esgoto Do Ceara Cagece",
+                           "Emissao":  "13/08/2026",
                            "Vencimento":  "24/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  777.8,
-                           "Ordem_SQL":  628692,
-                           "Descricao":  "Saída 90718 - 1/1"
-                       },
-                       {
-                           "Emissão":  "27/08/2026",
-                           "Código Cliente":  "82152",
-                           "Cliente":  "G S Incorporadora E Loteadora Ltda",
-                           "Vencimento":  "24/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  717.51,
-                           "Ordem_SQL":  628793,
-                           "Descricao":  "Saída 90753 - 1/2"
-                       },
-                       {
-                           "Emissão":  "14/08/2026",
-                           "Código Cliente":  "78778",
-                           "Cliente":  "PAP NETO LTDA",
-                           "Vencimento":  "25/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  540.41,
-                           "Ordem_SQL":  628501,
-                           "Descricao":  "Saída 90578 - 2/3"
-                       },
-                       {
-                           "Emissão":  "14/08/2026",
-                           "Código Cliente":  "66954",
-                           "Cliente":  "Glc Comercio De Pecas Para Refrigeracao Ltda",
-                           "Vencimento":  "25/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  3780.33,
-                           "Ordem_SQL":  628505,
-                           "Descricao":  "Saída 90580 - 2/3"
-                       },
-                       {
-                           "Emissão":  "14/08/2026",
-                           "Código Cliente":  "78847",
-                           "Cliente":  "Ok Empreendimentos Construcoes E Servicos Ltda",
-                           "Vencimento":  "25/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  593.72,
-                           "Ordem_SQL":  628531,
-                           "Descricao":  "Saída 90588 - 2/3"
-                       },
-                       {
-                           "Emissão":  "28/08/2026",
-                           "Código Cliente":  "74259",
-                           "Cliente":  "Inace Iate Ltda",
-                           "Vencimento":  "25/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  3648.08,
-                           "Ordem_SQL":  628806,
-                           "Descricao":  "Saída 90758 - 1/1"
-                       },
-                       {
-                           "Emissão":  "28/08/2026",
-                           "Código Cliente":  "93198",
-                           "Cliente":  "Forship Engenharia S/A",
-                           "Vencimento":  "25/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  2779.66,
-                           "Ordem_SQL":  628811,
-                           "Descricao":  "Saída 90762 - 1/1"
-                       },
-                       {
-                           "Emissão":  "28/08/2026",
-                           "Código Cliente":  "2223",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                           "Vencimento":  "27/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  4769,
-                           "Ordem_SQL":  628817,
-                           "Descricao":  "Saída 90765 - 1/1"
-                       },
-                       {
-                           "Emissão":  "31/08/2026",
-                           "Código Cliente":  "67992",
-                           "Cliente":  "Santa Clara Moveis E Equipamentos Hospitalares Ltda Epp",
-                           "Vencimento":  "28/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  351.27,
-                           "Ordem_SQL":  628901,
-                           "Descricao":  "Saída 90774 - 1/1"
-                       },
-                       {
-                           "Emissão":  "31/08/2026",
-                           "Código Cliente":  "93187",
-                           "Cliente":  "Qualigraf Editora E Grafica Ltda",
-                           "Vencimento":  "28/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  1830.99,
-                           "Ordem_SQL":  628910,
-                           "Descricao":  "Saída 90780 - 1/1"
-                       },
-                       {
-                           "Emissão":  "15/09/2026",
-                           "Código Cliente":  "93146",
-                           "Cliente":  "Solobahia Engenharia E Tecnologia Ltda",
-                           "Vencimento":  "29/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  875,
-                           "Ordem_SQL":  629373,
-                           "Descricao":  "Saída 90961 - 1/1"
-                       },
-                       {
-                           "Emissão":  "01/04/2026",
-                           "Código Cliente":  "14198",
-                           "Cliente":  "MARITZA FABIANA LIMA E SILVA",
-                           "Vencimento":  "30/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  175,
-                           "Ordem_SQL":  624932,
-                           "Descricao":  "Renegociação de Parcela (notebook dell ) - 7/19"
-                       },
-                       {
-                           "Emissão":  "31/08/2026",
-                           "Código Cliente":  "86460",
-                           "Cliente":  "AGLAÍLTON MACHADO DOS SANTOS",
-                           "Vencimento":  "30/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  500,
-                           "Ordem_SQL":  628841,
-                           "Descricao":  "Renegociação de Parcela (Emprestimo Iphone) - 1/10"
-                       },
-                       {
-                           "Emissão":  "31/08/2026",
-                           "Código Cliente":  "2223",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                           "Vencimento":  "30/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  2650,
-                           "Ordem_SQL":  628903,
-                           "Descricao":  "Saída 90777 - 1/1"
-                       },
-                       {
-                           "Emissão":  "02/09/2026",
-                           "Código Cliente":  "74259",
-                           "Cliente":  "Inace Iate Ltda",
-                           "Vencimento":  "30/09/2026",
-                           "Vendedor":  "",
-                           "Valor":  1642.28,
-                           "Ordem_SQL":  628983,
-                           "Descricao":  "Saída 90808 - 1/1"
-                       },
-                       {
-                           "Emissão":  "17/08/2026",
-                           "Código Cliente":  "47587",
-                           "Cliente":  "PECEM II GERACAO DE ENERGIA S A - ENEVA",
-                           "Vencimento":  "01/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  2100,
-                           "Ordem_SQL":  628555,
-                           "Descricao":  "Saída 90602 - 1/1"
-                       },
-                       {
-                           "Emissão":  "20/08/2026",
-                           "Código Cliente":  "68073",
-                           "Cliente":  "Vm Engenharia Ltda",
-                           "Vencimento":  "01/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  968.19,
-                           "Ordem_SQL":  628625,
-                           "Descricao":  "Saída 90668 - 2/3"
-                       },
-                       {
-                           "Emissão":  "07/08/2026",
-                           "Código Cliente":  "86577",
-                           "Cliente":  "Ed Locacoes E Servicos De Transporte Ltda",
-                           "Vencimento":  "02/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1521.19,
-                           "Ordem_SQL":  628321,
-                           "Descricao":  "Saída 90491 - 3/3"
-                       },
-                       {
-                           "Emissão":  "02/09/2026",
-                           "Código Cliente":  "93221",
-                           "Cliente":  "Granjas Sao Jose Ltda",
-                           "Vencimento":  "02/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  6395.3,
-                           "Ordem_SQL":  628968,
-                           "Descricao":  "Saída 90799 - 1/1"
-                       },
-                       {
-                           "Emissão":  "03/09/2026",
-                           "Código Cliente":  "2223",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                           "Vencimento":  "03/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  7912.5,
-                           "Ordem_SQL":  629016,
-                           "Descricao":  "Saída 90821 - 1/1"
-                       },
-                       {
-                           "Emissão":  "03/09/2026",
-                           "Código Cliente":  "1357",
-                           "Cliente":  "Vicunha Textil S A",
-                           "Vencimento":  "03/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  3724.8,
-                           "Ordem_SQL":  629027,
-                           "Descricao":  "Saída 90828 - 1/1"
-                       },
-                       {
-                           "Emissão":  "03/09/2026",
-                           "Código Cliente":  "93229",
-                           "Cliente":  "Vicunha Textil S A",
-                           "Vencimento":  "03/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1862.4,
-                           "Ordem_SQL":  629029,
-                           "Descricao":  "Saída 90829 - 1/1"
-                       },
-                       {
-                           "Emissão":  "20/08/2026",
-                           "Código Cliente":  "47587",
-                           "Cliente":  "PECEM II GERACAO DE ENERGIA S A - ENEVA",
-                           "Vencimento":  "04/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  2500.2,
-                           "Ordem_SQL":  628616,
-                           "Descricao":  "Saída 90658 - 1/1"
-                       },
-                       {
-                           "Emissão":  "08/09/2026",
-                           "Código Cliente":  "74257",
-                           "Cliente":  "R C Construcoes Ltda",
-                           "Vencimento":  "06/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  513.9,
-                           "Ordem_SQL":  629125,
-                           "Descricao":  "Saída 90866 - 1/2"
-                       },
-                       {
-                           "Emissão":  "08/09/2026",
-                           "Código Cliente":  "78778",
-                           "Cliente":  "PAP NETO LTDA",
-                           "Vencimento":  "06/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  706.2,
-                           "Ordem_SQL":  629144,
-                           "Descricao":  "Saída 90876 - 1/1"
-                       },
-                       {
-                           "Emissão":  "08/09/2026",
-                           "Código Cliente":  "1827",
-                           "Cliente":  "FRANCISCO PACHECO FILHO ",
-                           "Vencimento":  "06/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  441.14,
-                           "Ordem_SQL":  629148,
-                           "Descricao":  "Saída 90878 - 1/3"
-                       },
-                       {
-                           "Emissão":  "09/09/2026",
-                           "Código Cliente":  "78468",
+                           "Codigo_Cliente":  "4179",
                            "Cliente":  "Paraipaba Agroindustrial Ltda",
-                           "Vencimento":  "07/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1542.84,
-                           "Ordem_SQL":  629165,
-                           "Descricao":  "Saída 90887 - 1/3"
-                       },
-                       {
-                           "Emissão":  "09/09/2026",
-                           "Código Cliente":  "66949",
-                           "Cliente":  "Kanaflex Do Nordeste Industria E Comercio Ltda",
-                           "Vencimento":  "07/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  2047.36,
-                           "Ordem_SQL":  629175,
-                           "Descricao":  "Saída 90892 - 1/1"
-                       },
-                       {
-                           "Emissão":  "09/09/2026",
-                           "Código Cliente":  "66942",
-                           "Cliente":  "Hm Imports Comercio E Maquinario De Construcao Ltda",
-                           "Vencimento":  "07/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  2483.1,
-                           "Ordem_SQL":  629177,
-                           "Descricao":  "Saída 90893 - 1/3"
-                       },
-                       {
-                           "Emissão":  "13/08/2026",
-                           "Código Cliente":  "78468",
-                           "Cliente":  "Paraipaba Agroindustrial Ltda",
-                           "Vencimento":  "08/10/2026",
-                           "Vendedor":  "",
+                           "Descricao":  "Saída 90567 - 3/4",
                            "Valor":  1658.48,
-                           "Ordem_SQL":  628492,
-                           "Descricao":  "Saída 90567 - 4/4"
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Emissão":  "27/08/2026",
-                           "Código Cliente":  "82152",
+                           "Ordem_SQL":  628692,
+                           "Emissao":  "25/08/2026",
+                           "Vencimento":  "24/09/2026",
+                           "Codigo_Cliente":  "4354",
+                           "Cliente":  "Companhia De Agua E Esgoto Do Ceara Cagece",
+                           "Descricao":  "Saída 90718 - 1/1",
+                           "Valor":  777.80,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628793,
+                           "Emissao":  "27/08/2026",
+                           "Vencimento":  "24/09/2026",
+                           "Codigo_Cliente":  "2529",
                            "Cliente":  "G S Incorporadora E Loteadora Ltda",
-                           "Vencimento":  "08/10/2026",
-                           "Vendedor":  "",
+                           "Descricao":  "Saída 90753 - 1/2",
                            "Valor":  717.51,
-                           "Ordem_SQL":  628794,
-                           "Descricao":  "Saída 90753 - 2/2"
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Emissão":  "10/09/2026",
-                           "Código Cliente":  "68037",
-                           "Cliente":  "Raysan Transportes De Cargas Ltda",
-                           "Vencimento":  "08/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1161.22,
-                           "Ordem_SQL":  629195,
-                           "Descricao":  "Saída 90906 - 1/1"
-                       },
-                       {
-                           "Emissão":  "10/09/2026",
-                           "Código Cliente":  "88672",
-                           "Cliente":  "Jeri-1 Empreendimento Imobiliario Spe Ltda",
-                           "Vencimento":  "08/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  8612.2,
-                           "Ordem_SQL":  629255,
-                           "Descricao":  "Saída 90916 - 1/1"
-                       },
-                       {
-                           "Emissão":  "14/08/2026",
-                           "Código Cliente":  "78778",
+                           "Ordem_SQL":  628501,
+                           "Emissao":  "14/08/2026",
+                           "Vencimento":  "25/09/2026",
+                           "Codigo_Cliente":  "2850",
                            "Cliente":  "PAP NETO LTDA",
-                           "Vencimento":  "09/10/2026",
-                           "Vendedor":  "",
+                           "Descricao":  "Saída 90578 - 2/3",
                            "Valor":  540.41,
-                           "Ordem_SQL":  628502,
-                           "Descricao":  "Saída 90578 - 3/3"
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Emissão":  "14/08/2026",
-                           "Código Cliente":  "66954",
+                           "Ordem_SQL":  628505,
+                           "Emissao":  "14/08/2026",
+                           "Vencimento":  "25/09/2026",
+                           "Codigo_Cliente":  "3754",
                            "Cliente":  "Glc Comercio De Pecas Para Refrigeracao Ltda",
-                           "Vencimento":  "09/10/2026",
-                           "Vendedor":  "",
+                           "Descricao":  "Saída 90580 - 2/3",
                            "Valor":  3780.33,
-                           "Ordem_SQL":  628506,
-                           "Descricao":  "Saída 90580 - 3/3"
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Emissão":  "14/08/2026",
-                           "Código Cliente":  "78847",
+                           "Ordem_SQL":  628531,
+                           "Emissao":  "14/08/2026",
+                           "Vencimento":  "25/09/2026",
+                           "Codigo_Cliente":  "2790",
                            "Cliente":  "Ok Empreendimentos Construcoes E Servicos Ltda",
-                           "Vencimento":  "09/10/2026",
-                           "Vendedor":  "",
+                           "Descricao":  "Saída 90588 - 2/3",
                            "Valor":  593.72,
-                           "Ordem_SQL":  628532,
-                           "Descricao":  "Saída 90588 - 3/3"
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Emissão":  "11/09/2026",
-                           "Código Cliente":  "74257",
-                           "Cliente":  "R C Construcoes Ltda",
-                           "Vencimento":  "09/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  520,
-                           "Ordem_SQL":  629272,
-                           "Descricao":  "Saída 90929 - 1/2"
+                           "Ordem_SQL":  628806,
+                           "Emissao":  "28/08/2026",
+                           "Vencimento":  "25/09/2026",
+                           "Codigo_Cliente":  "4008",
+                           "Cliente":  "Inace Iate Ltda",
+                           "Descricao":  "Saída 90758 - 1/1",
+                           "Valor":  3648.08,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Emissão":  "11/09/2026",
-                           "Código Cliente":  "2223",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                           "Vencimento":  "11/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  46140,
-                           "Ordem_SQL":  629262,
-                           "Descricao":  "Saída 90922 - 1/1"
-                       },
-                       {
-                           "Emissão":  "01/09/2026",
-                           "Código Cliente":  "1428",
-                           "Cliente":  "C M Cavalcante Motos - Me",
-                           "Vencimento":  "13/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  629.53,
-                           "Ordem_SQL":  628932,
-                           "Descricao":  "Saída 90785 - 2/3"
-                       },
-                       {
-                           "Emissão":  "15/09/2026",
-                           "Código Cliente":  "78750",
-                           "Cliente":  "CONSORCIO TSM 2023",
-                           "Vencimento":  "13/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  11646.66,
-                           "Ordem_SQL":  629369,
-                           "Descricao":  "Saída 90959 - 1/3"
-                       },
-                       {
-                           "Emissão":  "20/08/2026",
-                           "Código Cliente":  "68073",
-                           "Cliente":  "Vm Engenharia Ltda",
-                           "Vencimento":  "15/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  968.19,
-                           "Ordem_SQL":  628626,
-                           "Descricao":  "Saída 90668 - 3/3"
-                       },
-                       {
-                           "Emissão":  "15/09/2026",
-                           "Código Cliente":  "2223",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                           "Vencimento":  "15/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  9790,
-                           "Ordem_SQL":  629356,
-                           "Descricao":  "Saída 90952 - 1/1"
-                       },
-                       {
-                           "Emissão":  "15/09/2026",
-                           "Código Cliente":  "93229",
-                           "Cliente":  "Vicunha Textil S A",
-                           "Vencimento":  "15/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1862.4,
-                           "Ordem_SQL":  629366,
-                           "Descricao":  "Saída 90956 - 1/2"
-                       },
-                       {
-                           "Emissão":  "17/09/2026",
-                           "Código Cliente":  "1054",
-                           "Cliente":  "Marte Petroleo Ltda",
-                           "Vencimento":  "15/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  955.1,
-                           "Ordem_SQL":  629394,
-                           "Descricao":  "Saída 90980 - 1/1"
-                       },
-                       {
-                           "Emissão":  "17/08/2026",
-                           "Código Cliente":  "93171",
-                           "Cliente":  "ENEVA S.A.",
-                           "Vencimento":  "16/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  540,
-                           "Ordem_SQL":  628563,
-                           "Descricao":  "Saída 90615 - 1/1"
-                       },
-                       {
-                           "Emissão":  "18/09/2026",
-                           "Código Cliente":  "116",
-                           "Cliente":  "Rolitec Comercio Rocha Lima Ltda",
-                           "Vencimento":  "16/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1105.59,
-                           "Ordem_SQL":  629408,
-                           "Descricao":  "Saída 90992 - 1/1"
-                       },
-                       {
-                           "Emissão":  "18/09/2026",
-                           "Código Cliente":  "19323",
-                           "Cliente":  "Icone Elevadores Ltda Epp",
-                           "Vencimento":  "16/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  492.34,
-                           "Ordem_SQL":  629412,
-                           "Descricao":  "Saída 90997 - 1/2"
-                       },
-                       {
-                           "Emissão":  "18/09/2026",
-                           "Código Cliente":  "68073",
-                           "Cliente":  "Vm Engenharia Ltda",
-                           "Vencimento":  "16/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  324.4,
-                           "Ordem_SQL":  629421,
-                           "Descricao":  "Saída 91002 - 1/1"
-                       },
-                       {
-                           "Emissão":  "08/09/2026",
-                           "Código Cliente":  "74257",
-                           "Cliente":  "R C Construcoes Ltda",
-                           "Vencimento":  "20/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  513.9,
-                           "Ordem_SQL":  629126,
-                           "Descricao":  "Saída 90866 - 2/2"
-                       },
-                       {
-                           "Emissão":  "08/09/2026",
-                           "Código Cliente":  "1827",
-                           "Cliente":  "FRANCISCO PACHECO FILHO ",
-                           "Vencimento":  "20/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  441.15,
-                           "Ordem_SQL":  629149,
-                           "Descricao":  "Saída 90878 - 2/3"
-                       },
-                       {
-                           "Emissão":  "22/09/2026",
-                           "Código Cliente":  "64852",
-                           "Cliente":  "Chaves S A Mineracao E Industria",
-                           "Vencimento":  "20/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  522.16,
-                           "Ordem_SQL":  629490,
-                           "Descricao":  "Saída 91010 - 1/1"
-                       },
-                       {
-                           "Emissão":  "22/09/2026",
-                           "Código Cliente":  "78749",
-                           "Cliente":  "3Epar Rental Ltda",
-                           "Vencimento":  "20/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  934.9,
-                           "Ordem_SQL":  629494,
-                           "Descricao":  "Saída 91016 - 1/1"
-                       },
-                       {
-                           "Emissão":  "22/09/2026",
-                           "Código Cliente":  "78464",
-                           "Cliente":  "Geofix Engenharia Fundacoes E Estaqueamento Sociedade Empres",
-                           "Vencimento":  "20/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  7599.34,
-                           "Ordem_SQL":  629510,
-                           "Descricao":  "Saída 91018 - 1/3"
-                       },
-                       {
-                           "Emissão":  "09/09/2026",
-                           "Código Cliente":  "78468",
-                           "Cliente":  "Paraipaba Agroindustrial Ltda",
-                           "Vencimento":  "21/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1542.83,
-                           "Ordem_SQL":  629166,
-                           "Descricao":  "Saída 90887 - 2/3"
-                       },
-                       {
-                           "Emissão":  "09/09/2026",
-                           "Código Cliente":  "66942",
-                           "Cliente":  "Hm Imports Comercio E Maquinario De Construcao Ltda",
-                           "Vencimento":  "21/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  2483.1,
-                           "Ordem_SQL":  629178,
-                           "Descricao":  "Saída 90893 - 2/3"
-                       },
-                       {
-                           "Emissão":  "23/09/2026",
-                           "Código Cliente":  "93198",
+                           "Ordem_SQL":  628811,
+                           "Emissao":  "28/08/2026",
+                           "Vencimento":  "25/09/2026",
+                           "Codigo_Cliente":  "4867",
                            "Cliente":  "Forship Engenharia S/A",
-                           "Vencimento":  "21/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  1038.14,
-                           "Ordem_SQL":  629518,
-                           "Descricao":  "Saída 91029 - 1/1"
+                           "Descricao":  "Saída 90762 - 1/1",
+                           "Valor":  2779.66,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Emissão":  "11/09/2026",
-                           "Código Cliente":  "74257",
+                           "Ordem_SQL":  628817,
+                           "Emissao":  "28/08/2026",
+                           "Vencimento":  "27/09/2026",
+                           "Codigo_Cliente":  "2258",
+                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Descricao":  "Saída 90765 - 1/1",
+                           "Valor":  4769.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628901,
+                           "Emissao":  "31/08/2026",
+                           "Vencimento":  "28/09/2026",
+                           "Codigo_Cliente":  "3776",
+                           "Cliente":  "Santa Clara Moveis E Equipamentos Hospitalares Ltda Epp",
+                           "Descricao":  "Saída 90774 - 1/1",
+                           "Valor":  351.27,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628910,
+                           "Emissao":  "31/08/2026",
+                           "Vencimento":  "28/09/2026",
+                           "Codigo_Cliente":  "4859",
+                           "Cliente":  "Qualigraf Editora E Grafica Ltda",
+                           "Descricao":  "Saída 90780 - 1/1",
+                           "Valor":  1830.99,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629373,
+                           "Emissao":  "15/09/2026",
+                           "Vencimento":  "29/09/2026",
+                           "Codigo_Cliente":  "4822",
+                           "Cliente":  "Solobahia Engenharia E Tecnologia Ltda",
+                           "Descricao":  "Saída 90961 - 1/1",
+                           "Valor":  875.00,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  624932,
+                           "Emissao":  "01/04/2026",
+                           "Vencimento":  "30/09/2026",
+                           "Codigo_Cliente":  "3342",
+                           "Cliente":  "MARITZA FABIANA LIMA E SILVA",
+                           "Descricao":  "Renegociação de Parcela (notebook dell ) - 7/19",
+                           "Valor":  175.00,
+                           "Ordem_Conta_Bancaria":  1014,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628841,
+                           "Emissao":  "31/08/2026",
+                           "Vencimento":  "30/09/2026",
+                           "Codigo_Cliente":  "19096",
+                           "Cliente":  "AGLAÍLTON MACHADO DOS SANTOS",
+                           "Descricao":  "Renegociação de Parcela (Emprestimo Iphone) - 1/10",
+                           "Valor":  500.00,
+                           "Ordem_Conta_Bancaria":  1014,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628903,
+                           "Emissao":  "31/08/2026",
+                           "Vencimento":  "30/09/2026",
+                           "Codigo_Cliente":  "2258",
+                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Descricao":  "Saída 90777 - 1/1",
+                           "Valor":  2650.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628983,
+                           "Emissao":  "02/09/2026",
+                           "Vencimento":  "30/09/2026",
+                           "Codigo_Cliente":  "4008",
+                           "Cliente":  "Inace Iate Ltda",
+                           "Descricao":  "Saída 90808 - 1/1",
+                           "Valor":  1642.28,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628555,
+                           "Emissao":  "17/08/2026",
+                           "Vencimento":  "01/10/2026",
+                           "Codigo_Cliente":  "3541",
+                           "Cliente":  "PECEM II GERACAO DE ENERGIA S A - ENEVA",
+                           "Descricao":  "Saída 90602 - 1/1",
+                           "Valor":  2100.00,
+                           "Ordem_Conta_Bancaria":  3022,
+                           "Banco_Projetado":  "BNB",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628625,
+                           "Emissao":  "20/08/2026",
+                           "Vencimento":  "01/10/2026",
+                           "Codigo_Cliente":  "3837",
+                           "Cliente":  "Vm Engenharia Ltda",
+                           "Descricao":  "Saída 90668 - 2/3",
+                           "Valor":  968.19,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628321,
+                           "Emissao":  "07/08/2026",
+                           "Vencimento":  "02/10/2026",
+                           "Codigo_Cliente":  "4343",
+                           "Cliente":  "Ed Locacoes E Servicos De Transporte Ltda",
+                           "Descricao":  "Saída 90491 - 3/3",
+                           "Valor":  1521.19,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628968,
+                           "Emissao":  "02/09/2026",
+                           "Vencimento":  "02/10/2026",
+                           "Codigo_Cliente":  "4886",
+                           "Cliente":  "Granjas Sao Jose Ltda",
+                           "Descricao":  "Saída 90799 - 1/1",
+                           "Valor":  6395.30,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629016,
+                           "Emissao":  "03/09/2026",
+                           "Vencimento":  "03/10/2026",
+                           "Codigo_Cliente":  "2258",
+                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Descricao":  "Saída 90821 - 1/1",
+                           "Valor":  7912.50,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  629027,
+                           "Emissao":  "03/09/2026",
+                           "Vencimento":  "03/10/2026",
+                           "Codigo_Cliente":  "1357",
+                           "Cliente":  "Vicunha Textil S A",
+                           "Descricao":  "Saída 90828 - 1/1",
+                           "Valor":  3724.80,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  629029,
+                           "Emissao":  "03/09/2026",
+                           "Vencimento":  "03/10/2026",
+                           "Codigo_Cliente":  "4894",
+                           "Cliente":  "Vicunha Textil S A",
+                           "Descricao":  "Saída 90829 - 1/1",
+                           "Valor":  1862.40,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628616,
+                           "Emissao":  "20/08/2026",
+                           "Vencimento":  "04/10/2026",
+                           "Codigo_Cliente":  "3541",
+                           "Cliente":  "PECEM II GERACAO DE ENERGIA S A - ENEVA",
+                           "Descricao":  "Saída 90658 - 1/1",
+                           "Valor":  2500.20,
+                           "Ordem_Conta_Bancaria":  3022,
+                           "Banco_Projetado":  "BNB",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629125,
+                           "Emissao":  "08/09/2026",
+                           "Vencimento":  "06/10/2026",
+                           "Codigo_Cliente":  "4006",
                            "Cliente":  "R C Construcoes Ltda",
-                           "Vencimento":  "23/10/2026",
-                           "Vendedor":  "",
-                           "Valor":  520,
+                           "Descricao":  "Saída 90866 - 1/2",
+                           "Valor":  513.90,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629144,
+                           "Emissao":  "08/09/2026",
+                           "Vencimento":  "06/10/2026",
+                           "Codigo_Cliente":  "2850",
+                           "Cliente":  "PAP NETO LTDA",
+                           "Descricao":  "Saída 90876 - 1/1",
+                           "Valor":  706.20,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629148,
+                           "Emissao":  "08/09/2026",
+                           "Vencimento":  "06/10/2026",
+                           "Codigo_Cliente":  "1853",
+                           "Cliente":  "FRANCISCO PACHECO FILHO ",
+                           "Descricao":  "Saída 90878 - 1/3",
+                           "Valor":  441.14,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629165,
+                           "Emissao":  "09/09/2026",
+                           "Vencimento":  "07/10/2026",
+                           "Codigo_Cliente":  "4179",
+                           "Cliente":  "Paraipaba Agroindustrial Ltda",
+                           "Descricao":  "Saída 90887 - 1/3",
+                           "Valor":  1542.84,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629175,
+                           "Emissao":  "09/09/2026",
+                           "Vencimento":  "07/10/2026",
+                           "Codigo_Cliente":  "3750",
+                           "Cliente":  "Kanaflex Do Nordeste Industria E Comercio Ltda",
+                           "Descricao":  "Saída 90892 - 1/1",
+                           "Valor":  2047.36,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629177,
+                           "Emissao":  "09/09/2026",
+                           "Vencimento":  "07/10/2026",
+                           "Codigo_Cliente":  "3744",
+                           "Cliente":  "Hm Imports Comercio E Maquinario De Construcao Ltda",
+                           "Descricao":  "Saída 90893 - 1/3",
+                           "Valor":  2483.10,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628492,
+                           "Emissao":  "13/08/2026",
+                           "Vencimento":  "08/10/2026",
+                           "Codigo_Cliente":  "4179",
+                           "Cliente":  "Paraipaba Agroindustrial Ltda",
+                           "Descricao":  "Saída 90567 - 4/4",
+                           "Valor":  1658.48,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628794,
+                           "Emissao":  "27/08/2026",
+                           "Vencimento":  "08/10/2026",
+                           "Codigo_Cliente":  "2529",
+                           "Cliente":  "G S Incorporadora E Loteadora Ltda",
+                           "Descricao":  "Saída 90753 - 2/2",
+                           "Valor":  717.51,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629195,
+                           "Emissao":  "10/09/2026",
+                           "Vencimento":  "08/10/2026",
+                           "Codigo_Cliente":  "3809",
+                           "Cliente":  "Raysan Transportes De Cargas Ltda",
+                           "Descricao":  "Saída 90906 - 1/1",
+                           "Valor":  1161.22,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629255,
+                           "Emissao":  "10/09/2026",
+                           "Vencimento":  "08/10/2026",
+                           "Codigo_Cliente":  "4425",
+                           "Cliente":  "Jeri-1 Empreendimento Imobiliario Spe Ltda",
+                           "Descricao":  "Saída 90916 - 1/1",
+                           "Valor":  8612.20,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628502,
+                           "Emissao":  "14/08/2026",
+                           "Vencimento":  "09/10/2026",
+                           "Codigo_Cliente":  "2850",
+                           "Cliente":  "PAP NETO LTDA",
+                           "Descricao":  "Saída 90578 - 3/3",
+                           "Valor":  540.41,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628506,
+                           "Emissao":  "14/08/2026",
+                           "Vencimento":  "09/10/2026",
+                           "Codigo_Cliente":  "3754",
+                           "Cliente":  "Glc Comercio De Pecas Para Refrigeracao Ltda",
+                           "Descricao":  "Saída 90580 - 3/3",
+                           "Valor":  3780.33,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628532,
+                           "Emissao":  "14/08/2026",
+                           "Vencimento":  "09/10/2026",
+                           "Codigo_Cliente":  "2790",
+                           "Cliente":  "Ok Empreendimentos Construcoes E Servicos Ltda",
+                           "Descricao":  "Saída 90588 - 3/3",
+                           "Valor":  593.72,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629272,
+                           "Emissao":  "11/09/2026",
+                           "Vencimento":  "09/10/2026",
+                           "Codigo_Cliente":  "4006",
+                           "Cliente":  "R C Construcoes Ltda",
+                           "Descricao":  "Saída 90929 - 1/2",
+                           "Valor":  520.00,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629262,
+                           "Emissao":  "11/09/2026",
+                           "Vencimento":  "11/10/2026",
+                           "Codigo_Cliente":  "2258",
+                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Descricao":  "Saída 90922 - 1/1",
+                           "Valor":  46140.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628932,
+                           "Emissao":  "01/09/2026",
+                           "Vencimento":  "13/10/2026",
+                           "Codigo_Cliente":  "1438",
+                           "Cliente":  "C M Cavalcante Motos - Me",
+                           "Descricao":  "Saída 90785 - 2/3",
+                           "Valor":  629.53,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629369,
+                           "Emissao":  "15/09/2026",
+                           "Vencimento":  "13/10/2026",
+                           "Codigo_Cliente":  "2873",
+                           "Cliente":  "CONSORCIO TSM 2023",
+                           "Descricao":  "Saída 90959 - 1/3",
+                           "Valor":  11646.66,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628626,
+                           "Emissao":  "20/08/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Cliente":  "3837",
+                           "Cliente":  "Vm Engenharia Ltda",
+                           "Descricao":  "Saída 90668 - 3/3",
+                           "Valor":  968.19,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629356,
+                           "Emissao":  "15/09/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Cliente":  "2258",
+                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
+                           "Descricao":  "Saída 90952 - 1/1",
+                           "Valor":  9790.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  629366,
+                           "Emissao":  "15/09/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Cliente":  "4894",
+                           "Cliente":  "Vicunha Textil S A",
+                           "Descricao":  "Saída 90956 - 1/2",
+                           "Valor":  1862.40,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  629394,
+                           "Emissao":  "17/09/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Cliente":  "1054",
+                           "Cliente":  "Marte Petroleo Ltda",
+                           "Descricao":  "Saída 90980 - 1/1",
+                           "Valor":  955.10,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628563,
+                           "Emissao":  "17/08/2026",
+                           "Vencimento":  "16/10/2026",
+                           "Codigo_Cliente":  "4844",
+                           "Cliente":  "ENEVA S.A.",
+                           "Descricao":  "Saída 90615 - 1/1",
+                           "Valor":  540.00,
+                           "Ordem_Conta_Bancaria":  3022,
+                           "Banco_Projetado":  "BNB",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629408,
+                           "Emissao":  "18/09/2026",
+                           "Vencimento":  "16/10/2026",
+                           "Codigo_Cliente":  "112",
+                           "Cliente":  "Rolitec Comercio Rocha Lima Ltda",
+                           "Descricao":  "Saída 90992 - 1/1",
+                           "Valor":  1105.59,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629412,
+                           "Emissao":  "18/09/2026",
+                           "Vencimento":  "16/10/2026",
+                           "Codigo_Cliente":  "3400",
+                           "Cliente":  "Icone Elevadores Ltda Epp",
+                           "Descricao":  "Saída 90997 - 1/2",
+                           "Valor":  492.34,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629421,
+                           "Emissao":  "18/09/2026",
+                           "Vencimento":  "16/10/2026",
+                           "Codigo_Cliente":  "3837",
+                           "Cliente":  "Vm Engenharia Ltda",
+                           "Descricao":  "Saída 91002 - 1/1",
+                           "Valor":  324.40,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629126,
+                           "Emissao":  "08/09/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Cliente":  "4006",
+                           "Cliente":  "R C Construcoes Ltda",
+                           "Descricao":  "Saída 90866 - 2/2",
+                           "Valor":  513.90,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629149,
+                           "Emissao":  "08/09/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Cliente":  "1853",
+                           "Cliente":  "FRANCISCO PACHECO FILHO ",
+                           "Descricao":  "Saída 90878 - 2/3",
+                           "Valor":  441.15,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629490,
+                           "Emissao":  "22/09/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Cliente":  "3689",
+                           "Cliente":  "Chaves S A Mineracao E Industria",
+                           "Descricao":  "Saída 91010 - 1/1",
+                           "Valor":  522.16,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629494,
+                           "Emissao":  "22/09/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Cliente":  "2874",
+                           "Cliente":  "3Epar Rental Ltda",
+                           "Descricao":  "Saída 91016 - 1/1",
+                           "Valor":  934.90,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629510,
+                           "Emissao":  "22/09/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Cliente":  "4177",
+                           "Cliente":  "Geofix Engenharia Fundacoes E Estaqueamento Sociedade Empres",
+                           "Descricao":  "Saída 91018 - 1/3",
+                           "Valor":  7599.34,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629166,
+                           "Emissao":  "09/09/2026",
+                           "Vencimento":  "21/10/2026",
+                           "Codigo_Cliente":  "4179",
+                           "Cliente":  "Paraipaba Agroindustrial Ltda",
+                           "Descricao":  "Saída 90887 - 2/3",
+                           "Valor":  1542.83,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629178,
+                           "Emissao":  "09/09/2026",
+                           "Vencimento":  "21/10/2026",
+                           "Codigo_Cliente":  "3744",
+                           "Cliente":  "Hm Imports Comercio E Maquinario De Construcao Ltda",
+                           "Descricao":  "Saída 90893 - 2/3",
+                           "Valor":  2483.10,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629518,
+                           "Emissao":  "23/09/2026",
+                           "Vencimento":  "21/10/2026",
+                           "Codigo_Cliente":  "4867",
+                           "Cliente":  "Forship Engenharia S/A",
+                           "Descricao":  "Saída 91029 - 1/1",
+                           "Valor":  1038.14,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
                            "Ordem_SQL":  629273,
-                           "Descricao":  "Saída 90929 - 2/2"
+                           "Emissao":  "11/09/2026",
+                           "Vencimento":  "23/10/2026",
+                           "Codigo_Cliente":  "4006",
+                           "Cliente":  "R C Construcoes Ltda",
+                           "Descricao":  "Saída 90929 - 2/2",
+                           "Valor":  520.00,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        }
                    ],
     "pagamentos":  [
                        {
-                           "Emissão":  "20/01/2026",
-                           "Código Fornecedor":  "77444",
-                           "Fornecedor":  "PR ASSESSORIA EMPRESARIAL LTDA",
-                           "Nota":  "",
-                           "Descrição":  "Pagamento antecipado ref ao mês seguinte 9/12",
+                           "Ordem_SQL":  622761,
+                           "Emissao":  "20/01/2026",
                            "Vencimento":  "30/09/2026",
-                           "Valor":  1296.8,
-                           "Ordem_SQL":  622761
+                           "Codigo_Fornecedor":  "10161",
+                           "Fornecedor":  "PR ASSESSORIA EMPRESARIAL LTDA",
+                           "Descricao":  "Pagamento antecipado ref ao mês seguinte 9/12",
+                           "Valor":  1296.80,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "05/01/2024",
-                           "Código Fornecedor":  "62715",
+                           "Ordem_SQL":  564786,
+                           "Emissao":  "05/01/2024",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10446",
                            "Fornecedor":  "MANOEL JUNIOR SITE",
-                           "Nota":  "",
-                           "Descrição":  "Suporte Midias digitais  34/36",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  400,
-                           "Ordem_SQL":  564786
+                           "Descricao":  "Suporte Midias digitais  34/36",
+                           "Valor":  400.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "22/12/2025",
-                           "Código Fornecedor":  "2412",
-                           "Fornecedor":  "Nio Fibra",
-                           "Nota":  "",
-                           "Descrição":  "linha 8002 3226-1579 NIO FIBRA A-40241718914- 10/12",
+                           "Ordem_SQL":  621952,
+                           "Emissao":  "22/12/2025",
                            "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10026",
+                           "Fornecedor":  "Nio Fibra",
+                           "Descricao":  "linha 8002 3226-1579 NIO FIBRA A-40241718914- 10/12",
                            "Valor":  67.09,
-                           "Ordem_SQL":  621952
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "05/01/2026",
-                           "Código Fornecedor":  "62750",
+                           "Ordem_SQL":  622010,
+                           "Emissao":  "05/01/2026",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10430",
                            "Fornecedor":  "RICARTE CONTABILIDADE E CONSULTORIA",
-                           "Nota":  "",
-                           "Descrição":  "serv. contabeis e fiscail 10/12",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  1250,
-                           "Ordem_SQL":  622010
+                           "Descricao":  "serv. contabeis e fiscail 10/12",
+                           "Valor":  1250.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "14/01/2026",
-                           "Código Fornecedor":  "2485",
-                           "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "acal  nf 367292 + NF ent. futura 8/10",
+                           "Ordem_SQL":  622361,
+                           "Emissao":  "14/01/2026",
                            "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10099",
+                           "Fornecedor":  "CARTAO CREDICARD VISA",
+                           "Descricao":  "acal  nf 367292 + NF ent. futura 8/10",
                            "Valor":  527.44,
-                           "Ordem_SQL":  622361
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "16/03/2026",
-                           "Código Fornecedor":  "2485",
-                           "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "NOTE BOOK DELL - FABIANA 6/10",
+                           "Ordem_SQL":  625759,
+                           "Emissao":  "16/03/2026",
                            "Vencimento":  "05/10/2026",
-                           "Valor":  424.9,
-                           "Ordem_SQL":  625759
+                           "Codigo_Fornecedor":  "10099",
+                           "Fornecedor":  "CARTAO CREDICARD VISA",
+                           "Descricao":  "NOTE BOOK DELL - FABIANA 6/10",
+                           "Valor":  424.90,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "20/03/2026",
-                           "Código Fornecedor":  "2485",
-                           "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "NOTEBOOK DELL - ARI 6/12",
+                           "Ordem_SQL":  625769,
+                           "Emissao":  "20/03/2026",
                            "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10099",
+                           "Fornecedor":  "CARTAO CREDICARD VISA",
+                           "Descricao":  "NOTEBOOK DELL - ARI 6/12",
                            "Valor":  339.37,
-                           "Ordem_SQL":  625769
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "18/05/2026",
-                           "Código Fornecedor":  "2485",
-                           "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "CAROL SUPLEM. 5/6",
+                           "Ordem_SQL":  626627,
+                           "Emissao":  "18/05/2026",
                            "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10099",
+                           "Fornecedor":  "CARTAO CREDICARD VISA",
+                           "Descricao":  "CAROL SUPLEM. 5/6",
                            "Valor":  277.78,
-                           "Ordem_SQL":  626627
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "15/05/2026",
-                           "Código Fornecedor":  "2485",
+                           "Ordem_SQL":  626633,
+                           "Emissao":  "15/05/2026",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10099",
                            "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "CASA NATURAL 5/6",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  61.1,
-                           "Ordem_SQL":  626633
+                           "Descricao":  "CASA NATURAL 5/6",
+                           "Valor":  61.10,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "16/05/2026",
-                           "Código Fornecedor":  "2485",
+                           "Ordem_SQL":  626640,
+                           "Emissao":  "16/05/2026",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10099",
                            "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "LATAM PASS 5/36",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  40.9,
-                           "Ordem_SQL":  626640
+                           "Descricao":  "LATAM PASS 5/36",
+                           "Valor":  40.90,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "25/05/2026",
-                           "Código Fornecedor":  "86513",
-                           "Fornecedor":  "Itau Unibanco Holding S.A.",
-                           "Nota":  "",
-                           "Descrição":  "kalunga office 365 4/10",
+                           "Ordem_SQL":  627136,
+                           "Emissao":  "25/05/2026",
                            "Vencimento":  "05/10/2026",
-                           "Valor":  40.9,
-                           "Ordem_SQL":  627136
+                           "Codigo_Fornecedor":  "11106",
+                           "Fornecedor":  "Itau Unibanco Holding S.A.",
+                           "Descricao":  "kalunga office 365 4/10",
+                           "Valor":  40.90,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "30/06/2026",
-                           "Código Fornecedor":  "86513",
-                           "Fornecedor":  "Itau Unibanco Holding S.A.",
-                           "Nota":  "",
-                           "Descrição":  "FORN 10384 NF 134795 CT ITAU - Entrada 90044 - 3/3",
+                           "Ordem_SQL":  627277,
+                           "Emissao":  "30/06/2026",
                            "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "11106",
+                           "Fornecedor":  "Itau Unibanco Holding S.A.",
+                           "Descricao":  "FORN 10384 NF 134795 CT ITAU - Entrada 90044 - 3/3",
                            "Valor":  1256.42,
-                           "Ordem_SQL":  627277
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "07/06/2026",
-                           "Código Fornecedor":  "2485",
-                           "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "HUBLA*GUICIRILO 4/4",
+                           "Ordem_SQL":  627389,
+                           "Emissao":  "07/06/2026",
                            "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10099",
+                           "Fornecedor":  "CARTAO CREDICARD VISA",
+                           "Descricao":  "HUBLA*GUICIRILO 4/4",
                            "Valor":  80.84,
-                           "Ordem_SQL":  627389
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "10/07/2026",
-                           "Código Fornecedor":  "86513",
+                           "Ordem_SQL":  627539,
+                           "Emissao":  "10/07/2026",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "11106",
                            "Fornecedor":  "Itau Unibanco Holding S.A.",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11193 NF 401 CT ITAU EMPRESA - Entrada 90176 - 3/5",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  1999,
-                           "Ordem_SQL":  627539
+                           "Descricao":  "FORN 11193 NF 401 CT ITAU EMPRESA - Entrada 90176 - 3/5",
+                           "Valor":  1999.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "17/08/2026",
-                           "Código Fornecedor":  "93167",
+                           "Ordem_SQL":  628550,
+                           "Emissao":  "17/08/2026",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "11197",
                            "Fornecedor":  "Roster Equipamentos Para Laboratorio Ltda ",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11197 NF 16223 CT ITAU EMPRESA - Entrada 90598 - 2/3",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  335,
-                           "Ordem_SQL":  628550
+                           "Descricao":  "FORN 11197 NF 16223 CT ITAU EMPRESA - Entrada 90598 - 2/3",
+                           "Valor":  335.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "31/08/2026",
-                           "Código Fornecedor":  "2570",
+                           "Ordem_SQL":  628893,
+                           "Emissao":  "31/08/2026",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "10517",
                            "Fornecedor":  "Apiguana Maquinas E Ferramentas Ltda",
-                           "Nota":  "",
-                           "Descrição":  "FORN 10517 NF 837211 CT ITAU EMP - Entrada 90773 - 1/3",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  2120,
-                           "Ordem_SQL":  628893
+                           "Descricao":  "FORN 10517 NF 837211 CT ITAU EMP - Entrada 90773 - 1/3",
+                           "Valor":  2120.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "04/09/2026",
-                           "Código Fornecedor":  "92839",
+                           "Ordem_SQL":  629061,
+                           "Emissao":  "04/09/2026",
+                           "Vencimento":  "05/10/2026",
+                           "Codigo_Fornecedor":  "11156",
                            "Fornecedor":  "Araujo Cabral E Alves Ltda",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11156 NF 380467 CT ITAU EMP - Entrada 90847 - 1/1",
-                           "Vencimento":  "05/10/2026",
-                           "Valor":  187.9,
-                           "Ordem_SQL":  629061
+                           "Descricao":  "FORN 11156 NF 380467 CT ITAU EMP - Entrada 90847 - 1/1",
+                           "Valor":  187.90,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "07/06/2024",
-                           "Código Fornecedor":  "2477",
+                           "Ordem_SQL":  569402,
+                           "Emissao":  "07/06/2024",
+                           "Vencimento":  "07/10/2026",
+                           "Codigo_Fornecedor":  "10091",
                            "Fornecedor":  "BANCO BRADESCO SA",
-                           "Nota":  "",
-                           "Descrição":  "Operação Capital de Giro 29/42",
-                           "Vencimento":  "07/10/2026",
+                           "Descricao":  "Operação Capital de Giro 29/42",
                            "Valor":  4331.09,
-                           "Ordem_SQL":  569402
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "30/12/2025",
-                           "Código Fornecedor":  "2412",
-                           "Fornecedor":  "Nio Fibra",
-                           "Nota":  "",
-                           "Descrição":  "linha 8001 32541644  NIO FIBRA A-990922347948 10/12",
+                           "Ordem_SQL":  621978,
+                           "Emissao":  "30/12/2025",
                            "Vencimento":  "07/10/2026",
+                           "Codigo_Fornecedor":  "10026",
+                           "Fornecedor":  "Nio Fibra",
+                           "Descricao":  "linha 8001 32541644  NIO FIBRA A-990922347948 10/12",
                            "Valor":  69.22,
-                           "Ordem_SQL":  621978
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "26/01/2026",
-                           "Código Fornecedor":  "2393",
-                           "Fornecedor":  "PREFEITURA MUNICIPAL DE FORTALEZA",
-                           "Nota":  "",
-                           "Descrição":  "INSC-51285-0 9/11 PRED. BARAO DE ARATANHA ,575",
+                           "Ordem_SQL":  622787,
+                           "Emissao":  "26/01/2026",
                            "Vencimento":  "07/10/2026",
+                           "Codigo_Fornecedor":  "10007",
+                           "Fornecedor":  "PREFEITURA MUNICIPAL DE FORTALEZA",
+                           "Descricao":  "INSC-51285-0 9/11 PRED. BARAO DE ARATANHA ,575",
                            "Valor":  347.17,
-                           "Ordem_SQL":  622787
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "26/01/2026",
-                           "Código Fornecedor":  "2393",
-                           "Fornecedor":  "PREFEITURA MUNICIPAL DE FORTALEZA",
-                           "Nota":  "",
-                           "Descrição":  "INSC-276637-0   RES. ONFRE S. CAVALCANTE,63 9/11",
+                           "Ordem_SQL":  622798,
+                           "Emissao":  "26/01/2026",
                            "Vencimento":  "07/10/2026",
+                           "Codigo_Fornecedor":  "10007",
+                           "Fornecedor":  "PREFEITURA MUNICIPAL DE FORTALEZA",
+                           "Descricao":  "INSC-276637-0   RES. ONFRE S. CAVALCANTE,63 9/11",
                            "Valor":  204.97,
-                           "Ordem_SQL":  622798
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "26/01/2026",
-                           "Código Fornecedor":  "2393",
-                           "Fornecedor":  "PREFEITURA MUNICIPAL DE FORTALEZA",
-                           "Nota":  "",
-                           "Descrição":  "INSC-475271-6 SALA 08 AFONSO CELSO 1096 9/10",
+                           "Ordem_SQL":  622809,
+                           "Emissao":  "26/01/2026",
                            "Vencimento":  "07/10/2026",
+                           "Codigo_Fornecedor":  "10007",
+                           "Fornecedor":  "PREFEITURA MUNICIPAL DE FORTALEZA",
+                           "Descricao":  "INSC-475271-6 SALA 08 AFONSO CELSO 1096 9/10",
                            "Valor":  86.88,
-                           "Ordem_SQL":  622809
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "15/12/2025",
-                           "Código Fornecedor":  "2409",
-                           "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
-                           "Nota":  "",
-                           "Descrição":  "ENER. OSC 63 1106013 10/12",
+                           "Ordem_SQL":  620481,
+                           "Emissao":  "15/12/2025",
                            "Vencimento":  "08/10/2026",
+                           "Codigo_Fornecedor":  "10023",
+                           "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
+                           "Descricao":  "ENER. OSC 63 1106013 10/12",
                            "Valor":  185.31,
-                           "Ordem_SQL":  620481
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "30/12/2025",
-                           "Código Fornecedor":  "2412",
-                           "Fornecedor":  "Nio Fibra",
-                           "Nota":  "",
-                           "Descrição":  "linha res 3219-6300 NIO FIBRA A-402437544825 10/12",
+                           "Ordem_SQL":  621990,
+                           "Emissao":  "30/12/2025",
                            "Vencimento":  "08/10/2026",
-                           "Valor":  126.48,
-                           "Ordem_SQL":  621990
-                       },
-                       {
-                           "Emissão":  "26/12/2025",
-                           "Código Fornecedor":  "2411",
-                           "Fornecedor":  "UNIMED de Fortaleza  Coop. de trab Médico Ltda",
-                           "Nota":  "",
-                           "Descrição":  "Unimed 10/12",
-                           "Vencimento":  "10/10/2026",
-                           "Valor":  6021.04,
-                           "Ordem_SQL":  621818
-                       },
-                       {
-                           "Emissão":  "30/12/2025",
-                           "Código Fornecedor":  "2412",
+                           "Codigo_Fornecedor":  "10026",
                            "Fornecedor":  "Nio Fibra",
-                           "Nota":  "",
-                           "Descrição":  "linha  8004 32542115 NIO FIBRA A-402417837249 10/12",
+                           "Descricao":  "linha res 3219-6300 NIO FIBRA A-402437544825 10/12",
+                           "Valor":  126.48,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
+                       },
+                       {
+                           "Ordem_SQL":  621818,
+                           "Emissao":  "26/12/2025",
                            "Vencimento":  "10/10/2026",
+                           "Codigo_Fornecedor":  "10025",
+                           "Fornecedor":  "UNIMED de Fortaleza  Coop. de trab Médico Ltda",
+                           "Descricao":  "Unimed 10/12",
+                           "Valor":  6021.04,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
+                       },
+                       {
+                           "Ordem_SQL":  621966,
+                           "Emissao":  "30/12/2025",
+                           "Vencimento":  "10/10/2026",
+                           "Codigo_Fornecedor":  "10026",
+                           "Fornecedor":  "Nio Fibra",
+                           "Descricao":  "linha  8004 32542115 NIO FIBRA A-402417837249 10/12",
                            "Valor":  103.08,
-                           "Ordem_SQL":  621966
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "10/02/2026",
-                           "Código Fornecedor":  "2409",
-                           "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
-                           "Nota":  "",
-                           "Descrição":  "Energia BRB 2266 7/9",
+                           "Ordem_SQL":  624669,
+                           "Emissao":  "10/02/2026",
                            "Vencimento":  "10/10/2026",
+                           "Codigo_Fornecedor":  "10023",
+                           "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
+                           "Descricao":  "Energia BRB 2266 7/9",
                            "Valor":  313.76,
-                           "Ordem_SQL":  624669
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "31/03/2026",
-                           "Código Fornecedor":  "2421",
-                           "Fornecedor":  "TIM S.A.",
-                           "Nota":  "",
-                           "Descrição":  "TIM MOVEL  7/12",
+                           "Ordem_SQL":  625330,
+                           "Emissao":  "31/03/2026",
                            "Vencimento":  "10/10/2026",
+                           "Codigo_Fornecedor":  "10035",
+                           "Fornecedor":  "TIM S.A.",
+                           "Descricao":  "TIM MOVEL  7/12",
                            "Valor":  339.72,
-                           "Ordem_SQL":  625330
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "04/02/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  "ACAL NF 366812 - Entrada 88522 - 9/10",
+                           "Ordem_SQL":  623049,
+                           "Emissao":  "04/02/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  "ACAL NF 366812 - Entrada 88522 - 9/10",
                            "Valor":  120.01,
-                           "Ordem_SQL":  623049
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "13/02/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  "CEQUIP NF 123302 - Entrada 88648 - 8/10",
+                           "Ordem_SQL":  623401,
+                           "Emissao":  "13/02/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  "CEQUIP NF 123302 - Entrada 88648 - 8/10",
                            "Valor":  338.97,
-                           "Ordem_SQL":  623401
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "19/05/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11116 NF 189037 CT BRADESCO - Entrada 89576 - 5/6",
+                           "Ordem_SQL":  626141,
+                           "Emissao":  "19/05/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  "FORN 11116 NF 189037 CT BRADESCO - Entrada 89576 - 5/6",
                            "Valor":  738.34,
-                           "Ordem_SQL":  626141
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "25/05/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11156 NF 787221 CT BRADESCO - Entrada 89636 - 5/10",
+                           "Ordem_SQL":  626328,
+                           "Emissao":  "25/05/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  "FORN 11156 NF 787221 CT BRADESCO - Entrada 89636 - 5/10",
                            "Valor":  304.69,
-                           "Ordem_SQL":  626328
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "01/06/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  " - Entrada 89718 - 4/6",
+                           "Ordem_SQL":  626562,
+                           "Emissao":  "01/06/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  " - Entrada 89718 - 4/6",
                            "Valor":  516.05,
-                           "Ordem_SQL":  626562
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "08/07/2026",
-                           "Código Fornecedor":  "385",
+                           "Ordem_SQL":  627489,
+                           "Emissao":  "08/07/2026",
+                           "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "10301",
                            "Fornecedor":  "Central Nordeste De Pecas Ltda",
-                           "Nota":  "",
-                           "Descrição":  "FORN 10301 NF 49652 CT BRADESCO ARILUB - Entrada 90147 - 3/3",
-                           "Vencimento":  "13/10/2026",
+                           "Descricao":  "FORN 10301 NF 49652 CT BRADESCO ARILUB - Entrada 90147 - 3/3",
                            "Valor":  587.65,
-                           "Ordem_SQL":  627489
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "10/07/2026",
-                           "Código Fornecedor":  "93097",
+                           "Ordem_SQL":  627526,
+                           "Emissao":  "10/07/2026",
+                           "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11192",
                            "Fornecedor":  "MAGAZINE LUIZA S/A",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11192 NF 153677 CT BRADESCO ARILUB - Entrada 90171 - 3/10",
-                           "Vencimento":  "13/10/2026",
-                           "Valor":  399.8,
-                           "Ordem_SQL":  627526
+                           "Descricao":  "FORN 11192 NF 153677 CT BRADESCO ARILUB - Entrada 90171 - 3/10",
+                           "Valor":  399.80,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "07/08/2026",
-                           "Código Fornecedor":  "86305",
+                           "Ordem_SQL":  628345,
+                           "Emissao":  "07/08/2026",
+                           "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "10239",
                            "Fornecedor":  "IDIAL DISTRIBUIDORA LTDA",
-                           "Nota":  "",
-                           "Descrição":  "FORN: 10239 NF 9085 CT BRADESCO ARILUB - Entrada 90496 - 2/3",
-                           "Vencimento":  "13/10/2026",
-                           "Valor":  1400,
-                           "Ordem_SQL":  628345
+                           "Descricao":  "FORN: 10239 NF 9085 CT BRADESCO ARILUB - Entrada 90496 - 2/3",
+                           "Valor":  1400.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "14/08/2026",
-                           "Código Fornecedor":  "111",
+                           "Ordem_SQL":  628513,
+                           "Emissao":  "14/08/2026",
+                           "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "107",
                            "Fornecedor":  "Atm Refrigeracao Industrial Ltda",
-                           "Nota":  "",
-                           "Descrição":  "FORN 107 NF 23805 CT BRADESCO ARILUB - Entrada 90585 - 2/3",
-                           "Vencimento":  "13/10/2026",
+                           "Descricao":  "FORN 107 NF 23805 CT BRADESCO ARILUB - Entrada 90585 - 2/3",
                            "Valor":  2268.22,
-                           "Ordem_SQL":  628513
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "18/08/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  "FORN 4104 NF 802323 CT BRADESCO ARILUB C NF 802478 - Entrada 90634 - 2/6",
+                           "Ordem_SQL":  628597,
+                           "Emissao":  "18/08/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  "FORN 4104 NF 802323 CT BRADESCO ARILUB C NF 802478 - Entrada 90634 - 2/6",
                            "Valor":  114.51,
-                           "Ordem_SQL":  628597
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "25/08/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  "FORN 4104 NF 800954 CT BRADESCO ARILUB - Entrada 90727 - 2/8",
+                           "Ordem_SQL":  628723,
+                           "Emissao":  "25/08/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  "FORN 4104 NF 800954 CT BRADESCO ARILUB - Entrada 90727 - 2/8",
                            "Valor":  949.76,
-                           "Ordem_SQL":  628723
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "25/08/2026",
-                           "Código Fornecedor":  "36503",
-                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11156 NF 379508 CT BRADESCO ARILUB - Entrada 90729 - 2/8",
+                           "Ordem_SQL":  628732,
+                           "Emissao":  "25/08/2026",
                            "Vencimento":  "13/10/2026",
+                           "Codigo_Fornecedor":  "11072",
+                           "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
+                           "Descricao":  "FORN 11156 NF 379508 CT BRADESCO ARILUB - Entrada 90729 - 2/8",
                            "Valor":  189.65,
-                           "Ordem_SQL":  628732
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "SHOP9/DESCRIÇÃO"
                        },
                        {
-                           "Emissão":  "29/10/2025",
-                           "Código Fornecedor":  "91765",
+                           "Ordem_SQL":  618291,
+                           "Emissao":  "29/10/2025",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "11142",
                            "Fornecedor":  "HAPVIDA ASSISTENCIA MEDICA S.A.",
-                           "Nota":  "",
-                           "Descrição":  "PL SAUDE FUNCIONAARIOS 12/12",
-                           "Vencimento":  "15/10/2026",
+                           "Descricao":  "PL SAUDE FUNCIONAARIOS 12/12",
                            "Valor":  1054.25,
-                           "Ordem_SQL":  618291
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "16/12/2025",
-                           "Código Fornecedor":  "2402",
-                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                           "Nota":  "",
-                           "Descrição":  "futuras compras 10/12",
+                           "Ordem_SQL":  622421,
+                           "Emissao":  "16/12/2025",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10016",
+                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
+                           "Descricao":  "futuras compras 10/12",
                            "Valor":  0.01,
-                           "Ordem_SQL":  622421
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "06/02/2026",
-                           "Código Fornecedor":  "2547",
-                           "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "AZULYPWQWA BARUERI BR MARCELO  9/10",
+                           "Ordem_SQL":  623495,
+                           "Emissao":  "06/02/2026",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10210",
+                           "Fornecedor":  "CART PORTO BANK",
+                           "Descricao":  "AZULYPWQWA BARUERI BR MARCELO  9/10",
                            "Valor":  515.29,
-                           "Ordem_SQL":  623495
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "01/03/2026",
-                           "Código Fornecedor":  "2402",
-                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                           "Nota":  "",
-                           "Descrição":  "geladeira denes 8/15",
+                           "Ordem_SQL":  624173,
+                           "Emissao":  "01/03/2026",
                            "Vencimento":  "15/10/2026",
-                           "Valor":  753.2,
-                           "Ordem_SQL":  624173
+                           "Codigo_Fornecedor":  "10016",
+                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
+                           "Descricao":  "geladeira denes 8/15",
+                           "Valor":  753.20,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "01/03/2026",
-                           "Código Fornecedor":  "2402",
-                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                           "Nota":  "",
-                           "Descrição":  "seg maq denes 8/15",
+                           "Ordem_SQL":  624188,
+                           "Emissao":  "01/03/2026",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10016",
+                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
+                           "Descricao":  "seg maq denes 8/15",
                            "Valor":  41.33,
-                           "Ordem_SQL":  624188
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "01/03/2026",
-                           "Código Fornecedor":  "2402",
-                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                           "Nota":  "",
-                           "Descrição":  "maqina de lavar denes 8/15",
+                           "Ordem_SQL":  624203,
+                           "Emissao":  "01/03/2026",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10016",
+                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
+                           "Descricao":  "maqina de lavar denes 8/15",
                            "Valor":  119.93,
-                           "Ordem_SQL":  624203
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "01/03/2026",
-                           "Código Fornecedor":  "2402",
-                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                           "Nota":  "",
-                           "Descrição":  "SEG MAQ LAVAR RES 8/15",
+                           "Ordem_SQL":  624218,
+                           "Emissao":  "01/03/2026",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10016",
+                           "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
+                           "Descricao":  "SEG MAQ LAVAR RES 8/15",
                            "Valor":  41.33,
-                           "Ordem_SQL":  624218
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "27/02/2026",
-                           "Código Fornecedor":  "2547",
-                           "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "ACAL - TINTAS  8/10",
+                           "Ordem_SQL":  624269,
+                           "Emissao":  "27/02/2026",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10210",
+                           "Fornecedor":  "CART PORTO BANK",
+                           "Descricao":  "ACAL - TINTAS  8/10",
                            "Valor":  110.25,
-                           "Ordem_SQL":  624269
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "07/06/2026",
-                           "Código Fornecedor":  "2402",
+                           "Ordem_SQL":  626798,
+                           "Emissao":  "07/06/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10016",
                            "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                           "Nota":  "",
-                           "Descrição":  "PANELAS SAMS  5/8",
-                           "Vencimento":  "15/10/2026",
-                           "Valor":  50,
-                           "Ordem_SQL":  626798
+                           "Descricao":  "PANELAS SAMS  5/8",
+                           "Valor":  50.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "18/05/2026",
-                           "Código Fornecedor":  "2547",
-                           "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "MAQ MERCADO PAGO 5/12",
+                           "Ordem_SQL":  626863,
+                           "Emissao":  "18/05/2026",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10210",
+                           "Fornecedor":  "CART PORTO BANK",
+                           "Descricao":  "MAQ MERCADO PAGO 5/12",
                            "Valor":  20.88,
-                           "Ordem_SQL":  626863
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "10/06/2026",
-                           "Código Fornecedor":  "2547",
-                           "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "PAGUE MENOS 4/8",
+                           "Ordem_SQL":  627553,
+                           "Emissao":  "10/06/2026",
                            "Vencimento":  "15/10/2026",
-                           "Valor":  43.1,
-                           "Ordem_SQL":  627553
-                       },
-                       {
-                           "Emissão":  "20/06/2026",
-                           "Código Fornecedor":  "2547",
+                           "Codigo_Fornecedor":  "10210",
                            "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "SMARTFIT - ARI  4/12",
-                           "Vencimento":  "15/10/2026",
-                           "Valor":  141.8,
-                           "Ordem_SQL":  627561
+                           "Descricao":  "PAGUE MENOS 4/8",
+                           "Valor":  43.10,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "13/06/2026",
-                           "Código Fornecedor":  "2402",
+                           "Ordem_SQL":  627561,
+                           "Emissao":  "20/06/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10210",
+                           "Fornecedor":  "CART PORTO BANK",
+                           "Descricao":  "SMARTFIT - ARI  4/12",
+                           "Valor":  141.80,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
+                           "Ordem_SQL":  627579,
+                           "Emissao":  "13/06/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10016",
                            "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                           "Nota":  "",
-                           "Descrição":  "COMPRAS PARA CASA 4/10",
-                           "Vencimento":  "15/10/2026",
+                           "Descricao":  "COMPRAS PARA CASA 4/10",
                            "Valor":  56.37,
-                           "Ordem_SQL":  627579
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "12/06/2026",
-                           "Código Fornecedor":  "2547",
-                           "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "ADAPTA ORG  4/12",
+                           "Ordem_SQL":  627610,
+                           "Emissao":  "12/06/2026",
                            "Vencimento":  "15/10/2026",
-                           "Valor":  99,
-                           "Ordem_SQL":  627610
+                           "Codigo_Fornecedor":  "10210",
+                           "Fornecedor":  "CART PORTO BANK",
+                           "Descricao":  "ADAPTA ORG  4/12",
+                           "Valor":  99.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "10/08/2026",
-                           "Código Fornecedor":  "2547",
-                           "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "CAROL DISTR- SUPLEMENTOS 2/3",
+                           "Ordem_SQL":  628380,
+                           "Emissao":  "10/08/2026",
                            "Vencimento":  "15/10/2026",
+                           "Codigo_Fornecedor":  "10210",
+                           "Fornecedor":  "CART PORTO BANK",
+                           "Descricao":  "CAROL DISTR- SUPLEMENTOS 2/3",
                            "Valor":  127.39,
-                           "Ordem_SQL":  628380
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "07/08/2026",
-                           "Código Fornecedor":  "2547",
-                           "Fornecedor":  "CART PORTO BANK",
-                           "Nota":  "",
-                           "Descrição":  "KIWIFY Academia do Candiba BR 3/24",
+                           "Ordem_SQL":  628426,
+                           "Emissao":  "07/08/2026",
                            "Vencimento":  "15/10/2026",
-                           "Valor":  19.9,
-                           "Ordem_SQL":  628426
+                           "Codigo_Fornecedor":  "10210",
+                           "Fornecedor":  "CART PORTO BANK",
+                           "Descricao":  "KIWIFY Academia do Candiba BR 3/24",
+                           "Valor":  19.90,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "06/10/2025",
-                           "Código Fornecedor":  "2409",
+                           "Ordem_SQL":  608811,
+                           "Emissao":  "06/10/2025",
+                           "Vencimento":  "17/10/2026",
+                           "Codigo_Fornecedor":  "10023",
                            "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
-                           "Nota":  "",
-                           "Descrição":  "Pr5. Barão de Aratanha 575 cl 64768557 13/36",
-                           "Vencimento":  "17/10/2026",
+                           "Descricao":  "Pr5. Barão de Aratanha 575 cl 64768557 13/36",
                            "Valor":  106.31,
-                           "Ordem_SQL":  608811
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "18/09/2026",
-                           "Código Fornecedor":  "43548",
-                           "Fornecedor":  "NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
-                           "Nota":  "",
-                           "Descrição":  "boleto santander - Entrada 91005 - 1/1",
+                           "Ordem_SQL":  629425,
+                           "Emissao":  "18/09/2026",
                            "Vencimento":  "17/10/2026",
+                           "Codigo_Fornecedor":  "11046",
+                           "Fornecedor":  "NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
+                           "Descricao":  "boleto santander - Entrada 91005 - 1/1",
                            "Valor":  689.28,
-                           "Ordem_SQL":  629425
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "22/10/2025",
-                           "Código Fornecedor":  "2485",
-                           "Fornecedor":  "CARTAO CREDICARD VISA",
-                           "Nota":  "",
-                           "Descrição":  "CPAP -BUILDERS FORT 12/12",
+                           "Ordem_SQL":  619834,
+                           "Emissao":  "22/10/2025",
                            "Vencimento":  "18/10/2026",
+                           "Codigo_Fornecedor":  "10099",
+                           "Fornecedor":  "CARTAO CREDICARD VISA",
+                           "Descricao":  "CPAP -BUILDERS FORT 12/12",
                            "Valor":  341.74,
-                           "Ordem_SQL":  619834
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "08/01/2026",
-                           "Código Fornecedor":  "2413",
-                           "Fornecedor":  "RECEITA FEDERAL - MF",
-                           "Nota":  "",
-                           "Descrição":  "DARF CONT. PREVIDENCIARIA INSS 10/12",
+                           "Ordem_SQL":  622538,
+                           "Emissao":  "08/01/2026",
                            "Vencimento":  "20/10/2026",
+                           "Codigo_Fornecedor":  "10027",
+                           "Fornecedor":  "RECEITA FEDERAL - MF",
+                           "Descricao":  "DARF CONT. PREVIDENCIARIA INSS 10/12",
                            "Valor":  2036.44,
-                           "Ordem_SQL":  622538
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "19/01/2026",
-                           "Código Fornecedor":  "2413",
+                           "Ordem_SQL":  622550,
+                           "Emissao":  "19/01/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Fornecedor":  "10027",
                            "Fornecedor":  "RECEITA FEDERAL - MF",
-                           "Nota":  "",
-                           "Descrição":  "GUIA DO FGTS DIGITAL 10/12",
-                           "Vencimento":  "20/10/2026",
+                           "Descricao":  "GUIA DO FGTS DIGITAL 10/12",
                            "Valor":  470.34,
-                           "Ordem_SQL":  622550
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
-                           "Emissão":  "25/08/2026",
-                           "Código Fornecedor":  "93238",
+                           "Ordem_SQL":  628712,
+                           "Emissao":  "25/08/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Fornecedor":  "11204",
                            "Fornecedor":  "CARTÃO SANTANDER EMPRESA",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11140 NF 305003 CT SANT EMP - Entrada 90724 - 2/3",
-                           "Vencimento":  "20/10/2026",
-                           "Valor":  360,
-                           "Ordem_SQL":  628712
+                           "Descricao":  "FORN 11140 NF 305003 CT SANT EMP - Entrada 90724 - 2/3",
+                           "Valor":  360.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
-                           "Emissão":  "22/09/2026",
-                           "Código Fornecedor":  "93265",
+                           "Ordem_SQL":  629497,
+                           "Emissao":  "22/09/2026",
+                           "Vencimento":  "20/10/2026",
+                           "Codigo_Fornecedor":  "11207",
                            "Fornecedor":  "Cg Nautica Ltda",
-                           "Nota":  "",
-                           "Descrição":  "FORN 11207 NF 8812 CT SANTANDER EMP - Entrada 91017 - 1/10",
-                           "Vencimento":  "20/10/2026",
-                           "Valor":  55.9,
-                           "Ordem_SQL":  629497
+                           "Descricao":  "FORN 11207 NF 8812 CT SANTANDER EMP - Entrada 91017 - 1/10",
+                           "Valor":  55.90,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        }
                    ],
-    "horizontes":  [
-                       {
-                           "Horizonte":  "Hoje",
-                           "Até":  "23/09/2026",
-                           "Recebimentos acumulados":  27275,
-                           "Pagamentos acumulados":  0,
-                           "Débitos bancários acumulados":  0,
-                           "Saídas acumuladas":  0,
-                           "Saldo projetado operacional":  52673.81
-                       },
-                       {
-                           "Horizonte":  "7 dias",
-                           "Até":  "30/09/2026",
-                           "Recebimentos acumulados":  54564.53,
-                           "Pagamentos acumulados":  1296.8,
-                           "Débitos bancários acumulados":  17377.58,
-                           "Saídas acumuladas":  18674.38,
-                           "Saldo projetado operacional":  61288.96
-                       },
-                       {
-                           "Horizonte":  "15 dias",
-                           "Até":  "08/10/2026",
-                           "Recebimentos acumulados":  101433.06,
-                           "Pagamentos acumulados":  16056.56,
-                           "Débitos bancários acumulados":  44116.1,
-                           "Saídas acumuladas":  60172.66,
-                           "Saldo projetado operacional":  66659.21
-                       },
-                       {
-                           "Horizonte":  "30 dias",
-                           "Até":  "23/10/2026",
-                           "Recebimentos acumulados":  196917.25,
-                           "Pagamentos acumulados":  38015.85,
-                           "Débitos bancários acumulados":  81770.96,
-                           "Saídas acumuladas":  119786.81,
-                           "Saldo projetado operacional":  102529.25
-                       }
-                   ],
-    "auditoria":  {
-                      "qtd_recebiveis":  60,
-                      "total_recebiveis_30d":  196917.25,
-                      "qtd_pagamentos":  63,
-                      "total_pagamentos_30d":  38015.85,
-                      "qtd_debitos_programados":  32,
-                      "total_debitos_programados_30d":  81770.96,
-                      "saldo_bancario_consolidado_data_base":  469317.78,
-                      "disponibilidade_operacional":  25398.81,
-                      "reserva_financeira":  443918.97,
-                      "modo_sql":  "SOMENTE LEITURA"
-                  },
-    "parametros":  {
-                       "conta_reserva_sql":  1017,
-                       "conta_reserva_nome":  "BNB - FIF INSTITUCIONAL",
-                       "regra_reserva":  "Saldo real da conta 1017 no Shop9. Integra o saldo consolidado e nao integra a disponibilidade nem a projecao operacional.",
-                       "regra_recebiveis":  "Situacao=A; Pagar_Receber=R; Tipo_Conta=B",
-                       "regra_pagamentos":  "Situacao=A; Pagar_Receber=P; Tipo_Conta=R",
-                       "regra_debitos":  "Somente lancamentos futuros negativos das contas operacionais homologadas; sem conciliacao automatica.",
-                       "bancos_sql":  {
-                                          "BRADESCO":  3,
-                                          "ITAU":  3021,
-                                          "BNB":  3022,
-                                          "SANTANDER":  3024,
-                                          "BNB_FIF_INSTITUCIONAL":  1017
-                                      },
-                       "contas_operacionais_sql":  [
-                                                       3,
-                                                       3021,
-                                                       3022,
-                                                       3024
-                                                   ],
-                       "contas_reserva_sql":  [
-                                                  1017
-                                              ],
-                       "janelas_dias":  [
-                                            0,
-                                            7,
-                                            15,
-                                            30
-                                        ]
-                   },
     "debitos_programados":  [
                                 {
+                                    "Ordem_SQL":  298132,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "23/09/2026",
+                                    "Descricao":  "Pagamento de conta (BOLETO BANCO DO BRASIL - Entrada 90273 - 4/4) - Fornecedor 10137 - Dulub Lubrificantes Ltda",
+                                    "Valor":  6980.50
+                                },
+                                {
+                                    "Ordem_SQL":  298450,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "23/09/2026",
+                                    "Descricao":  "Pagamento de conta (BOLETO - Entrada 90848 - 1/3) - Fornecedor 10872 - O V D IMPORTADORA E DISTRIBUIDORA LTDA",
+                                    "Valor":  1706.16
+                                },
+                                {
+                                    "Ordem_SQL":  298401,
                                     "Banco":  "BRADESCO",
                                     "Data":  "25/09/2026",
                                     "Descricao":  "Pagamento de conta (boleto santander - Entrada 90771 - 1/3) - Fornecedor 11046 - NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
-                                    "Valor":  1478.52,
-                                    "Ordem_SQL":  298401
+                                    "Valor":  1478.52
                                 },
                                 {
+                                    "Ordem_SQL":  298556,
                                     "Banco":  "BRADESCO",
                                     "Data":  "25/09/2026",
                                     "Descricao":  "Pagamento de conta (Imov. Barão de Aratanha, 575 8/12) - Fornecedor 10015 - COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE",
-                                    "Valor":  479.97,
-                                    "Ordem_SQL":  298556
+                                    "Valor":  479.97
                                 },
                                 {
+                                    "Ordem_SQL":  298557,
                                     "Banco":  "BRADESCO",
                                     "Data":  "25/09/2026",
                                     "Descricao":  "Pagamento de várias contas",
-                                    "Valor":  6398.83,
-                                    "Ordem_SQL":  298557
+                                    "Valor":  6398.83
                                 },
                                 {
+                                    "Ordem_SQL":  298253,
                                     "Banco":  "BRADESCO",
                                     "Data":  "27/09/2026",
                                     "Descricao":  "Pagamento de conta ( - Entrada 90404 - 2/2) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                    "Valor":  721.37,
-                                    "Ordem_SQL":  298253
+                                    "Valor":  721.37
                                 },
                                 {
+                                    "Ordem_SQL":  298489,
                                     "Banco":  "BRADESCO",
                                     "Data":  "29/09/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 1/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  6744.89,
-                                    "Ordem_SQL":  298489
+                                    "Valor":  6744.89
                                 },
                                 {
+                                    "Ordem_SQL":  298494,
                                     "Banco":  "BRADESCO",
                                     "Data":  "29/09/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 1/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  202.79,
-                                    "Ordem_SQL":  298494
+                                    "Valor":  202.79
                                 },
                                 {
+                                    "Ordem_SQL":  298405,
                                     "Banco":  "BRADESCO",
                                     "Data":  "30/09/2026",
                                     "Descricao":  "Pagamento de conta (BOLETO BRADESCO - Entrada 90795 - 1/1) - Fornecedor 11046 - NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
-                                    "Valor":  1281.69,
-                                    "Ordem_SQL":  298405
+                                    "Valor":  1281.69
                                 },
                                 {
+                                    "Ordem_SQL":  298452,
                                     "Banco":  "BRADESCO",
                                     "Data":  "30/09/2026",
                                     "Descricao":  "Pagamento de conta (lote parque da paz L01503  9/12) - Fornecedor 10021 - EMPRESA BRASILEIRA DE LANÇAMENTO",
-                                    "Valor":  69.52,
-                                    "Ordem_SQL":  298452
+                                    "Valor":  69.52
                                 },
                                 {
+                                    "Ordem_SQL":  298010,
                                     "Banco":  "BRADESCO",
                                     "Data":  "01/10/2026",
                                     "Descricao":  "Pagamento de conta (BOLETO BANCO DO BRASIL - Entrada 90109 - 3/3) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                    "Valor":  1634.43,
-                                    "Ordem_SQL":  298010
+                                    "Valor":  1634.43
                                 },
                                 {
+                                    "Ordem_SQL":  298459,
                                     "Banco":  "BRADESCO",
                                     "Data":  "01/10/2026",
                                     "Descricao":  "Pagamento de conta ( - Entrada 90843 - 1/2) - Fornecedor 11046 - NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
-                                    "Valor":  692.87,
-                                    "Ordem_SQL":  298459
+                                    "Valor":  692.87
                                 },
                                 {
+                                    "Ordem_SQL":  298554,
                                     "Banco":  "BRADESCO",
                                     "Data":  "02/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 91006 - 1/1) - Fornecedor 10343 - BEZERRA \u0026 OLIVEIRA COMERCIO DE AUTOPECAS LTDA",
-                                    "Valor":  260.81,
-                                    "Ordem_SQL":  298554
+                                    "Valor":  260.81
                                 },
                                 {
+                                    "Ordem_SQL":  298555,
                                     "Banco":  "BRADESCO",
                                     "Data":  "02/10/2026",
                                     "Descricao":  "Pagamento de conta (Imov. Br.Rio Branco 2266 9/12) - Fornecedor 10015 - COMPANHIA DE AGUA E ESGOTO DO CEARA - CAGECE",
-                                    "Valor":  319.98,
-                                    "Ordem_SQL":  298555
+                                    "Valor":  319.98
                                 },
                                 {
+                                    "Ordem_SQL":  298462,
                                     "Banco":  "BRADESCO",
                                     "Data":  "05/10/2026",
                                     "Descricao":  "Pagamento de conta (Boleto banco do brasil - Entrada 90854 - 1/2) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                    "Valor":  362.88,
-                                    "Ordem_SQL":  298462
+                                    "Valor":  362.88
                                 },
                                 {
+                                    "Ordem_SQL":  298464,
                                     "Banco":  "BRADESCO",
                                     "Data":  "05/10/2026",
                                     "Descricao":  "Pagamento de conta (PE VR LUB 1/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  375.21,
-                                    "Ordem_SQL":  298464
+                                    "Valor":  375.21
                                 },
                                 {
+                                    "Ordem_SQL":  298469,
                                     "Banco":  "BRADESCO",
                                     "Data":  "05/10/2026",
                                     "Descricao":  "Pagamento de conta (PE VR LUB 1/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  12481.08,
-                                    "Ordem_SQL":  298469
+                                    "Valor":  12481.08
                                 },
                                 {
+                                    "Ordem_SQL":  298546,
                                     "Banco":  "BRADESCO",
                                     "Data":  "05/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto bradesco - Entrada 90914 - 1/1) - Fornecedor 11046 - NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
-                                    "Valor":  803.85,
-                                    "Ordem_SQL":  298546
+                                    "Valor":  803.85
                                 },
                                 {
+                                    "Ordem_SQL":  298550,
                                     "Banco":  "BRADESCO",
                                     "Data":  "05/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 91004 - 1/1) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                    "Valor":  137.87,
-                                    "Ordem_SQL":  298550
+                                    "Valor":  137.87
                                 },
                                 {
+                                    "Ordem_SQL":  298456,
                                     "Banco":  "BRADESCO",
                                     "Data":  "06/10/2026",
                                     "Descricao":  "Pagamento de conta (BOLETO WURTH - Entrada 90849 - 2/4) - Fornecedor 10259 - WURTH DO BRASIL PECAS DE FIXACAO LTDA",
-                                    "Valor":  1015.69,
-                                    "Ordem_SQL":  298456
+                                    "Valor":  1015.69
                                 },
                                 {
+                                    "Ordem_SQL":  298490,
                                     "Banco":  "BRADESCO",
                                     "Data":  "06/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 2/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  6744.91,
-                                    "Ordem_SQL":  298490
+                                    "Valor":  6744.91
                                 },
                                 {
+                                    "Ordem_SQL":  298495,
                                     "Banco":  "BRADESCO",
                                     "Data":  "06/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 2/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  202.77,
-                                    "Ordem_SQL":  298495
+                                    "Valor":  202.77
                                 },
                                 {
+                                    "Ordem_SQL":  298448,
                                     "Banco":  "BRADESCO",
                                     "Data":  "07/10/2026",
                                     "Descricao":  "Pagamento de conta (BOLETO - Entrada 90848 - 2/3) - Fornecedor 10872 - O V D IMPORTADORA E DISTRIBUIDORA LTDA",
-                                    "Valor":  1706.17,
-                                    "Ordem_SQL":  298448
+                                    "Valor":  1706.17
                                 },
                                 {
+                                    "Ordem_SQL":  298491,
                                     "Banco":  "BRADESCO",
                                     "Data":  "13/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 3/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  6744.91,
-                                    "Ordem_SQL":  298491
+                                    "Valor":  6744.91
                                 },
                                 {
+                                    "Ordem_SQL":  298496,
                                     "Banco":  "BRADESCO",
                                     "Data":  "13/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 3/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  202.77,
-                                    "Ordem_SQL":  298496
+                                    "Valor":  202.77
                                 },
                                 {
+                                    "Ordem_SQL":  298551,
                                     "Banco":  "BRADESCO",
                                     "Data":  "13/10/2026",
                                     "Descricao":  "Pagamento de conta (BOLETO BANCO DO BRASIL - Entrada 90921 - 1/3) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                    "Valor":  608.13,
-                                    "Ordem_SQL":  298551
+                                    "Valor":  608.13
                                 },
                                 {
+                                    "Ordem_SQL":  298465,
                                     "Banco":  "BRADESCO",
                                     "Data":  "14/10/2026",
                                     "Descricao":  "Pagamento de conta (PE VR LUB 2/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  375.23,
-                                    "Ordem_SQL":  298465
+                                    "Valor":  375.23
                                 },
                                 {
+                                    "Ordem_SQL":  298485,
                                     "Banco":  "BRADESCO",
                                     "Data":  "14/10/2026",
                                     "Descricao":  "Pagamento de conta (PE VR LUB 2/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  12481.06,
-                                    "Ordem_SQL":  298485
+                                    "Valor":  12481.06
                                 },
                                 {
+                                    "Ordem_SQL":  298547,
                                     "Banco":  "BRADESCO",
                                     "Data":  "14/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto bradesco - Entrada 91007 - 1/3) - Fornecedor 11046 - NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
-                                    "Valor":  6653.22,
-                                    "Ordem_SQL":  298547
+                                    "Valor":  6653.22
                                 },
                                 {
+                                    "Ordem_SQL":  298124,
                                     "Banco":  "BRADESCO",
                                     "Data":  "19/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90308 - 3/3) - Fornecedor 10127 - SOBRAL \u0026 PALACIO PETROLEO LTDA",
-                                    "Valor":  920,
-                                    "Ordem_SQL":  298124
+                                    "Valor":  920.00
                                 },
                                 {
+                                    "Ordem_SQL":  298457,
                                     "Banco":  "BRADESCO",
                                     "Data":  "20/10/2026",
                                     "Descricao":  "Pagamento de conta (BOLETO WURTH - Entrada 90849 - 3/4) - Fornecedor 10259 - WURTH DO BRASIL PECAS DE FIXACAO LTDA",
-                                    "Valor":  1015.69,
-                                    "Ordem_SQL":  298457
+                                    "Valor":  1015.69
                                 },
                                 {
+                                    "Ordem_SQL":  298492,
                                     "Banco":  "BRADESCO",
                                     "Data":  "20/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 4/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  6744.91,
-                                    "Ordem_SQL":  298492
+                                    "Valor":  6744.91
                                 },
                                 {
+                                    "Ordem_SQL":  298497,
                                     "Banco":  "BRADESCO",
                                     "Data":  "20/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 4/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  202.77,
-                                    "Ordem_SQL":  298497
+                                    "Valor":  202.77
                                 },
                                 {
+                                    "Ordem_SQL":  298449,
                                     "Banco":  "BRADESCO",
                                     "Data":  "21/10/2026",
                                     "Descricao":  "Pagamento de conta (BOLETO - Entrada 90848 - 3/3) - Fornecedor 10872 - O V D IMPORTADORA E DISTRIBUIDORA LTDA",
-                                    "Valor":  1706.17,
-                                    "Ordem_SQL":  298449
+                                    "Valor":  1706.17
                                 }
                             ],
-    "top10":  {
-                  "recebimentos":  [
-                                       {
-                                           "Emissão":  "11/09/2026",
-                                           "Código Cliente":  "2223",
-                                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                                           "Vencimento":  "11/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  46140,
-                                           "Ordem_SQL":  629262,
-                                           "Descricao":  "Saída 90922 - 1/1"
-                                       },
-                                       {
-                                           "Emissão":  "11/09/2026",
-                                           "Código Cliente":  "74257",
-                                           "Cliente":  "R C Construcoes Ltda",
-                                           "Vencimento":  "09/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  520,
-                                           "Ordem_SQL":  629272,
-                                           "Descricao":  "Saída 90929 - 1/2"
-                                       },
-                                       {
-                                           "Emissão":  "14/08/2026",
-                                           "Código Cliente":  "78847",
-                                           "Cliente":  "Ok Empreendimentos Construcoes E Servicos Ltda",
-                                           "Vencimento":  "09/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  593.72,
-                                           "Ordem_SQL":  628532,
-                                           "Descricao":  "Saída 90588 - 3/3"
-                                       },
-                                       {
-                                           "Emissão":  "01/09/2026",
-                                           "Código Cliente":  "1428",
-                                           "Cliente":  "C M Cavalcante Motos - Me",
-                                           "Vencimento":  "13/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  629.53,
-                                           "Ordem_SQL":  628932,
-                                           "Descricao":  "Saída 90785 - 2/3"
-                                       },
-                                       {
-                                           "Emissão":  "15/09/2026",
-                                           "Código Cliente":  "2223",
-                                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                                           "Vencimento":  "15/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  9790,
-                                           "Ordem_SQL":  629356,
-                                           "Descricao":  "Saída 90952 - 1/1"
-                                       },
-                                       {
-                                           "Emissão":  "20/08/2026",
-                                           "Código Cliente":  "68073",
-                                           "Cliente":  "Vm Engenharia Ltda",
-                                           "Vencimento":  "15/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  968.19,
-                                           "Ordem_SQL":  628626,
-                                           "Descricao":  "Saída 90668 - 3/3"
-                                       },
-                                       {
-                                           "Emissão":  "15/09/2026",
-                                           "Código Cliente":  "78750",
-                                           "Cliente":  "CONSORCIO TSM 2023",
-                                           "Vencimento":  "13/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  11646.66,
-                                           "Ordem_SQL":  629369,
-                                           "Descricao":  "Saída 90959 - 1/3"
-                                       },
-                                       {
-                                           "Emissão":  "14/08/2026",
-                                           "Código Cliente":  "66954",
-                                           "Cliente":  "Glc Comercio De Pecas Para Refrigeracao Ltda",
-                                           "Vencimento":  "09/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  3780.33,
-                                           "Ordem_SQL":  628506,
-                                           "Descricao":  "Saída 90580 - 3/3"
-                                       },
-                                       {
-                                           "Emissão":  "13/08/2026",
-                                           "Código Cliente":  "78468",
-                                           "Cliente":  "Paraipaba Agroindustrial Ltda",
-                                           "Vencimento":  "08/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  1658.48,
-                                           "Ordem_SQL":  628492,
-                                           "Descricao":  "Saída 90567 - 4/4"
-                                       },
-                                       {
-                                           "Emissão":  "09/09/2026",
-                                           "Código Cliente":  "66942",
-                                           "Cliente":  "Hm Imports Comercio E Maquinario De Construcao Ltda",
-                                           "Vencimento":  "07/10/2026",
-                                           "Vendedor":  "",
-                                           "Valor":  2483.1,
-                                           "Ordem_SQL":  629177,
-                                           "Descricao":  "Saída 90893 - 1/3"
-                                       }
-                                   ],
-                  "pagamentos":  [
-                                     {
-                                         "Emissão":  "06/02/2026",
-                                         "Código Fornecedor":  "2547",
-                                         "Fornecedor":  "CART PORTO BANK",
-                                         "Nota":  "",
-                                         "Descrição":  "AZULYPWQWA BARUERI BR MARCELO  9/10",
-                                         "Vencimento":  "15/10/2026",
-                                         "Valor":  515.29,
-                                         "Ordem_SQL":  623495
-                                     },
-                                     {
-                                         "Emissão":  "16/12/2025",
-                                         "Código Fornecedor":  "2402",
-                                         "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                                         "Nota":  "",
-                                         "Descrição":  "futuras compras 10/12",
-                                         "Vencimento":  "15/10/2026",
-                                         "Valor":  0.01,
-                                         "Ordem_SQL":  622421
-                                     },
-                                     {
-                                         "Emissão":  "29/10/2025",
-                                         "Código Fornecedor":  "91765",
-                                         "Fornecedor":  "HAPVIDA ASSISTENCIA MEDICA S.A.",
-                                         "Nota":  "",
-                                         "Descrição":  "PL SAUDE FUNCIONAARIOS 12/12",
-                                         "Vencimento":  "15/10/2026",
-                                         "Valor":  1054.25,
-                                         "Ordem_SQL":  618291
-                                     },
-                                     {
-                                         "Emissão":  "01/03/2026",
-                                         "Código Fornecedor":  "2402",
-                                         "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                                         "Nota":  "",
-                                         "Descrição":  "geladeira denes 8/15",
-                                         "Vencimento":  "15/10/2026",
-                                         "Valor":  753.2,
-                                         "Ordem_SQL":  624173
-                                     },
-                                     {
-                                         "Emissão":  "01/03/2026",
-                                         "Código Fornecedor":  "2402",
-                                         "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                                         "Nota":  "",
-                                         "Descrição":  "SEG MAQ LAVAR RES 8/15",
-                                         "Vencimento":  "15/10/2026",
-                                         "Valor":  41.33,
-                                         "Ordem_SQL":  624218
-                                     },
-                                     {
-                                         "Emissão":  "01/03/2026",
-                                         "Código Fornecedor":  "2402",
-                                         "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                                         "Nota":  "",
-                                         "Descrição":  "maqina de lavar denes 8/15",
-                                         "Vencimento":  "15/10/2026",
-                                         "Valor":  119.93,
-                                         "Ordem_SQL":  624203
-                                     },
-                                     {
-                                         "Emissão":  "01/03/2026",
-                                         "Código Fornecedor":  "2402",
-                                         "Fornecedor":  "CARTAO SAM\u0027S CLUB CARREFOUR ",
-                                         "Nota":  "",
-                                         "Descrição":  "seg maq denes 8/15",
-                                         "Vencimento":  "15/10/2026",
-                                         "Valor":  41.33,
-                                         "Ordem_SQL":  624188
-                                     },
-                                     {
-                                         "Emissão":  "25/08/2026",
-                                         "Código Fornecedor":  "36503",
-                                         "Fornecedor":  "CARTÃO BRADESCO  ELO  MAIS ",
-                                         "Nota":  "",
-                                         "Descrição":  "FORN 11156 NF 379508 CT BRADESCO ARILUB - Entrada 90729 - 2/8",
-                                         "Vencimento":  "13/10/2026",
-                                         "Valor":  189.65,
-                                         "Ordem_SQL":  628732
-                                     },
-                                     {
-                                         "Emissão":  "10/07/2026",
-                                         "Código Fornecedor":  "93097",
-                                         "Fornecedor":  "MAGAZINE LUIZA S/A",
-                                         "Nota":  "",
-                                         "Descrição":  "FORN 11192 NF 153677 CT BRADESCO ARILUB - Entrada 90171 - 3/10",
-                                         "Vencimento":  "13/10/2026",
-                                         "Valor":  399.8,
-                                         "Ordem_SQL":  627526
-                                     },
-                                     {
-                                         "Emissão":  "08/07/2026",
-                                         "Código Fornecedor":  "385",
-                                         "Fornecedor":  "Central Nordeste De Pecas Ltda",
-                                         "Nota":  "",
-                                         "Descrição":  "FORN 10301 NF 49652 CT BRADESCO ARILUB - Entrada 90147 - 3/3",
-                                         "Vencimento":  "13/10/2026",
-                                         "Valor":  587.65,
-                                         "Ordem_SQL":  627489
-                                     }
-                                 ],
-                  "debitos_bancarios":  [
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "13/10/2026",
-                                                "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 3/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                                "Valor":  6744.91,
-                                                "Ordem_SQL":  298491
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "07/10/2026",
-                                                "Descricao":  "Pagamento de conta (BOLETO - Entrada 90848 - 2/3) - Fornecedor 10872 - O V D IMPORTADORA E DISTRIBUIDORA LTDA",
-                                                "Valor":  1706.17,
-                                                "Ordem_SQL":  298448
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "13/10/2026",
-                                                "Descricao":  "Pagamento de conta (BOLETO BANCO DO BRASIL - Entrada 90921 - 1/3) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                                "Valor":  608.13,
-                                                "Ordem_SQL":  298551
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "13/10/2026",
-                                                "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 3/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                                "Valor":  202.77,
-                                                "Ordem_SQL":  298496
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "06/10/2026",
-                                                "Descricao":  "Pagamento de conta (BOLETO WURTH - Entrada 90849 - 2/4) - Fornecedor 10259 - WURTH DO BRASIL PECAS DE FIXACAO LTDA",
-                                                "Valor":  1015.69,
-                                                "Ordem_SQL":  298456
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "05/10/2026",
-                                                "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 91004 - 1/1) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                                "Valor":  137.87,
-                                                "Ordem_SQL":  298550
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "06/10/2026",
-                                                "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 2/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                                "Valor":  202.77,
-                                                "Ordem_SQL":  298495
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "06/10/2026",
-                                                "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 2/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                                "Valor":  6744.91,
-                                                "Ordem_SQL":  298490
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "20/10/2026",
-                                                "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 4/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                                "Valor":  6744.91,
-                                                "Ordem_SQL":  298492
-                                            },
-                                            {
-                                                "Banco":  "BRADESCO",
-                                                "Data":  "20/10/2026",
-                                                "Descricao":  "Pagamento de conta (BOLETO WURTH - Entrada 90849 - 3/4) - Fornecedor 10259 - WURTH DO BRASIL PECAS DE FIXACAO LTDA",
-                                                "Valor":  1015.69,
-                                                "Ordem_SQL":  298457
-                                            }
-                                        ]
-              }
+    "bancos":  [
+                   {
+                       "Banco":  "BRADESCO",
+                       "Saldo_Atual":  8979.33,
+                       "Entradas_Futuras":  107438.9,
+                       "Entradas_Aloc_Pendente":  107438.9,
+                       "Pagamentos_Futuros":  7641.9,
+                       "Debitos_Programados":  90457.62,
+                       "Saidas_Futuras":  98099.52,
+                       "Saldo_Projetado":  18318.71
+                   },
+                   {
+                       "Banco":  "ITAU",
+                       "Saldo_Atual":  8411.76,
+                       "Entradas_Futuras":  84338.15,
+                       "Entradas_Aloc_Pendente":  0,
+                       "Pagamentos_Futuros":  19080.38,
+                       "Debitos_Programados":  0,
+                       "Saidas_Futuras":  19080.38,
+                       "Saldo_Projetado":  73669.53
+                   },
+                   {
+                       "Banco":  "BNB",
+                       "Saldo_Atual":  3436.73,
+                       "Entradas_Futuras":  5140.2,
+                       "Entradas_Aloc_Pendente":  0,
+                       "Pagamentos_Futuros":  0,
+                       "Debitos_Programados":  0,
+                       "Saidas_Futuras":  0,
+                       "Saldo_Projetado":  8576.93
+                   },
+                   {
+                       "Banco":  "SANTANDER",
+                       "Saldo_Atual":  4982.39,
+                       "Entradas_Futuras":  0,
+                       "Entradas_Aloc_Pendente":  0,
+                       "Pagamentos_Futuros":  0,
+                       "Debitos_Programados":  0,
+                       "Saidas_Futuras":  0,
+                       "Saldo_Projetado":  4982.39
+                   },
+                   {
+                       "Banco":  "SEM BANCO",
+                       "Saldo_Atual":  0,
+                       "Entradas_Futuras":  0,
+                       "Entradas_Aloc_Pendente":  0,
+                       "Pagamentos_Futuros":  11293.57,
+                       "Debitos_Programados":  0,
+                       "Saidas_Futuras":  11293.57,
+                       "Saldo_Projetado":  -11293.57
+                   }
+               ],
+    "riscos_bancarios":  [
+                             {
+                                 "Banco":  "BRADESCO",
+                                 "Menor_Saldo":  5823.07,
+                                 "Data_Menor_Saldo":  "07/10/2026",
+                                 "Primeira_Data_Risco":  null,
+                                 "Necessidade_Cobertura":  0
+                             },
+                             {
+                                 "Banco":  "ITAU",
+                                 "Menor_Saldo":  8411.76,
+                                 "Data_Menor_Saldo":  null,
+                                 "Primeira_Data_Risco":  null,
+                                 "Necessidade_Cobertura":  0
+                             },
+                             {
+                                 "Banco":  "BNB",
+                                 "Menor_Saldo":  3436.73,
+                                 "Data_Menor_Saldo":  null,
+                                 "Primeira_Data_Risco":  null,
+                                 "Necessidade_Cobertura":  0
+                             },
+                             {
+                                 "Banco":  "SANTANDER",
+                                 "Menor_Saldo":  4982.39,
+                                 "Data_Menor_Saldo":  null,
+                                 "Primeira_Data_Risco":  null,
+                                 "Necessidade_Cobertura":  0
+                             }
+                         ],
+    "auditoria":  {
+                      "saldo_operacional":  25810.21,
+                      "investimentos":  443918.97,
+                      "saldo_consolidado":  469729.18,
+                      "recebiveis_30d":  196917.25,
+                      "recebiveis_aloc_pendente":  107438.9,
+                      "pagamentos_30d":  38015.85,
+                      "debitos_programados_30d":  90457.62,
+                      "pagamentos_sem_banco":  11293.57,
+                      "qtd_recebiveis":  60,
+                      "qtd_pagamentos":  63,
+                      "qtd_debitos_programados":  34,
+                      "total_saidas_30d":  128473.47,
+                      "modo_sql":  "SOMENTE LEITURA"
+                  }
 }
