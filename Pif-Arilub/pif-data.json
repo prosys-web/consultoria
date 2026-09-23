@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "23/09/2026",
-                     "gerado_em":  "23/09/2026 13:41:40",
+                     "gerado_em":  "23/09/2026 14:00:01",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -1073,6 +1073,18 @@
                            "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
+                           "Ordem_SQL":  629523,
+                           "Emissao":  "23/09/2026",
+                           "Vencimento":  "08/10/2026",
+                           "Codigo_Fornecedor":  "10839",
+                           "Fornecedor":  "Vecchi Lubrificantes Ltda",
+                           "Descricao":  "boleto banco do brasil - Entrada 91032 - 1/4",
+                           "Valor":  1416.42,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "PROVISÓRIA"
+                       },
+                       {
                            "Ordem_SQL":  621818,
                            "Emissao":  "26/12/2025",
                            "Vencimento":  "10/10/2026",
@@ -1493,6 +1505,18 @@
                            "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
+                           "Ordem_SQL":  629524,
+                           "Emissao":  "23/09/2026",
+                           "Vencimento":  "18/10/2026",
+                           "Codigo_Fornecedor":  "10839",
+                           "Fornecedor":  "Vecchi Lubrificantes Ltda",
+                           "Descricao":  "boleto banco do brasil - Entrada 91032 - 2/4",
+                           "Valor":  1416.44,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "PROVISÓRIA"
+                       },
+                       {
                            "Ordem_SQL":  622538,
                            "Emissao":  "08/01/2026",
                            "Vencimento":  "20/10/2026",
@@ -1787,10 +1811,10 @@
                        "Saldo_Atual":  8979.33,
                        "Entradas_Futuras":  107438.9,
                        "Entradas_Aloc_Pendente":  107438.9,
-                       "Pagamentos_Futuros":  7641.9,
+                       "Pagamentos_Futuros":  10474.76,
                        "Debitos_Programados":  90457.62,
-                       "Saidas_Futuras":  98099.52,
-                       "Saldo_Projetado":  18318.71
+                       "Saidas_Futuras":  100932.38,
+                       "Saldo_Projetado":  15485.85
                    },
                    {
                        "Banco":  "ITAU",
@@ -1836,8 +1860,8 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  5823.07,
-                                 "Data_Menor_Saldo":  "07/10/2026",
+                                 "Menor_Saldo":  4406.65,
+                                 "Data_Menor_Saldo":  "08/10/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
@@ -1869,13 +1893,13 @@
                       "saldo_consolidado":  469729.18,
                       "recebiveis_30d":  196917.25,
                       "recebiveis_aloc_pendente":  107438.9,
-                      "pagamentos_30d":  38015.85,
+                      "pagamentos_30d":  40848.71,
                       "debitos_programados_30d":  90457.62,
                       "pagamentos_sem_banco":  11293.57,
                       "qtd_recebiveis":  60,
-                      "qtd_pagamentos":  63,
+                      "qtd_pagamentos":  65,
                       "qtd_debitos_programados":  34,
-                      "total_saidas_30d":  128473.47,
+                      "total_saidas_30d":  131306.33,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
