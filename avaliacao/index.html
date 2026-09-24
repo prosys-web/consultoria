@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>AriLub | Avaliação — Assistente Comercial</title>
+  <style>
+    :root{--navy:#00358b;--blue:#2399d6;--red:#ef2929;--ink:#16335f;--muted:#60728d;--line:#d9e4ef;--bg:#f4f8fc;--white:#fff;--ok:#16764a}
+    *{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+    header{background:var(--white);border-bottom:3px solid var(--blue);padding:14px 24px}
+    .brand{max-width:920px;margin:auto;display:flex;align-items:center}
+    .brand img{display:block;width:190px;max-width:52vw;height:auto}
+    main{max-width:920px;margin:34px auto;padding:0 18px 60px}
+    .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:28px;box-shadow:0 8px 28px rgba(0,53,139,.07)}
+    h1{margin:0 0 8px;color:var(--navy);font-size:30px} h2{color:var(--navy)}
+    .muted{color:var(--muted);line-height:1.55}.meta{margin:20px 0;padding:15px;background:#f7f9fc;border-radius:10px;line-height:1.6}
+    .progress{height:8px;background:#e7ebf0;border-radius:999px;overflow:hidden;margin:20px 0 8px}.bar{height:100%;width:0;background:var(--blue);transition:.25s}
+    .progress-text{font-size:13px;color:var(--muted);text-align:right}
+    .q{padding:22px 0;border-top:1px solid var(--line)}.q:first-child{border-top:0}.q-title{font-weight:700;line-height:1.5;margin-bottom:14px}
+    label.opt{display:block;border:1px solid var(--line);border-radius:9px;padding:12px;margin:8px 0;cursor:pointer;line-height:1.4}
+    label.opt:hover{border-color:#7cc5ea;background:#f5fbff} input[type=radio]{margin-right:9px}
+    textarea{width:100%;min-height:120px;resize:vertical;border:1px solid #cfd7e2;border-radius:9px;padding:12px;font:inherit;line-height:1.5}
+    textarea:focus{outline:2px solid rgba(35,153,214,.20);border-color:var(--blue)}
+    .actions{display:flex;gap:12px;justify-content:space-between;margin-top:24px;flex-wrap:wrap}
+    button{border:0;border-radius:9px;padding:13px 20px;font-size:15px;font-weight:700;cursor:pointer}
+    .primary{background:var(--blue);color:#fff}.primary:hover{background:var(--navy)}.secondary{background:#eaf5fb;color:var(--navy);border:1px solid #c8e4f3}
+    button:disabled{opacity:.55;cursor:not-allowed}.error{color:#a51f27;background:#fff0f1;border:1px solid #f0c8cb;padding:12px;border-radius:9px;margin:14px 0}
+    .success{color:var(--ok);font-weight:700}.center{text-align:center;padding:20px 0}.hidden{display:none!important}
+    .spinner{width:34px;height:34px;border:4px solid #dfe5ec;border-top-color:var(--blue);border-radius:50%;animation:s .8s linear infinite;margin:18px auto}@keyframes s{to{transform:rotate(360deg)}}
+    .timer{position:sticky;top:0;z-index:5;display:flex;justify-content:flex-end;align-items:center;gap:8px;
+    margin:-28px -28px 18px;padding:11px 18px;background:var(--navy);color:#fff;border-radius:14px 14px 0 0;font-weight:700}
+    .timer strong{font-size:20px;letter-spacing:.5px}.timer.warn{background:#8a5b00}.timer.critical{background:#a51f27}
+    footer{text-align:center;color:var(--muted);font-size:12px;padding:22px}
+    @media(max-width:600px){.card{padding:20px 16px}h1{font-size:25px}.actions button{width:100%}}
+  </style>
+</head>
+<body>
+<header><div class="brand"><img src="logo-arilub.png" alt="AriLub Distribuidora"></div></header>
+<main>
+  <section id="loading" class="card center">
+    <div class="spinner"></div><p class="muted">Validando seu acesso...</p>
+  </section>
+
+  <section id="intro" class="card hidden">
+    <h1>Avaliação — Assistente Comercial</h1>
+    <p id="welcome" class="muted"></p>
+    <div class="meta">
+      <strong>Como funciona</strong><br>
+      São 30 questões organizadas em 3 blocos, com <strong>25 minutos de tempo total</strong>.<br><br>
+      Nas questões de múltipla escolha, selecione a alternativa que mais se aproxima da forma como você agiria.
+      Algumas alternativas podem parecer possíveis; escolha aquela que considera mais adequada ao contexto.<br><br>
+      Nas questões abertas, responda de forma objetiva, explicando como você agiria.
+      A avaliação deve ser realizada individualmente, sem auxílio de terceiros ou ferramentas de inteligência artificial.
+    </div>
+    <p class="muted">Não se trata de teste psicológico. A avaliação é uma das fontes de informação do processo seletivo e será analisada em conjunto com as demais etapas.</p>
+    <div id="introError"></div>
+    <div class="actions"><span></span><button id="startBtn" class="primary">Iniciar avaliação</button></div>
+  </section>
+
+  <section id="assessment" class="card hidden">
+    <div id="timer" class="timer"><span>Tempo restante</span><strong id="timerText">25:00</strong></div>
+    <div>
+      <strong id="candidateName"></strong>
+      <div class="progress"><div id="bar" class="bar"></div></div>
+      <div id="progressText" class="progress-text"></div>
+    </div>
+    <h2 id="blockTitle"></h2>
+    <div id="questions"></div>
+    <div id="formError"></div>
+    <div class="actions">
+      <button id="backBtn" class="secondary hidden">Voltar</button>
+      <button id="nextBtn" class="primary">Salvar e continuar</button>
+    </div>
+  </section>
+
+  <section id="done" class="card center hidden">
+    <h1>Participação registrada</h1>
+    <p class="success">Obrigado por concluir esta etapa.</p>
+    <p class="muted">Suas respostas foram registradas com sucesso. A AriLub dará continuidade ao processo seletivo pelos canais informados na candidatura.</p>
+  </section>
+
+  <section id="fatal" class="card center hidden">
+    <h1>Acesso indisponível</h1><div id="fatalMessage" class="muted"></div>
+  </section>
+</main>
+<footer>AriLub • Processo Seletivo • Assistente Comercial — Fortaleza/CE</footer>
+
+<script>
+const API = 'https://script.google.com/macros/s/AKfycbz2rzFCBm6MBiWjclrBDeStB12zBbipLjPKF4anmpru8OIpBVEXy7Zg-4WKCJmY_JCQug/exec';
+const token = new URLSearchParams(location.search).get('t') || '';
+let payload = null, currentBlock = 1;
+const local = {};
+let deadlineMs = null, timerHandle = null, timeoutSent = false;
+
+function startTimer(tempo){
+  const restante = Math.max(0, Number(tempo?.restanteSeg ?? 1500));
+  deadlineMs = Date.now() + restante * 1000;
+  tickTimer();
+  clearInterval(timerHandle);
+  timerHandle = setInterval(tickTimer, 1000);
+}
+function tickTimer(){
+  if(deadlineMs == null) return;
+  const s = Math.max(0, Math.ceil((deadlineMs-Date.now())/1000));
+  const mm = String(Math.floor(s/60)).padStart(2,'0');
+  const ss = String(s%60).padStart(2,'0');
+  $('timerText').textContent = mm+':'+ss;
+  $('timer').classList.toggle('warn',s<=300 && s>60);
+  $('timer').classList.toggle('critical',s<=60);
+  if(s<=0){
+    clearInterval(timerHandle);
+    handleTimeout();
+  }
+}
+async function handleTimeout(){
+  if(timeoutSent) return;
+  timeoutSent=true;
+  document.querySelectorAll('input,textarea,button').forEach(el=>el.disabled=true);
+  $('formError').innerHTML='<div class="error">Tempo encerrado. Registrando a avaliação...</div>';
+  try{
+    await postJSON('timeout',{token});
+  }catch(_){}
+  $('done').querySelector('.success').textContent='Tempo encerrado. Sua participação foi registrada.';
+  $('done').querySelector('.muted').textContent='As respostas salvas até o encerramento do tempo foram preservadas para análise.';
+  show('done');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+const $ = id => document.getElementById(id);
+function show(id){['loading','intro','assessment','done','fatal'].forEach(x=>$(x).classList.add('hidden'));$(id).classList.remove('hidden')}
+function fatal(msg){$('fatalMessage').textContent=msg || 'Não foi possível validar este acesso.';show('fatal')}
+function esc(s){return String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]))}
+
+async function getJSON(url){
+  const r=await fetch(url,{method:'GET',redirect:'follow'});
+  return await r.json();
+}
+async function postJSON(action, body){
+  const payload = { action, ...body };
+  const r=await fetch(API,{
+    method:'POST',
+    headers:{'Content-Type':'text/plain;charset=utf-8'},
+    body:JSON.stringify(payload),
+    redirect:'follow'
+  });
+  const text=await r.text();
+  try{
+    return JSON.parse(text);
+  }catch(_){
+    throw new Error('Resposta inválida do servidor.');
+  }
+}
+
+async function validate(){
+  if(!token) return fatal('O link de acesso está incompleto. Utilize o link recebido da AriLub.');
+  try{
+    const d=await getJSON(API+'?action=validate&t='+encodeURIComponent(token));
+    if(!d.ok) return fatal(d.mensagem || 'Token inválido ou indisponível.');
+    $('welcome').innerHTML='Olá, <strong>'+esc(d.candidato.nome)+'</strong>. Você está avançando para a próxima etapa do processo seletivo da AriLub.';
+    $('candidateName').textContent=d.candidato.nome;
+    show('intro');
+  }catch(e){ fatal('Não foi possível conectar ao sistema de avaliação. Tente novamente em alguns instantes.'); }
+}
+
+$('startBtn').onclick=async()=>{
+  const b=$('startBtn'); b.disabled=true; b.textContent='Carregando...'; $('introError').innerHTML='';
+  try{
+    const d=await getJSON(API+'?action=start&t='+encodeURIComponent(token));
+    if(!d.ok) throw new Error(d.mensagem||'Não foi possível iniciar.');
+    payload=d;
+    Object.entries(d.respostasExistentes||{}).forEach(([id,r])=>{
+      local[Number(id)]={
+        resposta:String(r.resposta??''),
+        alternativa:String(r.alternativa??''),
+        tipo:String(r.tipo??'')
+      };
+    });
+    if(d.tempo?.expirado){
+      await handleTimeout();
+      return;
+    }
+    currentBlock=firstIncompleteBlock();
+    renderBlock();
+    show('assessment');
+    startTimer(d.tempo);
+  }catch(e){$('introError').innerHTML='<div class="error">'+esc(e.message)+'</div>';b.disabled=false;b.textContent='Iniciar avaliação'}
+};
+
+function isAnswered(q){
+  const v=local[Number(q.id)]||{};
+  if(String(q.tipo).toLowerCase().includes('multipla')){
+    return String(v.alternativa||'').trim()!=='';
+  }
+  return String(v.resposta||'').trim()!=='';
+}
+function firstIncompleteBlock(){
+  for(let b=1;b<=3;b++){
+    const qs=(payload.questoes||[]).filter(q=>{
+      const n=String(q.bloco||'').match(/\d+/);
+      return n && Number(n[0])===b;
+    });
+    if(qs.some(q=>!isAnswered(q))) return b;
+  }
+  return 3;
+}
+
+function blockQuestions(){
+  return (payload.questoes||[]).filter(q=>{
+    const n=String(q.bloco||'').match(/\d+/); return n && Number(n[0])===currentBlock;
+  });
+}
+function optionsFor(q){
+  if(Array.isArray(q.opcoes)) return q.opcoes;
+  if(Array.isArray(q.alternativas)) return q.alternativas;
+  if(q.alternativas && typeof q.alternativas==='object'){
+    return Object.entries(q.alternativas)
+      .filter(([_,texto])=>String(texto||'').trim()!=='')
+      .map(([letra,texto])=>({letra,valor:letra,texto}));
+  }
+  return [];
+}
+function renderBlock(){
+  $('blockTitle').textContent='Bloco '+currentBlock+' de 3';
+  $('bar').style.width=(currentBlock/3*100)+'%';
+  $('progressText').textContent='Etapa '+currentBlock+' de 3';
+  $('formError').innerHTML='';
+  $('backBtn').classList.toggle('hidden',currentBlock===1);
+  $('nextBtn').textContent=currentBlock===3?'Concluir avaliação':'Salvar e continuar';
+  $('questions').innerHTML=blockQuestions().map(q=>{
+    const id=Number(q.id), val=local[id]||{};
+    if(String(q.tipo).toLowerCase().includes('multipla')){
+      return `<div class="q" data-q="${id}"><div class="q-title">${id}. ${esc(q.texto)}</div>`+
+      optionsFor(q).map((o,i)=>{
+        const letter=typeof o==='object'?(o.valor||o.letra||String.fromCharCode(65+i)):String.fromCharCode(65+i);
+        const text=typeof o==='object'?(o.texto||o.label||o.valor):o;
+        return `<label class="opt"><input type="radio" name="q${id}" value="${esc(letter)}" data-text="${esc(text)}" ${val.alternativa===letter?'checked':''}> <strong>${esc(letter)}.</strong> ${esc(text)}</label>`;
+      }).join('')+'</div>';
+    }
+    return `<div class="q" data-q="${id}"><div class="q-title">${id}. ${esc(q.texto)}</div><textarea name="q${id}" placeholder="Digite sua resposta...">${esc(val.resposta||'')}</textarea></div>`;
+  }).join('');
+}
+function collect(strict=true){
+  const out=[]; let missing=null;
+  for(const q of blockQuestions()){
+    const id=Number(q.id);
+    if(String(q.tipo).toLowerCase().includes('multipla')){
+      const el=document.querySelector(`input[name="q${id}"]:checked`);
+      if(!el){if(strict){missing=id;break}else{continue}}
+      out.push({idQuestao:id,tipo:'multipla',resposta:el.dataset.text||el.value,alternativa:el.value});
+    }else{
+      const el=document.querySelector(`textarea[name="q${id}"]`), v=(el?.value||'').trim();
+      if(!v){if(strict){missing=id;break}else{continue}}
+      out.push({idQuestao:id,tipo:'aberta',resposta:v});
+    }
+  }
+  return {out,missing};
+}
+$('backBtn').onclick=()=>{
+  const {out}=collect(false);
+  out.forEach(r=>local[r.idQuestao]=r);
+  if(currentBlock>1){
+    currentBlock--;
+    renderBlock();
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+};
+
+$('nextBtn').onclick=async()=>{
+  const {out,missing}=collect();
+  if(missing){$('formError').innerHTML='<div class="error">Responda à questão '+missing+' antes de continuar.</div>';document.querySelector(`[data-q="${missing}"]`)?.scrollIntoView({behavior:'smooth',block:'center'});return}
+  out.forEach(r=>local[r.idQuestao]=r);
+  const b=$('nextBtn');b.disabled=true;b.textContent='Salvando...';$('formError').innerHTML='';
+  try{
+    const saved=await postJSON('saveBlock',{token,bloco:'BLOCO '+currentBlock,respostas:out});
+    if(!saved.ok){
+      if(saved.codigo==='TEMPO_ESGOTADO'){ await handleTimeout(); return; }
+      throw new Error(saved.mensagem||saved.codigo||'Não foi possível salvar.');
+    }
+    if(currentBlock<3){currentBlock++;renderBlock();window.scrollTo({top:0,behavior:'smooth'});return}
+    const fin=await postJSON('finish',{token});
+    if(!fin.ok){
+      if(fin.codigo==='TEMPO_ESGOTADO'){ await handleTimeout(); return; }
+      throw new Error(fin.mensagem||fin.codigo||'Não foi possível concluir.');
+    }
+    clearInterval(timerHandle);
+    show('done');window.scrollTo({top:0,behavior:'smooth'});
+  }catch(e){
+    $('formError').innerHTML='<div class="error">'+esc(e.message)+' Suas respostas desta tela permanecem preenchidas.</div>';
+  }finally{
+    b.disabled=false;
+    if(!$('assessment').classList.contains('hidden')) b.textContent=currentBlock===3?'Concluir avaliação':'Salvar e continuar';
+  }
+};
+
+validate();
+</script>
+</body>
+</html>
