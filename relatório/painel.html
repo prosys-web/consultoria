@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>AriLub | Painel da Seleção</title>
+<style>
+:root{--navy:#0b2341;--red:#c72b32;--ink:#172033;--muted:#657084;--line:#dfe5ec;--bg:#f5f7fa;--white:#fff;--danger:#fff0f1}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:#fff;border-bottom:1px solid var(--line);padding:17px 24px;position:sticky;top:0;z-index:5}
+.head{max-width:1600px;margin:auto;display:flex;justify-content:space-between;gap:16px}.brand{font-weight:800;color:var(--navy);font-size:24px}.brand span{color:var(--red)}
+.sub,.muted{color:var(--muted);font-size:13px}main{max-width:1600px;margin:26px auto;padding:0 18px 50px}
+.login,.card,.metric,.filters{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px rgba(11,35,65,.06)}
+.login{max-width:480px;margin:70px auto;padding:28px}h1{color:var(--navy);font-size:27px;margin:0 0 8px}
+input,select{padding:11px 12px;border:1px solid #cfd7e2;border-radius:9px;font:inherit;background:#fff}
+.login input{width:100%;margin:14px 0;padding:13px}button{border:0;border-radius:9px;padding:12px 18px;font-weight:700;cursor:pointer;background:var(--navy);color:#fff}
+.secondary{background:#e9eef4;color:var(--navy)}.toolbar{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px;flex-wrap:wrap}
+.metrics{display:grid;grid-template-columns:repeat(8,minmax(120px,1fr));gap:10px;margin:18px 0}.metric{padding:15px}.metric b{display:block;font-size:25px;color:var(--navy);margin-top:6px}.metric span{font-size:10px;color:var(--muted);text-transform:uppercase;font-weight:700}
+.filters{padding:14px;margin-bottom:14px;display:grid;grid-template-columns:minmax(250px,2fr) repeat(3,minmax(160px,1fr)) auto;gap:10px;align-items:center}
+#search{width:100%}.card{overflow:hidden}.tablewrap{overflow:auto;max-height:68vh}table{border-collapse:collapse;width:100%;min-width:1500px}
+th{position:sticky;top:0;background:var(--navy);color:#fff;text-align:left;font-size:11px;padding:11px;white-space:nowrap}
+td{padding:10px 11px;border-bottom:1px solid var(--line);font-size:12px;vertical-align:top;max-width:390px}tr:hover td{background:#f8fbff}
+.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#edf3f9;font-weight:700;font-size:10px}.pill.fail{background:var(--danger);color:#a51f27}.pill.ready{background:#eaf6ee;color:#23633b}
+.error{color:#a51f27;background:#fff0f1;border:1px solid #f0c8cb;padding:10px;border-radius:8px;margin-top:10px}.hidden{display:none}
+@media(max-width:1100px){.metrics{grid-template-columns:repeat(4,1fr)}.filters{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.metrics{grid-template-columns:repeat(2,1fr)}.head{flex-direction:column}.filters{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="head"><div><div class="brand">ARI<span>LUB</span></div><div class="sub">Central da Seleção • Assistente de Atendimento Comercial</div></div><div id="stamp" class="sub"></div></div></header>
+<main>
+<section id="login" class="login"><h1>Painel da Seleção</h1><p class="muted">Acesso administrativo. Informe a chave do painel.</p><input id="key" type="password" placeholder="Chave de acesso"><button id="enter">Entrar</button><div id="err"></div></section>
+
+<section id="app" class="hidden">
+<div class="toolbar"><div><h1>Visão consolidada</h1><div class="muted">Status, resultado, evidências, parecer prévio, contraprovas e decisão humana.</div></div><div><button id="refresh">Atualizar</button> <button id="logout" class="secondary">Sair</button></div></div>
+
+<div class="metrics">
+<div class="metric"><span>Base total</span><b id="mBase">0</b></div>
+<div class="metric"><span>Convocados</span><b id="mConv">0</b></div>
+<div class="metric"><span>Falha entrega</span><b id="mFalha">0</b></div>
+<div class="metric"><span>Não iniciaram</span><b id="mNao">0</b></div>
+<div class="metric"><span>Em andamento</span><b id="mAnd">0</b></div>
+<div class="metric"><span>Concluíram</span><b id="mConc">0</b></div>
+<div class="metric"><span>Análise pronta</span><b id="mPronta">0</b></div>
+<div class="metric"><span>Com EV</span><b id="mEv">0</b></div>
+</div>
+
+<div class="filters">
+<input id="search" placeholder="Buscar candidato, ID, resultado ou parecer...">
+<select id="fStatus"><option value="">Todos os status</option></select>
+<select id="fGrupo"><option value="">Todos os grupos</option></select>
+<select id="fFicha"><option value="">Todas as fichas</option></select>
+<button id="clear" class="secondary">Limpar filtros</button>
+</div>
+
+<div class="toolbar"><div class="muted" id="count"></div><div class="muted">Os cards resumem a base completa; os filtros atuam somente na tabela.</div></div>
+<div class="card"><div class="tablewrap"><table><thead id="thead"></thead><tbody id="tbody"></tbody></table></div></div>
+</section>
+</main>
+
+<script>
+const API='https://script.google.com/macros/s/AKfycbz2rzFCBm6MBiWjclrBDeStB12zBbipLjPKF4anmpru8OIpBVEXy7Zg-4WKCJmY_JCQug/exec';
+let data=null;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+const norm=s=>String(s??'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim().toUpperCase();
+const getKey=()=>sessionStorage.getItem('arilub_panel_key')||'';
+
+function field(o, aliases){
+  const keys=Object.keys(o||{});
+  for(const a of aliases){
+    const k=keys.find(x=>norm(x)===norm(a));
+    if(k!==undefined) return String(o[k]??'').trim();
+  }
+  return '';
+}
+const statusOf=o=>field(o,['STATUS DO FLUXO','STATUS PROCESSO','STATUS']);
+const grupoOf=o=>field(o,['GRUPO','ORIGEM']);
+const fichaOf=o=>field(o,['FICHA','STATUS ASSESSMENT']);
+const resultOf=o=>field(o,['RESULTADO ASSESSMENT','EVIDÊNCIAS','EVIDENCIAS']);
+const evOf=o=>{
+  const direct=field(o,['EV','PONTOS A VALIDAR']);
+  const n=parseInt(String(direct).replace(/\D/g,''),10);
+  if(!isNaN(n)) return n;
+  const m=resultOf(o).match(/EV\s*:\s*(\d+)/i);
+  return m?parseInt(m[1],10):0;
+};
+
+async function load(){
+  try{
+    $('err').innerHTML='';
+    const r=await fetch(API+'?action=painel&k='+encodeURIComponent(getKey())+'&_='+Date.now(),{redirect:'follow',cache:'no-store'});
+    const d=await r.json();
+    if(!d.ok) throw new Error(d.mensagem||'Acesso negado');
+    data=d;
+    $('login').classList.add('hidden'); $('app').classList.remove('hidden');
+    $('stamp').textContent='Atualizado em '+new Date(d.atualizadoEm||Date.now()).toLocaleString('pt-BR');
+    buildFilters();
+    metrics(data.candidatos||[]);
+    render();
+  }catch(e){
+    sessionStorage.removeItem('arilub_panel_key');
+    $('app').classList.add('hidden'); $('login').classList.remove('hidden');
+    $('err').innerHTML='<div class="error">'+esc(e.message)+'</div>';
+  }
+}
+
+function uniq(vals){return [...new Set(vals.filter(Boolean))].sort((a,b)=>a.localeCompare(b,'pt-BR',{numeric:true}));}
+function fillSelect(id, vals, label){
+  const el=$(id), current=el.value;
+  el.innerHTML='<option value="">'+label+'</option>'+vals.map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');
+  if(vals.includes(current)) el.value=current;
+}
+function buildFilters(){
+  const rows=data.candidatos||[];
+  fillSelect('fStatus',uniq(rows.map(statusOf)),'Todos os status');
+  fillSelect('fGrupo',uniq(rows.map(grupoOf)),'Todos os grupos');
+  fillSelect('fFicha',uniq(rows.map(fichaOf)),'Todas as fichas');
+}
+
+function metrics(rows){
+  const base=rows.length;
+  let conv=0,falha=0,nao=0,and=0,conc=0,pronta=0,ev=0;
+  rows.forEach(o=>{
+    const st=norm(statusOf(o)), fi=norm(fichaOf(o)), all=norm(Object.values(o).join(' '));
+    const isFalha=/FALHA.*ENTREGA|BOUNCE|NAO ENTREGUE/.test(st+' '+all);
+    const isStarted=/ASSESSMENT INICIADO|INICIADO|RESPONDENDO|EM ANDAMENTO/.test(st);
+    const isConcl=/ASSESSMENT CONCLUIDO|CONCLUIDO/.test(st) || /ANALISE PRONTA/.test(fi);
+    const isPronta=/ANALISE PRONTA/.test(fi);
+    const isConv=/CONVITE ENVIADO|ASSESSMENT INICIADO|ASSESSMENT CONCLUIDO|FALHA.*ENTREGA/.test(st) || isStarted || isConcl || isFalha;
+    if(isConv) conv++;
+    if(isFalha) falha++;
+    if(isConv && !isFalha && !isStarted && !isConcl) nao++;
+    if(isStarted && !isConcl) and++;
+    if(isConcl) conc++;
+    if(isPronta) pronta++;
+    if(evOf(o)>0) ev++;
+  });
+  $('mBase').textContent=base;$('mConv').textContent=conv;$('mFalha').textContent=falha;$('mNao').textContent=nao;
+  $('mAnd').textContent=and;$('mConc').textContent=conc;$('mPronta').textContent=pronta;$('mEv').textContent=ev;
+}
+
+function pill(v){
+  if(!v)return '';
+  let cls='pill', n=norm(v);
+  if(/FALHA.*ENTREGA|BOUNCE/.test(n)) cls+=' fail';
+  else if(/ANALISE PRONTA|CONCLUIDO/.test(n)) cls+=' ready';
+  return '<span class="'+cls+'">'+esc(v)+'</span>';
+}
+
+function render(){
+  if(!data)return;
+  const q=norm($('search').value), fs=$('fStatus').value, fg=$('fGrupo').value, ff=$('fFicha').value;
+  const all=data.candidatos||[], hs=data.headers||[];
+  const rows=all.filter(o=>{
+    if(q && !norm(Object.values(o).join(' ')).includes(q)) return false;
+    if(fs && statusOf(o)!==fs) return false;
+    if(fg && grupoOf(o)!==fg) return false;
+    if(ff && fichaOf(o)!==ff) return false;
+    return true;
+  });
+  $('thead').innerHTML='<tr>'+hs.map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr>';
+  $('tbody').innerHTML=rows.map(o=>'<tr>'+hs.map(h=>{
+    const v=o[h]??'', nh=norm(h);
+    return '<td>'+((/STATUS|FICHA|DECISAO/.test(nh)&&v)?pill(String(v)):esc(v))+'</td>';
+  }).join('')+'</tr>').join('');
+  $('count').textContent=rows.length+' de '+all.length+' registro(s)';
+}
+
+$('enter').onclick=()=>{const v=$('key').value.trim();if(v){sessionStorage.setItem('arilub_panel_key',v);load()}};
+$('key').onkeydown=e=>{if(e.key==='Enter')$('enter').click()};
+$('refresh').onclick=load;
+$('logout').onclick=()=>{sessionStorage.removeItem('arilub_panel_key');location.reload()};
+['search','fStatus','fGrupo','fFicha'].forEach(id=>$(id).addEventListener(id==='search'?'input':'change',render));
+$('clear').onclick=()=>{$('search').value='';$('fStatus').value='';$('fGrupo').value='';$('fFicha').value='';render()};
+</script>
+</body>
+</html>
