@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "25/09/2026",
-                     "gerado_em":  "25/09/2026 13:00:02",
+                     "gerado_em":  "25/09/2026 14:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -1085,6 +1085,18 @@
                            "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
+                           "Ordem_SQL":  629617,
+                           "Emissao":  "25/09/2026",
+                           "Vencimento":  "09/10/2026",
+                           "Codigo_Fornecedor":  "10236",
+                           "Fornecedor":  "SATURNO INDUSTRIA DE TINTAS E REPRESENTACOES COMERCIAIS LTDA",
+                           "Descricao":  "boleto itau - Entrada 91074 - 1/6",
+                           "Valor":  2335.67,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "PROVISÓRIA"
+                       },
+                       {
                            "Ordem_SQL":  621818,
                            "Emissao":  "26/12/2025",
                            "Vencimento":  "10/10/2026",
@@ -1469,6 +1481,18 @@
                            "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
+                           "Ordem_SQL":  629618,
+                           "Emissao":  "25/09/2026",
+                           "Vencimento":  "16/10/2026",
+                           "Codigo_Fornecedor":  "10236",
+                           "Fornecedor":  "SATURNO INDUSTRIA DE TINTAS E REPRESENTACOES COMERCIAIS LTDA",
+                           "Descricao":  "boleto itau - Entrada 91074 - 2/6",
+                           "Valor":  2335.67,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "PROVISÓRIA"
+                       },
+                       {
                            "Ordem_SQL":  608811,
                            "Emissao":  "06/10/2025",
                            "Vencimento":  "17/10/2026",
@@ -1539,6 +1563,18 @@
                            "Ordem_Conta_Bancaria":  0,
                            "Banco_Projetado":  "SEM BANCO",
                            "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
+                           "Ordem_SQL":  629619,
+                           "Emissao":  "25/09/2026",
+                           "Vencimento":  "23/10/2026",
+                           "Codigo_Fornecedor":  "10236",
+                           "Fornecedor":  "SATURNO INDUSTRIA DE TINTAS E REPRESENTACOES COMERCIAIS LTDA",
+                           "Descricao":  "boleto itau - Entrada 91074 - 3/6",
+                           "Valor":  2335.67,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
                            "Ordem_SQL":  620751,
@@ -2009,10 +2045,10 @@
                        "Saldo_Atual":  16849.54,
                        "Entradas_Futuras":  87066.1,
                        "Entradas_Aloc_Pendente":  87066.1,
-                       "Pagamentos_Futuros":  6952.62,
+                       "Pagamentos_Futuros":  13959.63,
                        "Debitos_Programados":  100671.91,
-                       "Saidas_Futuras":  107624.53,
-                       "Saldo_Projetado":  -3708.89
+                       "Saidas_Futuras":  114631.54,
+                       "Saldo_Projetado":  -10715.90
                    },
                    {
                        "Banco":  "ITAU",
@@ -2058,10 +2094,10 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -11388.89,
+                                 "Menor_Saldo":  -18395.90,
                                  "Data_Menor_Saldo":  "23/10/2026",
                                  "Primeira_Data_Risco":  "06/10/2026",
-                                 "Necessidade_Cobertura":  11388.89
+                                 "Necessidade_Cobertura":  18395.90
                              },
                              {
                                  "Banco":  "ITAU",
@@ -2091,13 +2127,13 @@
                       "saldo_consolidado":  479903.07,
                       "recebiveis_30d":  180409.59,
                       "recebiveis_aloc_pendente":  87066.1,
-                      "pagamentos_30d":  40536.09,
+                      "pagamentos_30d":  47543.1,
                       "debitos_programados_30d":  100671.91,
                       "pagamentos_sem_banco":  14267.33,
                       "qtd_recebiveis":  60,
-                      "qtd_pagamentos":  78,
+                      "qtd_pagamentos":  81,
                       "qtd_debitos_programados":  40,
-                      "total_saidas_30d":  141208.00,
+                      "total_saidas_30d":  148215.01,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
