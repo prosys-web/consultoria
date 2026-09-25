@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "25/09/2026",
-                     "gerado_em":  "25/09/2026 10:00:03",
+                     "gerado_em":  "25/09/2026 11:00:03",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -22,8 +22,8 @@
                        "Ordem":  3,
                        "Banco":  "BRADESCO",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "24/09/2026",
-                       "Saldo":  24838.3300
+                       "Data_Posicao":  "25/09/2026",
+                       "Saldo":  16849.5400
                    },
                    {
                        "Ordem":  3021,
@@ -730,6 +730,18 @@
                            "Cliente":  "R C Construcoes Ltda",
                            "Descricao":  "Saída 90929 - 2/2",
                            "Valor":  520.00,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629609,
+                           "Emissao":  "25/09/2026",
+                           "Vencimento":  "23/10/2026",
+                           "Codigo_Cliente":  "4463",
+                           "Cliente":  "Wjf Campos Comercial De Ferragens Ltda",
+                           "Descricao":  "Saída 91066 - 1/1",
+                           "Valor":  1994.45,
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
@@ -1982,23 +1994,23 @@
     "bancos":  [
                    {
                        "Banco":  "BRADESCO",
-                       "Saldo_Atual":  24838.33,
+                       "Saldo_Atual":  16849.54,
                        "Entradas_Futuras":  87066.1,
                        "Entradas_Aloc_Pendente":  87066.1,
                        "Pagamentos_Futuros":  6952.62,
                        "Debitos_Programados":  100671.91,
                        "Saidas_Futuras":  107624.53,
-                       "Saldo_Projetado":  4279.90
+                       "Saldo_Projetado":  -3708.89
                    },
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  10483.44,
-                       "Entradas_Futuras":  84355.5,
+                       "Entradas_Futuras":  86349.95,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  19316.14,
                        "Debitos_Programados":  0,
                        "Saidas_Futuras":  19316.14,
-                       "Saldo_Projetado":  75522.80
+                       "Saldo_Projetado":  77517.25
                    },
                    {
                        "Banco":  "BNB",
@@ -2034,10 +2046,10 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -3400.10,
+                                 "Menor_Saldo":  -11388.89,
                                  "Data_Menor_Saldo":  "23/10/2026",
-                                 "Primeira_Data_Risco":  "21/10/2026",
-                                 "Necessidade_Cobertura":  3400.10
+                                 "Primeira_Data_Risco":  "06/10/2026",
+                                 "Necessidade_Cobertura":  11388.89
                              },
                              {
                                  "Banco":  "ITAU",
@@ -2062,15 +2074,15 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  43806.89,
+                      "saldo_operacional":  35818.1,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  487725.86,
-                      "recebiveis_30d":  176561.8,
+                      "saldo_consolidado":  479737.07,
+                      "recebiveis_30d":  178556.25,
                       "recebiveis_aloc_pendente":  87066.1,
                       "pagamentos_30d":  40536.09,
                       "debitos_programados_30d":  100671.91,
                       "pagamentos_sem_banco":  14267.33,
-                      "qtd_recebiveis":  58,
+                      "qtd_recebiveis":  59,
                       "qtd_pagamentos":  78,
                       "qtd_debitos_programados":  40,
                       "total_saidas_30d":  141208.00,
