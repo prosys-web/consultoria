@@ -1,8 +1,8 @@
 ﻿{
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
-                     "data_base":  "26/09/2026",
-                     "gerado_em":  "26/09/2026 23:00:03",
+                     "data_base":  "27/09/2026",
+                     "gerado_em":  "27/09/2026 00:00:04",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -730,6 +730,30 @@
                            "Cliente":  "Unilink Transportes Integrados Ltda",
                            "Descricao":  "Saída 91073 - 1/1",
                            "Valor":  1853.34,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628933,
+                           "Emissao":  "01/09/2026",
+                           "Vencimento":  "27/10/2026",
+                           "Codigo_Cliente":  "1438",
+                           "Cliente":  "C M Cavalcante Motos - Me",
+                           "Descricao":  "Saída 90785 - 3/3",
+                           "Valor":  629.53,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629370,
+                           "Emissao":  "15/09/2026",
+                           "Vencimento":  "27/10/2026",
+                           "Codigo_Cliente":  "2873",
+                           "Cliente":  "CONSORCIO TSM 2023",
+                           "Descricao":  "Saída 90959 - 2/3",
+                           "Valor":  11646.67,
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
@@ -1996,6 +2020,20 @@
                                     "Data":  "26/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto itau - Entrada 91033 - 3/3) - Fornecedor 10071 - GAGLIARDI DISTRIBUIDORA DE LUIBRIFICANTES LTDA",
                                     "Valor":  5000.82
+                                },
+                                {
+                                    "Ordem_SQL":  298493,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "27/10/2026",
+                                    "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 5/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
+                                    "Valor":  6744.91
+                                },
+                                {
+                                    "Ordem_SQL":  298498,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "27/10/2026",
+                                    "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 5/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
+                                    "Valor":  202.77
                                 }
                             ],
     "bancos":  [
@@ -2005,19 +2043,19 @@
                        "Entradas_Futuras":  87066.1,
                        "Entradas_Aloc_Pendente":  87066.1,
                        "Pagamentos_Futuros":  13959.63,
-                       "Debitos_Programados":  111650.23,
-                       "Saidas_Futuras":  125609.86,
-                       "Saldo_Projetado":  -21694.22
+                       "Debitos_Programados":  118597.91,
+                       "Saidas_Futuras":  132557.54,
+                       "Saldo_Projetado":  -28641.90
                    },
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  22358.47,
-                       "Entradas_Futuras":  81768.19,
+                       "Entradas_Futuras":  94044.39,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  19316.14,
                        "Debitos_Programados":  0,
                        "Saidas_Futuras":  19316.14,
-                       "Saldo_Projetado":  84810.52
+                       "Saldo_Projetado":  97086.72
                    },
                    {
                        "Banco":  "BNB",
@@ -2053,10 +2091,10 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -21694.22,
-                                 "Data_Menor_Saldo":  "26/10/2026",
+                                 "Menor_Saldo":  -28641.90,
+                                 "Data_Menor_Saldo":  "27/10/2026",
                                  "Primeira_Data_Risco":  "09/10/2026",
-                                 "Necessidade_Cobertura":  21694.22
+                                 "Necessidade_Cobertura":  28641.90
                              },
                              {
                                  "Banco":  "ITAU",
@@ -2084,15 +2122,15 @@
                       "saldo_operacional":  47859.13,
                       "investimentos":  443918.97,
                       "saldo_consolidado":  491778.10,
-                      "recebiveis_30d":  173974.49,
+                      "recebiveis_30d":  186250.69,
                       "recebiveis_aloc_pendente":  87066.1,
                       "pagamentos_30d":  47543.1,
-                      "debitos_programados_30d":  111650.23,
+                      "debitos_programados_30d":  118597.91,
                       "pagamentos_sem_banco":  14267.33,
-                      "qtd_recebiveis":  56,
+                      "qtd_recebiveis":  58,
                       "qtd_pagamentos":  81,
-                      "qtd_debitos_programados":  41,
-                      "total_saidas_30d":  159193.33,
+                      "qtd_debitos_programados":  43,
+                      "total_saidas_30d":  166141.01,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
