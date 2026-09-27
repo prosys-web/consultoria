@@ -350,7 +350,11 @@
 
 <script>
   // ---------- CONFIGURAÇÃO — cole aqui a URL do Web App depois de implantar ----------
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw8ZjT9neMTzU5Ylbd1-V2H9Q70jE-PGvLBDdPZDcxMonPM4QXFFwW5hIxTqxYUAOe7/exec';
+ // Produção institucional ARILUB
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzyVbvw_93ApUjJ0gaZ-TzXzqo7V3T8UAC343SJ9FNHY6F1NhVKmFDmsskuAb3l8HjO/exec';
+
+// Endpoint anterior preservado para rollback
+const APPS_SCRIPT_URL_ROLLBACK = 'https://script.google.com/macros/s/AKfycbw8ZjT9neMTzU5Ylbd1-V2H9Q70jE-PGvLBDdPZDcxMonPM4QXFFwW5hIxTqxYUAOe7/exec';
 
   let periodoAtual = 'todos';
   const agora = new Date();
