@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "28/09/2026",
-                     "gerado_em":  "28/09/2026 11:00:02",
+                     "gerado_em":  "28/09/2026 12:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -30,7 +30,7 @@
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "28/09/2026",
-                       "Saldo":  20567.8900
+                       "Saldo":  20447.8900
                    },
                    {
                        "Ordem":  3022,
@@ -43,8 +43,8 @@
                        "Ordem":  3024,
                        "Banco":  "SANTANDER",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "25/09/2026",
-                       "Saldo":  5214.3900
+                       "Data_Posicao":  "28/09/2026",
+                       "Saldo":  5443.6700
                    },
                    {
                        "Ordem":  1017,
@@ -1701,6 +1701,20 @@
                                     "Valor":  290.58
                                 },
                                 {
+                                    "Ordem_SQL":  298612,
+                                    "Banco":  "SANTANDER",
+                                    "Data":  "28/09/2026",
+                                    "Descricao":  "Desefetivação Sequência 91089 - Saída 91089",
+                                    "Valor":  189.28
+                                },
+                                {
+                                    "Ordem_SQL":  298614,
+                                    "Banco":  "ITAU",
+                                    "Data":  "28/09/2026",
+                                    "Descricao":  "Chaveiro Roberio",
+                                    "Valor":  120.00
+                                },
+                                {
                                     "Ordem_SQL":  298489,
                                     "Banco":  "BRADESCO",
                                     "Data":  "29/09/2026",
@@ -2043,13 +2057,13 @@
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  20567.89,
+                       "Saldo_Atual":  20447.89,
                        "Entradas_Futuras":  95205.61,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  19316.14,
-                       "Debitos_Programados":  1790.58,
-                       "Saidas_Futuras":  21106.72,
-                       "Saldo_Projetado":  94666.78
+                       "Debitos_Programados":  1910.58,
+                       "Saidas_Futuras":  21226.72,
+                       "Saldo_Projetado":  94426.78
                    },
                    {
                        "Banco":  "BNB",
@@ -2063,13 +2077,13 @@
                    },
                    {
                        "Banco":  "SANTANDER",
-                       "Saldo_Atual":  5214.39,
+                       "Saldo_Atual":  5443.67,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
-                       "Debitos_Programados":  0,
-                       "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  5214.39
+                       "Debitos_Programados":  189.28,
+                       "Saidas_Futuras":  189.28,
+                       "Saldo_Projetado":  5254.39
                    },
                    {
                        "Banco":  "SEM BANCO",
@@ -2092,7 +2106,7 @@
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  20567.89,
+                                 "Menor_Saldo":  20447.89,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -2106,25 +2120,25 @@
                              },
                              {
                                  "Banco":  "SANTANDER",
-                                 "Menor_Saldo":  5214.39,
-                                 "Data_Menor_Saldo":  null,
+                                 "Menor_Saldo":  5254.39,
+                                 "Data_Menor_Saldo":  "28/09/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  46068.55,
+                      "saldo_operacional":  46177.83,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  489987.52,
+                      "saldo_consolidado":  490096.80,
                       "recebiveis_30d":  180780.51,
                       "recebiveis_aloc_pendente":  80434.7,
                       "pagamentos_30d":  40536.09,
-                      "debitos_programados_30d":  130426.24,
+                      "debitos_programados_30d":  130735.52,
                       "pagamentos_sem_banco":  14267.33,
                       "qtd_recebiveis":  57,
                       "qtd_pagamentos":  78,
-                      "qtd_debitos_programados":  49,
-                      "total_saidas_30d":  170962.33,
+                      "qtd_debitos_programados":  51,
+                      "total_saidas_30d":  171271.61,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
