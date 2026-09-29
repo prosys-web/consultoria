@@ -1,8 +1,8 @@
 ﻿{
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
-                     "data_base":  "28/09/2026",
-                     "gerado_em":  "28/09/2026 23:00:01",
+                     "data_base":  "29/09/2026",
+                     "gerado_em":  "29/09/2026 00:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -62,30 +62,6 @@
                    }
                ],
     "recebiveis":  [
-                       {
-                           "Ordem_SQL":  628901,
-                           "Emissao":  "31/08/2026",
-                           "Vencimento":  "28/09/2026",
-                           "Codigo_Cliente":  "3776",
-                           "Cliente":  "Santa Clara Moveis E Equipamentos Hospitalares Ltda Epp",
-                           "Descricao":  "Saída 90774 - 1/1",
-                           "Valor":  351.27,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
-                       {
-                           "Ordem_SQL":  628910,
-                           "Emissao":  "31/08/2026",
-                           "Vencimento":  "28/09/2026",
-                           "Codigo_Cliente":  "4859",
-                           "Cliente":  "Qualigraf Editora E Grafica Ltda",
-                           "Descricao":  "Saída 90780 - 1/1",
-                           "Valor":  1830.99,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
                        {
                            "Ordem_SQL":  629373,
                            "Emissao":  "15/09/2026",
@@ -1699,34 +1675,6 @@
                    ],
     "debitos_programados":  [
                                 {
-                                    "Ordem_SQL":  298603,
-                                    "Banco":  "ITAU",
-                                    "Data":  "28/09/2026",
-                                    "Descricao":  "Equipe edileuzo - prateleira",
-                                    "Valor":  1500.00
-                                },
-                                {
-                                    "Ordem_SQL":  298604,
-                                    "Banco":  "ITAU",
-                                    "Data":  "28/09/2026",
-                                    "Descricao":  "Combustivel Compass",
-                                    "Valor":  290.58
-                                },
-                                {
-                                    "Ordem_SQL":  298612,
-                                    "Banco":  "SANTANDER",
-                                    "Data":  "28/09/2026",
-                                    "Descricao":  "Desefetivação Sequência 91089 - Saída 91089",
-                                    "Valor":  189.28
-                                },
-                                {
-                                    "Ordem_SQL":  298614,
-                                    "Banco":  "ITAU",
-                                    "Data":  "28/09/2026",
-                                    "Descricao":  "Chaveiro Roberio",
-                                    "Valor":  120.00
-                                },
-                                {
                                     "Ordem_SQL":  298489,
                                     "Banco":  "BRADESCO",
                                     "Data":  "29/09/2026",
@@ -2054,6 +2002,20 @@
                                     "Data":  "28/10/2026",
                                     "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 91032 - 3/4) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
                                     "Valor":  1416.44
+                                },
+                                {
+                                    "Ordem_SQL":  298467,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "29/10/2026",
+                                    "Descricao":  "Pagamento de conta (PE VR LUB 4/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
+                                    "Valor":  375.23
+                                },
+                                {
+                                    "Ordem_SQL":  298487,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "29/10/2026",
+                                    "Descricao":  "Pagamento de conta (PE VR LUB 4/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
+                                    "Valor":  12481.06
                                 }
                             ],
     "bancos":  [
@@ -2063,19 +2025,19 @@
                        "Entradas_Futuras":  80434.7,
                        "Entradas_Aloc_Pendente":  80434.7,
                        "Pagamentos_Futuros":  6952.62,
-                       "Debitos_Programados":  128635.66,
-                       "Saidas_Futuras":  135588.28,
-                       "Saldo_Projetado":  -38304.04
+                       "Debitos_Programados":  141491.95,
+                       "Saidas_Futuras":  148444.57,
+                       "Saldo_Projetado":  -51160.33
                    },
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  20447.89,
-                       "Entradas_Futuras":  96316.43,
+                       "Entradas_Futuras":  94134.17,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  19316.14,
-                       "Debitos_Programados":  1910.58,
-                       "Saidas_Futuras":  21226.72,
-                       "Saldo_Projetado":  95537.60
+                       "Debitos_Programados":  0,
+                       "Saidas_Futuras":  19316.14,
+                       "Saldo_Projetado":  95265.92
                    },
                    {
                        "Banco":  "BNB",
@@ -2093,9 +2055,9 @@
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
-                       "Debitos_Programados":  189.28,
-                       "Saidas_Futuras":  189.28,
-                       "Saldo_Projetado":  5254.39
+                       "Debitos_Programados":  0,
+                       "Saidas_Futuras":  0,
+                       "Saldo_Projetado":  5443.67
                    },
                    {
                        "Banco":  "SEM BANCO",
@@ -2111,10 +2073,10 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -38304.04,
-                                 "Data_Menor_Saldo":  "28/10/2026",
+                                 "Menor_Saldo":  -51160.33,
+                                 "Data_Menor_Saldo":  "29/10/2026",
                                  "Primeira_Data_Risco":  "06/10/2026",
-                                 "Necessidade_Cobertura":  38304.04
+                                 "Necessidade_Cobertura":  51160.33
                              },
                              {
                                  "Banco":  "ITAU",
@@ -2132,8 +2094,8 @@
                              },
                              {
                                  "Banco":  "SANTANDER",
-                                 "Menor_Saldo":  5254.39,
-                                 "Data_Menor_Saldo":  "28/09/2026",
+                                 "Menor_Saldo":  5443.67,
+                                 "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              }
@@ -2142,15 +2104,15 @@
                       "saldo_operacional":  46177.83,
                       "investimentos":  443918.97,
                       "saldo_consolidado":  490096.80,
-                      "recebiveis_30d":  181891.33,
+                      "recebiveis_30d":  179709.07,
                       "recebiveis_aloc_pendente":  80434.7,
                       "pagamentos_30d":  40536.09,
-                      "debitos_programados_30d":  130735.52,
+                      "debitos_programados_30d":  141491.95,
                       "pagamentos_sem_banco":  14267.33,
-                      "qtd_recebiveis":  58,
+                      "qtd_recebiveis":  56,
                       "qtd_pagamentos":  78,
-                      "qtd_debitos_programados":  51,
-                      "total_saidas_30d":  171271.61,
+                      "qtd_debitos_programados":  49,
+                      "total_saidas_30d":  182028.04,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
