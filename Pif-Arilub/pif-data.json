@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "29/09/2026",
-                     "gerado_em":  "29/09/2026 12:00:04",
+                     "gerado_em":  "29/09/2026 13:00:03",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -742,6 +742,18 @@
                            "Cliente":  "R C Construcoes Ltda",
                            "Descricao":  "Saída 91112 - 1/2",
                            "Valor":  520.00,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629691,
+                           "Emissao":  "29/09/2026",
+                           "Vencimento":  "27/10/2026",
+                           "Codigo_Cliente":  "2850",
+                           "Cliente":  "PAP NETO LTDA",
+                           "Descricao":  "Saída 91115 - 1/2",
+                           "Valor":  529.65,
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
@@ -2056,12 +2068,12 @@
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  23305.15,
-                       "Entradas_Futuras":  94329.17,
+                       "Entradas_Futuras":  94858.82,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
                        "Debitos_Programados":  0,
                        "Saidas_Futuras":  20562.82,
-                       "Saldo_Projetado":  97071.50
+                       "Saldo_Projetado":  97601.15
                    },
                    {
                        "Banco":  "BNB",
@@ -2128,12 +2140,12 @@
                       "saldo_operacional":  48203.12,
                       "investimentos":  443918.97,
                       "saldo_consolidado":  492122.09,
-                      "recebiveis_30d":  179904.07,
+                      "recebiveis_30d":  180433.72,
                       "recebiveis_aloc_pendente":  80434.7,
                       "pagamentos_30d":  41782.77,
                       "debitos_programados_30d":  141491.95,
                       "pagamentos_sem_banco":  14267.33,
-                      "qtd_recebiveis":  57,
+                      "qtd_recebiveis":  58,
                       "qtd_pagamentos":  79,
                       "qtd_debitos_programados":  49,
                       "total_saidas_30d":  183274.72,
