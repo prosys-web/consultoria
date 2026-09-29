@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "29/09/2026",
-                     "gerado_em":  "29/09/2026 13:00:03",
+                     "gerado_em":  "29/09/2026 14:00:04",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -29,8 +29,8 @@
                        "Ordem":  3021,
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "28/09/2026",
-                       "Saldo":  23305.1500
+                       "Data_Posicao":  "29/09/2026",
+                       "Saldo":  21505.1500
                    },
                    {
                        "Ordem":  3022,
@@ -757,6 +757,18 @@
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629694,
+                           "Emissao":  "29/09/2026",
+                           "Vencimento":  "29/10/2026",
+                           "Codigo_Cliente":  "2277",
+                           "Cliente":  "SECRETARIA DA EDUCACAO",
+                           "Descricao":  "Saída 91116 - 1/1",
+                           "Valor":  10314.83,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
                        }
                    ],
     "pagamentos":  [
@@ -1725,6 +1737,13 @@
                                     "Valor":  202.79
                                 },
                                 {
+                                    "Ordem_SQL":  298621,
+                                    "Banco":  "ITAU",
+                                    "Data":  "29/09/2026",
+                                    "Descricao":  "Crédito com o fornecedor 371 - Petral Comercio De Ferro E Aco Ltda - ORÇAMENTO PED 491301",
+                                    "Valor":  1800.00
+                                },
+                                {
                                     "Ordem_SQL":  298405,
                                     "Banco":  "BRADESCO",
                                     "Data":  "30/09/2026",
@@ -2058,22 +2077,22 @@
                    {
                        "Banco":  "BRADESCO",
                        "Saldo_Atual":  15875.07,
-                       "Entradas_Futuras":  80434.7,
-                       "Entradas_Aloc_Pendente":  80434.7,
+                       "Entradas_Futuras":  90749.53,
+                       "Entradas_Aloc_Pendente":  90749.53,
                        "Pagamentos_Futuros":  6952.62,
                        "Debitos_Programados":  141491.95,
                        "Saidas_Futuras":  148444.57,
-                       "Saldo_Projetado":  -52134.80
+                       "Saldo_Projetado":  -41819.97
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  23305.15,
+                       "Saldo_Atual":  21505.15,
                        "Entradas_Futuras":  94858.82,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
-                       "Debitos_Programados":  0,
-                       "Saidas_Futuras":  20562.82,
-                       "Saldo_Projetado":  97601.15
+                       "Debitos_Programados":  1800,
+                       "Saidas_Futuras":  22362.82,
+                       "Saldo_Projetado":  94001.15
                    },
                    {
                        "Banco":  "BNB",
@@ -2109,15 +2128,15 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -52134.80,
+                                 "Menor_Saldo":  -41819.97,
                                  "Data_Menor_Saldo":  "29/10/2026",
                                  "Primeira_Data_Risco":  "06/10/2026",
-                                 "Necessidade_Cobertura":  52134.80
+                                 "Necessidade_Cobertura":  41819.97
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  23305.15,
-                                 "Data_Menor_Saldo":  null,
+                                 "Menor_Saldo":  19705.15,
+                                 "Data_Menor_Saldo":  "29/09/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
@@ -2137,18 +2156,18 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  48203.12,
+                      "saldo_operacional":  46403.12,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  492122.09,
-                      "recebiveis_30d":  180433.72,
-                      "recebiveis_aloc_pendente":  80434.7,
+                      "saldo_consolidado":  490322.09,
+                      "recebiveis_30d":  190748.55,
+                      "recebiveis_aloc_pendente":  90749.53,
                       "pagamentos_30d":  41782.77,
-                      "debitos_programados_30d":  141491.95,
+                      "debitos_programados_30d":  143291.95,
                       "pagamentos_sem_banco":  14267.33,
-                      "qtd_recebiveis":  58,
+                      "qtd_recebiveis":  59,
                       "qtd_pagamentos":  79,
-                      "qtd_debitos_programados":  49,
-                      "total_saidas_30d":  183274.72,
+                      "qtd_debitos_programados":  50,
+                      "total_saidas_30d":  185074.72,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
