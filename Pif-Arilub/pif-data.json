@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "30/09/2026",
-                     "gerado_em":  "30/09/2026 13:00:02",
+                     "gerado_em":  "30/09/2026 14:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -30,7 +30,7 @@
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "30/09/2026",
-                       "Saldo":  19949.3500
+                       "Saldo":  19864.3500
                    },
                    {
                        "Ordem":  3022,
@@ -1856,6 +1856,13 @@
                                     "Valor":  56.00
                                 },
                                 {
+                                    "Ordem_SQL":  298628,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "PRATELEIRAS - ANABOR",
+                                    "Valor":  85.00
+                                },
+                                {
                                     "Ordem_SQL":  298010,
                                     "Banco":  "BRADESCO",
                                     "Data":  "01/10/2026",
@@ -2184,13 +2191,13 @@
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  19949.35,
+                       "Saldo_Atual":  19864.35,
                        "Entradas_Futuras":  97547.23,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
-                       "Debitos_Programados":  1555.8,
-                       "Saidas_Futuras":  22118.62,
-                       "Saldo_Projetado":  95377.96
+                       "Debitos_Programados":  1640.8,
+                       "Saidas_Futuras":  22203.62,
+                       "Saldo_Projetado":  95207.96
                    },
                    {
                        "Banco":  "BNB",
@@ -2233,7 +2240,7 @@
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  19949.35,
+                                 "Menor_Saldo":  19864.35,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -2254,18 +2261,18 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  44919.32,
+                      "saldo_operacional":  44834.32,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  488838.29,
+                      "saldo_consolidado":  488753.29,
                       "recebiveis_30d":  193436.96,
                       "recebiveis_aloc_pendente":  90749.53,
                       "pagamentos_30d":  55925.37,
-                      "debitos_programados_30d":  136100.07,
+                      "debitos_programados_30d":  136185.07,
                       "pagamentos_sem_banco":  28409.93,
                       "qtd_recebiveis":  62,
                       "qtd_pagamentos":  83,
-                      "qtd_debitos_programados":  52,
-                      "total_saidas_30d":  192025.44,
+                      "qtd_debitos_programados":  53,
+                      "total_saidas_30d":  192110.44,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
