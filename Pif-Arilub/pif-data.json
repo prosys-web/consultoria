@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "30/09/2026",
-                     "gerado_em":  "30/09/2026 10:00:02",
+                     "gerado_em":  "30/09/2026 11:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -29,8 +29,8 @@
                        "Ordem":  3021,
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "29/09/2026",
-                       "Saldo":  21505.1500
+                       "Data_Posicao":  "30/09/2026",
+                       "Saldo":  20208.3500
                    },
                    {
                        "Ordem":  3022,
@@ -70,18 +70,6 @@
                            "Cliente":  "MARITZA FABIANA LIMA E SILVA",
                            "Descricao":  "Renegociação de Parcela (notebook dell ) - 7/19",
                            "Valor":  175.00,
-                           "Ordem_Conta_Bancaria":  1014,
-                           "Banco_Projetado":  "BRADESCO",
-                           "Origem_Alocacao":  "ALOC. PENDENTE"
-                       },
-                       {
-                           "Ordem_SQL":  628841,
-                           "Emissao":  "31/08/2026",
-                           "Vencimento":  "30/09/2026",
-                           "Codigo_Cliente":  "19096",
-                           "Cliente":  "AGLAÍLTON MACHADO DOS SANTOS",
-                           "Descricao":  "Renegociação de Parcela (Emprestimo Iphone) - 1/10",
-                           "Valor":  500.00,
                            "Ordem_Conta_Bancaria":  1014,
                            "Banco_Projetado":  "BRADESCO",
                            "Origem_Alocacao":  "ALOC. PENDENTE"
@@ -421,6 +409,18 @@
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  628842,
+                           "Emissao":  "31/08/2026",
+                           "Vencimento":  "15/10/2026",
+                           "Codigo_Cliente":  "19096",
+                           "Cliente":  "AGLAÍLTON MACHADO DOS SANTOS",
+                           "Descricao":  "Renegociação de Parcela (Emprestimo Iphone) - 2/10",
+                           "Valor":  500.00,
+                           "Ordem_Conta_Bancaria":  1014,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
                        },
                        {
                            "Ordem_SQL":  629356,
@@ -783,18 +783,6 @@
                            "Origem_Alocacao":  "ALOC. PENDENTE"
                        },
                        {
-                           "Ordem_SQL":  628842,
-                           "Emissao":  "31/08/2026",
-                           "Vencimento":  "30/10/2026",
-                           "Codigo_Cliente":  "19096",
-                           "Cliente":  "AGLAÍLTON MACHADO DOS SANTOS",
-                           "Descricao":  "Renegociação de Parcela (Emprestimo Iphone) - 2/10",
-                           "Valor":  500.00,
-                           "Ordem_Conta_Bancaria":  1014,
-                           "Banco_Projetado":  "BRADESCO",
-                           "Origem_Alocacao":  "ALOC. PENDENTE"
-                       },
-                       {
                            "Ordem_SQL":  629413,
                            "Emissao":  "18/09/2026",
                            "Vencimento":  "30/10/2026",
@@ -808,18 +796,6 @@
                        }
                    ],
     "pagamentos":  [
-                       {
-                           "Ordem_SQL":  622761,
-                           "Emissao":  "20/01/2026",
-                           "Vencimento":  "30/09/2026",
-                           "Codigo_Fornecedor":  "10161",
-                           "Fornecedor":  "PR ASSESSORIA EMPRESARIAL LTDA",
-                           "Descricao":  "Pagamento antecipado ref ao mês seguinte 9/12",
-                           "Valor":  1296.80,
-                           "Ordem_Conta_Bancaria":  0,
-                           "Banco_Projetado":  "SEM BANCO",
-                           "Origem_Alocacao":  "NÃO ALOCADO"
-                       },
                        {
                            "Ordem_SQL":  564786,
                            "Emissao":  "05/01/2024",
@@ -1757,6 +1733,18 @@
                            "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
+                           "Ordem_SQL":  629711,
+                           "Emissao":  "30/09/2026",
+                           "Vencimento":  "25/10/2026",
+                           "Codigo_Fornecedor":  "10517",
+                           "Fornecedor":  "Apiguana Maquinas E Ferramentas Ltda",
+                           "Descricao":  "FORN 10517 NF 839840 CT SANTANDER ELITE - Entrada 91130 - 1/1",
+                           "Valor":  187.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
                            "Ordem_SQL":  606413,
                            "Emissao":  "29/08/2025",
                            "Vencimento":  "30/10/2026",
@@ -1819,6 +1807,13 @@
                                     "Data":  "30/09/2026",
                                     "Descricao":  "Pagamento de conta (lote parque da paz L01503  9/12) - Fornecedor 10021 - EMPRESA BRASILEIRA DE LANÇAMENTO",
                                     "Valor":  69.52
+                                },
+                                {
+                                    "Ordem_SQL":  298623,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagamento de conta (Pagamento antecipado ref ao mês seguinte 9/12) - Fornecedor 10161 - PR ASSESSORIA EMPRESARIAL LTDA",
+                                    "Valor":  1296.80
                                 },
                                 {
                                     "Ordem_SQL":  298010,
@@ -2140,22 +2135,22 @@
                    {
                        "Banco":  "BRADESCO",
                        "Saldo_Atual":  15875.07,
-                       "Entradas_Futuras":  91249.53,
-                       "Entradas_Aloc_Pendente":  91249.53,
+                       "Entradas_Futuras":  90749.53,
+                       "Entradas_Aloc_Pendente":  90749.53,
                        "Pagamentos_Futuros":  6952.62,
                        "Debitos_Programados":  134544.27,
                        "Saidas_Futuras":  141496.89,
-                       "Saldo_Projetado":  -34372.29
+                       "Saldo_Projetado":  -34872.29
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  21505.15,
+                       "Saldo_Atual":  20208.35,
                        "Entradas_Futuras":  96841.03,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
-                       "Debitos_Programados":  0,
-                       "Saidas_Futuras":  20562.82,
-                       "Saldo_Projetado":  97783.36
+                       "Debitos_Programados":  1296.8,
+                       "Saidas_Futuras":  21859.62,
+                       "Saldo_Projetado":  95189.76
                    },
                    {
                        "Banco":  "BNB",
@@ -2182,10 +2177,10 @@
                        "Saldo_Atual":  0,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
-                       "Pagamentos_Futuros":  29519.73,
+                       "Pagamentos_Futuros":  28409.93,
                        "Debitos_Programados":  0,
-                       "Saidas_Futuras":  29519.73,
-                       "Saldo_Projetado":  -29519.73
+                       "Saidas_Futuras":  28409.93,
+                       "Saldo_Projetado":  -28409.93
                    }
                ],
     "riscos_bancarios":  [
@@ -2198,7 +2193,7 @@
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  21505.15,
+                                 "Menor_Saldo":  20208.35,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -2219,18 +2214,18 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  46475.12,
+                      "saldo_operacional":  45178.32,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  490394.09,
-                      "recebiveis_30d":  193230.76,
-                      "recebiveis_aloc_pendente":  91249.53,
-                      "pagamentos_30d":  57035.17,
-                      "debitos_programados_30d":  134544.27,
-                      "pagamentos_sem_banco":  29519.73,
-                      "qtd_recebiveis":  62,
+                      "saldo_consolidado":  489097.29,
+                      "recebiveis_30d":  192730.76,
+                      "recebiveis_aloc_pendente":  90749.53,
+                      "pagamentos_30d":  55925.37,
+                      "debitos_programados_30d":  135841.07,
+                      "pagamentos_sem_banco":  28409.93,
+                      "qtd_recebiveis":  61,
                       "qtd_pagamentos":  83,
-                      "qtd_debitos_programados":  47,
-                      "total_saidas_30d":  191579.44,
+                      "qtd_debitos_programados":  48,
+                      "total_saidas_30d":  191766.44,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
