@@ -1,8 +1,8 @@
 ﻿{
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
-                     "data_base":  "29/09/2026",
-                     "gerado_em":  "29/09/2026 23:00:02",
+                     "data_base":  "30/09/2026",
+                     "gerado_em":  "30/09/2026 00:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -781,6 +781,30 @@
                            "Ordem_Conta_Bancaria":  2018,
                            "Banco_Projetado":  "BRADESCO",
                            "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  628842,
+                           "Emissao":  "31/08/2026",
+                           "Vencimento":  "30/10/2026",
+                           "Codigo_Cliente":  "19096",
+                           "Cliente":  "AGLAÍLTON MACHADO DOS SANTOS",
+                           "Descricao":  "Renegociação de Parcela (Emprestimo Iphone) - 2/10",
+                           "Valor":  500.00,
+                           "Ordem_Conta_Bancaria":  1014,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  629413,
+                           "Emissao":  "18/09/2026",
+                           "Vencimento":  "30/10/2026",
+                           "Codigo_Cliente":  "3400",
+                           "Cliente":  "Icone Elevadores Ltda Epp",
+                           "Descricao":  "Saída 90997 - 2/2",
+                           "Valor":  492.35,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
                        }
                    ],
     "pagamentos":  [
@@ -1731,30 +1755,57 @@
                            "Ordem_Conta_Bancaria":  0,
                            "Banco_Projetado":  "SEM BANCO",
                            "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
+                           "Ordem_SQL":  606413,
+                           "Emissao":  "29/08/2025",
+                           "Vencimento":  "30/10/2026",
+                           "Codigo_Fornecedor":  "10151",
+                           "Fornecedor":  "BANCO DO NORDESTE DO BRASIL",
+                           "Descricao":  "Aquisição Predio Barão de Aratanha 575 14/120",
+                           "Valor":  7736.08,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
+                           "Ordem_SQL":  606533,
+                           "Emissao":  "29/08/2025",
+                           "Vencimento":  "30/10/2026",
+                           "Codigo_Fornecedor":  "10151",
+                           "Fornecedor":  "BANCO DO NORDESTE DO BRASIL",
+                           "Descricao":  "ref a Pr. Br. Aratanha 575 14/120",
+                           "Valor":  6150.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
+                           "Ordem_SQL":  621940,
+                           "Emissao":  "15/12/2025",
+                           "Vencimento":  "30/10/2026",
+                           "Codigo_Fornecedor":  "10021",
+                           "Fornecedor":  "EMPRESA BRASILEIRA DE LANÇAMENTO",
+                           "Descricao":  "lote parque da paz L01503  10/12",
+                           "Valor":  69.52,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
+                           "Ordem_SQL":  622762,
+                           "Emissao":  "20/01/2026",
+                           "Vencimento":  "30/10/2026",
+                           "Codigo_Fornecedor":  "10161",
+                           "Fornecedor":  "PR ASSESSORIA EMPRESARIAL LTDA",
+                           "Descricao":  "Pagamento antecipado ref ao mês seguinte 10/12",
+                           "Valor":  1296.80,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
                        }
                    ],
     "debitos_programados":  [
-                                {
-                                    "Ordem_SQL":  298489,
-                                    "Banco":  "BRADESCO",
-                                    "Data":  "29/09/2026",
-                                    "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90862 - 1/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  6744.89
-                                },
-                                {
-                                    "Ordem_SQL":  298494,
-                                    "Banco":  "BRADESCO",
-                                    "Data":  "29/09/2026",
-                                    "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 90863 - 1/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  202.79
-                                },
-                                {
-                                    "Ordem_SQL":  298621,
-                                    "Banco":  "ITAU",
-                                    "Data":  "29/09/2026",
-                                    "Descricao":  "Crédito com o fornecedor 371 - Petral Comercio De Ferro E Aco Ltda - ORÇAMENTO PED 491301",
-                                    "Valor":  1800.00
-                                },
                                 {
                                     "Ordem_SQL":  298405,
                                     "Banco":  "BRADESCO",
@@ -2089,22 +2140,22 @@
                    {
                        "Banco":  "BRADESCO",
                        "Saldo_Atual":  15875.07,
-                       "Entradas_Futuras":  90749.53,
-                       "Entradas_Aloc_Pendente":  90749.53,
+                       "Entradas_Futuras":  91249.53,
+                       "Entradas_Aloc_Pendente":  91249.53,
                        "Pagamentos_Futuros":  6952.62,
-                       "Debitos_Programados":  141491.95,
-                       "Saidas_Futuras":  148444.57,
-                       "Saldo_Projetado":  -41819.97
+                       "Debitos_Programados":  134544.27,
+                       "Saidas_Futuras":  141496.89,
+                       "Saldo_Projetado":  -34372.29
                    },
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  21505.15,
-                       "Entradas_Futuras":  96348.68,
+                       "Entradas_Futuras":  96841.03,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
-                       "Debitos_Programados":  1800,
-                       "Saidas_Futuras":  22362.82,
-                       "Saldo_Projetado":  95491.01
+                       "Debitos_Programados":  0,
+                       "Saidas_Futuras":  20562.82,
+                       "Saldo_Projetado":  97783.36
                    },
                    {
                        "Banco":  "BNB",
@@ -2131,24 +2182,24 @@
                        "Saldo_Atual":  0,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
-                       "Pagamentos_Futuros":  14267.33,
+                       "Pagamentos_Futuros":  29519.73,
                        "Debitos_Programados":  0,
-                       "Saidas_Futuras":  14267.33,
-                       "Saldo_Projetado":  -14267.33
+                       "Saidas_Futuras":  29519.73,
+                       "Saldo_Projetado":  -29519.73
                    }
                ],
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -41819.97,
+                                 "Menor_Saldo":  -34872.29,
                                  "Data_Menor_Saldo":  "29/10/2026",
-                                 "Primeira_Data_Risco":  "06/10/2026",
-                                 "Necessidade_Cobertura":  41819.97
+                                 "Primeira_Data_Risco":  "08/10/2026",
+                                 "Necessidade_Cobertura":  34872.29
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  19705.15,
-                                 "Data_Menor_Saldo":  "29/09/2026",
+                                 "Menor_Saldo":  21505.15,
+                                 "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
@@ -2171,15 +2222,15 @@
                       "saldo_operacional":  46403.12,
                       "investimentos":  443918.97,
                       "saldo_consolidado":  490322.09,
-                      "recebiveis_30d":  192238.41,
-                      "recebiveis_aloc_pendente":  90749.53,
-                      "pagamentos_30d":  41782.77,
-                      "debitos_programados_30d":  143291.95,
-                      "pagamentos_sem_banco":  14267.33,
-                      "qtd_recebiveis":  60,
-                      "qtd_pagamentos":  79,
-                      "qtd_debitos_programados":  50,
-                      "total_saidas_30d":  185074.72,
+                      "recebiveis_30d":  193230.76,
+                      "recebiveis_aloc_pendente":  91249.53,
+                      "pagamentos_30d":  57035.17,
+                      "debitos_programados_30d":  134544.27,
+                      "pagamentos_sem_banco":  29519.73,
+                      "qtd_recebiveis":  62,
+                      "qtd_pagamentos":  83,
+                      "qtd_debitos_programados":  47,
+                      "total_saidas_30d":  191579.44,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
