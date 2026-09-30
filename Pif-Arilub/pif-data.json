@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "30/09/2026",
-                     "gerado_em":  "30/09/2026 16:00:02",
+                     "gerado_em":  "30/09/2026 17:01:57",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -30,7 +30,7 @@
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "30/09/2026",
-                       "Saldo":  19864.3500
+                       "Saldo":  14579.2500
                    },
                    {
                        "Ordem":  3022,
@@ -1781,6 +1781,18 @@
                            "Origem_Alocacao":  "PROVISÓRIA"
                        },
                        {
+                           "Ordem_SQL":  629745,
+                           "Emissao":  "30/09/2026",
+                           "Vencimento":  "28/10/2026",
+                           "Codigo_Fornecedor":  "10208",
+                           "Fornecedor":  "RENNER SAYERLACK S/A",
+                           "Descricao":  " - Entrada 91140 - 1/3",
+                           "Valor":  406.27,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "SEM BANCO",
+                           "Origem_Alocacao":  "NÃO ALOCADO"
+                       },
+                       {
                            "Ordem_SQL":  606413,
                            "Emissao":  "29/08/2025",
                            "Vencimento":  "30/10/2026",
@@ -1885,6 +1897,48 @@
                                     "Data":  "30/09/2026",
                                     "Descricao":  "PRATELEIRAS - ANABOR",
                                     "Valor":  85.00
+                                },
+                                {
+                                    "Ordem_SQL":  298629,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "128 ALMOÇO LEIDE 01/09 ATÉ 30/09",
+                                    "Valor":  1405.00
+                                },
+                                {
+                                    "Ordem_SQL":  298630,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário Aglaílton / Fornec.: 19096 - AGLAÍLTON MACHADO DOS SANTOS",
+                                    "Valor":  1126.02
+                                },
+                                {
+                                    "Ordem_SQL":  298631,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário FABIANA  / Fornec.: 19019 - MARITZA FABIANA LIMA E SILVA ",
+                                    "Valor":  732.06
+                                },
+                                {
+                                    "Ordem_SQL":  298632,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário EDVALDO / Fornec.: 19108 - EDVALDO DA SILVA BEZERRA",
+                                    "Valor":  801.02
+                                },
+                                {
+                                    "Ordem_SQL":  298633,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário PEDRO / Fornec.: 19139 - PEDRO DE ALMEIDA VASCONCELOS",
+                                    "Valor":  769.00
+                                },
+                                {
+                                    "Ordem_SQL":  298634,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "22 ALMOÇO E 8 REFRI GUILHERME PEDREIRO 01/09 ATÉ 16/09",
+                                    "Valor":  452.00
                                 },
                                 {
                                     "Ordem_SQL":  298010,
@@ -2215,13 +2269,13 @@
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  19864.35,
+                       "Saldo_Atual":  14579.25,
                        "Entradas_Futuras":  98009.16,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
-                       "Debitos_Programados":  1640.8,
-                       "Saidas_Futuras":  22203.62,
-                       "Saldo_Projetado":  95669.89
+                       "Debitos_Programados":  6925.9,
+                       "Saidas_Futuras":  27488.72,
+                       "Saldo_Projetado":  85099.69
                    },
                    {
                        "Banco":  "BNB",
@@ -2248,10 +2302,10 @@
                        "Saldo_Atual":  0,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
-                       "Pagamentos_Futuros":  28409.93,
+                       "Pagamentos_Futuros":  28816.2,
                        "Debitos_Programados":  0,
-                       "Saidas_Futuras":  28409.93,
-                       "Saldo_Projetado":  -28409.93
+                       "Saidas_Futuras":  28816.2,
+                       "Saldo_Projetado":  -28816.2
                    }
                ],
     "riscos_bancarios":  [
@@ -2264,8 +2318,8 @@
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  19864.35,
-                                 "Data_Menor_Saldo":  null,
+                                 "Menor_Saldo":  9295.63,
+                                 "Data_Menor_Saldo":  "30/09/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
@@ -2285,18 +2339,18 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  44834.32,
+                      "saldo_operacional":  39549.22,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  488753.29,
+                      "saldo_consolidado":  483468.19,
                       "recebiveis_30d":  193898.89,
                       "recebiveis_aloc_pendente":  90749.53,
-                      "pagamentos_30d":  56585.37,
-                      "debitos_programados_30d":  136185.07,
-                      "pagamentos_sem_banco":  28409.93,
+                      "pagamentos_30d":  56991.64,
+                      "debitos_programados_30d":  141470.17,
+                      "pagamentos_sem_banco":  28816.2,
                       "qtd_recebiveis":  63,
-                      "qtd_pagamentos":  84,
-                      "qtd_debitos_programados":  53,
-                      "total_saidas_30d":  192770.44,
+                      "qtd_pagamentos":  85,
+                      "qtd_debitos_programados":  59,
+                      "total_saidas_30d":  198461.81,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
