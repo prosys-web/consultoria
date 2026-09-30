@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "30/09/2026",
-                     "gerado_em":  "30/09/2026 11:00:02",
+                     "gerado_em":  "30/09/2026 12:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -30,7 +30,7 @@
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "30/09/2026",
-                       "Saldo":  20208.3500
+                       "Saldo":  19949.3500
                    },
                    {
                        "Ordem":  3022,
@@ -766,6 +766,18 @@
                            "Cliente":  "PAP NETO LTDA",
                            "Descricao":  "Saída 91115 - 1/2",
                            "Valor":  529.65,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629717,
+                           "Emissao":  "30/09/2026",
+                           "Vencimento":  "28/10/2026",
+                           "Codigo_Cliente":  "2850",
+                           "Cliente":  "PAP NETO LTDA",
+                           "Descricao":  "Saída 91133 - 1/1",
+                           "Valor":  706.20,
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
@@ -1816,6 +1828,34 @@
                                     "Valor":  1296.80
                                 },
                                 {
+                                    "Ordem_SQL":  298624,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário FABIANA  / Fornec.: 19019 - MARITZA FABIANA LIMA E SILVA ",
+                                    "Valor":  70.00
+                                },
+                                {
+                                    "Ordem_SQL":  298625,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário Aglaílton / Fornec.: 19096 - AGLAÍLTON MACHADO DOS SANTOS",
+                                    "Valor":  66.50
+                                },
+                                {
+                                    "Ordem_SQL":  298626,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário EDVALDO / Fornec.: 19108 - EDVALDO DA SILVA BEZERRA",
+                                    "Valor":  66.50
+                                },
+                                {
+                                    "Ordem_SQL":  298627,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "Pagto. de vale para o funcionário PEDRO / Fornec.: 19139 - PEDRO DE ALMEIDA VASCONCELOS",
+                                    "Valor":  56.00
+                                },
+                                {
                                     "Ordem_SQL":  298010,
                                     "Banco":  "BRADESCO",
                                     "Data":  "01/10/2026",
@@ -2144,13 +2184,13 @@
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  20208.35,
-                       "Entradas_Futuras":  96841.03,
+                       "Saldo_Atual":  19949.35,
+                       "Entradas_Futuras":  97547.23,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
-                       "Debitos_Programados":  1296.8,
-                       "Saidas_Futuras":  21859.62,
-                       "Saldo_Projetado":  95189.76
+                       "Debitos_Programados":  1555.8,
+                       "Saidas_Futuras":  22118.62,
+                       "Saldo_Projetado":  95377.96
                    },
                    {
                        "Banco":  "BNB",
@@ -2193,7 +2233,7 @@
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  20208.35,
+                                 "Menor_Saldo":  19949.35,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -2214,18 +2254,18 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  45178.32,
+                      "saldo_operacional":  44919.32,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  489097.29,
-                      "recebiveis_30d":  192730.76,
+                      "saldo_consolidado":  488838.29,
+                      "recebiveis_30d":  193436.96,
                       "recebiveis_aloc_pendente":  90749.53,
                       "pagamentos_30d":  55925.37,
-                      "debitos_programados_30d":  135841.07,
+                      "debitos_programados_30d":  136100.07,
                       "pagamentos_sem_banco":  28409.93,
-                      "qtd_recebiveis":  61,
+                      "qtd_recebiveis":  62,
                       "qtd_pagamentos":  83,
-                      "qtd_debitos_programados":  48,
-                      "total_saidas_30d":  191766.44,
+                      "qtd_debitos_programados":  52,
+                      "total_saidas_30d":  192025.44,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
