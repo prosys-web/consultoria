@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "30/09/2026",
-                     "gerado_em":  "30/09/2026 17:01:57",
+                     "gerado_em":  "30/09/2026 18:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -30,7 +30,7 @@
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "30/09/2026",
-                       "Saldo":  14579.2500
+                       "Saldo":  7250.6400
                    },
                    {
                        "Ordem":  3022,
@@ -1941,6 +1941,83 @@
                                     "Valor":  452.00
                                 },
                                 {
+                                    "Ordem_SQL":  298635,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "bonus de meta minima",
+                                    "Valor":  100.00
+                                },
+                                {
+                                    "Ordem_SQL":  298636,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "bonus de meta minima",
+                                    "Valor":  100.00
+                                },
+                                {
+                                    "Ordem_SQL":  298637,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "bonus de meta minima",
+                                    "Valor":  100.00
+                                },
+                                {
+                                    "Ordem_SQL":  298638,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "bonus de meta minima",
+                                    "Valor":  100.00
+                                },
+                                {
+                                    "Ordem_SQL":  298639,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "bonus de venda teto maximo",
+                                    "Valor":  200.00
+                                },
+                                {
+                                    "Ordem_SQL":  298640,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "comissão ref set ",
+                                    "Valor":  4165.48
+                                },
+                                {
+                                    "Ordem_SQL":  298641,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "comissão ref set ",
+                                    "Valor":  1083.90
+                                },
+                                {
+                                    "Ordem_SQL":  298642,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "comissão ref set ",
+                                    "Valor":  1244.98
+                                },
+                                {
+                                    "Ordem_SQL":  298643,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "03 frete uber",
+                                    "Valor":  32.08
+                                },
+                                {
+                                    "Ordem_SQL":  298644,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "02 frete uber",
+                                    "Valor":  15.00
+                                },
+                                {
+                                    "Ordem_SQL":  298645,
+                                    "Banco":  "ITAU",
+                                    "Data":  "30/09/2026",
+                                    "Descricao":  "complemento comissão set",
+                                    "Valor":  187.17
+                                },
+                                {
                                     "Ordem_SQL":  298010,
                                     "Banco":  "BRADESCO",
                                     "Data":  "01/10/2026",
@@ -2269,13 +2346,13 @@
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  14579.25,
+                       "Saldo_Atual":  7250.64,
                        "Entradas_Futuras":  98009.16,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
-                       "Debitos_Programados":  6925.9,
-                       "Saidas_Futuras":  27488.72,
-                       "Saldo_Projetado":  85099.69
+                       "Debitos_Programados":  14254.51,
+                       "Saidas_Futuras":  34817.33,
+                       "Saldo_Projetado":  70442.47
                    },
                    {
                        "Banco":  "BNB",
@@ -2318,10 +2395,10 @@
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  9295.63,
+                                 "Menor_Saldo":  -5361.59,
                                  "Data_Menor_Saldo":  "30/09/2026",
-                                 "Primeira_Data_Risco":  null,
-                                 "Necessidade_Cobertura":  0
+                                 "Primeira_Data_Risco":  "30/09/2026",
+                                 "Necessidade_Cobertura":  5361.59
                              },
                              {
                                  "Banco":  "BNB",
@@ -2339,18 +2416,18 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  39549.22,
+                      "saldo_operacional":  32220.61,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  483468.19,
+                      "saldo_consolidado":  476139.58,
                       "recebiveis_30d":  193898.89,
                       "recebiveis_aloc_pendente":  90749.53,
                       "pagamentos_30d":  56991.64,
-                      "debitos_programados_30d":  141470.17,
+                      "debitos_programados_30d":  148798.78,
                       "pagamentos_sem_banco":  28816.2,
                       "qtd_recebiveis":  63,
                       "qtd_pagamentos":  85,
-                      "qtd_debitos_programados":  59,
-                      "total_saidas_30d":  198461.81,
+                      "qtd_debitos_programados":  70,
+                      "total_saidas_30d":  205790.42,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
