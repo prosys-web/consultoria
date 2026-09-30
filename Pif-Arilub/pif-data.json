@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "30/09/2026",
-                     "gerado_em":  "30/09/2026 14:00:02",
+                     "gerado_em":  "30/09/2026 15:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -1757,6 +1757,18 @@
                            "Origem_Alocacao":  "NÃO ALOCADO"
                        },
                        {
+                           "Ordem_SQL":  629737,
+                           "Emissao":  "30/09/2026",
+                           "Vencimento":  "26/10/2026",
+                           "Codigo_Fornecedor":  "10235",
+                           "Fornecedor":  "FORTBELT COMERCIO DE LUBRIFICANTES LTDA ME",
+                           "Descricao":  "boleto itau - Entrada 91136 - 1/1",
+                           "Valor":  660.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "PROVISÓRIA"
+                       },
+                       {
                            "Ordem_SQL":  606413,
                            "Emissao":  "29/08/2025",
                            "Vencimento":  "30/10/2026",
@@ -2184,10 +2196,10 @@
                        "Saldo_Atual":  15875.07,
                        "Entradas_Futuras":  90749.53,
                        "Entradas_Aloc_Pendente":  90749.53,
-                       "Pagamentos_Futuros":  6952.62,
+                       "Pagamentos_Futuros":  7612.62,
                        "Debitos_Programados":  134544.27,
-                       "Saidas_Futuras":  141496.89,
-                       "Saldo_Projetado":  -34872.29
+                       "Saidas_Futuras":  142156.89,
+                       "Saldo_Projetado":  -35532.29
                    },
                    {
                        "Banco":  "ITAU",
@@ -2233,10 +2245,10 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -34872.29,
+                                 "Menor_Saldo":  -35532.29,
                                  "Data_Menor_Saldo":  "29/10/2026",
                                  "Primeira_Data_Risco":  "09/10/2026",
-                                 "Necessidade_Cobertura":  34872.29
+                                 "Necessidade_Cobertura":  35532.29
                              },
                              {
                                  "Banco":  "ITAU",
@@ -2266,13 +2278,13 @@
                       "saldo_consolidado":  488753.29,
                       "recebiveis_30d":  193436.96,
                       "recebiveis_aloc_pendente":  90749.53,
-                      "pagamentos_30d":  55925.37,
+                      "pagamentos_30d":  56585.37,
                       "debitos_programados_30d":  136185.07,
                       "pagamentos_sem_banco":  28409.93,
                       "qtd_recebiveis":  62,
-                      "qtd_pagamentos":  83,
+                      "qtd_pagamentos":  84,
                       "qtd_debitos_programados":  53,
-                      "total_saidas_30d":  192110.44,
+                      "total_saidas_30d":  192770.44,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
