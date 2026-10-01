@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "01/10/2026",
-                     "gerado_em":  "01/10/2026 07:00:02",
+                     "gerado_em":  "01/10/2026 08:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -30,14 +30,14 @@
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "30/09/2026",
-                       "Saldo":  6450.6400
+                       "Saldo":  8722.4500
                    },
                    {
                        "Ordem":  3022,
                        "Banco":  "BNB",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "22/09/2026",
-                       "Saldo":  3436.7300
+                       "Data_Posicao":  "29/09/2026",
+                       "Saldo":  8036.9300
                    },
                    {
                        "Ordem":  3024,
@@ -62,18 +62,6 @@
                    }
                ],
     "recebiveis":  [
-                       {
-                           "Ordem_SQL":  628555,
-                           "Emissao":  "17/08/2026",
-                           "Vencimento":  "01/10/2026",
-                           "Codigo_Cliente":  "3541",
-                           "Cliente":  "PECEM II GERACAO DE ENERGIA S A - ENEVA",
-                           "Descricao":  "Saída 90602 - 1/1",
-                           "Valor":  2100.00,
-                           "Ordem_Conta_Bancaria":  3022,
-                           "Banco_Projetado":  "BNB",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
                        {
                            "Ordem_SQL":  628625,
                            "Emissao":  "20/08/2026",
@@ -133,18 +121,6 @@
                            "Ordem_Conta_Bancaria":  2018,
                            "Banco_Projetado":  "BRADESCO",
                            "Origem_Alocacao":  "ALOC. PENDENTE"
-                       },
-                       {
-                           "Ordem_SQL":  628616,
-                           "Emissao":  "20/08/2026",
-                           "Vencimento":  "04/10/2026",
-                           "Codigo_Cliente":  "3541",
-                           "Cliente":  "PECEM II GERACAO DE ENERGIA S A - ENEVA",
-                           "Descricao":  "Saída 90658 - 1/1",
-                           "Valor":  2500.20,
-                           "Ordem_Conta_Bancaria":  3022,
-                           "Banco_Projetado":  "BNB",
-                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
                            "Ordem_SQL":  629125,
@@ -325,18 +301,6 @@
                            "Ordem_Conta_Bancaria":  2018,
                            "Banco_Projetado":  "BRADESCO",
                            "Origem_Alocacao":  "ALOC. PENDENTE"
-                       },
-                       {
-                           "Ordem_SQL":  628932,
-                           "Emissao":  "01/09/2026",
-                           "Vencimento":  "13/10/2026",
-                           "Codigo_Cliente":  "1438",
-                           "Cliente":  "C M Cavalcante Motos - Me",
-                           "Descricao":  "Saída 90785 - 2/3",
-                           "Valor":  629.53,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
                        },
                        {
                            "Ordem_SQL":  629369,
@@ -2147,18 +2111,18 @@
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  6450.64,
-                       "Entradas_Futuras":  96366.88,
+                       "Saldo_Atual":  8722.45,
+                       "Entradas_Futuras":  95737.35,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
                        "Debitos_Programados":  0,
                        "Saidas_Futuras":  20562.82,
-                       "Saldo_Projetado":  82254.70
+                       "Saldo_Projetado":  83896.98
                    },
                    {
                        "Banco":  "BNB",
-                       "Saldo_Atual":  3436.73,
-                       "Entradas_Futuras":  5140.2,
+                       "Saldo_Atual":  8036.93,
+                       "Entradas_Futuras":  540,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  0,
@@ -2196,14 +2160,14 @@
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  6450.64,
+                                 "Menor_Saldo":  8722.45,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
                              {
                                  "Banco":  "BNB",
-                                 "Menor_Saldo":  3436.73,
+                                 "Menor_Saldo":  8036.93,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -2217,15 +2181,15 @@
                              }
                          ],
     "auditoria":  {
-                      "saldo_operacional":  31420.61,
+                      "saldo_operacional":  38292.62,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  475339.58,
-                      "recebiveis_30d":  189606.61,
+                      "saldo_consolidado":  482211.59,
+                      "recebiveis_30d":  184376.88,
                       "recebiveis_aloc_pendente":  88099.53,
                       "pagamentos_30d":  56991.64,
                       "debitos_programados_30d":  133193.06,
                       "pagamentos_sem_banco":  28816.2,
-                      "qtd_recebiveis":  61,
+                      "qtd_recebiveis":  58,
                       "qtd_pagamentos":  85,
                       "qtd_debitos_programados":  45,
                       "total_saidas_30d":  190184.70,
