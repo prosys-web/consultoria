@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "01/10/2026",
-                     "gerado_em":  "01/10/2026 11:00:02",
+                     "gerado_em":  "01/10/2026 12:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -445,6 +445,18 @@
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629784,
+                           "Emissao":  "01/10/2026",
+                           "Vencimento":  "16/10/2026",
+                           "Codigo_Cliente":  "3764",
+                           "Cliente":  "Servico Social Do Comercio - Sesc - Ar.Ce.",
+                           "Descricao":  "Saída 91151 - 1/1",
+                           "Valor":  530.40,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
                        },
                        {
                            "Ordem_SQL":  629126,
@@ -2102,12 +2114,12 @@
                    {
                        "Banco":  "BRADESCO",
                        "Saldo_Atual":  12342.56,
-                       "Entradas_Futuras":  88099.53,
-                       "Entradas_Aloc_Pendente":  88099.53,
+                       "Entradas_Futuras":  88629.93,
+                       "Entradas_Aloc_Pendente":  88629.93,
                        "Pagamentos_Futuros":  7612.62,
                        "Debitos_Programados":  133193.06,
                        "Saidas_Futuras":  140805.68,
-                       "Saldo_Projetado":  -40363.59
+                       "Saldo_Projetado":  -39833.19
                    },
                    {
                        "Banco":  "ITAU",
@@ -2153,10 +2165,10 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -40538.59,
+                                 "Menor_Saldo":  -40008.19,
                                  "Data_Menor_Saldo":  "29/10/2026",
                                  "Primeira_Data_Risco":  "06/10/2026",
-                                 "Necessidade_Cobertura":  40538.59
+                                 "Necessidade_Cobertura":  40008.19
                              },
                              {
                                  "Banco":  "ITAU",
@@ -2184,12 +2196,12 @@
                       "saldo_operacional":  34760.11,
                       "investimentos":  443918.97,
                       "saldo_consolidado":  478679.08,
-                      "recebiveis_30d":  184376.88,
-                      "recebiveis_aloc_pendente":  88099.53,
+                      "recebiveis_30d":  184907.28,
+                      "recebiveis_aloc_pendente":  88629.93,
                       "pagamentos_30d":  56991.64,
                       "debitos_programados_30d":  133193.06,
                       "pagamentos_sem_banco":  28816.2,
-                      "qtd_recebiveis":  58,
+                      "qtd_recebiveis":  59,
                       "qtd_pagamentos":  85,
                       "qtd_debitos_programados":  45,
                       "total_saidas_30d":  190184.70,
