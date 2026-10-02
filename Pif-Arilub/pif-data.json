@@ -1,8 +1,8 @@
 ﻿{
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
-                     "data_base":  "01/10/2026",
-                     "gerado_em":  "01/10/2026 23:00:02",
+                     "data_base":  "02/10/2026",
+                     "gerado_em":  "02/10/2026 00:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.1"
                  },
@@ -62,18 +62,6 @@
                    }
                ],
     "recebiveis":  [
-                       {
-                           "Ordem_SQL":  628625,
-                           "Emissao":  "20/08/2026",
-                           "Vencimento":  "01/10/2026",
-                           "Codigo_Cliente":  "3837",
-                           "Cliente":  "Vm Engenharia Ltda",
-                           "Descricao":  "Saída 90668 - 2/3",
-                           "Valor":  968.19,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
                        {
                            "Ordem_SQL":  628321,
                            "Emissao":  "07/08/2026",
@@ -1795,20 +1783,6 @@
                    ],
     "debitos_programados":  [
                                 {
-                                    "Ordem_SQL":  298010,
-                                    "Banco":  "BRADESCO",
-                                    "Data":  "01/10/2026",
-                                    "Descricao":  "Pagamento de conta (BOLETO BANCO DO BRASIL - Entrada 90109 - 3/3) - Fornecedor 10081 - AUTO PECAS PADRE CICERO LTDA FL 04",
-                                    "Valor":  1634.43
-                                },
-                                {
-                                    "Ordem_SQL":  298459,
-                                    "Banco":  "BRADESCO",
-                                    "Data":  "01/10/2026",
-                                    "Descricao":  "Pagamento de conta ( - Entrada 90843 - 1/2) - Fornecedor 11046 - NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
-                                    "Valor":  692.87
-                                },
-                                {
                                     "Ordem_SQL":  298554,
                                     "Banco":  "BRADESCO",
                                     "Data":  "02/10/2026",
@@ -2117,19 +2091,19 @@
                        "Entradas_Futuras":  88629.93,
                        "Entradas_Aloc_Pendente":  88629.93,
                        "Pagamentos_Futuros":  7612.62,
-                       "Debitos_Programados":  133193.06,
-                       "Saidas_Futuras":  140805.68,
-                       "Saldo_Projetado":  -39833.19
+                       "Debitos_Programados":  130865.76,
+                       "Saidas_Futuras":  138478.38,
+                       "Saldo_Projetado":  -37505.89
                    },
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  8722.45,
-                       "Entradas_Futuras":  95737.35,
+                       "Entradas_Futuras":  94769.16,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  20562.82,
                        "Debitos_Programados":  0,
                        "Saidas_Futuras":  20562.82,
-                       "Saldo_Projetado":  83896.98
+                       "Saldo_Projetado":  82928.79
                    },
                    {
                        "Banco":  "BNB",
@@ -2165,15 +2139,15 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -40008.19,
+                                 "Menor_Saldo":  -37680.89,
                                  "Data_Menor_Saldo":  "29/10/2026",
-                                 "Primeira_Data_Risco":  "06/10/2026",
-                                 "Necessidade_Cobertura":  40008.19
+                                 "Primeira_Data_Risco":  "07/10/2026",
+                                 "Necessidade_Cobertura":  37680.89
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  8722.45,
-                                 "Data_Menor_Saldo":  null,
+                                 "Menor_Saldo":  7776.85,
+                                 "Data_Menor_Saldo":  "05/10/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
@@ -2196,15 +2170,15 @@
                       "saldo_operacional":  34760.11,
                       "investimentos":  443918.97,
                       "saldo_consolidado":  478679.08,
-                      "recebiveis_30d":  184907.28,
+                      "recebiveis_30d":  183939.09,
                       "recebiveis_aloc_pendente":  88629.93,
                       "pagamentos_30d":  56991.64,
-                      "debitos_programados_30d":  133193.06,
+                      "debitos_programados_30d":  130865.76,
                       "pagamentos_sem_banco":  28816.2,
-                      "qtd_recebiveis":  59,
+                      "qtd_recebiveis":  58,
                       "qtd_pagamentos":  85,
-                      "qtd_debitos_programados":  45,
-                      "total_saidas_30d":  190184.70,
+                      "qtd_debitos_programados":  43,
+                      "total_saidas_30d":  187857.40,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
