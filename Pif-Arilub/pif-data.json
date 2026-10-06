@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "06/10/2026",
-                     "gerado_em":  "06/10/2026 10:00:03",
+                     "gerado_em":  "06/10/2026 11:00:03",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.4"
                  },
@@ -29,8 +29,8 @@
                        "Ordem":  3,
                        "Banco":  "BRADESCO",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "05/10/2026",
-                       "Saldo":  24014.0800
+                       "Data_Posicao":  "06/10/2026",
+                       "Saldo":  16575.2800
                    },
                    {
                        "Ordem":  3021,
@@ -3984,15 +3984,6 @@
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                 },
                                 {
-                                    "Ordem_SQL":  298608,
-                                    "Banco":  "BRADESCO",
-                                    "Data":  "09/10/2026",
-                                    "Descricao":  "Pagamento de conta (boleto itau - Entrada 91074 - 4/6) - Fornecedor 10236 - SATURNO INDUSTRIA DE TINTAS E REPRESENTACOES COMERCIAIS LTDA",
-                                    "Valor":  2335.67,
-                                    "Estagio":  "PROGRAMADO",
-                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO"
-                                },
-                                {
                                     "Ordem_SQL":  298586,
                                     "Banco":  "BRADESCO",
                                     "Data":  "12/10/2026",
@@ -4241,6 +4232,15 @@
                                     "Data":  "29/10/2026",
                                     "Descricao":  "Pagamento de conta (PE VR LUB 4/5) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
                                     "Valor":  12481.06,
+                                    "Estagio":  "PROGRAMADO",
+                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                },
+                                {
+                                    "Ordem_SQL":  298608,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "30/10/2026",
+                                    "Descricao":  "Pagamento de conta (boleto itau - Entrada 91074 - 4/6) - Fornecedor 10236 - SATURNO INDUSTRIA DE TINTAS E REPRESENTACOES COMERCIAIS LTDA",
+                                    "Valor":  2335.67,
                                     "Estagio":  "PROGRAMADO",
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                 },
@@ -7331,15 +7331,6 @@
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                    },
                                    {
-                                       "Ordem_SQL":  298608,
-                                       "Banco":  "BRADESCO",
-                                       "Data":  "09/10/2026",
-                                       "Descricao":  "Pagamento de conta (boleto itau - Entrada 91074 - 4/6) - Fornecedor 10236 - SATURNO INDUSTRIA DE TINTAS E REPRESENTACOES COMERCIAIS LTDA",
-                                       "Valor":  2335.67,
-                                       "Estagio":  "PROGRAMADO",
-                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO"
-                                   },
-                                   {
                                        "Ordem_SQL":  298586,
                                        "Banco":  "BRADESCO",
                                        "Data":  "12/10/2026",
@@ -7592,6 +7583,15 @@
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                    },
                                    {
+                                       "Ordem_SQL":  298608,
+                                       "Banco":  "BRADESCO",
+                                       "Data":  "30/10/2026",
+                                       "Descricao":  "Pagamento de conta (boleto itau - Entrada 91074 - 4/6) - Fornecedor 10236 - SATURNO INDUSTRIA DE TINTAS E REPRESENTACOES COMERCIAIS LTDA",
+                                       "Valor":  2335.67,
+                                       "Estagio":  "PROGRAMADO",
+                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                   },
+                                   {
                                        "Ordem_SQL":  298458,
                                        "Banco":  "BRADESCO",
                                        "Data":  "03/11/2026",
@@ -7750,7 +7750,7 @@
                                     "Codigo":  1,
                                     "Nome":  "Caixa LOJA",
                                     "Classificacao_PIF":  "OPERACIONAL",
-                                    "Data_Abertura":  "05/10/2026 09:05:12",
+                                    "Data_Abertura":  "06/10/2026 10:04:58",
                                     "Saldo_Atual":  55.8900,
                                     "Entradas_Desde_Abertura":  55.8900,
                                     "Saidas_Desde_Abertura":  0.0000,
@@ -7787,13 +7787,13 @@
     "bancos":  [
                    {
                        "Banco":  "BRADESCO",
-                       "Saldo_Atual":  24014.08,
+                       "Saldo_Atual":  16575.28,
                        "Entradas_Futuras":  119612.63,
                        "Entradas_Aloc_Pendente":  90615.73,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  159532.21,
                        "Saidas_Futuras":  159532.21,
-                       "Saldo_Projetado":  -15905.50
+                       "Saldo_Projetado":  -23344.30
                    },
                    {
                        "Banco":  "ITAU",
@@ -7839,10 +7839,10 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -48503.91,
+                                 "Menor_Saldo":  -55942.71,
                                  "Data_Menor_Saldo":  "13/11/2026",
                                  "Primeira_Data_Risco":  "26/10/2026",
-                                 "Necessidade_Cobertura":  48503.91
+                                 "Necessidade_Cobertura":  55942.71
                              },
                              {
                                  "Banco":  "ITAU",
@@ -7882,23 +7882,23 @@
                                "dias":  7,
                                "recebiveis":  84594.93,
                                "pagamentos":  21536.49,
-                               "debitos_programados":  30933.47,
+                               "debitos_programados":  28597.80,
                                "pagamentos_nao_alocados":  21536.49,
-                               "total_saidas":  52469.96,
+                               "total_saidas":  50134.29,
                                "qtd_recebiveis":  17,
                                "qtd_pagamentos":  23,
-                               "qtd_debitos_programados":  12
+                               "qtd_debitos_programados":  11
                            },
                     "15d":  {
                                 "dias":  15,
                                 "recebiveis":  117200.80,
                                 "pagamentos":  41645.59,
-                                "debitos_programados":  70473.22,
+                                "debitos_programados":  68137.55,
                                 "pagamentos_nao_alocados":  41645.59,
-                                "total_saidas":  112118.81,
+                                "total_saidas":  109783.14,
                                 "qtd_recebiveis":  36,
                                 "qtd_pagamentos":  46,
-                                "qtd_debitos_programados":  24
+                                "qtd_debitos_programados":  23
                             },
                     "30d":  {
                                 "dias":  30,
@@ -7946,9 +7946,9 @@
                        "horizonte_sql_dias":  90
                    },
     "auditoria":  {
-                      "saldo_operacional":  37353.49,
+                      "saldo_operacional":  29914.69,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  481272.46,
+                      "saldo_consolidado":  473833.66,
                       "bnb_operacional":  8036.93,
                       "bnb_investimento":  443918.97,
                       "bnb_total":  451955.90,
