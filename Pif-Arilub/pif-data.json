@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "07/10/2026",
-                     "gerado_em":  "07/10/2026 08:00:03",
+                     "gerado_em":  "07/10/2026 09:00:04",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.4"
                  },
@@ -797,6 +797,18 @@
                            "Cliente":  "Idibra Participacoes Ltda",
                            "Descricao":  "Saída 91173 - 1/1",
                            "Valor":  2193.52,
+                           "Ordem_Conta_Bancaria":  3021,
+                           "Banco_Projetado":  "ITAU",
+                           "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629946,
+                           "Emissao":  "07/10/2026",
+                           "Vencimento":  "04/11/2026",
+                           "Codigo_Cliente":  "4177",
+                           "Cliente":  "Geofix Engenharia Fundacoes E Estaqueamento Sociedade Empres",
+                           "Descricao":  "Saída 91200 - 1/1",
+                           "Valor":  2289.28,
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
@@ -7942,12 +7954,12 @@
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  6345.15,
-                       "Entradas_Futuras":  132043.41,
+                       "Entradas_Futuras":  134332.69,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  323.69,
                        "Saidas_Futuras":  323.69,
-                       "Saldo_Projetado":  138064.87
+                       "Saldo_Projetado":  140354.15
                    },
                    {
                        "Banco":  "BNB",
@@ -8046,34 +8058,34 @@
                             },
                     "30d":  {
                                 "dias":  30,
-                                "recebiveis":  174181.08,
+                                "recebiveis":  176470.36,
                                 "pagamentos":  44990.19,
                                 "debitos_programados":  144001.03,
                                 "pagamentos_nao_alocados":  44990.19,
                                 "total_saidas":  188991.22,
-                                "qtd_recebiveis":  61,
+                                "qtd_recebiveis":  62,
                                 "qtd_pagamentos":  81,
                                 "qtd_debitos_programados":  48
                             },
                     "60d":  {
                                 "dias":  60,
-                                "recebiveis":  244101.21,
+                                "recebiveis":  246390.49,
                                 "pagamentos":  97409.84,
                                 "debitos_programados":  160807.66,
                                 "pagamentos_nao_alocados":  97409.84,
                                 "total_saidas":  258217.50,
-                                "qtd_recebiveis":  79,
+                                "qtd_recebiveis":  80,
                                 "qtd_pagamentos":  154,
                                 "qtd_debitos_programados":  56
                             },
                     "90d":  {
                                 "dias":  90,
-                                "recebiveis":  244981.21,
+                                "recebiveis":  247270.49,
                                 "pagamentos":  135882.15,
                                 "debitos_programados":  168475.42,
                                 "pagamentos_nao_alocados":  135882.15,
                                 "total_saidas":  304357.57,
-                                "qtd_recebiveis":  81,
+                                "qtd_recebiveis":  82,
                                 "qtd_pagamentos":  206,
                                 "qtd_debitos_programados":  59
                             }
@@ -8099,9 +8111,9 @@
                       "caixa_operacional":  315.89,
                       "caixa_misto":  22.5981,
                       "caixa_particular":  -1211.69,
-                      "recebiveis_30d":  174181.08,
-                      "recebiveis_60d":  244101.21,
-                      "recebiveis_90d":  244981.21,
+                      "recebiveis_30d":  176470.36,
+                      "recebiveis_60d":  246390.49,
+                      "recebiveis_90d":  247270.49,
                       "recebiveis_aloc_pendente":  80300.9,
                       "pagamentos_30d":  44990.19,
                       "pagamentos_60d":  97409.84,
@@ -8112,7 +8124,7 @@
                       "pagamentos_nao_alocados_30d":  44990.19,
                       "pagamentos_nao_alocados_60d":  97409.84,
                       "pagamentos_nao_alocados_90d":  135882.15,
-                      "qtd_recebiveis_90d":  81,
+                      "qtd_recebiveis_90d":  82,
                       "qtd_pagamentos_90d":  206,
                       "qtd_debitos_programados_90d":  59,
                       "total_saidas_30d":  188991.22,
