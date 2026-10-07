@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "07/10/2026",
-                     "gerado_em":  "07/10/2026 07:00:03",
+                     "gerado_em":  "07/10/2026 08:00:03",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.4"
                  },
@@ -30,14 +30,14 @@
                        "Banco":  "BRADESCO",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "06/10/2026",
-                       "Saldo":  16984.2800
+                       "Saldo":  27175.3400
                    },
                    {
                        "Ordem":  3021,
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "05/10/2026",
-                       "Saldo":  5448.7400
+                       "Data_Posicao":  "07/10/2026",
+                       "Saldo":  6345.1500
                    },
                    {
                        "Ordem":  3022,
@@ -658,18 +658,6 @@
                            "Origem_Alocacao":  "SHOP9"
                        },
                        {
-                           "Ordem_SQL":  629694,
-                           "Emissao":  "29/09/2026",
-                           "Vencimento":  "29/10/2026",
-                           "Codigo_Cliente":  "2277",
-                           "Cliente":  "SECRETARIA DA EDUCACAO",
-                           "Descricao":  "Saída 91116 - 1/1",
-                           "Valor":  10314.83,
-                           "Ordem_Conta_Bancaria":  2018,
-                           "Banco_Projetado":  "BRADESCO",
-                           "Origem_Alocacao":  "ALOC. PENDENTE"
-                       },
-                       {
                            "Ordem_SQL":  629413,
                            "Emissao":  "18/09/2026",
                            "Vencimento":  "30/10/2026",
@@ -1055,20 +1043,6 @@
                        }
                    ],
     "pagamentos":  [
-                       {
-                           "Ordem_SQL":  569402,
-                           "Emissao":  "07/06/2024",
-                           "Vencimento":  "07/10/2026",
-                           "Codigo_Fornecedor":  "10091",
-                           "Fornecedor":  "BANCO BRADESCO SA",
-                           "Descricao":  "Operação Capital de Giro 29/42",
-                           "Valor":  5811.21,
-                           "Ordem_Conta_Bancaria":  0,
-                           "Banco_Projetado":  "NÃO ALOCADO",
-                           "Origem_Alocacao":  "NÃO ALOCADO",
-                           "Estagio":  "PREVISTO",
-                           "Tipo_Registro":  "CONTA_A_PAGAR"
-                       },
                        {
                            "Ordem_SQL":  621978,
                            "Emissao":  "30/12/2025",
@@ -2190,6 +2164,20 @@
                            "Tipo_Registro":  "CONTA_A_PAGAR"
                        },
                        {
+                           "Ordem_SQL":  629943,
+                           "Emissao":  "07/10/2026",
+                           "Vencimento":  "05/11/2026",
+                           "Codigo_Fornecedor":  "11046",
+                           "Fornecedor":  "NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
+                           "Descricao":  "BOLETO ITAU - Entrada 91199 - 1/2",
+                           "Valor":  789.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "NÃO ALOCADO",
+                           "Origem_Alocacao":  "NÃO ALOCADO",
+                           "Estagio":  "PREVISTO",
+                           "Tipo_Registro":  "CONTA_A_PAGAR"
+                       },
+                       {
                            "Ordem_SQL":  569403,
                            "Emissao":  "07/06/2024",
                            "Vencimento":  "07/11/2026",
@@ -3198,6 +3186,20 @@
                            "Tipo_Registro":  "CONTA_A_PAGAR"
                        },
                        {
+                           "Ordem_SQL":  629944,
+                           "Emissao":  "07/10/2026",
+                           "Vencimento":  "05/12/2026",
+                           "Codigo_Fornecedor":  "11046",
+                           "Fornecedor":  "NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
+                           "Descricao":  "BOLETO ITAU - Entrada 91199 - 2/2",
+                           "Valor":  789.00,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "NÃO ALOCADO",
+                           "Origem_Alocacao":  "NÃO ALOCADO",
+                           "Estagio":  "PREVISTO",
+                           "Tipo_Registro":  "CONTA_A_PAGAR"
+                       },
+                       {
                            "Ordem_SQL":  569404,
                            "Emissao":  "07/06/2024",
                            "Vencimento":  "07/12/2026",
@@ -3964,6 +3966,24 @@
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                 },
                                 {
+                                    "Ordem_SQL":  298688,
+                                    "Banco":  "ITAU",
+                                    "Data":  "07/10/2026",
+                                    "Descricao":  "COMB COMPASS",
+                                    "Valor":  323.69,
+                                    "Estagio":  "PROGRAMADO",
+                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                },
+                                {
+                                    "Ordem_SQL":  298689,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "07/10/2026",
+                                    "Descricao":  "Pagamento de conta (Operação Capital de Giro 29/42) - Fornecedor 10091 - BANCO BRADESCO SA",
+                                    "Valor":  5814.16,
+                                    "Estagio":  "PROGRAMADO",
+                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                },
+                                {
                                     "Ordem_SQL":  298589,
                                     "Banco":  "BRADESCO",
                                     "Data":  "08/10/2026",
@@ -4442,20 +4462,6 @@
                                 }
                             ],
     "pagamentos_previstos":  [
-                                 {
-                                     "Ordem_SQL":  569402,
-                                     "Emissao":  "07/06/2024",
-                                     "Vencimento":  "07/10/2026",
-                                     "Codigo_Fornecedor":  "10091",
-                                     "Fornecedor":  "BANCO BRADESCO SA",
-                                     "Descricao":  "Operação Capital de Giro 29/42",
-                                     "Valor":  5811.21,
-                                     "Ordem_Conta_Bancaria":  0,
-                                     "Banco_Projetado":  "NÃO ALOCADO",
-                                     "Origem_Alocacao":  "NÃO ALOCADO",
-                                     "Estagio":  "PREVISTO",
-                                     "Tipo_Registro":  "CONTA_A_PAGAR"
-                                 },
                                  {
                                      "Ordem_SQL":  621978,
                                      "Emissao":  "30/12/2025",
@@ -5577,6 +5583,20 @@
                                      "Tipo_Registro":  "CONTA_A_PAGAR"
                                  },
                                  {
+                                     "Ordem_SQL":  629943,
+                                     "Emissao":  "07/10/2026",
+                                     "Vencimento":  "05/11/2026",
+                                     "Codigo_Fornecedor":  "11046",
+                                     "Fornecedor":  "NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
+                                     "Descricao":  "BOLETO ITAU - Entrada 91199 - 1/2",
+                                     "Valor":  789.00,
+                                     "Ordem_Conta_Bancaria":  0,
+                                     "Banco_Projetado":  "NÃO ALOCADO",
+                                     "Origem_Alocacao":  "NÃO ALOCADO",
+                                     "Estagio":  "PREVISTO",
+                                     "Tipo_Registro":  "CONTA_A_PAGAR"
+                                 },
+                                 {
                                      "Ordem_SQL":  569403,
                                      "Emissao":  "07/06/2024",
                                      "Vencimento":  "07/11/2026",
@@ -6585,6 +6605,20 @@
                                      "Tipo_Registro":  "CONTA_A_PAGAR"
                                  },
                                  {
+                                     "Ordem_SQL":  629944,
+                                     "Emissao":  "07/10/2026",
+                                     "Vencimento":  "05/12/2026",
+                                     "Codigo_Fornecedor":  "11046",
+                                     "Fornecedor":  "NOVUM DISTRIBUIDORA DE PECAS INDUSTRIAIS E AUTOMOTIVAS LTDA ",
+                                     "Descricao":  "BOLETO ITAU - Entrada 91199 - 2/2",
+                                     "Valor":  789.00,
+                                     "Ordem_Conta_Bancaria":  0,
+                                     "Banco_Projetado":  "NÃO ALOCADO",
+                                     "Origem_Alocacao":  "NÃO ALOCADO",
+                                     "Estagio":  "PREVISTO",
+                                     "Tipo_Registro":  "CONTA_A_PAGAR"
+                                 },
+                                 {
                                      "Ordem_SQL":  569404,
                                      "Emissao":  "07/06/2024",
                                      "Vencimento":  "07/12/2026",
@@ -7351,6 +7385,24 @@
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                    },
                                    {
+                                       "Ordem_SQL":  298688,
+                                       "Banco":  "ITAU",
+                                       "Data":  "07/10/2026",
+                                       "Descricao":  "COMB COMPASS",
+                                       "Valor":  323.69,
+                                       "Estagio":  "PROGRAMADO",
+                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                   },
+                                   {
+                                       "Ordem_SQL":  298689,
+                                       "Banco":  "BRADESCO",
+                                       "Data":  "07/10/2026",
+                                       "Descricao":  "Pagamento de conta (Operação Capital de Giro 29/42) - Fornecedor 10091 - BANCO BRADESCO SA",
+                                       "Valor":  5814.16,
+                                       "Estagio":  "PROGRAMADO",
+                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                   },
+                                   {
                                        "Ordem_SQL":  298589,
                                        "Banco":  "BRADESCO",
                                        "Data":  "08/10/2026",
@@ -7842,18 +7894,18 @@
                                     "Codigo":  1,
                                     "Nome":  "Caixa LOJA",
                                     "Classificacao_PIF":  "OPERACIONAL",
-                                    "Data_Abertura":  "06/10/2026 10:04:58",
+                                    "Data_Abertura":  "07/10/2026 07:35:07",
                                     "Saldo_Atual":  315.8900,
                                     "Entradas_Desde_Abertura":  315.8900,
                                     "Saidas_Desde_Abertura":  0.0000,
-                                    "Qtd_Movimentos":  2
+                                    "Qtd_Movimentos":  1
                                 },
                                 {
                                     "Ordem_Caixa":  5,
                                     "Codigo":  10,
                                     "Nome":  "TESOURARIA",
                                     "Classificacao_PIF":  "MISTO",
-                                    "Data_Abertura":  "06/10/2026 11:37:19",
+                                    "Data_Abertura":  "07/10/2026 07:05:41",
                                     "Saldo_Atual":  22.5981,
                                     "Entradas_Desde_Abertura":  22.5981,
                                     "Saidas_Desde_Abertura":  0.0000,
@@ -7879,23 +7931,23 @@
     "bancos":  [
                    {
                        "Banco":  "BRADESCO",
-                       "Saldo_Atual":  16984.28,
-                       "Entradas_Futuras":  119612.63,
-                       "Entradas_Aloc_Pendente":  90615.73,
+                       "Saldo_Atual":  27175.34,
+                       "Entradas_Futuras":  109297.8,
+                       "Entradas_Aloc_Pendente":  80300.9,
                        "Pagamentos_Futuros":  0,
-                       "Debitos_Programados":  162337.57,
-                       "Saidas_Futuras":  162337.57,
-                       "Saldo_Projetado":  -25740.66
+                       "Debitos_Programados":  168151.73,
+                       "Saidas_Futuras":  168151.73,
+                       "Saldo_Projetado":  -31678.59
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  5448.74,
+                       "Saldo_Atual":  6345.15,
                        "Entradas_Futuras":  132043.41,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
-                       "Debitos_Programados":  0,
-                       "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  137492.15
+                       "Debitos_Programados":  323.69,
+                       "Saidas_Futuras":  323.69,
+                       "Saldo_Projetado":  138064.87
                    },
                    {
                        "Banco":  "BNB",
@@ -7922,23 +7974,23 @@
                        "Saldo_Atual":  0,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
-                       "Pagamentos_Futuros":  140115.36,
+                       "Pagamentos_Futuros":  135882.15,
                        "Debitos_Programados":  0,
-                       "Saidas_Futuras":  140115.36,
-                       "Saldo_Projetado":  -140115.36
+                       "Saidas_Futuras":  135882.15,
+                       "Saldo_Projetado":  -135882.15
                    }
                ],
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -57526.41,
+                                 "Menor_Saldo":  -63464.34,
                                  "Data_Menor_Saldo":  "13/11/2026",
                                  "Primeira_Data_Risco":  "26/10/2026",
-                                 "Necessidade_Cobertura":  57526.41
+                                 "Necessidade_Cobertura":  63464.34
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  5448.74,
+                                 "Menor_Saldo":  6345.15,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -7962,68 +8014,68 @@
                     "hoje":  {
                                  "dias":  0,
                                  "recebiveis":  6073.30,
-                                 "pagamentos":  5880.43,
-                                 "debitos_programados":  2345.19,
-                                 "pagamentos_nao_alocados":  5880.43,
-                                 "total_saidas":  8225.62,
+                                 "pagamentos":  69.22,
+                                 "debitos_programados":  8483.04,
+                                 "pagamentos_nao_alocados":  69.22,
+                                 "total_saidas":  8552.26,
                                  "qtd_recebiveis":  3,
-                                 "qtd_pagamentos":  2,
-                                 "qtd_debitos_programados":  4
+                                 "qtd_pagamentos":  1,
+                                 "qtd_debitos_programados":  6
                              },
                     "7d":  {
                                "dias":  7,
                                "recebiveis":  83504.62,
-                               "pagamentos":  14876.43,
-                               "debitos_programados":  49033.74,
-                               "pagamentos_nao_alocados":  14876.43,
-                               "total_saidas":  63910.17,
+                               "pagamentos":  9065.22,
+                               "debitos_programados":  55171.59,
+                               "pagamentos_nao_alocados":  9065.22,
+                               "total_saidas":  64236.81,
                                "qtd_recebiveis":  16,
-                               "qtd_pagamentos":  19,
-                               "qtd_debitos_programados":  16
+                               "qtd_pagamentos":  18,
+                               "qtd_debitos_programados":  18
                            },
                     "15d":  {
                                 "dias":  15,
                                 "recebiveis":  118041.90,
-                                "pagamentos":  34985.53,
-                                "debitos_programados":  69063.98,
-                                "pagamentos_nao_alocados":  34985.53,
-                                "total_saidas":  104049.51,
+                                "pagamentos":  29174.32,
+                                "debitos_programados":  75201.83,
+                                "pagamentos_nao_alocados":  29174.32,
+                                "total_saidas":  104376.15,
                                 "qtd_recebiveis":  35,
-                                "qtd_pagamentos":  42,
-                                "qtd_debitos_programados":  25
+                                "qtd_pagamentos":  41,
+                                "qtd_debitos_programados":  27
                             },
                     "30d":  {
                                 "dias":  30,
-                                "recebiveis":  184495.91,
-                                "pagamentos":  50012.40,
-                                "debitos_programados":  137863.18,
-                                "pagamentos_nao_alocados":  50012.40,
-                                "total_saidas":  187875.58,
-                                "qtd_recebiveis":  62,
+                                "recebiveis":  174181.08,
+                                "pagamentos":  44990.19,
+                                "debitos_programados":  144001.03,
+                                "pagamentos_nao_alocados":  44990.19,
+                                "total_saidas":  188991.22,
+                                "qtd_recebiveis":  61,
                                 "qtd_pagamentos":  81,
-                                "qtd_debitos_programados":  46
+                                "qtd_debitos_programados":  48
                             },
                     "60d":  {
                                 "dias":  60,
-                                "recebiveis":  254416.04,
-                                "pagamentos":  101643.05,
-                                "debitos_programados":  154669.81,
-                                "pagamentos_nao_alocados":  101643.05,
-                                "total_saidas":  256312.86,
-                                "qtd_recebiveis":  80,
-                                "qtd_pagamentos":  153,
-                                "qtd_debitos_programados":  54
+                                "recebiveis":  244101.21,
+                                "pagamentos":  97409.84,
+                                "debitos_programados":  160807.66,
+                                "pagamentos_nao_alocados":  97409.84,
+                                "total_saidas":  258217.50,
+                                "qtd_recebiveis":  79,
+                                "qtd_pagamentos":  154,
+                                "qtd_debitos_programados":  56
                             },
                     "90d":  {
                                 "dias":  90,
-                                "recebiveis":  255296.04,
-                                "pagamentos":  140115.36,
-                                "debitos_programados":  162337.57,
-                                "pagamentos_nao_alocados":  140115.36,
-                                "total_saidas":  302452.93,
-                                "qtd_recebiveis":  82,
-                                "qtd_pagamentos":  205,
-                                "qtd_debitos_programados":  57
+                                "recebiveis":  244981.21,
+                                "pagamentos":  135882.15,
+                                "debitos_programados":  168475.42,
+                                "pagamentos_nao_alocados":  135882.15,
+                                "total_saidas":  304357.57,
+                                "qtd_recebiveis":  81,
+                                "qtd_pagamentos":  206,
+                                "qtd_debitos_programados":  59
                             }
                 },
     "parametros":  {
@@ -8038,35 +8090,35 @@
                        "horizonte_sql_dias":  90
                    },
     "auditoria":  {
-                      "saldo_operacional":  31407.21,
+                      "saldo_operacional":  42494.68,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  475326.18,
+                      "saldo_consolidado":  486413.65,
                       "bnb_operacional":  8036.93,
                       "bnb_investimento":  443918.97,
                       "bnb_total":  451955.90,
                       "caixa_operacional":  315.89,
                       "caixa_misto":  22.5981,
                       "caixa_particular":  -1211.69,
-                      "recebiveis_30d":  184495.91,
-                      "recebiveis_60d":  254416.04,
-                      "recebiveis_90d":  255296.04,
-                      "recebiveis_aloc_pendente":  90615.73,
-                      "pagamentos_30d":  50012.40,
-                      "pagamentos_60d":  101643.05,
-                      "pagamentos_90d":  140115.36,
-                      "debitos_programados_30d":  137863.18,
-                      "debitos_programados_60d":  154669.81,
-                      "debitos_programados_90d":  162337.57,
-                      "pagamentos_nao_alocados_30d":  50012.40,
-                      "pagamentos_nao_alocados_60d":  101643.05,
-                      "pagamentos_nao_alocados_90d":  140115.36,
-                      "qtd_recebiveis_90d":  82,
-                      "qtd_pagamentos_90d":  205,
-                      "qtd_debitos_programados_90d":  57,
-                      "total_saidas_30d":  187875.58,
-                      "total_saidas_60d":  256312.86,
-                      "total_saidas_90d":  302452.93,
-                      "conciliacao_pagamentos_90d":  140115.36,
+                      "recebiveis_30d":  174181.08,
+                      "recebiveis_60d":  244101.21,
+                      "recebiveis_90d":  244981.21,
+                      "recebiveis_aloc_pendente":  80300.9,
+                      "pagamentos_30d":  44990.19,
+                      "pagamentos_60d":  97409.84,
+                      "pagamentos_90d":  135882.15,
+                      "debitos_programados_30d":  144001.03,
+                      "debitos_programados_60d":  160807.66,
+                      "debitos_programados_90d":  168475.42,
+                      "pagamentos_nao_alocados_30d":  44990.19,
+                      "pagamentos_nao_alocados_60d":  97409.84,
+                      "pagamentos_nao_alocados_90d":  135882.15,
+                      "qtd_recebiveis_90d":  81,
+                      "qtd_pagamentos_90d":  206,
+                      "qtd_debitos_programados_90d":  59,
+                      "total_saidas_30d":  188991.22,
+                      "total_saidas_60d":  258217.50,
+                      "total_saidas_90d":  304357.57,
+                      "conciliacao_pagamentos_90d":  135882.15,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
