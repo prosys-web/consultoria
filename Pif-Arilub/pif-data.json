@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "09/10/2026",
-                     "gerado_em":  "09/10/2026 08:00:04",
+                     "gerado_em":  "09/10/2026 12:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.4"
                  },
@@ -36,8 +36,8 @@
                        "Ordem":  3021,
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "07/10/2026",
-                       "Saldo":  6345.1500
+                       "Data_Posicao":  "09/10/2026",
+                       "Saldo":  21705.2500
                    },
                    {
                        "Ordem":  3022,
@@ -740,6 +740,30 @@
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
+                       },
+                       {
+                           "Ordem_SQL":  629958,
+                           "Emissao":  "09/10/2026",
+                           "Vencimento":  "08/11/2026",
+                           "Codigo_Cliente":  "2277",
+                           "Cliente":  "SECRETARIA DA EDUCACAO",
+                           "Descricao":  "Saída 91218 - 1/1",
+                           "Valor":  42270.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
+                       },
+                       {
+                           "Ordem_SQL":  629960,
+                           "Emissao":  "09/10/2026",
+                           "Vencimento":  "08/11/2026",
+                           "Codigo_Cliente":  "2277",
+                           "Cliente":  "SECRETARIA DA EDUCACAO",
+                           "Descricao":  "Saída 91219 - 1/1",
+                           "Valor":  7500.00,
+                           "Ordem_Conta_Bancaria":  2018,
+                           "Banco_Projetado":  "BRADESCO",
+                           "Origem_Alocacao":  "ALOC. PENDENTE"
                        },
                        {
                            "Ordem_SQL":  629666,
@@ -3856,6 +3880,15 @@
                                     "Data":  "09/10/2026",
                                     "Descricao":  "NFS-e 818",
                                     "Valor":  660.03,
+                                    "Estagio":  "PROGRAMADO",
+                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                },
+                                {
+                                    "Ordem_SQL":  298699,
+                                    "Banco":  "ITAU",
+                                    "Data":  "09/10/2026",
+                                    "Descricao":  "Cl. 371/11110/10301/4177. Sequência. 91110/91200.",
+                                    "Valor":  95.00,
                                     "Estagio":  "PROGRAMADO",
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                 },
@@ -7188,6 +7221,15 @@
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO"
                                    },
                                    {
+                                       "Ordem_SQL":  298699,
+                                       "Banco":  "ITAU",
+                                       "Data":  "09/10/2026",
+                                       "Descricao":  "Cl. 371/11110/10301/4177. Sequência. 91110/91200.",
+                                       "Valor":  95.00,
+                                       "Estagio":  "PROGRAMADO",
+                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO"
+                                   },
+                                   {
                                        "Ordem_SQL":  298586,
                                        "Banco":  "BRADESCO",
                                        "Data":  "12/10/2026",
@@ -7652,22 +7694,22 @@
                                     "Codigo":  1,
                                     "Nome":  "Caixa LOJA",
                                     "Classificacao_PIF":  "OPERACIONAL",
-                                    "Data_Abertura":  "08/10/2026 14:01:56",
+                                    "Data_Abertura":  "09/10/2026 09:06:06",
                                     "Saldo_Atual":  385.8900,
                                     "Entradas_Desde_Abertura":  385.8900,
                                     "Saidas_Desde_Abertura":  0.0000,
-                                    "Qtd_Movimentos":  2
+                                    "Qtd_Movimentos":  1
                                 },
                                 {
                                     "Ordem_Caixa":  5,
                                     "Codigo":  10,
                                     "Nome":  "TESOURARIA",
                                     "Classificacao_PIF":  "MISTO",
-                                    "Data_Abertura":  "07/10/2026 07:05:41",
-                                    "Saldo_Atual":  22.5981,
+                                    "Data_Abertura":  "09/10/2026 10:22:16",
+                                    "Saldo_Atual":  -177.4019,
                                     "Entradas_Desde_Abertura":  22.5981,
-                                    "Saidas_Desde_Abertura":  0.0000,
-                                    "Qtd_Movimentos":  1
+                                    "Saidas_Desde_Abertura":  200.0000,
+                                    "Qtd_Movimentos":  2
                                 },
                                 {
                                     "Ordem_Caixa":  6,
@@ -7682,7 +7724,7 @@
                                 }
                             ],
                   "operacional":  385.89,
-                  "misto":  22.5981,
+                  "misto":  -177.4019,
                   "particular":  -1211.69,
                   "regra_consolidacao":  "INFORMATIVO; nao somar automaticamente ao saldo consolidado bancario."
               },
@@ -7690,22 +7732,22 @@
                    {
                        "Banco":  "BRADESCO",
                        "Saldo_Atual":  19565.77,
-                       "Entradas_Futuras":  109297.8,
-                       "Entradas_Aloc_Pendente":  80300.9,
+                       "Entradas_Futuras":  159067.8,
+                       "Entradas_Aloc_Pendente":  130070.9,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  158575.96,
                        "Saidas_Futuras":  158575.96,
-                       "Saldo_Projetado":  -29712.39
+                       "Saldo_Projetado":  20057.61
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  6345.15,
+                       "Saldo_Atual":  21705.25,
                        "Entradas_Futuras":  116212.18,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
-                       "Debitos_Programados":  0,
-                       "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  122557.33
+                       "Debitos_Programados":  95,
+                       "Saidas_Futuras":  95,
+                       "Saldo_Projetado":  137822.43
                    },
                    {
                        "Banco":  "BNB",
@@ -7741,14 +7783,14 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -61498.14,
-                                 "Data_Menor_Saldo":  "13/11/2026",
+                                 "Menor_Saldo":  -47858.00,
+                                 "Data_Menor_Saldo":  "06/11/2026",
                                  "Primeira_Data_Risco":  "26/10/2026",
-                                 "Necessidade_Cobertura":  61498.14
+                                 "Necessidade_Cobertura":  47858.00
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  6345.15,
+                                 "Menor_Saldo":  21705.25,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -7773,67 +7815,67 @@
                                  "dias":  0,
                                  "recebiveis":  5434.46,
                                  "pagamentos":  0,
-                                 "debitos_programados":  2995.70,
+                                 "debitos_programados":  3090.70,
                                  "pagamentos_nao_alocados":  0,
-                                 "total_saidas":  2995.70,
+                                 "total_saidas":  3090.70,
                                  "qtd_recebiveis":  4,
                                  "qtd_pagamentos":  0,
-                                 "qtd_debitos_programados":  2
+                                 "qtd_debitos_programados":  3
                              },
                     "7d":  {
                                "dias":  7,
                                "recebiveis":  82350.33,
                                "pagamentos":  11878.24,
-                               "debitos_programados":  47607.80,
+                               "debitos_programados":  47702.80,
                                "pagamentos_nao_alocados":  11878.24,
-                               "total_saidas":  59486.04,
+                               "total_saidas":  59581.04,
                                "qtd_recebiveis":  19,
                                "qtd_pagamentos":  31,
-                               "qtd_debitos_programados":  12
+                               "qtd_debitos_programados":  13
                            },
                     "15d":  {
                                 "dias":  15,
                                 "recebiveis":  115022.94,
                                 "pagamentos":  28793.31,
-                                "debitos_programados":  70259.11,
+                                "debitos_programados":  70354.11,
                                 "pagamentos_nao_alocados":  28793.31,
-                                "total_saidas":  99052.42,
+                                "total_saidas":  99147.42,
                                 "qtd_recebiveis":  34,
                                 "qtd_pagamentos":  38,
-                                "qtd_debitos_programados":  22
+                                "qtd_debitos_programados":  23
                             },
                     "30d":  {
                                 "dias":  30,
-                                "recebiveis":  158349.85,
+                                "recebiveis":  208119.85,
                                 "pagamentos":  49308.37,
-                                "debitos_programados":  134101.57,
+                                "debitos_programados":  134196.57,
                                 "pagamentos_nao_alocados":  49308.37,
-                                "total_saidas":  183409.94,
-                                "qtd_recebiveis":  56,
+                                "total_saidas":  183504.94,
+                                "qtd_recebiveis":  58,
                                 "qtd_pagamentos":  82,
-                                "qtd_debitos_programados":  41
+                                "qtd_debitos_programados":  42
                             },
                     "60d":  {
                                 "dias":  60,
-                                "recebiveis":  228269.98,
+                                "recebiveis":  278039.98,
                                 "pagamentos":  102280.16,
-                                "debitos_programados":  150908.20,
+                                "debitos_programados":  151003.20,
                                 "pagamentos_nao_alocados":  102280.16,
-                                "total_saidas":  253188.36,
-                                "qtd_recebiveis":  74,
+                                "total_saidas":  253283.36,
+                                "qtd_recebiveis":  76,
                                 "qtd_pagamentos":  157,
-                                "qtd_debitos_programados":  49
+                                "qtd_debitos_programados":  50
                             },
                     "90d":  {
                                 "dias":  90,
-                                "recebiveis":  229149.98,
+                                "recebiveis":  278919.98,
                                 "pagamentos":  139832.23,
-                                "debitos_programados":  158575.96,
+                                "debitos_programados":  158670.96,
                                 "pagamentos_nao_alocados":  139832.23,
-                                "total_saidas":  298408.19,
-                                "qtd_recebiveis":  76,
+                                "total_saidas":  298503.19,
+                                "qtd_recebiveis":  78,
                                 "qtd_pagamentos":  204,
-                                "qtd_debitos_programados":  52
+                                "qtd_debitos_programados":  53
                             }
                 },
     "parametros":  {
@@ -7848,34 +7890,34 @@
                        "horizonte_sql_dias":  90
                    },
     "auditoria":  {
-                      "saldo_operacional":  34885.11,
+                      "saldo_operacional":  50245.21,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  478804.08,
+                      "saldo_consolidado":  494164.18,
                       "bnb_operacional":  8036.93,
                       "bnb_investimento":  443918.97,
                       "bnb_total":  451955.90,
                       "caixa_operacional":  385.89,
-                      "caixa_misto":  22.5981,
+                      "caixa_misto":  -177.4019,
                       "caixa_particular":  -1211.69,
-                      "recebiveis_30d":  158349.85,
-                      "recebiveis_60d":  228269.98,
-                      "recebiveis_90d":  229149.98,
-                      "recebiveis_aloc_pendente":  80300.9,
+                      "recebiveis_30d":  208119.85,
+                      "recebiveis_60d":  278039.98,
+                      "recebiveis_90d":  278919.98,
+                      "recebiveis_aloc_pendente":  130070.9,
                       "pagamentos_30d":  49308.37,
                       "pagamentos_60d":  102280.16,
                       "pagamentos_90d":  139832.23,
-                      "debitos_programados_30d":  134101.57,
-                      "debitos_programados_60d":  150908.20,
-                      "debitos_programados_90d":  158575.96,
+                      "debitos_programados_30d":  134196.57,
+                      "debitos_programados_60d":  151003.20,
+                      "debitos_programados_90d":  158670.96,
                       "pagamentos_nao_alocados_30d":  49308.37,
                       "pagamentos_nao_alocados_60d":  102280.16,
                       "pagamentos_nao_alocados_90d":  139832.23,
-                      "qtd_recebiveis_90d":  76,
+                      "qtd_recebiveis_90d":  78,
                       "qtd_pagamentos_90d":  204,
-                      "qtd_debitos_programados_90d":  52,
-                      "total_saidas_30d":  183409.94,
-                      "total_saidas_60d":  253188.36,
-                      "total_saidas_90d":  298408.19,
+                      "qtd_debitos_programados_90d":  53,
+                      "total_saidas_30d":  183504.94,
+                      "total_saidas_60d":  253283.36,
+                      "total_saidas_90d":  298503.19,
                       "conciliacao_pagamentos_90d":  139832.23,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
