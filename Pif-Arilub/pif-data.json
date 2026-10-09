@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "09/10/2026",
-                     "gerado_em":  "09/10/2026 12:00:02",
+                     "gerado_em":  "09/10/2026 18:00:04",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.4"
                  },
@@ -50,8 +50,8 @@
                        "Ordem":  3024,
                        "Banco":  "SANTANDER",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "05/10/2026",
-                       "Saldo":  937.2600
+                       "Data_Posicao":  "09/10/2026",
+                       "Saldo":  970.2600
                    },
                    {
                        "Ordem":  1017,
@@ -7695,10 +7695,10 @@
                                     "Nome":  "Caixa LOJA",
                                     "Classificacao_PIF":  "OPERACIONAL",
                                     "Data_Abertura":  "09/10/2026 09:06:06",
-                                    "Saldo_Atual":  385.8900,
-                                    "Entradas_Desde_Abertura":  385.8900,
+                                    "Saldo_Atual":  835.8900,
+                                    "Entradas_Desde_Abertura":  835.8900,
                                     "Saidas_Desde_Abertura":  0.0000,
-                                    "Qtd_Movimentos":  1
+                                    "Qtd_Movimentos":  2
                                 },
                                 {
                                     "Ordem_Caixa":  5,
@@ -7723,7 +7723,7 @@
                                     "Qtd_Movimentos":  4
                                 }
                             ],
-                  "operacional":  385.89,
+                  "operacional":  835.89,
                   "misto":  -177.4019,
                   "particular":  -1211.69,
                   "regra_consolidacao":  "INFORMATIVO; nao somar automaticamente ao saldo consolidado bancario."
@@ -7761,13 +7761,13 @@
                    },
                    {
                        "Banco":  "SANTANDER",
-                       "Saldo_Atual":  937.26,
+                       "Saldo_Atual":  970.26,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  0,
                        "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  937.26
+                       "Saldo_Projetado":  970.26
                    },
                    {
                        "Banco":  "NÃO ALOCADO",
@@ -7804,7 +7804,7 @@
                              },
                              {
                                  "Banco":  "SANTANDER",
-                                 "Menor_Saldo":  937.26,
+                                 "Menor_Saldo":  970.26,
                                  "Data_Menor_Saldo":  null,
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -7890,13 +7890,13 @@
                        "horizonte_sql_dias":  90
                    },
     "auditoria":  {
-                      "saldo_operacional":  50245.21,
+                      "saldo_operacional":  50278.21,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  494164.18,
+                      "saldo_consolidado":  494197.18,
                       "bnb_operacional":  8036.93,
                       "bnb_investimento":  443918.97,
                       "bnb_total":  451955.90,
-                      "caixa_operacional":  385.89,
+                      "caixa_operacional":  835.89,
                       "caixa_misto":  -177.4019,
                       "caixa_particular":  -1211.69,
                       "recebiveis_30d":  208119.85,
