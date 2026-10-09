@@ -1,8 +1,8 @@
 ﻿{
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
-                     "data_base":  "08/10/2026",
-                     "gerado_em":  "08/10/2026 22:00:04",
+                     "data_base":  "09/10/2026",
+                     "gerado_em":  "09/10/2026 02:00:04",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.4"
                  },
@@ -69,54 +69,6 @@
                    }
                ],
     "recebiveis":  [
-                       {
-                           "Ordem_SQL":  628492,
-                           "Emissao":  "13/08/2026",
-                           "Vencimento":  "08/10/2026",
-                           "Codigo_Cliente":  "4179",
-                           "Cliente":  "Paraipaba Agroindustrial Ltda",
-                           "Descricao":  "Saída 90567 - 4/4",
-                           "Valor":  1658.48,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
-                       {
-                           "Ordem_SQL":  628794,
-                           "Emissao":  "27/08/2026",
-                           "Vencimento":  "08/10/2026",
-                           "Codigo_Cliente":  "2529",
-                           "Cliente":  "G S Incorporadora E Loteadora Ltda",
-                           "Descricao":  "Saída 90753 - 2/2",
-                           "Valor":  717.51,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
-                       {
-                           "Ordem_SQL":  629195,
-                           "Emissao":  "10/09/2026",
-                           "Vencimento":  "08/10/2026",
-                           "Codigo_Cliente":  "3809",
-                           "Cliente":  "Raysan Transportes De Cargas Ltda",
-                           "Descricao":  "Saída 90906 - 1/1",
-                           "Valor":  1161.22,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
-                       {
-                           "Ordem_SQL":  629255,
-                           "Emissao":  "10/09/2026",
-                           "Vencimento":  "08/10/2026",
-                           "Codigo_Cliente":  "4425",
-                           "Cliente":  "Jeri-1 Empreendimento Imobiliario Spe Ltda",
-                           "Descricao":  "Saída 90916 - 1/1",
-                           "Valor":  8612.20,
-                           "Ordem_Conta_Bancaria":  3021,
-                           "Banco_Projetado":  "ITAU",
-                           "Origem_Alocacao":  "SHOP9"
-                       },
                        {
                            "Ordem_SQL":  628502,
                            "Emissao":  "14/08/2026",
@@ -1031,34 +983,6 @@
                        }
                    ],
     "pagamentos":  [
-                       {
-                           "Ordem_SQL":  620481,
-                           "Emissao":  "15/12/2025",
-                           "Vencimento":  "08/10/2026",
-                           "Codigo_Fornecedor":  "10023",
-                           "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
-                           "Descricao":  "ENER. OSC 63 1106013 10/12",
-                           "Valor":  185.31,
-                           "Ordem_Conta_Bancaria":  0,
-                           "Banco_Projetado":  "NÃO ALOCADO",
-                           "Origem_Alocacao":  "NÃO ALOCADO",
-                           "Estagio":  "PREVISTO",
-                           "Tipo_Registro":  "CONTA_A_PAGAR"
-                       },
-                       {
-                           "Ordem_SQL":  621990,
-                           "Emissao":  "30/12/2025",
-                           "Vencimento":  "08/10/2026",
-                           "Codigo_Fornecedor":  "10026",
-                           "Fornecedor":  "Nio Fibra",
-                           "Descricao":  "linha res 3219-6300 NIO FIBRA A-402437544825 10/12",
-                           "Valor":  126.48,
-                           "Ordem_Conta_Bancaria":  0,
-                           "Banco_Projetado":  "NÃO ALOCADO",
-                           "Origem_Alocacao":  "NÃO ALOCADO",
-                           "Estagio":  "PREVISTO",
-                           "Tipo_Registro":  "CONTA_A_PAGAR"
-                       },
                        {
                            "Ordem_SQL":  621966,
                            "Emissao":  "30/12/2025",
@@ -3900,18 +3824,23 @@
                            "Origem_Alocacao":  "NÃO ALOCADO",
                            "Estagio":  "PREVISTO",
                            "Tipo_Registro":  "CONTA_A_PAGAR"
+                       },
+                       {
+                           "Ordem_SQL":  569405,
+                           "Emissao":  "07/06/2024",
+                           "Vencimento":  "07/01/2027",
+                           "Codigo_Fornecedor":  "10091",
+                           "Fornecedor":  "BANCO BRADESCO SA",
+                           "Descricao":  "Operação Capital de Giro 32/42",
+                           "Valor":  4331.09,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "NÃO ALOCADO",
+                           "Origem_Alocacao":  "NÃO ALOCADO",
+                           "Estagio":  "PREVISTO",
+                           "Tipo_Registro":  "CONTA_A_PAGAR"
                        }
                    ],
     "debitos_programados":  [
-                                {
-                                    "Ordem_SQL":  298589,
-                                    "Banco":  "BRADESCO",
-                                    "Data":  "08/10/2026",
-                                    "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 91032 - 1/4) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                    "Valor":  1416.42,
-                                    "Estagio":  "PROGRAMADO",
-                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO"
-                                },
                                 {
                                     "Ordem_SQL":  298605,
                                     "Banco":  "BRADESCO",
@@ -4382,34 +4311,6 @@
                                 }
                             ],
     "pagamentos_previstos":  [
-                                 {
-                                     "Ordem_SQL":  620481,
-                                     "Emissao":  "15/12/2025",
-                                     "Vencimento":  "08/10/2026",
-                                     "Codigo_Fornecedor":  "10023",
-                                     "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
-                                     "Descricao":  "ENER. OSC 63 1106013 10/12",
-                                     "Valor":  185.31,
-                                     "Ordem_Conta_Bancaria":  0,
-                                     "Banco_Projetado":  "NÃO ALOCADO",
-                                     "Origem_Alocacao":  "NÃO ALOCADO",
-                                     "Estagio":  "PREVISTO",
-                                     "Tipo_Registro":  "CONTA_A_PAGAR"
-                                 },
-                                 {
-                                     "Ordem_SQL":  621990,
-                                     "Emissao":  "30/12/2025",
-                                     "Vencimento":  "08/10/2026",
-                                     "Codigo_Fornecedor":  "10026",
-                                     "Fornecedor":  "Nio Fibra",
-                                     "Descricao":  "linha res 3219-6300 NIO FIBRA A-402437544825 10/12",
-                                     "Valor":  126.48,
-                                     "Ordem_Conta_Bancaria":  0,
-                                     "Banco_Projetado":  "NÃO ALOCADO",
-                                     "Origem_Alocacao":  "NÃO ALOCADO",
-                                     "Estagio":  "PREVISTO",
-                                     "Tipo_Registro":  "CONTA_A_PAGAR"
-                                 },
                                  {
                                      "Ordem_SQL":  621966,
                                      "Emissao":  "30/12/2025",
@@ -7251,18 +7152,23 @@
                                      "Origem_Alocacao":  "NÃO ALOCADO",
                                      "Estagio":  "PREVISTO",
                                      "Tipo_Registro":  "CONTA_A_PAGAR"
+                                 },
+                                 {
+                                     "Ordem_SQL":  569405,
+                                     "Emissao":  "07/06/2024",
+                                     "Vencimento":  "07/01/2027",
+                                     "Codigo_Fornecedor":  "10091",
+                                     "Fornecedor":  "BANCO BRADESCO SA",
+                                     "Descricao":  "Operação Capital de Giro 32/42",
+                                     "Valor":  4331.09,
+                                     "Ordem_Conta_Bancaria":  0,
+                                     "Banco_Projetado":  "NÃO ALOCADO",
+                                     "Origem_Alocacao":  "NÃO ALOCADO",
+                                     "Estagio":  "PREVISTO",
+                                     "Tipo_Registro":  "CONTA_A_PAGAR"
                                  }
                              ],
     "pagamentos_programados":  [
-                                   {
-                                       "Ordem_SQL":  298589,
-                                       "Banco":  "BRADESCO",
-                                       "Data":  "08/10/2026",
-                                       "Descricao":  "Pagamento de conta (boleto banco do brasil - Entrada 91032 - 1/4) - Fornecedor 10839 - Vecchi Lubrificantes Ltda",
-                                       "Valor":  1416.42,
-                                       "Estagio":  "PROGRAMADO",
-                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO"
-                                   },
                                    {
                                        "Ordem_SQL":  298605,
                                        "Banco":  "BRADESCO",
@@ -7787,19 +7693,19 @@
                        "Entradas_Futuras":  109297.8,
                        "Entradas_Aloc_Pendente":  80300.9,
                        "Pagamentos_Futuros":  0,
-                       "Debitos_Programados":  159992.38,
-                       "Saidas_Futuras":  159992.38,
-                       "Saldo_Projetado":  -31128.81
+                       "Debitos_Programados":  158575.96,
+                       "Saidas_Futuras":  158575.96,
+                       "Saldo_Projetado":  -29712.39
                    },
                    {
                        "Banco":  "ITAU",
                        "Saldo_Atual":  6345.15,
-                       "Entradas_Futuras":  128361.59,
+                       "Entradas_Futuras":  116212.18,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  0,
                        "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  134706.74
+                       "Saldo_Projetado":  122557.33
                    },
                    {
                        "Banco":  "BNB",
@@ -7826,19 +7732,19 @@
                        "Saldo_Atual":  0,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
-                       "Pagamentos_Futuros":  135812.93,
+                       "Pagamentos_Futuros":  139832.23,
                        "Debitos_Programados":  0,
-                       "Saidas_Futuras":  135812.93,
-                       "Saldo_Projetado":  -135812.93
+                       "Saidas_Futuras":  139832.23,
+                       "Saldo_Projetado":  -139832.23
                    }
                ],
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -62914.56,
+                                 "Menor_Saldo":  -61498.14,
                                  "Data_Menor_Saldo":  "13/11/2026",
                                  "Primeira_Data_Risco":  "26/10/2026",
-                                 "Necessidade_Cobertura":  62914.56
+                                 "Necessidade_Cobertura":  61498.14
                              },
                              {
                                  "Banco":  "ITAU",
@@ -7865,69 +7771,69 @@
     "janelas":  {
                     "hoje":  {
                                  "dias":  0,
-                                 "recebiveis":  12149.41,
-                                 "pagamentos":  311.79,
-                                 "debitos_programados":  1416.42,
-                                 "pagamentos_nao_alocados":  311.79,
-                                 "total_saidas":  1728.21,
+                                 "recebiveis":  5434.46,
+                                 "pagamentos":  0,
+                                 "debitos_programados":  2995.70,
+                                 "pagamentos_nao_alocados":  0,
+                                 "total_saidas":  2995.70,
                                  "qtd_recebiveis":  4,
-                                 "qtd_pagamentos":  2,
-                                 "qtd_debitos_programados":  1
+                                 "qtd_pagamentos":  0,
+                                 "qtd_debitos_programados":  2
                              },
                     "7d":  {
                                "dias":  7,
-                               "recebiveis":  91507.01,
-                               "pagamentos":  12190.03,
-                               "debitos_programados":  46688.55,
-                               "pagamentos_nao_alocados":  12190.03,
-                               "total_saidas":  58878.58,
-                               "qtd_recebiveis":  18,
-                               "qtd_pagamentos":  33,
+                               "recebiveis":  82350.33,
+                               "pagamentos":  11878.24,
+                               "debitos_programados":  47607.80,
+                               "pagamentos_nao_alocados":  11878.24,
+                               "total_saidas":  59486.04,
+                               "qtd_recebiveis":  19,
+                               "qtd_pagamentos":  31,
                                "qtd_debitos_programados":  12
                            },
                     "15d":  {
                                 "dias":  15,
-                                "recebiveis":  119492.35,
-                                "pagamentos":  29105.10,
-                                "debitos_programados":  71675.53,
-                                "pagamentos_nao_alocados":  29105.10,
-                                "total_saidas":  100780.63,
-                                "qtd_recebiveis":  36,
-                                "qtd_pagamentos":  40,
-                                "qtd_debitos_programados":  23
+                                "recebiveis":  115022.94,
+                                "pagamentos":  28793.31,
+                                "debitos_programados":  70259.11,
+                                "pagamentos_nao_alocados":  28793.31,
+                                "total_saidas":  99052.42,
+                                "qtd_recebiveis":  34,
+                                "qtd_pagamentos":  38,
+                                "qtd_debitos_programados":  22
                             },
                     "30d":  {
                                 "dias":  30,
-                                "recebiveis":  170499.26,
-                                "pagamentos":  49321.28,
-                                "debitos_programados":  135517.99,
-                                "pagamentos_nao_alocados":  49321.28,
-                                "total_saidas":  184839.27,
-                                "qtd_recebiveis":  60,
+                                "recebiveis":  158349.85,
+                                "pagamentos":  49308.37,
+                                "debitos_programados":  134101.57,
+                                "pagamentos_nao_alocados":  49308.37,
+                                "total_saidas":  183409.94,
+                                "qtd_recebiveis":  56,
                                 "qtd_pagamentos":  82,
-                                "qtd_debitos_programados":  42
+                                "qtd_debitos_programados":  41
                             },
                     "60d":  {
                                 "dias":  60,
-                                "recebiveis":  240419.39,
-                                "pagamentos":  102293.07,
-                                "debitos_programados":  152324.62,
-                                "pagamentos_nao_alocados":  102293.07,
-                                "total_saidas":  254617.69,
-                                "qtd_recebiveis":  78,
+                                "recebiveis":  228269.98,
+                                "pagamentos":  102280.16,
+                                "debitos_programados":  150908.20,
+                                "pagamentos_nao_alocados":  102280.16,
+                                "total_saidas":  253188.36,
+                                "qtd_recebiveis":  74,
                                 "qtd_pagamentos":  157,
-                                "qtd_debitos_programados":  50
+                                "qtd_debitos_programados":  49
                             },
                     "90d":  {
                                 "dias":  90,
-                                "recebiveis":  241299.39,
-                                "pagamentos":  135812.93,
-                                "debitos_programados":  159992.38,
-                                "pagamentos_nao_alocados":  135812.93,
-                                "total_saidas":  295805.31,
-                                "qtd_recebiveis":  80,
-                                "qtd_pagamentos":  205,
-                                "qtd_debitos_programados":  53
+                                "recebiveis":  229149.98,
+                                "pagamentos":  139832.23,
+                                "debitos_programados":  158575.96,
+                                "pagamentos_nao_alocados":  139832.23,
+                                "total_saidas":  298408.19,
+                                "qtd_recebiveis":  76,
+                                "qtd_pagamentos":  204,
+                                "qtd_debitos_programados":  52
                             }
                 },
     "parametros":  {
@@ -7951,26 +7857,26 @@
                       "caixa_operacional":  385.89,
                       "caixa_misto":  22.5981,
                       "caixa_particular":  -1211.69,
-                      "recebiveis_30d":  170499.26,
-                      "recebiveis_60d":  240419.39,
-                      "recebiveis_90d":  241299.39,
+                      "recebiveis_30d":  158349.85,
+                      "recebiveis_60d":  228269.98,
+                      "recebiveis_90d":  229149.98,
                       "recebiveis_aloc_pendente":  80300.9,
-                      "pagamentos_30d":  49321.28,
-                      "pagamentos_60d":  102293.07,
-                      "pagamentos_90d":  135812.93,
-                      "debitos_programados_30d":  135517.99,
-                      "debitos_programados_60d":  152324.62,
-                      "debitos_programados_90d":  159992.38,
-                      "pagamentos_nao_alocados_30d":  49321.28,
-                      "pagamentos_nao_alocados_60d":  102293.07,
-                      "pagamentos_nao_alocados_90d":  135812.93,
-                      "qtd_recebiveis_90d":  80,
-                      "qtd_pagamentos_90d":  205,
-                      "qtd_debitos_programados_90d":  53,
-                      "total_saidas_30d":  184839.27,
-                      "total_saidas_60d":  254617.69,
-                      "total_saidas_90d":  295805.31,
-                      "conciliacao_pagamentos_90d":  135812.93,
+                      "pagamentos_30d":  49308.37,
+                      "pagamentos_60d":  102280.16,
+                      "pagamentos_90d":  139832.23,
+                      "debitos_programados_30d":  134101.57,
+                      "debitos_programados_60d":  150908.20,
+                      "debitos_programados_90d":  158575.96,
+                      "pagamentos_nao_alocados_30d":  49308.37,
+                      "pagamentos_nao_alocados_60d":  102280.16,
+                      "pagamentos_nao_alocados_90d":  139832.23,
+                      "qtd_recebiveis_90d":  76,
+                      "qtd_pagamentos_90d":  204,
+                      "qtd_debitos_programados_90d":  52,
+                      "total_saidas_30d":  183409.94,
+                      "total_saidas_60d":  253188.36,
+                      "total_saidas_90d":  298408.19,
+                      "conciliacao_pagamentos_90d":  139832.23,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
