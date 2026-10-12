@@ -1,8 +1,8 @@
 ﻿{
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
-                     "data_base":  "11/10/2026",
-                     "gerado_em":  "11/10/2026 22:00:02",
+                     "data_base":  "12/10/2026",
+                     "gerado_em":  "12/10/2026 00:00:02",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.4"
                  },
@@ -69,18 +69,6 @@
                    }
                ],
     "recebiveis":  [
-                       {
-                           "Ordem_SQL":  629262,
-                           "Emissao":  "11/09/2026",
-                           "Vencimento":  "11/10/2026",
-                           "Codigo_Cliente":  "2258",
-                           "Cliente":  "COMPANHIA  DE AGUA E ESGOTO DO CEARA CAGECE",
-                           "Descricao":  "Saída 90922 - 1/1",
-                           "Valor":  46140.00,
-                           "Ordem_Conta_Bancaria":  2018,
-                           "Banco_Projetado":  "BRADESCO",
-                           "Origem_Alocacao":  "ALOC. PENDENTE"
-                       },
                        {
                            "Ordem_SQL":  629369,
                            "Emissao":  "15/09/2026",
@@ -3772,6 +3760,20 @@
                            "Origem_Alocacao":  "NÃO ALOCADO",
                            "Estagio":  "PREVISTO",
                            "Tipo_Registro":  "CONTA_A_PAGAR"
+                       },
+                       {
+                           "Ordem_SQL":  625333,
+                           "Emissao":  "31/03/2026",
+                           "Vencimento":  "10/01/2027",
+                           "Codigo_Fornecedor":  "10035",
+                           "Fornecedor":  "TIM S.A.",
+                           "Descricao":  "TIM MOVEL  10/12",
+                           "Valor":  339.72,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "NÃO ALOCADO",
+                           "Origem_Alocacao":  "NÃO ALOCADO",
+                           "Estagio":  "PREVISTO",
+                           "Tipo_Registro":  "CONTA_A_PAGAR"
                        }
                    ],
     "debitos_programados":  [
@@ -7040,6 +7042,20 @@
                                      "Origem_Alocacao":  "NÃO ALOCADO",
                                      "Estagio":  "PREVISTO",
                                      "Tipo_Registro":  "CONTA_A_PAGAR"
+                                 },
+                                 {
+                                     "Ordem_SQL":  625333,
+                                     "Emissao":  "31/03/2026",
+                                     "Vencimento":  "10/01/2027",
+                                     "Codigo_Fornecedor":  "10035",
+                                     "Fornecedor":  "TIM S.A.",
+                                     "Descricao":  "TIM MOVEL  10/12",
+                                     "Valor":  339.72,
+                                     "Ordem_Conta_Bancaria":  0,
+                                     "Banco_Projetado":  "NÃO ALOCADO",
+                                     "Origem_Alocacao":  "NÃO ALOCADO",
+                                     "Estagio":  "PREVISTO",
+                                     "Tipo_Registro":  "CONTA_A_PAGAR"
                                  }
                              ],
     "pagamentos_programados":  [
@@ -7546,12 +7562,12 @@
                    {
                        "Banco":  "BRADESCO",
                        "Saldo_Atual":  19565.77,
-                       "Entradas_Futuras":  159067.8,
-                       "Entradas_Aloc_Pendente":  130070.9,
+                       "Entradas_Futuras":  112927.8,
+                       "Entradas_Aloc_Pendente":  83930.9,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  155580.26,
                        "Saidas_Futuras":  155580.26,
-                       "Saldo_Projetado":  23053.31
+                       "Saldo_Projetado":  -23086.69
                    },
                    {
                        "Banco":  "ITAU",
@@ -7588,19 +7604,19 @@
                        "Saldo_Atual":  0,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
-                       "Pagamentos_Futuros":  139075.67,
+                       "Pagamentos_Futuros":  139415.39,
                        "Debitos_Programados":  0,
-                       "Saidas_Futuras":  139075.67,
-                       "Saldo_Projetado":  -139075.67
+                       "Saidas_Futuras":  139415.39,
+                       "Saldo_Projetado":  -139415.39
                    }
                ],
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -44862.30,
+                                 "Menor_Saldo":  -91002.30,
                                  "Data_Menor_Saldo":  "06/11/2026",
-                                 "Primeira_Data_Risco":  "26/10/2026",
-                                 "Necessidade_Cobertura":  44862.30
+                                 "Primeira_Data_Risco":  "13/10/2026",
+                                 "Necessidade_Cobertura":  91002.30
                              },
                              {
                                  "Banco":  "ITAU",
@@ -7627,68 +7643,68 @@
     "janelas":  {
                     "hoje":  {
                                  "dias":  0,
-                                 "recebiveis":  46140.00,
+                                 "recebiveis":  0,
                                  "pagamentos":  0,
-                                 "debitos_programados":  0,
+                                 "debitos_programados":  4999.31,
                                  "pagamentos_nao_alocados":  0,
-                                 "total_saidas":  0,
-                                 "qtd_recebiveis":  1,
+                                 "total_saidas":  4999.31,
+                                 "qtd_recebiveis":  0,
                                  "qtd_pagamentos":  0,
-                                 "qtd_debitos_programados":  0
+                                 "qtd_debitos_programados":  1
                              },
                     "7d":  {
                                "dias":  7,
-                               "recebiveis":  76915.87,
+                               "recebiveis":  30775.87,
                                "pagamentos":  11227.99,
-                               "debitos_programados":  44612.10,
+                               "debitos_programados":  52637.13,
                                "pagamentos_nao_alocados":  11227.99,
-                               "total_saidas":  55840.09,
-                               "qtd_recebiveis":  15,
+                               "total_saidas":  63865.12,
+                               "qtd_recebiveis":  14,
                                "qtd_pagamentos":  29,
-                               "qtd_debitos_programados":  10
+                               "qtd_debitos_programados":  14
                            },
                     "15d":  {
                                 "dias":  15,
-                                "recebiveis":  113713.86,
+                                "recebiveis":  81449.71,
                                 "pagamentos":  31193.37,
-                                "debitos_programados":  87259.05,
+                                "debitos_programados":  94206.73,
                                 "pagamentos_nao_alocados":  31193.37,
-                                "total_saidas":  118452.42,
-                                "qtd_recebiveis":  33,
+                                "total_saidas":  125400.10,
+                                "qtd_recebiveis":  37,
                                 "qtd_pagamentos":  51,
-                                "qtd_debitos_programados":  25
+                                "qtd_debitos_programados":  27
                             },
                     "30d":  {
                                 "dias":  30,
-                                "recebiveis":  217042.54,
+                                "recebiveis":  170902.54,
                                 "pagamentos":  55949.75,
                                 "debitos_programados":  133130.44,
                                 "pagamentos_nao_alocados":  55949.75,
                                 "total_saidas":  189080.19,
-                                "qtd_recebiveis":  59,
+                                "qtd_recebiveis":  58,
                                 "qtd_pagamentos":  86,
                                 "qtd_debitos_programados":  41
                             },
                     "60d":  {
                                 "dias":  60,
-                                "recebiveis":  272605.52,
+                                "recebiveis":  226465.52,
                                 "pagamentos":  108282.52,
                                 "debitos_programados":  148520.64,
                                 "pagamentos_nao_alocados":  108282.52,
                                 "total_saidas":  256803.16,
-                                "qtd_recebiveis":  72,
+                                "qtd_recebiveis":  71,
                                 "qtd_pagamentos":  158,
                                 "qtd_debitos_programados":  48
                             },
                     "90d":  {
                                 "dias":  90,
-                                "recebiveis":  273485.52,
-                                "pagamentos":  139075.67,
+                                "recebiveis":  227345.52,
+                                "pagamentos":  139415.39,
                                 "debitos_programados":  155580.26,
-                                "pagamentos_nao_alocados":  139075.67,
-                                "total_saidas":  294655.93,
-                                "qtd_recebiveis":  74,
-                                "qtd_pagamentos":  201,
+                                "pagamentos_nao_alocados":  139415.39,
+                                "total_saidas":  294995.65,
+                                "qtd_recebiveis":  73,
+                                "qtd_pagamentos":  202,
                                 "qtd_debitos_programados":  50
                             }
                 },
@@ -7713,26 +7729,26 @@
                       "caixa_operacional":  835.89,
                       "caixa_misto":  -177.4019,
                       "caixa_particular":  -1211.69,
-                      "recebiveis_30d":  217042.54,
-                      "recebiveis_60d":  272605.52,
-                      "recebiveis_90d":  273485.52,
-                      "recebiveis_aloc_pendente":  130070.9,
+                      "recebiveis_30d":  170902.54,
+                      "recebiveis_60d":  226465.52,
+                      "recebiveis_90d":  227345.52,
+                      "recebiveis_aloc_pendente":  83930.9,
                       "pagamentos_30d":  55949.75,
                       "pagamentos_60d":  108282.52,
-                      "pagamentos_90d":  139075.67,
+                      "pagamentos_90d":  139415.39,
                       "debitos_programados_30d":  133130.44,
                       "debitos_programados_60d":  148520.64,
                       "debitos_programados_90d":  155580.26,
                       "pagamentos_nao_alocados_30d":  55949.75,
                       "pagamentos_nao_alocados_60d":  108282.52,
-                      "pagamentos_nao_alocados_90d":  139075.67,
-                      "qtd_recebiveis_90d":  74,
-                      "qtd_pagamentos_90d":  201,
+                      "pagamentos_nao_alocados_90d":  139415.39,
+                      "qtd_recebiveis_90d":  73,
+                      "qtd_pagamentos_90d":  202,
                       "qtd_debitos_programados_90d":  50,
                       "total_saidas_30d":  189080.19,
                       "total_saidas_60d":  256803.16,
-                      "total_saidas_90d":  294655.93,
-                      "conciliacao_pagamentos_90d":  139075.67,
+                      "total_saidas_90d":  294995.65,
+                      "conciliacao_pagamentos_90d":  139415.39,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
