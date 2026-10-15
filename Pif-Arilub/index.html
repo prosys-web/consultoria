@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>PIF — Painel de Inteligência Financeira · AriLub</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -98,9 +98,9 @@ function render(){
 
  let rs=(DATA.recebiveis||[]).filter(x=>iw(x.Vencimento));
  let recPend=rs.filter(x=>x.Origem_Alocacao==='ALOC. PENDENTE').reduce((s,x)=>s+(+x.Valor||0),0);
- let ah='<div class="alert"><b>PIF v2.7:</b> a aba Bancos consome exclusivamente a trajetória canônica do motor SQL 2.5.1; não recalcula saldos a partir das listas.</div>';
+ let ah='';
  if(USING_CACHE)ah+='<div class="alert red"><b>Atenção:</b> exibindo cache local. '+esc(DATA_ERROR)+'.</div>';
- if(inc>0)ah+='<div class="alert"><b>Replay bloqueado:</b> '+fmt(inc)+' em PROGRAMADOS da janela já estavam incorporados ao saldo bancário e permanecem visíveis com efeito incremental zero.</div>';
+
  if(recPend>0)ah+='<div class="alert"><b>Alocação pendente:</b> '+fmt(recPend)+' em recebíveis da janela estão provisoriamente no Bradesco.</div>';
  (DATA.riscos_bancarios||[]).filter(x=>+x.Necessidade_Cobertura>0).forEach(x=>ah+='<div class="alert red"><b>Risco · '+esc(x.Banco)+':</b> inicia em '+esc(x.Primeira_Data_Risco||'—')+'; cobertura máxima '+fmt(x.Necessidade_Cobertura)+'.</div>');
  alerts.innerHTML=ah;
