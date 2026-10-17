@@ -56,6 +56,14 @@ function trajRows(bank){return (DATA.trajetorias_bancarias||[]).filter(x=>x.Banc
 function bankSummary(bank){let rows=trajRows(bank); if(!rows.length)return null; let first=rows[0],last=rows[rows.length-1]; return {Banco:bank,Saldo_Atual:+first.Saldo_Anterior||0,Saldo_Projetado:+last.Saldo_Projetado||0}}
 function programadoEfeito(x){return +(x.Valor_Efeito_Projecao ?? x.Valor ?? 0)||0}
 function programadoIncorporado(x){return x.Ja_Incorporado_Saldo===true || String(x.Ja_Incorporado_Saldo).toLowerCase()==='true'}
+function bankRiskWindow(bank){
+ let rows=trajRows(bank);
+ if(!rows.length)return null;
+ let min=rows.reduce((m,x)=>(+x.Saldo_Projetado||0)<(+m.Saldo_Projetado||0)?x:m,rows[0]);
+ let neg=rows.find(x=>(+x.Saldo_Projetado||0)<0);
+ return {Banco:bank,Menor_Saldo:+min.Saldo_Projetado||0,Data_Menor_Saldo:min.Data||null,Primeira_Data_Risco:neg?neg.Data:null,Necessidade_Cobertura:Math.max(0,-(+min.Saldo_Projetado||0))};
+}
+function risksWindow(){return banks().filter(b=>b!=='NÃO ALOCADO').map(bankRiskWindow).filter(Boolean);}
 
 function moves(){
  let o=[];
@@ -90,8 +98,8 @@ function render(){
 
  let rt=+w.recebiveis||0, pt=+w.total_saidas||0, pn=+w.total_saidas_nominais||pt, inc=+w.debitos_programados_ja_incorporados||0;
  kp.innerHTML=[
-  ['Saldo consolidado',a.saldo_consolidado,'Operacional + investimentos','blue'],
-  ['Disponibilidade operacional',a.saldo_operacional,'Contas operacionais','green'],
+  ['Saldo consolidado atual',a.saldo_consolidado,'Operacional + investimentos','blue'],
+  ['Disponibilidade operacional atual',a.saldo_operacional,'Contas operacionais','green'],
   ['Recebíveis · '+(WIN===0?'Hoje':'Hoje + '+WIN+'d'),rt,'Universo canônico da janela','green'],
   ['Saídas com efeito · '+(WIN===0?'Hoje':'Hoje + '+WIN+'d'),pt,'Nominal '+fmt(pn)+' · já incorporado '+fmt(inc),'red']
  ].map(x=>'<div class="kpi '+x[3]+'"><div class="lbl">'+x[0]+'</div><div class="val">'+fmt(x[1])+'</div><div class="small">'+x[2]+'</div></div>').join('');
@@ -102,7 +110,7 @@ function render(){
  if(USING_CACHE)ah+='<div class="alert red"><b>Atenção:</b> exibindo cache local. '+esc(DATA_ERROR)+'.</div>';
 
  if(recPend>0)ah+='<div class="alert"><b>Alocação pendente:</b> '+fmt(recPend)+' em recebíveis da janela estão provisoriamente no Bradesco.</div>';
- (DATA.riscos_bancarios||[]).filter(x=>+x.Necessidade_Cobertura>0).forEach(x=>ah+='<div class="alert red"><b>Risco · '+esc(x.Banco)+':</b> inicia em '+esc(x.Primeira_Data_Risco||'—')+'; cobertura máxima '+fmt(x.Necessidade_Cobertura)+'.</div>');
+ risksWindow().filter(x=>+x.Necessidade_Cobertura>0).forEach(x=>ah+='<div class="alert red"><b>Risco · '+esc(x.Banco)+':</b> inicia em '+esc(x.Primeira_Data_Risco||'—')+'; cobertura máxima '+fmt(x.Necessidade_Cobertura)+' na janela selecionada.</div>');
  alerts.innerHTML=ah;
  recAlert.innerHTML=recPend>0?'<div class="alert"><b>ALOC. PENDENTE:</b> '+fmt(recPend)+' na janela selecionada; já incluídos no total de recebíveis.</div>':'';
 
@@ -163,7 +171,7 @@ function rbanks(){
    if(!rows.length)return '';
    return '<div style="margin-top:16px"><div class="h">'+esc(b)+'</div><div style="overflow:auto"><table><thead><tr><th>Data</th><th class="r">Saldo anterior</th><th class="r">Recebíveis</th><th class="r">Previstos</th><th class="r">Prog. nominal</th><th class="r">Já incorporado</th><th class="r">Prog. efeito</th><th class="r">Saldo projetado</th></tr></thead><tbody>'+rows.map(x=>'<tr><td>'+esc(x.Data)+'</td><td class="r">'+fmt(x.Saldo_Anterior)+'</td><td class="r">'+fmt(x.Recebiveis)+'</td><td class="r">'+fmt(x.Pagamentos_Previstos)+'</td><td class="r">'+fmt(x.Programados_Nominais)+'</td><td class="r">'+fmt(x.Programados_Ja_Incorporados)+'</td><td class="r">'+fmt(x.Programados_Efeito_Projecao)+'</td><td class="r"><b>'+fmt(x.Saldo_Projetado)+'</b></td></tr>').join('')+'</tbody></table></div></div>';
  }).join('');
- riskCards.innerHTML=(DATA.riscos_bancarios||[]).filter(x=>!s||x.Banco===s).map(x=>'<div class="kpi '+(+x.Necessidade_Cobertura>0?'red':'green')+'"><div class="lbl">'+esc(x.Banco)+'</div><div class="val">'+fmt(x.Menor_Saldo)+'</div><div class="small">Menor saldo · '+esc(x.Data_Menor_Saldo||'—')+'</div>'+(x.Primeira_Data_Risco?'<div class="small">Risco inicia · '+esc(x.Primeira_Data_Risco)+'</div>':'<div class="small">Sem saldo negativo no horizonte</div>')+'</div>').join('');
+ riskCards.innerHTML=risksWindow().filter(x=>!s||x.Banco===s).map(x=>'<div class="kpi '+(+x.Necessidade_Cobertura>0?'red':'green')+'"><div class="lbl">'+esc(x.Banco)+'</div><div class="val">'+fmt(x.Menor_Saldo)+'</div><div class="small">Menor saldo na janela · '+esc(x.Data_Menor_Saldo||'—')+'</div>'+(x.Primeira_Data_Risco?'<div class="small">Risco inicia · '+esc(x.Primeira_Data_Risco)+'</div>':'<div class="small">Sem saldo negativo na janela</div>')+'</div>').join('');
 }
 
 function rinsights(){
@@ -177,3 +185,4 @@ function rinsights(){
 }
 load();
 </script></body></html>
+
