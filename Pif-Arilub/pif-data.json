@@ -1,8 +1,8 @@
 ﻿{
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
-                     "data_base":  "18/10/2026",
-                     "gerado_em":  "18/10/2026 23:00:03",
+                     "data_base":  "19/10/2026",
+                     "gerado_em":  "19/10/2026 00:00:03",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.5.1"
                  },
@@ -30,8 +30,8 @@
                        "Ordem":  3,
                        "Banco":  "BRADESCO",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "16/10/2026",
-                       "Saldo":  37481.6700
+                       "Data_Posicao":  "19/10/2026",
+                       "Saldo":  29456.6400
                    },
                    {
                        "Ordem":  3021,
@@ -3823,6 +3823,20 @@
                            "Origem_Alocacao":  "NÃO ALOCADO",
                            "Estagio":  "PREVISTO",
                            "Tipo_Registro":  "CONTA_A_PAGAR"
+                       },
+                       {
+                           "Ordem_SQL":  608814,
+                           "Emissao":  "06/10/2025",
+                           "Vencimento":  "17/01/2027",
+                           "Codigo_Fornecedor":  "10023",
+                           "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
+                           "Descricao":  "Pr5. Barão de Aratanha 575 cl 64768557 16/36",
+                           "Valor":  106.31,
+                           "Ordem_Conta_Bancaria":  0,
+                           "Banco_Projetado":  "NÃO ALOCADO",
+                           "Origem_Alocacao":  "NÃO ALOCADO",
+                           "Estagio":  "PREVISTO",
+                           "Tipo_Registro":  "CONTA_A_PAGAR"
                        }
                    ],
     "debitos_programados":  [
@@ -3834,8 +3848,8 @@
                                     "Valor":  920.00,
                                     "Estagio":  "PROGRAMADO",
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                    "Ja_Incorporado_Saldo":  false,
-                                    "Valor_Efeito_Projecao":  920.00
+                                    "Ja_Incorporado_Saldo":  true,
+                                    "Valor_Efeito_Projecao":  0
                                 },
                                 {
                                     "Ordem_SQL":  298585,
@@ -3845,8 +3859,8 @@
                                     "Valor":  689.28,
                                     "Estagio":  "PROGRAMADO",
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                    "Ja_Incorporado_Saldo":  false,
-                                    "Valor_Efeito_Projecao":  689.28
+                                    "Ja_Incorporado_Saldo":  true,
+                                    "Valor_Efeito_Projecao":  0
                                 },
                                 {
                                     "Ordem_SQL":  298587,
@@ -3856,8 +3870,8 @@
                                     "Valor":  4999.31,
                                     "Estagio":  "PROGRAMADO",
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                    "Ja_Incorporado_Saldo":  false,
-                                    "Valor_Efeito_Projecao":  4999.31
+                                    "Ja_Incorporado_Saldo":  true,
+                                    "Valor_Efeito_Projecao":  0
                                 },
                                 {
                                     "Ordem_SQL":  298590,
@@ -3867,8 +3881,8 @@
                                     "Valor":  1416.44,
                                     "Estagio":  "PROGRAMADO",
                                     "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                    "Ja_Incorporado_Saldo":  false,
-                                    "Valor_Efeito_Projecao":  1416.44
+                                    "Ja_Incorporado_Saldo":  true,
+                                    "Valor_Efeito_Projecao":  0
                                 },
                                 {
                                     "Ordem_SQL":  298457,
@@ -7190,6 +7204,20 @@
                                      "Origem_Alocacao":  "NÃO ALOCADO",
                                      "Estagio":  "PREVISTO",
                                      "Tipo_Registro":  "CONTA_A_PAGAR"
+                                 },
+                                 {
+                                     "Ordem_SQL":  608814,
+                                     "Emissao":  "06/10/2025",
+                                     "Vencimento":  "17/01/2027",
+                                     "Codigo_Fornecedor":  "10023",
+                                     "Fornecedor":  "ENEL - COMPANHIA ENERGETICA DO CEARA  ",
+                                     "Descricao":  "Pr5. Barão de Aratanha 575 cl 64768557 16/36",
+                                     "Valor":  106.31,
+                                     "Ordem_Conta_Bancaria":  0,
+                                     "Banco_Projetado":  "NÃO ALOCADO",
+                                     "Origem_Alocacao":  "NÃO ALOCADO",
+                                     "Estagio":  "PREVISTO",
+                                     "Tipo_Registro":  "CONTA_A_PAGAR"
                                  }
                              ],
     "pagamentos_programados":  [
@@ -7201,8 +7229,8 @@
                                        "Valor":  920.00,
                                        "Estagio":  "PROGRAMADO",
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                       "Ja_Incorporado_Saldo":  false,
-                                       "Valor_Efeito_Projecao":  920.00
+                                       "Ja_Incorporado_Saldo":  true,
+                                       "Valor_Efeito_Projecao":  0
                                    },
                                    {
                                        "Ordem_SQL":  298585,
@@ -7212,8 +7240,8 @@
                                        "Valor":  689.28,
                                        "Estagio":  "PROGRAMADO",
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                       "Ja_Incorporado_Saldo":  false,
-                                       "Valor_Efeito_Projecao":  689.28
+                                       "Ja_Incorporado_Saldo":  true,
+                                       "Valor_Efeito_Projecao":  0
                                    },
                                    {
                                        "Ordem_SQL":  298587,
@@ -7223,8 +7251,8 @@
                                        "Valor":  4999.31,
                                        "Estagio":  "PROGRAMADO",
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                       "Ja_Incorporado_Saldo":  false,
-                                       "Valor_Efeito_Projecao":  4999.31
+                                       "Ja_Incorporado_Saldo":  true,
+                                       "Valor_Efeito_Projecao":  0
                                    },
                                    {
                                        "Ordem_SQL":  298590,
@@ -7234,8 +7262,8 @@
                                        "Valor":  1416.44,
                                        "Estagio":  "PROGRAMADO",
                                        "Tipo_Registro":  "LANCAMENTO_BANCARIO",
-                                       "Ja_Incorporado_Saldo":  false,
-                                       "Valor_Efeito_Projecao":  1416.44
+                                       "Ja_Incorporado_Saldo":  true,
+                                       "Valor_Efeito_Projecao":  0
                                    },
                                    {
                                        "Ordem_SQL":  298457,
@@ -7696,14 +7724,14 @@
     "bancos":  [
                    {
                        "Banco":  "BRADESCO",
-                       "Saldo_Atual":  37481.67,
+                       "Saldo_Atual":  29456.64,
                        "Entradas_Futuras":  100745,
                        "Entradas_Aloc_Pendente":  71748.1,
                        "Pagamentos_Futuros":  0,
-                       "Debitos_Programados":  111075.28,
+                       "Debitos_Programados":  103050.25,
                        "Debitos_Programados_Nominais":  111075.28,
-                       "Debitos_Ja_Incorporados_Saldo":  0.00,
-                       "Saidas_Futuras":  111075.28,
+                       "Debitos_Ja_Incorporados_Saldo":  8025.03,
+                       "Saidas_Futuras":  103050.25,
                        "Saldo_Projetado":  27151.39
                    },
                    {
@@ -7747,35 +7775,23 @@
                        "Saldo_Atual":  0,
                        "Entradas_Futuras":  0,
                        "Entradas_Aloc_Pendente":  0,
-                       "Pagamentos_Futuros":  137408.11,
+                       "Pagamentos_Futuros":  137514.42,
                        "Debitos_Programados":  0,
-                       "Saidas_Futuras":  137408.11,
-                       "Saldo_Projetado":  -137408.11
+                       "Saidas_Futuras":  137514.42,
+                       "Saldo_Projetado":  -137514.42
                    }
                ],
     "trajetorias_bancarias":  [
                                   {
                                       "Banco":  "BRADESCO",
-                                      "Data":  "18/10/2026",
-                                      "Saldo_Anterior":  37481.67,
-                                      "Recebiveis":  0,
-                                      "Pagamentos_Previstos":  0,
-                                      "Programados_Nominais":  0,
-                                      "Programados_Ja_Incorporados":  0,
-                                      "Programados_Efeito_Projecao":  0,
-                                      "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  37481.67
-                                  },
-                                  {
-                                      "Banco":  "BRADESCO",
                                       "Data":  "19/10/2026",
-                                      "Saldo_Anterior":  37481.67,
+                                      "Saldo_Anterior":  29456.64,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  8025.03,
-                                      "Programados_Ja_Incorporados":  0.00,
-                                      "Programados_Efeito_Projecao":  8025.03,
-                                      "Saidas_Efeito_Projecao":  8025.03,
+                                      "Programados_Ja_Incorporados":  8025.03,
+                                      "Programados_Efeito_Projecao":  0,
+                                      "Saidas_Efeito_Projecao":  0,
                                       "Saldo_Projetado":  29456.64
                                   },
                                   {
@@ -8847,16 +8863,16 @@
                                       "Saldo_Projetado":  27151.39
                                   },
                                   {
-                                      "Banco":  "ITAU",
-                                      "Data":  "18/10/2026",
-                                      "Saldo_Anterior":  16467.98,
+                                      "Banco":  "BRADESCO",
+                                      "Data":  "17/01/2027",
+                                      "Saldo_Anterior":  27151.39,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16467.98
+                                      "Saldo_Projetado":  27151.39
                                   },
                                   {
                                       "Banco":  "ITAU",
@@ -9939,16 +9955,16 @@
                                       "Saldo_Projetado":  117436.63
                                   },
                                   {
-                                      "Banco":  "BNB",
-                                      "Data":  "18/10/2026",
-                                      "Saldo_Anterior":  8036.93,
+                                      "Banco":  "ITAU",
+                                      "Data":  "17/01/2027",
+                                      "Saldo_Anterior":  117436.63,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  8036.93
+                                      "Saldo_Projetado":  117436.63
                                   },
                                   {
                                       "Banco":  "BNB",
@@ -11031,16 +11047,16 @@
                                       "Saldo_Projetado":  11136.93
                                   },
                                   {
-                                      "Banco":  "SANTANDER",
-                                      "Data":  "18/10/2026",
-                                      "Saldo_Anterior":  970.26,
+                                      "Banco":  "BNB",
+                                      "Data":  "17/01/2027",
+                                      "Saldo_Anterior":  11136.93,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  970.26
+                                      "Saldo_Projetado":  11136.93
                                   },
                                   {
                                       "Banco":  "SANTANDER",
@@ -12123,16 +12139,16 @@
                                       "Saldo_Projetado":  970.26
                                   },
                                   {
-                                      "Banco":  "NÃO ALOCADO",
-                                      "Data":  "18/10/2026",
-                                      "Saldo_Anterior":  0,
+                                      "Banco":  "SANTANDER",
+                                      "Data":  "17/01/2027",
+                                      "Saldo_Anterior":  970.26,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  0
+                                      "Saldo_Projetado":  970.26
                                   },
                                   {
                                       "Banco":  "NÃO ALOCADO",
@@ -13213,6 +13229,18 @@
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
                                       "Saldo_Projetado":  -137408.11
+                                  },
+                                  {
+                                      "Banco":  "NÃO ALOCADO",
+                                      "Data":  "17/01/2027",
+                                      "Saldo_Anterior":  -137408.11,
+                                      "Recebiveis":  0,
+                                      "Pagamentos_Previstos":  106.31,
+                                      "Programados_Nominais":  0,
+                                      "Programados_Ja_Incorporados":  0,
+                                      "Programados_Efeito_Projecao":  0,
+                                      "Saidas_Efeito_Projecao":  106.31,
+                                      "Saldo_Projetado":  -137514.42
                                   }
                               ],
     "riscos_bancarios":  [
@@ -13226,21 +13254,21 @@
                              {
                                  "Banco":  "ITAU",
                                  "Menor_Saldo":  16467.98,
-                                 "Data_Menor_Saldo":  "18/10/2026",
+                                 "Data_Menor_Saldo":  "19/10/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
                              {
                                  "Banco":  "BNB",
                                  "Menor_Saldo":  8036.93,
-                                 "Data_Menor_Saldo":  "18/10/2026",
+                                 "Data_Menor_Saldo":  "19/10/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              },
                              {
                                  "Banco":  "SANTANDER",
                                  "Menor_Saldo":  970.26,
-                                 "Data_Menor_Saldo":  "18/10/2026",
+                                 "Data_Menor_Saldo":  "19/10/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
                              }
@@ -13251,52 +13279,52 @@
                                  "recebiveis":  0,
                                  "pagamentos":  0,
                                  "debitos_programados":  0,
-                                 "debitos_programados_nominais":  0,
-                                 "debitos_programados_ja_incorporados":  0,
+                                 "debitos_programados_nominais":  8025.03,
+                                 "debitos_programados_ja_incorporados":  8025.03,
                                  "pagamentos_nao_alocados":  0,
                                  "total_saidas":  0,
-                                 "total_saidas_nominais":  0,
+                                 "total_saidas_nominais":  8025.03,
                                  "qtd_recebiveis":  0,
                                  "qtd_pagamentos":  0,
-                                 "qtd_debitos_programados":  0
+                                 "qtd_debitos_programados":  4
                              },
                     "7d":  {
                                "dias":  7,
-                               "recebiveis":  34525.95,
+                               "recebiveis":  36797.99,
                                "pagamentos":  19965.38,
-                               "debitos_programados":  22758.43,
-                               "debitos_programados_nominais":  22758.43,
-                               "debitos_programados_ja_incorporados":  0.00,
+                               "debitos_programados":  34729.04,
+                               "debitos_programados_nominais":  42754.07,
+                               "debitos_programados_ja_incorporados":  8025.03,
                                "pagamentos_nao_alocados":  19965.38,
-                               "total_saidas":  42723.81,
-                               "total_saidas_nominais":  42723.81,
-                               "qtd_recebiveis":  16,
+                               "total_saidas":  54694.42,
+                               "total_saidas_nominais":  62719.45,
+                               "qtd_recebiveis":  18,
                                "qtd_pagamentos":  22,
-                               "qtd_debitos_programados":  11
+                               "qtd_debitos_programados":  16
                            },
                     "15d":  {
                                 "dias":  15,
-                                "recebiveis":  58956.97,
+                                "recebiveis":  67490.79,
                                 "pagamentos":  21651.68,
-                                "debitos_programados":  66716.42,
-                                "debitos_programados_nominais":  66716.42,
-                                "debitos_programados_ja_incorporados":  0.00,
+                                "debitos_programados":  76240.19,
+                                "debitos_programados_nominais":  84265.22,
+                                "debitos_programados_ja_incorporados":  8025.03,
                                 "pagamentos_nao_alocados":  21651.68,
-                                "total_saidas":  88368.10,
-                                "total_saidas_nominais":  88368.10,
-                                "qtd_recebiveis":  30,
+                                "total_saidas":  97891.87,
+                                "total_saidas_nominais":  105916.90,
+                                "qtd_recebiveis":  33,
                                 "qtd_pagamentos":  25,
-                                "qtd_debitos_programados":  23
+                                "qtd_debitos_programados":  29
                             },
                     "30d":  {
                                 "dias":  30,
                                 "recebiveis":  171571.35,
                                 "pagamentos":  58598.73,
-                                "debitos_programados":  100241.03,
+                                "debitos_programados":  92216.00,
                                 "debitos_programados_nominais":  100241.03,
-                                "debitos_programados_ja_incorporados":  0.00,
+                                "debitos_programados_ja_incorporados":  8025.03,
                                 "pagamentos_nao_alocados":  58598.73,
-                                "total_saidas":  158839.76,
+                                "total_saidas":  150814.73,
                                 "total_saidas_nominais":  158839.76,
                                 "qtd_recebiveis":  59,
                                 "qtd_pagamentos":  95,
@@ -13306,11 +13334,11 @@
                                 "dias":  60,
                                 "recebiveis":  203933.65,
                                 "pagamentos":  106858.39,
-                                "debitos_programados":  110668.89,
+                                "debitos_programados":  102643.86,
                                 "debitos_programados_nominais":  110668.89,
-                                "debitos_programados_ja_incorporados":  0.00,
+                                "debitos_programados_ja_incorporados":  8025.03,
                                 "pagamentos_nao_alocados":  106858.39,
-                                "total_saidas":  217527.28,
+                                "total_saidas":  209502.25,
                                 "total_saidas_nominais":  217527.28,
                                 "qtd_recebiveis":  68,
                                 "qtd_pagamentos":  166,
@@ -13319,15 +13347,15 @@
                     "90d":  {
                                 "dias":  90,
                                 "recebiveis":  204813.65,
-                                "pagamentos":  137408.11,
-                                "debitos_programados":  111075.28,
+                                "pagamentos":  137514.42,
+                                "debitos_programados":  103050.25,
                                 "debitos_programados_nominais":  111075.28,
-                                "debitos_programados_ja_incorporados":  0.00,
-                                "pagamentos_nao_alocados":  137408.11,
-                                "total_saidas":  248483.39,
-                                "total_saidas_nominais":  248483.39,
+                                "debitos_programados_ja_incorporados":  8025.03,
+                                "pagamentos_nao_alocados":  137514.42,
+                                "total_saidas":  240564.67,
+                                "total_saidas_nominais":  248589.70,
                                 "qtd_recebiveis":  70,
-                                "qtd_pagamentos":  208,
+                                "qtd_pagamentos":  209,
                                 "qtd_debitos_programados":  41
                             }
                 },
@@ -13343,9 +13371,9 @@
                        "horizonte_sql_dias":  90
                    },
     "auditoria":  {
-                      "saldo_operacional":  62956.84,
+                      "saldo_operacional":  54931.81,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  506875.81,
+                      "saldo_consolidado":  498850.78,
                       "bnb_operacional":  8036.93,
                       "bnb_investimento":  443918.97,
                       "bnb_total":  451955.90,
@@ -13358,29 +13386,29 @@
                       "recebiveis_aloc_pendente":  71748.1,
                       "pagamentos_30d":  58598.73,
                       "pagamentos_60d":  106858.39,
-                      "pagamentos_90d":  137408.11,
-                      "debitos_programados_30d":  100241.03,
-                      "debitos_programados_60d":  110668.89,
-                      "debitos_programados_90d":  111075.28,
+                      "pagamentos_90d":  137514.42,
+                      "debitos_programados_30d":  92216.00,
+                      "debitos_programados_60d":  102643.86,
+                      "debitos_programados_90d":  103050.25,
                       "debitos_programados_nominais_30d":  100241.03,
                       "debitos_programados_nominais_60d":  110668.89,
                       "debitos_programados_nominais_90d":  111075.28,
-                      "debitos_ja_incorporados_30d":  0.00,
-                      "debitos_ja_incorporados_60d":  0.00,
-                      "debitos_ja_incorporados_90d":  0.00,
+                      "debitos_ja_incorporados_30d":  8025.03,
+                      "debitos_ja_incorporados_60d":  8025.03,
+                      "debitos_ja_incorporados_90d":  8025.03,
                       "pagamentos_nao_alocados_30d":  58598.73,
                       "pagamentos_nao_alocados_60d":  106858.39,
-                      "pagamentos_nao_alocados_90d":  137408.11,
+                      "pagamentos_nao_alocados_90d":  137514.42,
                       "qtd_recebiveis_90d":  70,
-                      "qtd_pagamentos_90d":  208,
+                      "qtd_pagamentos_90d":  209,
                       "qtd_debitos_programados_90d":  41,
-                      "total_saidas_30d":  158839.76,
-                      "total_saidas_60d":  217527.28,
-                      "total_saidas_90d":  248483.39,
-                      "conciliacao_pagamentos_90d":  137408.11,
+                      "total_saidas_30d":  150814.73,
+                      "total_saidas_60d":  209502.25,
+                      "total_saidas_90d":  240564.67,
+                      "conciliacao_pagamentos_90d":  137514.42,
                       "trajetoria_qtd_linhas":  455,
                       "trajetoria_programados_nominais_90d":  111075.28,
-                      "trajetoria_programados_efeito_90d":  111075.28,
+                      "trajetoria_programados_efeito_90d":  103050.25,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
 }
