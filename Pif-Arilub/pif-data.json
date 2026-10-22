@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "22/10/2026",
-                     "gerado_em":  "22/10/2026 09:00:03",
+                     "gerado_em":  "22/10/2026 10:00:04",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.5.1"
                  },
@@ -31,14 +31,14 @@
                        "Banco":  "BRADESCO",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "22/10/2026",
-                       "Saldo":  36609.5800
+                       "Saldo":  78372.3400
                    },
                    {
                        "Ordem":  3021,
                        "Banco":  "ITAU",
                        "Classificacao":  "OPERACIONAL",
                        "Data_Posicao":  "21/10/2026",
-                       "Saldo":  22250.8400
+                       "Saldo":  27835.4800
                    },
                    {
                        "Ordem":  3022,
@@ -417,18 +417,6 @@
                            "Ordem_Conta_Bancaria":  3021,
                            "Banco_Projetado":  "ITAU",
                            "Origem_Alocacao":  "SHOP9"
-                       },
-                       {
-                           "Ordem_SQL":  629958,
-                           "Emissao":  "09/10/2026",
-                           "Vencimento":  "08/11/2026",
-                           "Codigo_Cliente":  "2277",
-                           "Cliente":  "SECRETARIA DA EDUCACAO",
-                           "Descricao":  "Saída 91218 - 1/1",
-                           "Valor":  42270.00,
-                           "Ordem_Conta_Bancaria":  2018,
-                           "Banco_Projetado":  "BRADESCO",
-                           "Origem_Alocacao":  "ALOC. PENDENTE"
                        },
                        {
                            "Ordem_SQL":  629666,
@@ -4048,6 +4036,17 @@
                                     "Valor_Efeito_Projecao":  0
                                 },
                                 {
+                                    "Ordem_SQL":  298771,
+                                    "Banco":  "BRADESCO",
+                                    "Data":  "22/10/2026",
+                                    "Descricao":  "Ret. 1,2% IFP NF 17828",
+                                    "Valor":  507.24,
+                                    "Estagio":  "PROGRAMADO",
+                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO",
+                                    "Ja_Incorporado_Saldo":  true,
+                                    "Valor_Efeito_Projecao":  0
+                                },
+                                {
                                     "Ordem_SQL":  298594,
                                     "Banco":  "BRADESCO",
                                     "Data":  "23/10/2026",
@@ -7537,6 +7536,17 @@
                                        "Valor_Efeito_Projecao":  0
                                    },
                                    {
+                                       "Ordem_SQL":  298771,
+                                       "Banco":  "BRADESCO",
+                                       "Data":  "22/10/2026",
+                                       "Descricao":  "Ret. 1,2% IFP NF 17828",
+                                       "Valor":  507.24,
+                                       "Estagio":  "PROGRAMADO",
+                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO",
+                                       "Ja_Incorporado_Saldo":  true,
+                                       "Valor_Efeito_Projecao":  0
+                                   },
+                                   {
                                        "Ordem_SQL":  298594,
                                        "Banco":  "BRADESCO",
                                        "Data":  "23/10/2026",
@@ -7940,19 +7950,19 @@
     "bancos":  [
                    {
                        "Banco":  "BRADESCO",
-                       "Saldo_Atual":  36609.58,
-                       "Entradas_Futuras":  93245,
-                       "Entradas_Aloc_Pendente":  64248.1,
+                       "Saldo_Atual":  78372.34,
+                       "Entradas_Futuras":  50975,
+                       "Entradas_Aloc_Pendente":  21978.1,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  93273.59,
-                       "Debitos_Programados_Nominais":  93363.59,
-                       "Debitos_Ja_Incorporados_Saldo":  90.00,
+                       "Debitos_Programados_Nominais":  93870.83,
+                       "Debitos_Ja_Incorporados_Saldo":  597.24,
                        "Saidas_Futuras":  93273.59,
-                       "Saldo_Projetado":  36580.99
+                       "Saldo_Projetado":  36073.75
                    },
                    {
                        "Banco":  "ITAU",
-                       "Saldo_Atual":  22250.84,
+                       "Saldo_Atual":  27835.48,
                        "Entradas_Futuras":  92379.3,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
@@ -7960,7 +7970,7 @@
                        "Debitos_Programados_Nominais":  0,
                        "Debitos_Ja_Incorporados_Saldo":  0,
                        "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  114630.14
+                       "Saldo_Projetado":  120214.78
                    },
                    {
                        "Banco":  "BNB",
@@ -8001,2186 +8011,2186 @@
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "22/10/2026",
-                                      "Saldo_Anterior":  36609.58,
+                                      "Saldo_Anterior":  78372.34,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
-                                      "Programados_Nominais":  90.00,
-                                      "Programados_Ja_Incorporados":  90.00,
+                                      "Programados_Nominais":  597.24,
+                                      "Programados_Ja_Incorporados":  597.24,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36609.58
+                                      "Saldo_Projetado":  78372.34
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "23/10/2026",
-                                      "Saldo_Anterior":  36609.58,
+                                      "Saldo_Anterior":  78372.34,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  4956.74,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  4956.74,
                                       "Saidas_Efeito_Projecao":  4956.74,
-                                      "Saldo_Projetado":  31652.84
+                                      "Saldo_Projetado":  73415.60
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "24/10/2026",
-                                      "Saldo_Anterior":  31652.84,
+                                      "Saldo_Anterior":  73415.60,
                                       "Recebiveis":  7680.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  39332.84
+                                      "Saldo_Projetado":  81095.60
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "25/10/2026",
-                                      "Saldo_Anterior":  39332.84,
+                                      "Saldo_Anterior":  81095.60,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  39332.84
+                                      "Saldo_Projetado":  81095.60
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "26/10/2026",
-                                      "Saldo_Anterior":  39332.84,
+                                      "Saldo_Anterior":  81095.60,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  19995.64,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  19995.64,
                                       "Saidas_Efeito_Projecao":  19995.64,
-                                      "Saldo_Projetado":  19337.20
+                                      "Saldo_Projetado":  61099.96
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "27/10/2026",
-                                      "Saldo_Anterior":  19337.20,
+                                      "Saldo_Anterior":  61099.96,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  6947.68,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  6947.68,
                                       "Saidas_Efeito_Projecao":  6947.68,
-                                      "Saldo_Projetado":  12389.52
+                                      "Saldo_Projetado":  54152.28
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "28/10/2026",
-                                      "Saldo_Anterior":  12389.52,
+                                      "Saldo_Anterior":  54152.28,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  1822.71,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  1822.71,
                                       "Saidas_Efeito_Projecao":  1822.71,
-                                      "Saldo_Projetado":  10566.81
+                                      "Saldo_Projetado":  52329.57
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "29/10/2026",
-                                      "Saldo_Anterior":  10566.81,
+                                      "Saldo_Anterior":  52329.57,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  12856.29,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  12856.29,
                                       "Saidas_Efeito_Projecao":  12856.29,
-                                      "Saldo_Projetado":  -2289.48
+                                      "Saldo_Projetado":  39473.28
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "30/10/2026",
-                                      "Saldo_Anterior":  -2289.48,
+                                      "Saldo_Anterior":  39473.28,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  2335.67,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  2335.67,
                                       "Saidas_Efeito_Projecao":  2335.67,
-                                      "Saldo_Projetado":  -4625.15
+                                      "Saldo_Projetado":  37137.61
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "31/10/2026",
-                                      "Saldo_Anterior":  -4625.15,
+                                      "Saldo_Anterior":  37137.61,
                                       "Recebiveis":  175.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  -4450.15
+                                      "Saldo_Projetado":  37312.61
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "01/11/2026",
-                                      "Saldo_Anterior":  -4450.15,
+                                      "Saldo_Anterior":  37312.61,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  -4450.15
+                                      "Saldo_Projetado":  37312.61
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "02/11/2026",
-                                      "Saldo_Anterior":  -4450.15,
+                                      "Saldo_Anterior":  37312.61,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  -4450.15
+                                      "Saldo_Projetado":  37312.61
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "03/11/2026",
-                                      "Saldo_Anterior":  -4450.15,
+                                      "Saldo_Anterior":  37312.61,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  17548.80,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  17548.80,
                                       "Saidas_Efeito_Projecao":  17548.80,
-                                      "Saldo_Projetado":  -21998.95
+                                      "Saldo_Projetado":  19763.81
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "04/11/2026",
-                                      "Saldo_Anterior":  -21998.95,
+                                      "Saldo_Anterior":  19763.81,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  -21998.95
+                                      "Saldo_Projetado":  19763.81
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "05/11/2026",
-                                      "Saldo_Anterior":  -21998.95,
+                                      "Saldo_Anterior":  19763.81,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  -21998.95
+                                      "Saldo_Projetado":  19763.81
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "06/11/2026",
-                                      "Saldo_Anterior":  -21998.95,
+                                      "Saldo_Anterior":  19763.81,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  2335.67,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  2335.67,
                                       "Saidas_Efeito_Projecao":  2335.67,
-                                      "Saldo_Projetado":  -24334.62
+                                      "Saldo_Projetado":  17428.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "07/11/2026",
-                                      "Saldo_Anterior":  -24334.62,
+                                      "Saldo_Anterior":  17428.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  -24334.62
+                                      "Saldo_Projetado":  17428.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "08/11/2026",
-                                      "Saldo_Anterior":  -24334.62,
-                                      "Recebiveis":  42270.00,
+                                      "Saldo_Anterior":  17428.14,
+                                      "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  17935.38
+                                      "Saldo_Projetado":  17428.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "09/11/2026",
-                                      "Saldo_Anterior":  17935.38,
+                                      "Saldo_Anterior":  17428.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  2024.57,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  2024.57,
                                       "Saidas_Efeito_Projecao":  2024.57,
-                                      "Saldo_Projetado":  15910.81
+                                      "Saldo_Projetado":  15403.57
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "10/11/2026",
-                                      "Saldo_Anterior":  15910.81,
+                                      "Saldo_Anterior":  15403.57,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  15910.81
+                                      "Saldo_Projetado":  15403.57
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "11/11/2026",
-                                      "Saldo_Anterior":  15910.81,
+                                      "Saldo_Anterior":  15403.57,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  15910.81
+                                      "Saldo_Projetado":  15403.57
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "12/11/2026",
-                                      "Saldo_Anterior":  15910.81,
+                                      "Saldo_Anterior":  15403.57,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  2621.07,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  2621.07,
                                       "Saidas_Efeito_Projecao":  2621.07,
-                                      "Saldo_Projetado":  13289.74
+                                      "Saldo_Projetado":  12782.50
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "13/11/2026",
-                                      "Saldo_Anterior":  13289.74,
+                                      "Saldo_Anterior":  12782.50,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  8994.50,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  8994.50,
                                       "Saidas_Efeito_Projecao":  8994.50,
-                                      "Saldo_Projetado":  4295.24
+                                      "Saldo_Projetado":  3788.00
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "14/11/2026",
-                                      "Saldo_Anterior":  4295.24,
+                                      "Saldo_Anterior":  3788.00,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  4295.24
+                                      "Saldo_Projetado":  3788.00
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "15/11/2026",
-                                      "Saldo_Anterior":  4295.24,
+                                      "Saldo_Anterior":  3788.00,
                                       "Recebiveis":  12568.10,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "16/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "17/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "18/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "19/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "20/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "21/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "22/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  16863.34
+                                      "Saldo_Projetado":  16356.10
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "23/11/2026",
-                                      "Saldo_Anterior":  16863.34,
+                                      "Saldo_Anterior":  16356.10,
                                       "Recebiveis":  14749.90,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  31613.24
+                                      "Saldo_Projetado":  31106.00
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "24/11/2026",
-                                      "Saldo_Anterior":  31613.24,
+                                      "Saldo_Anterior":  31106.00,
                                       "Recebiveis":  14247.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  2760.22,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  2760.22,
                                       "Saidas_Efeito_Projecao":  2760.22,
-                                      "Saldo_Projetado":  43100.02
+                                      "Saldo_Projetado":  42592.78
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "25/11/2026",
-                                      "Saldo_Anterior":  43100.02,
+                                      "Saldo_Anterior":  42592.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  43100.02
+                                      "Saldo_Projetado":  42592.78
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "26/11/2026",
-                                      "Saldo_Anterior":  43100.02,
+                                      "Saldo_Anterior":  42592.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  43100.02
+                                      "Saldo_Projetado":  42592.78
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "27/11/2026",
-                                      "Saldo_Anterior":  43100.02,
+                                      "Saldo_Anterior":  42592.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  406.27,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  406.27,
                                       "Saidas_Efeito_Projecao":  406.27,
-                                      "Saldo_Projetado":  42693.75
+                                      "Saldo_Projetado":  42186.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "28/11/2026",
-                                      "Saldo_Anterior":  42693.75,
+                                      "Saldo_Anterior":  42186.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42693.75
+                                      "Saldo_Projetado":  42186.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "29/11/2026",
-                                      "Saldo_Anterior":  42693.75,
+                                      "Saldo_Anterior":  42186.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42693.75
+                                      "Saldo_Projetado":  42186.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "30/11/2026",
-                                      "Saldo_Anterior":  42693.75,
+                                      "Saldo_Anterior":  42186.51,
                                       "Recebiveis":  175.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "01/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "02/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "03/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "04/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "05/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "06/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "07/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "08/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42868.75
+                                      "Saldo_Projetado":  42361.51
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "09/12/2026",
-                                      "Saldo_Anterior":  42868.75,
+                                      "Saldo_Anterior":  42361.51,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  608.14,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  608.14,
                                       "Saidas_Efeito_Projecao":  608.14,
-                                      "Saldo_Projetado":  42260.61
+                                      "Saldo_Projetado":  41753.37
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "10/12/2026",
-                                      "Saldo_Anterior":  42260.61,
+                                      "Saldo_Anterior":  41753.37,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42260.61
+                                      "Saldo_Projetado":  41753.37
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "11/12/2026",
-                                      "Saldo_Anterior":  42260.61,
+                                      "Saldo_Anterior":  41753.37,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42260.61
+                                      "Saldo_Projetado":  41753.37
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "12/12/2026",
-                                      "Saldo_Anterior":  42260.61,
+                                      "Saldo_Anterior":  41753.37,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42260.61
+                                      "Saldo_Projetado":  41753.37
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "13/12/2026",
-                                      "Saldo_Anterior":  42260.61,
+                                      "Saldo_Anterior":  41753.37,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  42260.61
+                                      "Saldo_Projetado":  41753.37
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "14/12/2026",
-                                      "Saldo_Anterior":  42260.61,
+                                      "Saldo_Anterior":  41753.37,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  6653.23,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  6653.23,
                                       "Saidas_Efeito_Projecao":  6653.23,
-                                      "Saldo_Projetado":  35607.38
+                                      "Saldo_Projetado":  35100.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "15/12/2026",
-                                      "Saldo_Anterior":  35607.38,
+                                      "Saldo_Anterior":  35100.14,
                                       "Recebiveis":  500.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "16/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "17/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "18/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "19/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "20/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "21/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "22/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "23/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "24/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "25/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "26/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "27/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36107.38
+                                      "Saldo_Projetado":  35600.14
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "28/12/2026",
-                                      "Saldo_Anterior":  36107.38,
+                                      "Saldo_Anterior":  35600.14,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  406.39,
                                       "Programados_Ja_Incorporados":  0.00,
                                       "Programados_Efeito_Projecao":  406.39,
                                       "Saidas_Efeito_Projecao":  406.39,
-                                      "Saldo_Projetado":  35700.99
+                                      "Saldo_Projetado":  35193.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "29/12/2026",
-                                      "Saldo_Anterior":  35700.99,
+                                      "Saldo_Anterior":  35193.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  35700.99
+                                      "Saldo_Projetado":  35193.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "30/12/2026",
-                                      "Saldo_Anterior":  35700.99,
+                                      "Saldo_Anterior":  35193.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  35700.99
+                                      "Saldo_Projetado":  35193.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "31/12/2026",
-                                      "Saldo_Anterior":  35700.99,
+                                      "Saldo_Anterior":  35193.75,
                                       "Recebiveis":  380.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "01/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "02/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "03/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "04/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "05/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "06/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "07/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "08/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "09/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "10/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "11/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "12/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "13/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "14/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36080.99
+                                      "Saldo_Projetado":  35573.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "15/01/2027",
-                                      "Saldo_Anterior":  36080.99,
+                                      "Saldo_Anterior":  35573.75,
                                       "Recebiveis":  500.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36580.99
+                                      "Saldo_Projetado":  36073.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "16/01/2027",
-                                      "Saldo_Anterior":  36580.99,
+                                      "Saldo_Anterior":  36073.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36580.99
+                                      "Saldo_Projetado":  36073.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "17/01/2027",
-                                      "Saldo_Anterior":  36580.99,
+                                      "Saldo_Anterior":  36073.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36580.99
+                                      "Saldo_Projetado":  36073.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "18/01/2027",
-                                      "Saldo_Anterior":  36580.99,
+                                      "Saldo_Anterior":  36073.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36580.99
+                                      "Saldo_Projetado":  36073.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "19/01/2027",
-                                      "Saldo_Anterior":  36580.99,
+                                      "Saldo_Anterior":  36073.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36580.99
+                                      "Saldo_Projetado":  36073.75
                                   },
                                   {
                                       "Banco":  "BRADESCO",
                                       "Data":  "20/01/2027",
-                                      "Saldo_Anterior":  36580.99,
+                                      "Saldo_Anterior":  36073.75,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36580.99
+                                      "Saldo_Projetado":  36073.75
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "22/10/2026",
-                                      "Saldo_Anterior":  22250.84,
+                                      "Saldo_Anterior":  27835.48,
                                       "Recebiveis":  2495.54,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  24746.38
+                                      "Saldo_Projetado":  30331.02
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "23/10/2026",
-                                      "Saldo_Anterior":  24746.38,
+                                      "Saldo_Anterior":  30331.02,
                                       "Recebiveis":  7421.55,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  32167.93
+                                      "Saldo_Projetado":  37752.57
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "24/10/2026",
-                                      "Saldo_Anterior":  32167.93,
+                                      "Saldo_Anterior":  37752.57,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  32167.93
+                                      "Saldo_Projetado":  37752.57
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "25/10/2026",
-                                      "Saldo_Anterior":  32167.93,
+                                      "Saldo_Anterior":  37752.57,
                                       "Recebiveis":  1853.34,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  34021.27
+                                      "Saldo_Projetado":  39605.91
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "26/10/2026",
-                                      "Saldo_Anterior":  34021.27,
+                                      "Saldo_Anterior":  39605.91,
                                       "Recebiveis":  2272.04,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  36293.31
+                                      "Saldo_Projetado":  41877.95
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "27/10/2026",
-                                      "Saldo_Anterior":  36293.31,
+                                      "Saldo_Anterior":  41877.95,
                                       "Recebiveis":  13246.32,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  49539.63
+                                      "Saldo_Projetado":  55124.27
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "28/10/2026",
-                                      "Saldo_Anterior":  49539.63,
+                                      "Saldo_Anterior":  55124.27,
                                       "Recebiveis":  706.20,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  50245.83
+                                      "Saldo_Projetado":  55830.47
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "29/10/2026",
-                                      "Saldo_Anterior":  50245.83,
+                                      "Saldo_Anterior":  55830.47,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  50245.83
+                                      "Saldo_Projetado":  55830.47
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "30/10/2026",
-                                      "Saldo_Anterior":  50245.83,
+                                      "Saldo_Anterior":  55830.47,
                                       "Recebiveis":  6613.36,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  56859.19
+                                      "Saldo_Projetado":  62443.83
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "31/10/2026",
-                                      "Saldo_Anterior":  56859.19,
+                                      "Saldo_Anterior":  62443.83,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  56859.19
+                                      "Saldo_Projetado":  62443.83
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "01/11/2026",
-                                      "Saldo_Anterior":  56859.19,
+                                      "Saldo_Anterior":  62443.83,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  56859.19
+                                      "Saldo_Projetado":  62443.83
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "02/11/2026",
-                                      "Saldo_Anterior":  56859.19,
+                                      "Saldo_Anterior":  62443.83,
                                       "Recebiveis":  788.57,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  57647.76
+                                      "Saldo_Projetado":  63232.40
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "03/11/2026",
-                                      "Saldo_Anterior":  57647.76,
+                                      "Saldo_Anterior":  63232.40,
                                       "Recebiveis":  8533.82,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  66181.58
+                                      "Saldo_Projetado":  71766.22
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "04/11/2026",
-                                      "Saldo_Anterior":  66181.58,
+                                      "Saldo_Anterior":  71766.22,
                                       "Recebiveis":  10199.13,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  76380.71
+                                      "Saldo_Projetado":  81965.35
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "05/11/2026",
-                                      "Saldo_Anterior":  76380.71,
+                                      "Saldo_Anterior":  81965.35,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  76380.71
+                                      "Saldo_Projetado":  81965.35
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "06/11/2026",
-                                      "Saldo_Anterior":  76380.71,
+                                      "Saldo_Anterior":  81965.35,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  76380.71
+                                      "Saldo_Projetado":  81965.35
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "07/11/2026",
-                                      "Saldo_Anterior":  76380.71,
+                                      "Saldo_Anterior":  81965.35,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  76380.71
+                                      "Saldo_Projetado":  81965.35
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "08/11/2026",
-                                      "Saldo_Anterior":  76380.71,
+                                      "Saldo_Anterior":  81965.35,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  76380.71
+                                      "Saldo_Projetado":  81965.35
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "09/11/2026",
-                                      "Saldo_Anterior":  76380.71,
+                                      "Saldo_Anterior":  81965.35,
                                       "Recebiveis":  1110.83,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  77491.54
+                                      "Saldo_Projetado":  83076.18
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "10/11/2026",
-                                      "Saldo_Anterior":  77491.54,
+                                      "Saldo_Anterior":  83076.18,
                                       "Recebiveis":  15304.05,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  92795.59
+                                      "Saldo_Projetado":  98380.23
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "11/11/2026",
-                                      "Saldo_Anterior":  92795.59,
+                                      "Saldo_Anterior":  98380.23,
                                       "Recebiveis":  524.57,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  93320.16
+                                      "Saldo_Projetado":  98904.80
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "12/11/2026",
-                                      "Saldo_Anterior":  93320.16,
+                                      "Saldo_Anterior":  98904.80,
                                       "Recebiveis":  4235.44,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  97555.60
+                                      "Saldo_Projetado":  103140.24
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "13/11/2026",
-                                      "Saldo_Anterior":  97555.60,
+                                      "Saldo_Anterior":  103140.24,
                                       "Recebiveis":  866.18,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  98421.78
+                                      "Saldo_Projetado":  104006.42
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "14/11/2026",
-                                      "Saldo_Anterior":  98421.78,
+                                      "Saldo_Anterior":  104006.42,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  98421.78
+                                      "Saldo_Projetado":  104006.42
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "15/11/2026",
-                                      "Saldo_Anterior":  98421.78,
+                                      "Saldo_Anterior":  104006.42,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  98421.78
+                                      "Saldo_Projetado":  104006.42
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "16/11/2026",
-                                      "Saldo_Anterior":  98421.78,
+                                      "Saldo_Anterior":  104006.42,
                                       "Recebiveis":  1994.16,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  100415.94
+                                      "Saldo_Projetado":  106000.58
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "17/11/2026",
-                                      "Saldo_Anterior":  100415.94,
+                                      "Saldo_Anterior":  106000.58,
                                       "Recebiveis":  8632.66,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  109048.60
+                                      "Saldo_Projetado":  114633.24
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "18/11/2026",
-                                      "Saldo_Anterior":  109048.60,
+                                      "Saldo_Anterior":  114633.24,
                                       "Recebiveis":  564.92,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  109613.52
+                                      "Saldo_Projetado":  115198.16
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "19/11/2026",
-                                      "Saldo_Anterior":  109613.52,
+                                      "Saldo_Anterior":  115198.16,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  109613.52
+                                      "Saldo_Projetado":  115198.16
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "20/11/2026",
-                                      "Saldo_Anterior":  109613.52,
+                                      "Saldo_Anterior":  115198.16,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  109613.52
+                                      "Saldo_Projetado":  115198.16
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "21/11/2026",
-                                      "Saldo_Anterior":  109613.52,
+                                      "Saldo_Anterior":  115198.16,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  109613.52
+                                      "Saldo_Projetado":  115198.16
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "22/11/2026",
-                                      "Saldo_Anterior":  109613.52,
+                                      "Saldo_Anterior":  115198.16,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  109613.52
+                                      "Saldo_Projetado":  115198.16
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "23/11/2026",
-                                      "Saldo_Anterior":  109613.52,
+                                      "Saldo_Anterior":  115198.16,
                                       "Recebiveis":  1110.83,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  110724.35
+                                      "Saldo_Projetado":  116308.99
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "24/11/2026",
-                                      "Saldo_Anterior":  110724.35,
+                                      "Saldo_Anterior":  116308.99,
                                       "Recebiveis":  573.16,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  111297.51
+                                      "Saldo_Projetado":  116882.15
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "25/11/2026",
-                                      "Saldo_Anterior":  111297.51,
+                                      "Saldo_Anterior":  116882.15,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  111297.51
+                                      "Saldo_Projetado":  116882.15
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "26/11/2026",
-                                      "Saldo_Anterior":  111297.51,
+                                      "Saldo_Anterior":  116882.15,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  111297.51
+                                      "Saldo_Projetado":  116882.15
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "27/11/2026",
-                                      "Saldo_Anterior":  111297.51,
+                                      "Saldo_Anterior":  116882.15,
                                       "Recebiveis":  513.08,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  111810.59
+                                      "Saldo_Projetado":  117395.23
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "28/11/2026",
-                                      "Saldo_Anterior":  111810.59,
+                                      "Saldo_Anterior":  117395.23,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  111810.59
+                                      "Saldo_Projetado":  117395.23
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "29/11/2026",
-                                      "Saldo_Anterior":  111810.59,
+                                      "Saldo_Anterior":  117395.23,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  111810.59
+                                      "Saldo_Projetado":  117395.23
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "30/11/2026",
-                                      "Saldo_Anterior":  111810.59,
+                                      "Saldo_Anterior":  117395.23,
                                       "Recebiveis":  1196.38,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  113006.97
+                                      "Saldo_Projetado":  118591.61
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "01/12/2026",
-                                      "Saldo_Anterior":  113006.97,
+                                      "Saldo_Anterior":  118591.61,
                                       "Recebiveis":  493.33,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  113500.30
+                                      "Saldo_Projetado":  119084.94
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "02/12/2026",
-                                      "Saldo_Anterior":  113500.30,
+                                      "Saldo_Anterior":  119084.94,
                                       "Recebiveis":  564.92,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "03/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "04/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "05/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "06/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "07/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "08/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "09/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "10/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "11/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "12/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "13/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "14/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "15/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114065.22
+                                      "Saldo_Projetado":  119649.86
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "16/12/2026",
-                                      "Saldo_Anterior":  114065.22,
+                                      "Saldo_Anterior":  119649.86,
                                       "Recebiveis":  564.92,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "17/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "18/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "19/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "20/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "21/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "22/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "23/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "24/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "25/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "26/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "27/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "28/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "29/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "30/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "31/12/2026",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "01/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "02/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "03/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "04/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "05/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "06/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "07/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "08/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "09/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "10/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "11/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "12/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "13/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "14/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "15/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "16/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "17/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "18/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "19/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "ITAU",
                                       "Data":  "20/01/2027",
-                                      "Saldo_Anterior":  114630.14,
+                                      "Saldo_Anterior":  120214.78,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  114630.14
+                                      "Saldo_Projetado":  120214.78
                                   },
                                   {
                                       "Banco":  "BNB",
@@ -13462,14 +13472,14 @@
     "riscos_bancarios":  [
                              {
                                  "Banco":  "BRADESCO",
-                                 "Menor_Saldo":  -24334.62,
-                                 "Data_Menor_Saldo":  "06/11/2026",
-                                 "Primeira_Data_Risco":  "29/10/2026",
-                                 "Necessidade_Cobertura":  24334.62
+                                 "Menor_Saldo":  3788.00,
+                                 "Data_Menor_Saldo":  "13/11/2026",
+                                 "Primeira_Data_Risco":  null,
+                                 "Necessidade_Cobertura":  0
                              },
                              {
                                  "Banco":  "ITAU",
-                                 "Menor_Saldo":  24746.38,
+                                 "Menor_Saldo":  30331.02,
                                  "Data_Menor_Saldo":  "22/10/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -13495,84 +13505,84 @@
                                  "recebiveis":  2495.54,
                                  "pagamentos":  0,
                                  "debitos_programados":  0,
-                                 "debitos_programados_nominais":  90.00,
-                                 "debitos_programados_ja_incorporados":  90.00,
+                                 "debitos_programados_nominais":  597.24,
+                                 "debitos_programados_ja_incorporados":  597.24,
                                  "pagamentos_nao_alocados":  0,
                                  "total_saidas":  0,
-                                 "total_saidas_nominais":  90.00,
+                                 "total_saidas_nominais":  597.24,
                                  "qtd_recebiveis":  2,
                                  "qtd_pagamentos":  0,
-                                 "qtd_debitos_programados":  1
+                                 "qtd_debitos_programados":  2
                              },
                     "7d":  {
                                "dias":  7,
                                "recebiveis":  35674.99,
                                "pagamentos":  4987.57,
                                "debitos_programados":  46579.06,
-                               "debitos_programados_nominais":  46669.06,
-                               "debitos_programados_ja_incorporados":  90.00,
+                               "debitos_programados_nominais":  47176.30,
+                               "debitos_programados_ja_incorporados":  597.24,
                                "pagamentos_nao_alocados":  4987.57,
                                "total_saidas":  51566.63,
-                               "total_saidas_nominais":  51656.63,
+                               "total_saidas_nominais":  52163.87,
                                "qtd_recebiveis":  15,
                                "qtd_pagamentos":  20,
-                               "qtd_debitos_programados":  14
+                               "qtd_debitos_programados":  15
                            },
                     "15d":  {
                                 "dias":  15,
                                 "recebiveis":  61984.87,
                                 "pagamentos":  19320.75,
                                 "debitos_programados":  68799.20,
-                                "debitos_programados_nominais":  68889.20,
-                                "debitos_programados_ja_incorporados":  90.00,
+                                "debitos_programados_nominais":  69396.44,
+                                "debitos_programados_ja_incorporados":  597.24,
                                 "pagamentos_nao_alocados":  19320.75,
                                 "total_saidas":  88119.95,
-                                "total_saidas_nominais":  88209.95,
+                                "total_saidas_nominais":  88717.19,
                                 "qtd_recebiveis":  29,
                                 "qtd_pagamentos":  47,
-                                "qtd_debitos_programados":  22
+                                "qtd_debitos_programados":  23
                             },
                     "30d":  {
                                 "dias":  30,
-                                "recebiveis":  153155.78,
+                                "recebiveis":  110885.78,
                                 "pagamentos":  61018.62,
                                 "debitos_programados":  82439.34,
-                                "debitos_programados_nominais":  82529.34,
-                                "debitos_programados_ja_incorporados":  90.00,
+                                "debitos_programados_nominais":  83036.58,
+                                "debitos_programados_ja_incorporados":  597.24,
                                 "pagamentos_nao_alocados":  61018.62,
                                 "total_saidas":  143457.96,
-                                "total_saidas_nominais":  143547.96,
-                                "qtd_recebiveis":  55,
+                                "total_saidas_nominais":  144055.20,
+                                "qtd_recebiveis":  54,
                                 "qtd_pagamentos":  102,
-                                "qtd_debitos_programados":  27
+                                "qtd_debitos_programados":  28
                             },
                     "60d":  {
                                 "dias":  60,
-                                "recebiveis":  187844.30,
+                                "recebiveis":  145574.30,
                                 "pagamentos":  109356.94,
                                 "debitos_programados":  92867.20,
-                                "debitos_programados_nominais":  92957.20,
-                                "debitos_programados_ja_incorporados":  90.00,
+                                "debitos_programados_nominais":  93464.44,
+                                "debitos_programados_ja_incorporados":  597.24,
                                 "pagamentos_nao_alocados":  109356.94,
                                 "total_saidas":  202224.14,
-                                "total_saidas_nominais":  202314.14,
-                                "qtd_recebiveis":  68,
+                                "total_saidas_nominais":  202821.38,
+                                "qtd_recebiveis":  67,
                                 "qtd_pagamentos":  178,
-                                "qtd_debitos_programados":  32
+                                "qtd_debitos_programados":  33
                             },
                     "90d":  {
                                 "dias":  90,
-                                "recebiveis":  188724.30,
+                                "recebiveis":  146454.30,
                                 "pagamentos":  124542.53,
                                 "debitos_programados":  93273.59,
-                                "debitos_programados_nominais":  93363.59,
-                                "debitos_programados_ja_incorporados":  90.00,
+                                "debitos_programados_nominais":  93870.83,
+                                "debitos_programados_ja_incorporados":  597.24,
                                 "pagamentos_nao_alocados":  124542.53,
                                 "total_saidas":  217816.12,
-                                "total_saidas_nominais":  217906.12,
-                                "qtd_recebiveis":  70,
+                                "total_saidas_nominais":  218413.36,
+                                "qtd_recebiveis":  69,
                                 "qtd_pagamentos":  223,
-                                "qtd_debitos_programados":  33
+                                "qtd_debitos_programados":  34
                             }
                 },
     "parametros":  {
@@ -13587,43 +13597,43 @@
                        "horizonte_sql_dias":  90
                    },
     "auditoria":  {
-                      "saldo_operacional":  59420.14,
+                      "saldo_operacional":  106767.54,
                       "investimentos":  443918.97,
-                      "saldo_consolidado":  503339.11,
+                      "saldo_consolidado":  550686.51,
                       "bnb_operacional":  215.76,
                       "bnb_investimento":  443918.97,
                       "bnb_total":  444134.73,
                       "caixa_operacional":  835.89,
                       "caixa_misto":  -197.4019,
                       "caixa_particular":  -1211.69,
-                      "recebiveis_30d":  153155.78,
-                      "recebiveis_60d":  187844.30,
-                      "recebiveis_90d":  188724.30,
-                      "recebiveis_aloc_pendente":  64248.1,
+                      "recebiveis_30d":  110885.78,
+                      "recebiveis_60d":  145574.30,
+                      "recebiveis_90d":  146454.30,
+                      "recebiveis_aloc_pendente":  21978.1,
                       "pagamentos_30d":  61018.62,
                       "pagamentos_60d":  109356.94,
                       "pagamentos_90d":  124542.53,
                       "debitos_programados_30d":  82439.34,
                       "debitos_programados_60d":  92867.20,
                       "debitos_programados_90d":  93273.59,
-                      "debitos_programados_nominais_30d":  82529.34,
-                      "debitos_programados_nominais_60d":  92957.20,
-                      "debitos_programados_nominais_90d":  93363.59,
-                      "debitos_ja_incorporados_30d":  90.00,
-                      "debitos_ja_incorporados_60d":  90.00,
-                      "debitos_ja_incorporados_90d":  90.00,
+                      "debitos_programados_nominais_30d":  83036.58,
+                      "debitos_programados_nominais_60d":  93464.44,
+                      "debitos_programados_nominais_90d":  93870.83,
+                      "debitos_ja_incorporados_30d":  597.24,
+                      "debitos_ja_incorporados_60d":  597.24,
+                      "debitos_ja_incorporados_90d":  597.24,
                       "pagamentos_nao_alocados_30d":  61018.62,
                       "pagamentos_nao_alocados_60d":  109356.94,
                       "pagamentos_nao_alocados_90d":  124542.53,
-                      "qtd_recebiveis_90d":  70,
+                      "qtd_recebiveis_90d":  69,
                       "qtd_pagamentos_90d":  223,
-                      "qtd_debitos_programados_90d":  33,
+                      "qtd_debitos_programados_90d":  34,
                       "total_saidas_30d":  143457.96,
                       "total_saidas_60d":  202224.14,
                       "total_saidas_90d":  217816.12,
                       "conciliacao_pagamentos_90d":  124542.53,
                       "trajetoria_qtd_linhas":  455,
-                      "trajetoria_programados_nominais_90d":  93363.59,
+                      "trajetoria_programados_nominais_90d":  93870.83,
                       "trajetoria_programados_efeito_90d":  93273.59,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
