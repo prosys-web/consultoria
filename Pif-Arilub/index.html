@@ -24,7 +24,7 @@ table{width:100%;border-collapse:collapse;font-size:12px}th{background:var(--nav
 <section id="pagamentos" class="wrap sec"><div class="card"><div class="h">Pagamentos — previstos e programados</div><div class="small">PREVISTO = obrigação futura ainda não convertida em lançamento bancário. PROGRAMADO = lançamento bancário real. Se já incorporado ao saldo bancário, permanece rastreável mas seu efeito incremental na projeção é zero.</div><div class="filters"><div><div class="small">Janela</div><div id="windowPag"></div></div><label class="small">Estágio<br><select id="pagStage"></select></label><label class="small">Banco<br><select id="pagBank"></select></label><label class="small">Origem<br><select id="pagOrigin"></select></label></div><div style="overflow:auto"><table><thead><tr><th>Data</th><th>Estágio</th><th>Fornecedor / Referência</th><th>Descrição</th><th>Banco</th><th>Origem</th><th class="r">Nominal</th><th>Incorporado</th><th class="r">Efeito projeção</th></tr></thead><tbody id="pagRows"></tbody></table></div></div></section>
 <section id="bancos" class="wrap sec"><div class="card"><div class="h">Bancos — trajetória projetada</div><div class="small">Trajetória canônica gerada no motor: saldo anterior + recebíveis − PREVISTOS − efeito dos PROGRAMADOS ainda não incorporados ao saldo.</div><div class="filters"><div><div class="small">Janela</div><div id="windowBank"></div></div><label class="small">Banco<br><select id="bankFilter"></select></label></div><div id="bankTrajectories"></div></div><div id="riskCards" class="grid4"></div></section>
 <section id="insights" class="wrap sec"><div class="card"><div class="h">Insights executivos</div><div class="small">Regras determinísticas: fato → período → impacto → ação.</div><div id="insightsRows"></div></div></section>
-</main><footer>PIF v2.7 · AriLub Distribuidora Ltda · Fonte: Shop9 · trajetória canônica gerada no motor SQL 2.5.1</footer>
+</main><footer>PIF v2.7 · AriLub Distribuidora Ltda · Fonte: Shop9 · trajetória canônica gerada no motor SQL 2.5.2</footer>
 <script>
 const fmt=v=>(Number(v||0)).toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
@@ -32,8 +32,8 @@ const pill=o=>'<span class="pill '+(o==='SHOP9'?'shop':o==='ALOC. PENDENTE'?'pen
 const parseBR=s=>{const z=String(s||'').split('/').map(Number);return new Date(z[2],z[1]-1,z[0])};
 const fd=d=>String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padStart(2,'0')+'/'+d.getFullYear();
 const add=(d,n)=>{let x=new Date(d);x.setDate(x.getDate()+n);return x};
-const EXPECTED_VERSION='PIF SQL 2.5.1';
-const FALLBACK_BANKS=['BRADESCO','ITAU','BNB','SANTANDER','NÃO ALOCADO'];
+const EXPECTED_VERSIONS=['PIF SQL 2.5.1','PIF SQL 2.5.2'];
+const FALLBACK_BANKS=['BRADESCO','ITAU','BNB','SANTANDER','MERCADO PAGO','NÃO ALOCADO'];
 let DATA=null,WIN=30,cb=null,cf=null,USING_CACHE=false,DATA_ERROR='';
 
 document.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{
@@ -49,7 +49,7 @@ function iw(s){let d=parseBR(s);return d>=base()&&d<=ed()}
 function uniq(a){return [...new Set((a||[]).filter(Boolean))]}
 function opts(id,vals){let e=document.getElementById(id),old=e.value;e.innerHTML='<option value="">Todos</option>'+vals.map(v=>'<option>'+esc(v)+'</option>').join('');if([...e.options].some(o=>o.value===old))e.value=old}
 function banks(){return uniq([...(DATA?.contas||[]).filter(x=>x.Classificacao==='OPERACIONAL').map(x=>x.Banco),...(DATA?.trajetorias_bancarias||[]).map(x=>x.Banco),...FALLBACK_BANKS])}
-function validData(d){return !!(d&&d.metadata&&d.metadata.versao===EXPECTED_VERSION&&Array.isArray(d.recebiveis)&&Array.isArray(d.pagamentos)&&Array.isArray(d.debitos_programados)&&Array.isArray(d.trajetorias_bancarias)&&d.janelas&&d.auditoria)}
+function validData(d){return !!(d&&d.metadata&&EXPECTED_VERSIONS.includes(d.metadata.versao)&&Array.isArray(d.recebiveis)&&Array.isArray(d.pagamentos)&&Array.isArray(d.debitos_programados)&&Array.isArray(d.trajetorias_bancarias)&&d.janelas&&d.auditoria)}
 function jkey(){return WIN===0?'hoje':WIN+'d'}
 function windowData(){return DATA.janelas?.[jkey()]||{}}
 function trajRows(bank){return (DATA.trajetorias_bancarias||[]).filter(x=>x.Banco===bank&&iw(x.Data)).sort((a,b)=>parseBR(a.Data)-parseBR(b.Data))}
@@ -86,7 +86,7 @@ async function load(){
    let c=null;try{c=JSON.parse(localStorage.getItem('ARILUB_PIF_LAST_VALID_FINAL_V27')||'null')}catch(_){}
    if(validData(c)){DATA=c;USING_CACHE=true}else DATA=null;
  }
- if(!DATA){document.getElementById('alerts').innerHTML='<div class="alert red"><b>Dados do PIF indisponíveis.</b> Esperado '+esc(EXPECTED_VERSION)+'.</div>';return}
+ if(!DATA){document.getElementById('alerts').innerHTML='<div class="alert red"><b>Dados do PIF indisponíveis.</b> Esperado '+esc(EXPECTED_VERSIONS.join(' ou '))+'.</div>';return}
  render();
 }
 
@@ -185,4 +185,5 @@ function rinsights(){
 }
 load();
 </script></body></html>
+
 
