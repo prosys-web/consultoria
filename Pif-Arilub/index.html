@@ -34,7 +34,23 @@ const fd=d=>String(d.getDate()).padStart(2,'0')+'/'+String(d.getMonth()+1).padSt
 const add=(d,n)=>{let x=new Date(d);x.setDate(x.getDate()+n);return x};
 const EXPECTED_VERSIONS=['PIF SQL 2.5.1','PIF SQL 2.5.2'];
 const FALLBACK_BANKS=['BRADESCO','ITAU','BNB','SANTANDER','MERCADO PAGO','NÃO ALOCADO'];
-let DATA=null,WIN=30,cb=null,cf=null,USING_CACHE=false,DATA_ERROR='';
+let DATA=null,CONFIG=null,WIN=30,cb=null,cf=null,USING_CACHE=false,DATA_ERROR='';
+
+const BANK_SELECT_IDS=new Set(['flowBank','recBank','pagBank','bankFilter']);
+function cfgBank(bank){
+  const a=(DATA?.contas||[]).find(x=>x.Banco===bank);
+  return a ? (CONFIG?.bancos?.[String(a.Ordem)]||{}) : {};
+}
+function bankLabel(bank){const c=cfgBank(bank);return c.nome_exibicao||bank}
+function bankVisible(bank){const c=cfgBank(bank);return c.exibir!==false}
+function bankOrder(bank){const c=cfgBank(bank);return Number.isFinite(+c.ordem)?+c.ordem:9000}
+function cfgCash(x){return CONFIG?.caixas?.[String(x?.Codigo)]||{}}
+function cashName(x){const c=cfgCash(x);return c.nome_exibicao||x?.Nome||('Caixa '+(x?.Codigo??''))}
+function cashVisible(x){const c=cfgCash(x);return c.exibir!==false}
+function cashOrder(x){const c=cfgCash(x);return Number.isFinite(+c.ordem)?+c.ordem:9000}
+function cfgDisplay(k,def=true){const v=CONFIG?.exibicao?.[k];return typeof v==='boolean'?v:def}
+function cfgAlert(k){const v=CONFIG?.alertas?.[k];return v===null||v===undefined||v===''?null:+v}
+function daysOld(s){if(!s)return null;const d=parseBR(s),b=base();if(isNaN(d)||isNaN(b))return null;return Math.floor((b-d)/86400000)}
 
 document.querySelectorAll('.nb').forEach(b=>b.onclick=()=>{
   document.querySelectorAll('.nb,.sec').forEach(x=>x.classList.remove('on'));
@@ -47,8 +63,8 @@ function base(){return parseBR(DATA.metadata.data_base)}
 function ed(){return add(base(),WIN)}
 function iw(s){let d=parseBR(s);return d>=base()&&d<=ed()}
 function uniq(a){return [...new Set((a||[]).filter(Boolean))]}
-function opts(id,vals){let e=document.getElementById(id),old=e.value;e.innerHTML='<option value="">Todos</option>'+vals.map(v=>'<option>'+esc(v)+'</option>').join('');if([...e.options].some(o=>o.value===old))e.value=old}
-function banks(){return uniq([...(DATA?.contas||[]).filter(x=>x.Classificacao==='OPERACIONAL').map(x=>x.Banco),...(DATA?.trajetorias_bancarias||[]).map(x=>x.Banco),...FALLBACK_BANKS])}
+function opts(id,vals){let e=document.getElementById(id),old=e.value;e.innerHTML='<option value="">Todos</option>'+vals.map(v=>'<option value="'+esc(v)+'">'+esc(BANK_SELECT_IDS.has(id)?bankLabel(v):v)+'</option>').join('');if([...e.options].some(o=>o.value===old))e.value=old}
+function banks(){return uniq([...(DATA?.contas||[]).filter(x=>x.Classificacao==='OPERACIONAL').map(x=>x.Banco),...(DATA?.trajetorias_bancarias||[]).map(x=>x.Banco),...FALLBACK_BANKS]).filter(bankVisible).sort((a,b)=>bankOrder(a)-bankOrder(b)||String(bankLabel(a)).localeCompare(String(bankLabel(b))))}
 function validData(d){return !!(d&&d.metadata&&EXPECTED_VERSIONS.includes(d.metadata.versao)&&Array.isArray(d.recebiveis)&&Array.isArray(d.pagamentos)&&Array.isArray(d.debitos_programados)&&Array.isArray(d.trajetorias_bancarias)&&d.janelas&&d.auditoria)}
 function jkey(){return WIN===0?'hoje':WIN+'d'}
 function windowData(){return DATA.janelas?.[jkey()]||{}}
@@ -74,19 +90,25 @@ function moves(){
 }
 
 async function load(){
- USING_CACHE=false;DATA_ERROR='';
+ USING_CACHE=false;DATA_ERROR='';CONFIG=null;
  try{
-   let r=await fetch('pif-data.json?ts='+Date.now(),{cache:'no-store'});
+   const ts=Date.now();
+   let r=await fetch('pif-data.json?ts='+ts,{cache:'no-store'});
    if(!r.ok)throw new Error('HTTP '+r.status);
    let d=await r.json();
    if(!validData(d))throw new Error('Versão/estrutura inesperada: '+(d?.metadata?.versao||'sem versão'));
    DATA=d;localStorage.setItem('ARILUB_PIF_LAST_VALID_FINAL_V27',JSON.stringify(DATA));
+   try{
+     let rc=await fetch('pif-config.json?ts='+ts,{cache:'no-store'});
+     if(rc.ok){let c=await rc.json();if(c?.schema==='PIF CONFIG 1.0')CONFIG=c}
+   }catch(_){}
  }catch(e){
    DATA_ERROR=String(e?.message||e||'falha de leitura');
    let c=null;try{c=JSON.parse(localStorage.getItem('ARILUB_PIF_LAST_VALID_FINAL_V27')||'null')}catch(_){}
    if(validData(c)){DATA=c;USING_CACHE=true}else DATA=null;
  }
  if(!DATA){document.getElementById('alerts').innerHTML='<div class="alert red"><b>Dados do PIF indisponíveis.</b> Esperado '+esc(EXPECTED_VERSIONS.join(' ou '))+'.</div>';return}
+ const iw0=+CONFIG?.janela_inicial_dias;if(windows().includes(iw0))WIN=iw0;
  render();
 }
 
@@ -106,26 +128,40 @@ function render(){
 
  let rs=(DATA.recebiveis||[]).filter(x=>iw(x.Vencimento));
  let recPend=rs.filter(x=>x.Origem_Alocacao==='ALOC. PENDENTE').reduce((s,x)=>s+(+x.Valor||0),0);
+ let naoAloc=moves().filter(x=>iw(x.d)&&x.t==='Pagamento'&&x.b==='NÃO ALOCADO').reduce((s,x)=>s+(+x.nom||0),0);
  let ah='';
  if(USING_CACHE)ah+='<div class="alert red"><b>Atenção:</b> exibindo cache local. '+esc(DATA_ERROR)+'.</div>';
 
- if(recPend>0)ah+='<div class="alert"><b>Alocação pendente:</b> '+fmt(recPend)+' em recebíveis da janela estão provisoriamente no Bradesco.</div>';
- risksWindow().filter(x=>+x.Necessidade_Cobertura>0).forEach(x=>ah+='<div class="alert red"><b>Risco · '+esc(x.Banco)+':</b> inicia em '+esc(x.Primeira_Data_Risco||'—')+'; cobertura máxima '+fmt(x.Necessidade_Cobertura)+' na janela selecionada.</div>');
+ const recThr=cfgAlert('aloc_pendente_acima');
+ if(cfgDisplay('mostrar_alerta_aloc_pendente',true)&&recPend>(recThr??0))ah+='<div class="alert"><b>Alocação pendente:</b> '+fmt(recPend)+' em recebíveis da janela estão provisoriamente no '+esc(bankLabel('BRADESCO'))+'.</div>';
+ const opThr=cfgAlert('saldo_operacional_atencao');
+ if(opThr!==null&&(+a.saldo_operacional||0)<opThr)ah+='<div class="alert"><b>Disponibilidade operacional:</b> '+fmt(a.saldo_operacional)+' abaixo do parâmetro de atenção '+fmt(opThr)+'.</div>';
+ const naThr=cfgAlert('nao_alocado_acima');
+ if(naThr!==null&&naoAloc>naThr)ah+='<div class="alert"><b>Pagamentos NÃO ALOCADO:</b> '+fmt(naoAloc)+' acima do parâmetro de atenção '+fmt(naThr)+'.</div>';
+ const stale=cfgAlert('dias_saldo_desatualizado');
+ if(cfgDisplay('mostrar_alerta_saldo_desatualizado',true)&&stale!==null){
+   cs.filter(x=>bankVisible(x.Banco)).forEach(x=>{const n=daysOld(x.Data_Posicao);if(n!==null&&n>stale)ah+='<div class="alert"><b>Saldo desatualizado · '+esc(bankLabel(x.Banco))+':</b> posição de '+esc(x.Data_Posicao)+' ('+n+' dias).</div>'});
+ }
+ const projThr=cfgAlert('saldo_projetado_banco_atencao');
+ if(projThr!==null)risksWindow().filter(x=>(+x.Menor_Saldo||0)>=0&&(+x.Menor_Saldo||0)<projThr).forEach(x=>ah+='<div class="alert"><b>Atenção projetada · '+esc(bankLabel(x.Banco))+':</b> menor saldo '+fmt(x.Menor_Saldo)+' na janela.</div>');
+ risksWindow().filter(x=>+x.Necessidade_Cobertura>0).forEach(x=>ah+='<div class="alert red"><b>Risco · '+esc(bankLabel(x.Banco))+':</b> inicia em '+esc(x.Primeira_Data_Risco||'—')+'; cobertura máxima '+fmt(x.Necessidade_Cobertura)+' na janela selecionada.</div>');
  alerts.innerHTML=ah;
- recAlert.innerHTML=recPend>0?'<div class="alert"><b>ALOC. PENDENTE:</b> '+fmt(recPend)+' na janela selecionada; já incluídos no total de recebíveis.</div>':'';
+ recAlert.innerHTML=(cfgDisplay('mostrar_alerta_aloc_pendente',true)&&recPend>(recThr??0))?'<div class="alert"><b>ALOC. PENDENTE:</b> '+fmt(recPend)+' na janela selecionada; já incluídos no total de recebíveis.</div>':'';
 
- const line=x=>'<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #ddd"><span>'+esc(x.Banco)+'</span><b>'+fmt(x.Saldo)+'</b></div>';
- invest.innerHTML=cs.filter(x=>x.Classificacao==='INVESTIMENTO').map(line).join('')||'<div class="small">Sem posição de investimentos.</div>';
- oper.innerHTML=cs.filter(x=>x.Classificacao==='OPERACIONAL').map(line).join('')||'<div class="small">Sem posição operacional.</div>';
+ const line=x=>'<div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #ddd"><span>'+esc(bankLabel(x.Banco))+'</span><b>'+fmt(x.Saldo)+'</b></div>';
+ const inv=cs.filter(x=>x.Classificacao==='INVESTIMENTO'&&bankVisible(x.Banco)).sort((a,b)=>bankOrder(a.Banco)-bankOrder(b.Banco));
+ const opr=cs.filter(x=>x.Classificacao==='OPERACIONAL'&&bankVisible(x.Banco)).sort((a,b)=>bankOrder(a.Banco)-bankOrder(b.Banco));
+ invest.innerHTML=cfgDisplay('mostrar_investimentos_individualmente',true)?(inv.map(line).join('')||'<div class="small">Sem posição de investimentos.</div>'):'<div class="small">Exibição individual de investimentos desativada.</div>';
+ oper.innerHTML=opr.map(line).join('')||'<div class="small">Sem posição operacional.</div>';
 
- let cx=(DATA.caixa?.itens||[]);
- const cashLabel=x=>esc((x.Nome||('Caixa '+(x.Codigo??'')))+(x.Classificacao_PIF==='MISTO'?' · uso misto':x.Classificacao_PIF==='PARTICULAR'?' · particular':''));
- cash.innerHTML=cx.map(x=>'<div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+cashLabel(x)+'</span><b>'+fmt(x.Saldo_Atual)+'</b></div>').join('')||'<div class="small">Sem posição de caixa.</div>';
+ let cx=(DATA.caixa?.itens||[]).filter(cashVisible).sort((a,b)=>cashOrder(a)-cashOrder(b));
+ const cashLabel=x=>esc(cashName(x)+(x.Classificacao_PIF==='MISTO'?' · uso misto':x.Classificacao_PIF==='PARTICULAR'?' · particular':''));
+ cash.innerHTML=cfgDisplay('mostrar_caixas',true)?(cx.map(x=>'<div style="display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid #eee;font-size:13px"><span>'+cashLabel(x)+'</span><b>'+fmt(x.Saldo_Atual)+'</b></div>').join('')||'<div class="small">Sem posição de caixa.</div>'):'<div class="small">Exibição de caixas desativada.</div>';
 
  let pro=banks().filter(b=>b!=='NÃO ALOCADO').map(bankSummary).filter(Boolean);
  chartBanksSub.textContent='Saldo atual x saldo canônico no fim da janela · '+fd(ed());
  if(cb)cb.destroy();
- cb=new Chart(chartBanks,{type:'bar',data:{labels:pro.map(x=>x.Banco),datasets:[{label:'Saldo atual',data:pro.map(x=>x.Saldo_Atual)},{label:'Saldo projetado',data:pro.map(x=>x.Saldo_Projetado)}]},options:{responsive:true,plugins:{legend:{position:'bottom'}}}});
+ cb=new Chart(chartBanks,{type:'bar',data:{labels:pro.map(x=>bankLabel(x.Banco)),datasets:[{label:'Saldo atual',data:pro.map(x=>x.Saldo_Atual)},{label:'Saldo projetado',data:pro.map(x=>x.Saldo_Projetado)}]},options:{responsive:true,plugins:{legend:{position:'bottom'}}}});
 
  filters(); rflow(); rrec(); rpag(); rbanks(); rinsights();
 }
@@ -142,7 +178,7 @@ function filters(){
 function rflow(){
  let bf=flowBank.value,tf=flowType.value,sf=flowStage.value,of=flowOrigin.value;
  let mv=moves().filter(x=>iw(x.d)&&(!bf||x.b===bf)&&(!tf||x.t===tf)&&(!sf||x.est===sf)&&(!of||x.o===of));
- flowRows.innerHTML=mv.map(x=>'<tr><td>'+esc(x.d)+'</td><td>'+esc(x.b)+'</td><td>'+esc(x.t)+'</td><td>'+(x.est?pill(x.est):'—')+'</td><td>'+pill(x.o)+'</td><td>'+esc(x.desc)+(x.inc?' · <b>já incorporado ao saldo</b>':'')+'</td><td class="r">'+(x.i?fmt(x.i):'—')+'</td><td class="r">'+(x.s?fmt(x.s):(x.t==='Pagamento'&&x.nom?'R$ 0,00':'—'))+'</td></tr>').join('')||'<tr><td colspan="8">Nenhum movimento.</td></tr>';
+ flowRows.innerHTML=mv.map(x=>'<tr><td>'+esc(x.d)+'</td><td>'+esc(bankLabel(x.b))+'</td><td>'+esc(x.t)+'</td><td>'+(x.est?pill(x.est):'—')+'</td><td>'+pill(x.o)+'</td><td>'+esc(x.desc)+(x.inc?' · <b>já incorporado ao saldo</b>':'')+'</td><td class="r">'+(x.i?fmt(x.i):'—')+'</td><td class="r">'+(x.s?fmt(x.s):(x.t==='Pagamento'&&x.nom?'R$ 0,00':'—'))+'</td></tr>').join('')||'<tr><td colspan="8">Nenhum movimento.</td></tr>';
  let days=[];for(let d=base();d<=ed();d=add(d,1))days.push(fd(d));
  if(cf)cf.destroy();
  cf=new Chart(chartFlow,{type:'bar',data:{labels:days,datasets:[{label:'Recebíveis',data:days.map(d=>mv.filter(x=>x.d===d).reduce((s,x)=>s+x.i,0))},{label:'Saídas com efeito',data:days.map(d=>mv.filter(x=>x.d===d).reduce((s,x)=>s+x.s,0))}]},options:{responsive:true,plugins:{legend:{position:'bottom'}}}});
@@ -152,7 +188,7 @@ function rrec(){
  let b=recBank.value,o=recOrigin.value;
  let rs=(DATA.recebiveis||[]).filter(x=>{let xb=x.Banco_Projetado==='SEM BANCO'?'NÃO ALOCADO':x.Banco_Projetado;return iw(x.Vencimento)&&(!b||xb===b)&&(!o||x.Origem_Alocacao===o)});
  let total=rs.reduce((s,x)=>s+(+x.Valor||0),0);
- recRows.innerHTML=rs.map(x=>'<tr><td>'+esc(x.Vencimento)+'</td><td>'+esc(x.Cliente)+'</td><td>'+esc(x.Descricao)+'</td><td>'+esc(x.Banco_Projetado==='SEM BANCO'?'NÃO ALOCADO':x.Banco_Projetado)+'</td><td>'+pill(x.Origem_Alocacao)+'</td><td class="r">'+fmt(x.Valor)+'</td></tr>').join('')+'<tr><td colspan="5"><b>Total filtrado</b></td><td class="r"><b>'+fmt(total)+'</b></td></tr>';
+ recRows.innerHTML=rs.map(x=>'<tr><td>'+esc(x.Vencimento)+'</td><td>'+esc(x.Cliente)+'</td><td>'+esc(x.Descricao)+'</td><td>'+esc(bankLabel(x.Banco_Projetado==='SEM BANCO'?'NÃO ALOCADO':x.Banco_Projetado))+'</td><td>'+pill(x.Origem_Alocacao)+'</td><td class="r">'+fmt(x.Valor)+'</td></tr>').join('')+'<tr><td colspan="5"><b>Total filtrado</b></td><td class="r"><b>'+fmt(total)+'</b></td></tr>';
 }
 
 function rpag(){
@@ -161,7 +197,7 @@ function rpag(){
  (DATA.debitos_programados||[]).forEach(x=>rows.push({d:x.Data,est:x.Estagio||'PROGRAMADO',ref:'Lançamento #'+(x.Ordem_SQL??'—'),desc:x.Descricao||'',b:x.Banco||'',o:'SHOP9',nom:+x.Valor||0,inc:programadoIncorporado(x),eff:programadoEfeito(x)}));
  rows=rows.filter(x=>iw(x.d)&&(!st||x.est===st)&&(!b||x.b===b)&&(!o||x.o===o)).sort((a,b)=>parseBR(a.d)-parseBR(b.d)||a.est.localeCompare(b.est)||a.b.localeCompare(b.b));
  let nom=rows.reduce((s,x)=>s+x.nom,0),eff=rows.reduce((s,x)=>s+x.eff,0),inc=nom-eff;
- pagRows.innerHTML=rows.map(x=>'<tr><td>'+esc(x.d)+'</td><td>'+pill(x.est)+'</td><td>'+esc(x.ref)+'</td><td>'+esc(x.desc)+'</td><td>'+esc(x.b)+'</td><td>'+pill(x.o)+'</td><td class="r">'+fmt(x.nom)+'</td><td>'+(x.inc?'<b>SIM</b>':'—')+'</td><td class="r">'+fmt(x.eff)+'</td></tr>').join('')+'<tr><td colspan="6"><b>Total filtrado</b></td><td class="r"><b>'+fmt(nom)+'</b></td><td><b>'+fmt(inc)+'</b></td><td class="r"><b>'+fmt(eff)+'</b></td></tr>';
+ pagRows.innerHTML=rows.map(x=>'<tr><td>'+esc(x.d)+'</td><td>'+pill(x.est)+'</td><td>'+esc(x.ref)+'</td><td>'+esc(x.desc)+'</td><td>'+esc(bankLabel(x.b))+'</td><td>'+pill(x.o)+'</td><td class="r">'+fmt(x.nom)+'</td><td>'+(x.inc?'<b>SIM</b>':'—')+'</td><td class="r">'+fmt(x.eff)+'</td></tr>').join('')+'<tr><td colspan="6"><b>Total filtrado</b></td><td class="r"><b>'+fmt(nom)+'</b></td><td><b>'+fmt(inc)+'</b></td><td class="r"><b>'+fmt(eff)+'</b></td></tr>';
 }
 
 function rbanks(){
@@ -169,9 +205,9 @@ function rbanks(){
  bankTrajectories.innerHTML=bs.map(b=>{
    let rows=trajRows(b);
    if(!rows.length)return '';
-   return '<div style="margin-top:16px"><div class="h">'+esc(b)+'</div><div style="overflow:auto"><table><thead><tr><th>Data</th><th class="r">Saldo anterior</th><th class="r">Recebíveis</th><th class="r">Previstos</th><th class="r">Prog. nominal</th><th class="r">Já incorporado</th><th class="r">Prog. efeito</th><th class="r">Saldo projetado</th></tr></thead><tbody>'+rows.map(x=>'<tr><td>'+esc(x.Data)+'</td><td class="r">'+fmt(x.Saldo_Anterior)+'</td><td class="r">'+fmt(x.Recebiveis)+'</td><td class="r">'+fmt(x.Pagamentos_Previstos)+'</td><td class="r">'+fmt(x.Programados_Nominais)+'</td><td class="r">'+fmt(x.Programados_Ja_Incorporados)+'</td><td class="r">'+fmt(x.Programados_Efeito_Projecao)+'</td><td class="r"><b>'+fmt(x.Saldo_Projetado)+'</b></td></tr>').join('')+'</tbody></table></div></div>';
+   return '<div style="margin-top:16px"><div class="h">'+esc(bankLabel(b))+'</div><div style="overflow:auto"><table><thead><tr><th>Data</th><th class="r">Saldo anterior</th><th class="r">Recebíveis</th><th class="r">Previstos</th><th class="r">Prog. nominal</th><th class="r">Já incorporado</th><th class="r">Prog. efeito</th><th class="r">Saldo projetado</th></tr></thead><tbody>'+rows.map(x=>'<tr><td>'+esc(x.Data)+'</td><td class="r">'+fmt(x.Saldo_Anterior)+'</td><td class="r">'+fmt(x.Recebiveis)+'</td><td class="r">'+fmt(x.Pagamentos_Previstos)+'</td><td class="r">'+fmt(x.Programados_Nominais)+'</td><td class="r">'+fmt(x.Programados_Ja_Incorporados)+'</td><td class="r">'+fmt(x.Programados_Efeito_Projecao)+'</td><td class="r"><b>'+fmt(x.Saldo_Projetado)+'</b></td></tr>').join('')+'</tbody></table></div></div>';
  }).join('');
- riskCards.innerHTML=risksWindow().filter(x=>!s||x.Banco===s).map(x=>'<div class="kpi '+(+x.Necessidade_Cobertura>0?'red':'green')+'"><div class="lbl">'+esc(x.Banco)+'</div><div class="val">'+fmt(x.Menor_Saldo)+'</div><div class="small">Menor saldo na janela · '+esc(x.Data_Menor_Saldo||'—')+'</div>'+(x.Primeira_Data_Risco?'<div class="small">Risco inicia · '+esc(x.Primeira_Data_Risco)+'</div>':'<div class="small">Sem saldo negativo na janela</div>')+'</div>').join('');
+ riskCards.innerHTML=risksWindow().filter(x=>!s||x.Banco===s).map(x=>'<div class="kpi '+(+x.Necessidade_Cobertura>0?'red':'green')+'"><div class="lbl">'+esc(bankLabel(x.Banco))+'</div><div class="val">'+fmt(x.Menor_Saldo)+'</div><div class="small">Menor saldo na janela · '+esc(x.Data_Menor_Saldo||'—')+'</div>'+(x.Primeira_Data_Risco?'<div class="small">Risco inicia · '+esc(x.Primeira_Data_Risco)+'</div>':'<div class="small">Sem saldo negativo na janela</div>')+'</div>').join('');
 }
 
 function rinsights(){
@@ -179,7 +215,7 @@ function rinsights(){
  if(+w.debitos_programados_ja_incorporados>0)ins.push('<b>Replay bloqueado.</b> '+fmt(w.debitos_programados_ja_incorporados)+' de PROGRAMADOS na janela permanecem nominais, porém com efeito incremental zero porque já compõem o saldo bancário atual.');
  if(+w.pagamentos_nao_alocados>0)ins.push('<b>Pagamentos não alocados.</b> '+fmt(w.pagamentos_nao_alocados)+' permanecem em NÃO ALOCADO.');
  let rs=(DATA.recebiveis||[]).filter(x=>iw(x.Vencimento)&&x.Origem_Alocacao==='ALOC. PENDENTE'),rp=rs.reduce((s,x)=>s+(+x.Valor||0),0);
- if(rp>0)ins.push('<b>Recebíveis com alocação pendente.</b> '+fmt(rp)+' já estão incluídos no total e projetados provisoriamente no Bradesco.');
+ if(rp>0)ins.push('<b>Recebíveis com alocação pendente.</b> '+fmt(rp)+' já estão incluídos no total e projetados provisoriamente no '+esc(bankLabel('BRADESCO'))+'.');
  if(!ins.length)ins.push('<b>Integridade.</b> Nenhuma ressalva material na janela selecionada.');
  insightsRows.innerHTML=ins.map(x=>'<div class="ins">'+x+'</div>').join('');
 }
