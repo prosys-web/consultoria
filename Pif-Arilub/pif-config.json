@@ -1,78 +1,77 @@
 {
-  "schema": "PIF CONFIG 1.0",
-  "atualizado_em": "2026-11-05T21:40:00-03:00",
-  "janela_inicial_dias": 30,
-  "bancos": {
-    "3": {
-      "nome_exibicao": "Bradesco",
-      "ordem": 10,
-      "exibir": true
-    },
-    "1017": {
-      "nome_exibicao": "BNB Investimento",
-      "ordem": 60,
-      "exibir": true
-    },
-    "3021": {
-      "nome_exibicao": "Itaú",
-      "ordem": 20,
-      "exibir": true
-    },
-    "3022": {
-      "nome_exibicao": "BNB",
-      "ordem": 30,
-      "exibir": true
-    },
-    "3023": {
-      "nome_exibicao": "Mercado Pago",
-      "ordem": 50,
-      "exibir": true
-    },
-    "3024": {
-      "nome_exibicao": "Santander",
-      "ordem": 40,
-      "exibir": true
-    },
-    "3025": {
-      "nome_exibicao": "Santander Investimento",
-      "ordem": 70,
-      "exibir": true
-    }
-  },
-  "caixas": {
-    "1": {
-      "nome_exibicao": "Caixa LOJA",
-      "ordem": 10,
-      "exibir": true
-    },
-    "10": {
-      "nome_exibicao": "Tesouraria",
-      "ordem": 20,
-      "exibir": true
-    },
-    "100": {
-      "nome_exibicao": "Caixari",
-      "ordem": 30,
-      "exibir": true
-    }
-  },
-  "alertas": {
-    "saldo_operacional_atencao": null,
-    "saldo_projetado_banco_atencao": null,
-    "dias_saldo_desatualizado": null,
-    "nao_alocado_acima": null,
-    "aloc_pendente_acima": null
-  },
-  "exibicao": {
-    "mostrar_investimentos_individualmente": true,
-    "mostrar_caixas": true,
-    "mostrar_alerta_aloc_pendente": true,
-    "mostrar_alerta_saldo_desatualizado": true
-  },
-  "governanca": {
-    "shop9_somente_leitura": true,
-    "regras_financeiras_editaveis": false,
-    "classificacao_contas_editavel": false,
-    "gravacao_direta_github": false
-  }
+    "schema":  "PIF CONFIG 1.0",
+    "janela_inicial_dias":  30,
+    "bancos":  {
+                   "3":  {
+                             "nome_exibicao":  "BRADESCO",
+                             "ordem":  10,
+                             "exibir":  true
+                         },
+                   "3021":  {
+                                "nome_exibicao":  "ITAU",
+                                "ordem":  20,
+                                "exibir":  true
+                            },
+                   "3022":  {
+                                "nome_exibicao":  "BNB",
+                                "ordem":  30,
+                                "exibir":  true
+                            },
+                   "3024":  {
+                                "nome_exibicao":  "SANTANDER",
+                                "ordem":  40,
+                                "exibir":  true
+                            },
+                   "3023":  {
+                                "nome_exibicao":  "MERCADO PAGO",
+                                "ordem":  50,
+                                "exibir":  true
+                            },
+                   "1017":  {
+                                "nome_exibicao":  "BNB INVESTIMENTO",
+                                "ordem":  60,
+                                "exibir":  true
+                            },
+                   "3025":  {
+                                "nome_exibicao":  "SANTANDER INVESTIMENTO",
+                                "ordem":  70,
+                                "exibir":  true
+                            }
+               },
+    "caixas":  {
+                   "1":  {
+                             "nome_exibicao":  "Caixa LOJA",
+                             "ordem":  10,
+                             "exibir":  true
+                         },
+                   "10":  {
+                              "nome_exibicao":  "TESOURARIA",
+                              "ordem":  20,
+                              "exibir":  true
+                          },
+                   "100":  {
+                               "nome_exibicao":  "Caixari",
+                               "ordem":  30,
+                               "exibir":  true
+                           }
+               },
+    "alertas":  {
+                    "saldo_operacional_atencao":  null,
+                    "saldo_projetado_banco_atencao":  null,
+                    "dias_saldo_desatualizado":  null,
+                    "nao_alocado_acima":  null,
+                    "aloc_pendente_acima":  null
+                },
+    "exibicao":  {
+                     "mostrar_investimentos_individualmente":  true,
+                     "mostrar_caixas":  true,
+                     "mostrar_alerta_aloc_pendente":  true,
+                     "mostrar_alerta_saldo_desatualizado":  true
+                 },
+    "governanca":  {
+                       "shop9_somente_leitura":  true,
+                       "regras_financeiras_editaveis":  false,
+                       "classificacao_contas_editavel":  false,
+                       "gravacao_direta_github":  false
+                   }
 }
