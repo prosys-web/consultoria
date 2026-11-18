@@ -2,7 +2,7 @@
     "metadata":  {
                      "empresa":  "ARILUB DISTRIBUIDORA LTDA",
                      "data_base":  "18/11/2026",
-                     "gerado_em":  "18/11/2026 13:00:04",
+                     "gerado_em":  "18/11/2026 14:00:04",
                      "origem":  "SQL Server Shop Control 9 - S9_Real",
                      "versao":  "PIF SQL 2.5.2"
                  },
@@ -46,8 +46,8 @@
                        "Ordem":  3022,
                        "Banco":  "BNB",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "12/11/2026",
-                       "Saldo":  3354.2600
+                       "Data_Posicao":  "18/11/2026",
+                       "Saldo":  8029.1300
                    },
                    {
                        "Ordem":  3024,
@@ -60,8 +60,8 @@
                        "Ordem":  3023,
                        "Banco":  "MERCADO PAGO",
                        "Classificacao":  "OPERACIONAL",
-                       "Data_Posicao":  "09/11/2026",
-                       "Saldo":  5706.2000
+                       "Data_Posicao":  "18/11/2026",
+                       "Saldo":  1031.3300
                    },
                    {
                        "Ordem":  1017,
@@ -3948,6 +3948,28 @@
                    ],
     "debitos_programados":  [
                                 {
+                                    "Ordem_SQL":  298998,
+                                    "Banco":  "MERCADO PAGO",
+                                    "Data":  "18/11/2026",
+                                    "Descricao":  "Transferência para a conta 4 (BNB)",
+                                    "Valor":  174.87,
+                                    "Estagio":  "PROGRAMADO",
+                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO",
+                                    "Ja_Incorporado_Saldo":  true,
+                                    "Valor_Efeito_Projecao":  0
+                                },
+                                {
+                                    "Ordem_SQL":  299000,
+                                    "Banco":  "MERCADO PAGO",
+                                    "Data":  "18/11/2026",
+                                    "Descricao":  "Transferência para a conta 4 (BNB)",
+                                    "Valor":  4500.00,
+                                    "Estagio":  "PROGRAMADO",
+                                    "Tipo_Registro":  "LANCAMENTO_BANCARIO",
+                                    "Ja_Incorporado_Saldo":  true,
+                                    "Valor_Efeito_Projecao":  0
+                                },
+                                {
                                     "Ordem_SQL":  298810,
                                     "Banco":  "BRADESCO",
                                     "Data":  "19/11/2026",
@@ -7182,6 +7204,28 @@
                              ],
     "pagamentos_programados":  [
                                    {
+                                       "Ordem_SQL":  298998,
+                                       "Banco":  "MERCADO PAGO",
+                                       "Data":  "18/11/2026",
+                                       "Descricao":  "Transferência para a conta 4 (BNB)",
+                                       "Valor":  174.87,
+                                       "Estagio":  "PROGRAMADO",
+                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO",
+                                       "Ja_Incorporado_Saldo":  true,
+                                       "Valor_Efeito_Projecao":  0
+                                   },
+                                   {
+                                       "Ordem_SQL":  299000,
+                                       "Banco":  "MERCADO PAGO",
+                                       "Data":  "18/11/2026",
+                                       "Descricao":  "Transferência para a conta 4 (BNB)",
+                                       "Valor":  4500.00,
+                                       "Estagio":  "PROGRAMADO",
+                                       "Tipo_Registro":  "LANCAMENTO_BANCARIO",
+                                       "Ja_Incorporado_Saldo":  true,
+                                       "Valor_Efeito_Projecao":  0
+                                   },
+                                   {
                                        "Ordem_SQL":  298810,
                                        "Banco":  "BRADESCO",
                                        "Data":  "19/11/2026",
@@ -7557,14 +7601,14 @@
                                    }
                                ],
     "bnb":  {
-                "operacional":  3354.26,
+                "operacional":  8029.13,
                 "investimento":  453460.41,
-                "total":  456814.67,
+                "total":  461489.54,
                 "conta_operacional":  3022,
                 "conta_investimento":  1017
             },
     "mercado_pago":  {
-                         "operacional":  5706.2,
+                         "operacional":  1031.33,
                          "conta_operacional":  3023,
                          "codigo_shop9":  22,
                          "cofrinho_status":  "PENDENTE DE FONTE DE DADOS"
@@ -7576,11 +7620,11 @@
                                     "Codigo":  1,
                                     "Nome":  "Caixa LOJA",
                                     "Classificacao_PIF":  "OPERACIONAL",
-                                    "Data_Abertura":  "17/11/2026 08:45:51",
+                                    "Data_Abertura":  "18/11/2026 13:29:03",
                                     "Saldo_Atual":  176.0000,
-                                    "Entradas_Desde_Abertura":  448.0000,
-                                    "Saidas_Desde_Abertura":  272.0000,
-                                    "Qtd_Movimentos":  3
+                                    "Entradas_Desde_Abertura":  176.0000,
+                                    "Saidas_Desde_Abertura":  0.0000,
+                                    "Qtd_Movimentos":  1
                                 },
                                 {
                                     "Ordem_Caixa":  5,
@@ -7637,7 +7681,7 @@
                    },
                    {
                        "Banco":  "BNB",
-                       "Saldo_Atual":  3354.26,
+                       "Saldo_Atual":  8029.13,
                        "Entradas_Futuras":  24150,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
@@ -7645,7 +7689,7 @@
                        "Debitos_Programados_Nominais":  0,
                        "Debitos_Ja_Incorporados_Saldo":  0,
                        "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  27504.26
+                       "Saldo_Projetado":  32179.13
                    },
                    {
                        "Banco":  "SANTANDER",
@@ -7661,15 +7705,15 @@
                    },
                    {
                        "Banco":  "MERCADO PAGO",
-                       "Saldo_Atual":  5706.2,
+                       "Saldo_Atual":  1031.33,
                        "Entradas_Futuras":  7470,
                        "Entradas_Aloc_Pendente":  0,
                        "Pagamentos_Futuros":  0,
                        "Debitos_Programados":  0,
-                       "Debitos_Programados_Nominais":  0,
-                       "Debitos_Ja_Incorporados_Saldo":  0,
+                       "Debitos_Programados_Nominais":  4674.87,
+                       "Debitos_Ja_Incorporados_Saldo":  4674.87,
                        "Saidas_Futuras":  0,
-                       "Saldo_Projetado":  13176.2
+                       "Saldo_Projetado":  8501.33
                    },
                    {
                        "Banco":  "NÃO ALOCADO",
@@ -9870,1094 +9914,1094 @@
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "18/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "19/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "20/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "21/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "22/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "23/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "24/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "25/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "26/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "27/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "28/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "29/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "30/11/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "01/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "02/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "03/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "04/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "05/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "06/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "07/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "08/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "09/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "10/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "11/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "12/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "13/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "14/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "15/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "16/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "17/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "18/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  3354.26
+                                      "Saldo_Projetado":  8029.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "19/12/2026",
-                                      "Saldo_Anterior":  3354.26,
+                                      "Saldo_Anterior":  8029.13,
                                       "Recebiveis":  24150.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "20/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "21/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "22/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "23/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "24/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "25/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "26/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "27/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "28/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "29/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "30/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "31/12/2026",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "01/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "02/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "03/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "04/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "05/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "06/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "07/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "08/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "09/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "10/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "11/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "12/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "13/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "14/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "15/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "16/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "17/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "18/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "19/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "20/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "21/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "22/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "23/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "24/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "25/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "26/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "27/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "28/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "29/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "30/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "31/01/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "01/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "02/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "03/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "04/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "05/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "06/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "07/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "08/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "09/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "10/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "11/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "12/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "13/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "14/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "15/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "BNB",
                                       "Data":  "16/02/2027",
-                                      "Saldo_Anterior":  27504.26,
+                                      "Saldo_Anterior":  32179.13,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  27504.26
+                                      "Saldo_Projetado":  32179.13
                                   },
                                   {
                                       "Banco":  "SANTANDER",
@@ -12054,1094 +12098,1094 @@
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "18/11/2026",
-                                      "Saldo_Anterior":  5706.2,
+                                      "Saldo_Anterior":  1031.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
-                                      "Programados_Nominais":  0,
-                                      "Programados_Ja_Incorporados":  0,
+                                      "Programados_Nominais":  4674.87,
+                                      "Programados_Ja_Incorporados":  4674.87,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  5706.2
+                                      "Saldo_Projetado":  1031.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "19/11/2026",
-                                      "Saldo_Anterior":  5706.2,
+                                      "Saldo_Anterior":  1031.33,
                                       "Recebiveis":  2241.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "20/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "21/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "22/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "23/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "24/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "25/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "26/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "27/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  7947.20
+                                      "Saldo_Projetado":  3272.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "28/11/2026",
-                                      "Saldo_Anterior":  7947.20,
+                                      "Saldo_Anterior":  3272.33,
                                       "Recebiveis":  3071.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  11018.20
+                                      "Saldo_Projetado":  6343.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "29/11/2026",
-                                      "Saldo_Anterior":  11018.20,
+                                      "Saldo_Anterior":  6343.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  11018.20
+                                      "Saldo_Projetado":  6343.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "30/11/2026",
-                                      "Saldo_Anterior":  11018.20,
+                                      "Saldo_Anterior":  6343.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  11018.20
+                                      "Saldo_Projetado":  6343.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "01/12/2026",
-                                      "Saldo_Anterior":  11018.20,
+                                      "Saldo_Anterior":  6343.33,
                                       "Recebiveis":  1245.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  12263.20
+                                      "Saldo_Projetado":  7588.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "02/12/2026",
-                                      "Saldo_Anterior":  12263.20,
+                                      "Saldo_Anterior":  7588.33,
                                       "Recebiveis":  913.00,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "03/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "04/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "05/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "06/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "07/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "08/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "09/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "10/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "11/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "12/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "13/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "14/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "15/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "16/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "17/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "18/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "19/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "20/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "21/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "22/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "23/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "24/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "25/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "26/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "27/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "28/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "29/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "30/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "31/12/2026",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "01/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "02/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "03/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "04/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "05/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "06/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "07/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "08/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "09/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "10/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "11/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "12/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "13/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "14/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "15/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "16/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "17/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "18/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "19/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "20/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "21/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "22/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "23/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "24/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "25/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "26/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "27/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "28/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "29/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "30/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "31/01/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "01/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "02/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "03/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "04/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "05/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "06/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "07/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "08/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "09/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "10/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "11/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "12/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "13/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "14/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "15/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "MERCADO PAGO",
                                       "Data":  "16/02/2027",
-                                      "Saldo_Anterior":  13176.20,
+                                      "Saldo_Anterior":  8501.33,
                                       "Recebiveis":  0,
                                       "Pagamentos_Previstos":  0,
                                       "Programados_Nominais":  0,
                                       "Programados_Ja_Incorporados":  0,
                                       "Programados_Efeito_Projecao":  0,
                                       "Saidas_Efeito_Projecao":  0,
-                                      "Saldo_Projetado":  13176.20
+                                      "Saldo_Projetado":  8501.33
                                   },
                                   {
                                       "Banco":  "NÃO ALOCADO",
@@ -14253,7 +14297,7 @@
                              },
                              {
                                  "Banco":  "BNB",
-                                 "Menor_Saldo":  3354.26,
+                                 "Menor_Saldo":  8029.13,
                                  "Data_Menor_Saldo":  "18/11/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -14267,7 +14311,7 @@
                              },
                              {
                                  "Banco":  "MERCADO PAGO",
-                                 "Menor_Saldo":  5706.2,
+                                 "Menor_Saldo":  1031.33,
                                  "Data_Menor_Saldo":  "18/11/2026",
                                  "Primeira_Data_Risco":  null,
                                  "Necessidade_Cobertura":  0
@@ -14279,84 +14323,84 @@
                                  "recebiveis":  564.92,
                                  "pagamentos":  0,
                                  "debitos_programados":  0,
-                                 "debitos_programados_nominais":  0,
-                                 "debitos_programados_ja_incorporados":  0,
+                                 "debitos_programados_nominais":  4674.87,
+                                 "debitos_programados_ja_incorporados":  4674.87,
                                  "pagamentos_nao_alocados":  0,
                                  "total_saidas":  0,
-                                 "total_saidas_nominais":  0,
+                                 "total_saidas_nominais":  4674.87,
                                  "qtd_recebiveis":  1,
                                  "qtd_pagamentos":  0,
-                                 "qtd_debitos_programados":  0
+                                 "qtd_debitos_programados":  2
                              },
                     "7d":  {
                                "dias":  7,
                                "recebiveis":  56214.41,
                                "pagamentos":  29554.52,
                                "debitos_programados":  9544.75,
-                               "debitos_programados_nominais":  9544.75,
-                               "debitos_programados_ja_incorporados":  0.00,
+                               "debitos_programados_nominais":  14219.62,
+                               "debitos_programados_ja_incorporados":  4674.87,
                                "pagamentos_nao_alocados":  29554.52,
                                "total_saidas":  39099.27,
-                               "total_saidas_nominais":  39099.27,
+                               "total_saidas_nominais":  43774.14,
                                "qtd_recebiveis":  20,
                                "qtd_pagamentos":  27,
-                               "qtd_debitos_programados":  10
+                               "qtd_debitos_programados":  12
                            },
                     "15d":  {
                                 "dias":  15,
                                 "recebiveis":  84525.83,
                                 "pagamentos":  31499.72,
                                 "debitos_programados":  17150.51,
-                                "debitos_programados_nominais":  17150.51,
-                                "debitos_programados_ja_incorporados":  0.00,
+                                "debitos_programados_nominais":  21825.38,
+                                "debitos_programados_ja_incorporados":  4674.87,
                                 "pagamentos_nao_alocados":  31499.72,
                                 "total_saidas":  48650.23,
-                                "total_saidas_nominais":  48650.23,
+                                "total_saidas_nominais":  53325.10,
                                 "qtd_recebiveis":  43,
                                 "qtd_pagamentos":  28,
-                                "qtd_debitos_programados":  17
+                                "qtd_debitos_programados":  19
                             },
                     "30d":  {
                                 "dias":  30,
                                 "recebiveis":  170472.54,
                                 "pagamentos":  69840.55,
                                 "debitos_programados":  37808.04,
-                                "debitos_programados_nominais":  37808.04,
-                                "debitos_programados_ja_incorporados":  0.00,
+                                "debitos_programados_nominais":  42482.91,
+                                "debitos_programados_ja_incorporados":  4674.87,
                                 "pagamentos_nao_alocados":  69840.55,
                                 "total_saidas":  107648.59,
-                                "total_saidas_nominais":  107648.59,
+                                "total_saidas_nominais":  112323.46,
                                 "qtd_recebiveis":  72,
                                 "qtd_pagamentos":  90,
-                                "qtd_debitos_programados":  26
+                                "qtd_debitos_programados":  28
                             },
                     "60d":  {
                                 "dias":  60,
                                 "recebiveis":  209945.69,
                                 "pagamentos":  105548.33,
                                 "debitos_programados":  48540.56,
-                                "debitos_programados_nominais":  48540.56,
-                                "debitos_programados_ja_incorporados":  0.00,
+                                "debitos_programados_nominais":  53215.43,
+                                "debitos_programados_ja_incorporados":  4674.87,
                                 "pagamentos_nao_alocados":  105548.33,
                                 "total_saidas":  154088.89,
-                                "total_saidas_nominais":  154088.89,
+                                "total_saidas_nominais":  158763.76,
                                 "qtd_recebiveis":  82,
                                 "qtd_pagamentos":  151,
-                                "qtd_debitos_programados":  32
+                                "qtd_debitos_programados":  34
                             },
                     "90d":  {
                                 "dias":  90,
                                 "recebiveis":  210825.69,
                                 "pagamentos":  136926.95,
                                 "debitos_programados":  55854.27,
-                                "debitos_programados_nominais":  55854.27,
-                                "debitos_programados_ja_incorporados":  0.00,
+                                "debitos_programados_nominais":  60529.14,
+                                "debitos_programados_ja_incorporados":  4674.87,
                                 "pagamentos_nao_alocados":  136926.95,
                                 "total_saidas":  192781.22,
-                                "total_saidas_nominais":  192781.22,
+                                "total_saidas_nominais":  197456.09,
                                 "qtd_recebiveis":  84,
                                 "qtd_pagamentos":  204,
-                                "qtd_debitos_programados":  34
+                                "qtd_debitos_programados":  36
                             }
                 },
     "parametros":  {
@@ -14374,10 +14418,10 @@
                       "saldo_operacional":  59133.94,
                       "investimentos":  453460.41,
                       "saldo_consolidado":  512594.35,
-                      "bnb_operacional":  3354.26,
+                      "bnb_operacional":  8029.13,
                       "bnb_investimento":  453460.41,
-                      "bnb_total":  456814.67,
-                      "mercado_pago_operacional":  5706.2,
+                      "bnb_total":  461489.54,
+                      "mercado_pago_operacional":  1031.33,
                       "caixa_operacional":  176,
                       "caixa_misto":  -797.4019,
                       "caixa_particular":  -1478.69,
@@ -14391,24 +14435,24 @@
                       "debitos_programados_30d":  37808.04,
                       "debitos_programados_60d":  48540.56,
                       "debitos_programados_90d":  55854.27,
-                      "debitos_programados_nominais_30d":  37808.04,
-                      "debitos_programados_nominais_60d":  48540.56,
-                      "debitos_programados_nominais_90d":  55854.27,
-                      "debitos_ja_incorporados_30d":  0.00,
-                      "debitos_ja_incorporados_60d":  0.00,
-                      "debitos_ja_incorporados_90d":  0.00,
+                      "debitos_programados_nominais_30d":  42482.91,
+                      "debitos_programados_nominais_60d":  53215.43,
+                      "debitos_programados_nominais_90d":  60529.14,
+                      "debitos_ja_incorporados_30d":  4674.87,
+                      "debitos_ja_incorporados_60d":  4674.87,
+                      "debitos_ja_incorporados_90d":  4674.87,
                       "pagamentos_nao_alocados_30d":  69840.55,
                       "pagamentos_nao_alocados_60d":  105548.33,
                       "pagamentos_nao_alocados_90d":  136926.95,
                       "qtd_recebiveis_90d":  84,
                       "qtd_pagamentos_90d":  204,
-                      "qtd_debitos_programados_90d":  34,
+                      "qtd_debitos_programados_90d":  36,
                       "total_saidas_30d":  107648.59,
                       "total_saidas_60d":  154088.89,
                       "total_saidas_90d":  192781.22,
                       "conciliacao_pagamentos_90d":  136926.95,
                       "trajetoria_qtd_linhas":  546,
-                      "trajetoria_programados_nominais_90d":  55854.27,
+                      "trajetoria_programados_nominais_90d":  60529.14,
                       "trajetoria_programados_efeito_90d":  55854.27,
                       "modo_sql":  "SOMENTE LEITURA"
                   }
